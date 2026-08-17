@@ -418,6 +418,9 @@ function renderInsights(){
         <ul>
           <li><b>Jonathan Taylor</b> segue confirmado como RB de elite tier-1 nos rankings de pré-temporada
             (junto com Gibbs/Bijan/Chase/Nacua) — sua base no RB1 está sólida.</li>
+          <li><b>Malik Washington (banco)</b> — no jogo de abertura da pré-temporada, ele e Caleb Douglas foram
+            claramente a dupla titular de wide receivers do Miami, já com distância dos outros nomes da posição.
+            Bom sinal pra quem já tem ele no elenco.</li>
           <li>Nenhuma notícia negativa nova achada pros seus outros titulares além do que já está na aba
             Lesões (Waddle, Metcalf, Monangai — todos com prognóstico ok).</li>
         </ul>
@@ -428,8 +431,12 @@ function renderInsights(){
             como RB2 atrás de McCaffrey.</li>
           <li><b>Ravens:</b> com Rashod Bateman fora de 2 treinos, o rookie de 3ª rodada Ja'Kobi Lane ganhou
             espaço pra brigar pelo posto de WR2 atrás de Zay Flowers.</li>
-          <li><b>Colts:</b> com Michael Pittman fora, Alec Pierce vira sleeper — foi 2º da liga em jardas por
-            recepção (21.3) no ano passado, e algum modelo já projeta ele acima de nomes como Nabers/Jefferson.</li>
+          <li><b>Colts:</b> com a saída de Michael Pittman (agora nos Steelers), Alec Pierce vira sleeper — foi
+            2º da liga em jardas por recepção (21.3) no ano passado, e algum modelo já projeta ele acima de
+            nomes como Nabers/Jefferson.</li>
+          <li><b>Steelers:</b> com Michael Pittman machucado (veja aba Lesões), o rookie de 2ª rodada Germie
+            Bernard vem mostrando que está pronto pra ser o WR3 do time, superando o outro rookie Roman Wilson
+            no camp — veja detalhes na aba Hot Waivers.</li>
         </ul>
 
         <h3>Lesões que valem acompanhar (fora da sua liga)</h3>
@@ -460,18 +467,35 @@ function renderInsights(){
           <li><a href="https://www.espn.com/fantasy/football/story/_/page/FFSleepBustBreak26-49030808/fantasy-football-2026-rankings-nfl-sleepers-breakouts-busts" target="_blank" rel="noopener">ESPN — Sleepers, Busts, Breakouts 2026</a></li>
           <li><a href="https://www.rotoballer.com/8-fantasy-football-sleepers-breakouts-and-league-winners-2026/1877912" target="_blank" rel="noopener">RotoBaller — Sleepers & League-Winners</a></li>
           <li><a href="https://www.cbssports.com/fantasy/football/news/fantasy-football-rankings-2026-sleepers-breakouts-busts-by-model-that-predicted-daniel-jones-big-year/" target="_blank" rel="noopener">CBS Sports — Sleepers/Breakouts/Busts (modelo)</a></li>
+          <li><a href="https://www.fantasypros.com/2026/08/fantasy-football-20-nfl-preseason-week-1-takeaways-2026/" target="_blank" rel="noopener">FantasyPros — 20 Takeaways da Semana 1 de pré-temporada</a></li>
+          <li><a href="https://www.espn.com/fantasy/football/story/_/id/49576653/fantasy-football-draft-targets-picks-fliers-breakouts-matt-bowen-2026" target="_blank" rel="noopener">ESPN (Matt Bowen) — Draft targets e breakouts 2026</a></li>
         </ul>
       </div>
     </div>`;
 }
 renderInsights();
 
-const HOT_WAIVERS = [];
-const HOT_WAIVERS_NOTE = `Pesquisei antes de montar essa aba (17/08/2026): ainda é pré-temporada — a liga real
-  começa depois do fim de agosto, e as fontes de fantasy (FantasyPros, ESPN, The Ringer etc.) praticamente não
-  publicam recomendação de waiver nessa fase, porque o jogo de pré-temporada não reflete uso real de titulares.
-  Não vou forçar um nome só pra essa aba não ficar vazia. Assim que a temporada regular começar e der pra ver
-  quem está de fato ganhando alvos/snaps, peço pra você pra atualizar e trago picks com motivo, links e fonte.`;
+const HOT_WAIVERS = [
+  {
+    id:"13274", name:"Germie Bernard", pos:"WR", team:"PIT",
+    why:`Pick de 2ª rodada dos Steelers (time subiu no draft pra pegar ele). No primeiro jogo da pré-temporada
+      já mostrou por que foi escolha alta — está pronto pra ser o WR3 do time, superando o outro rookie Roman
+      Wilson no camp, e é o backup direto de Michael Pittman Jr. Como o Pittman está machucado agora (ver aba
+      Lesões), Bernard pode ganhar oportunidade real de titular em cima da hora se a lesão persistir. Ainda
+      é agente livre nessa liga.`,
+    links:[
+      {label:"Steelers Depot: pronto pra ser o WR3", url:"https://steelersdepot.com/2026/05/how-quickly-can-wr-germie-bernard-move-up-the-depth-chart/"},
+      {label:"SI: rookie encerra a disputa de vaga", url:"https://www.si.com/nfl/steelers/onsi/pittsburgh-steelers-rookie-wr-germie-bernard-ends-debate"},
+      {label:"ESPN (Matt Bowen): \"slam dunk\" no best ball", url:"https://www.espn.com/fantasy/football/story/_/id/49576653/fantasy-football-draft-targets-picks-fliers-breakouts-matt-bowen-2026"}
+    ]
+  }
+];
+const HOT_WAIVERS_NOTE = `Pesquisei de novo em 17/08/2026, incluindo fontes de análise (FantasyPros, ESPN, hubs
+  de fantasy) além de contagem de snaps — vários nomes chamaram atenção (Isaac TeSlaa, Colbie Young, Kimani
+  Vidal, Mike Washington), mas na apuração mais funda a maioria ou já está em algum time dessa liga, ou o sinal
+  era fraco demais pra recomendar com confiança (ex: TeSlaa jogou com os reservas e errou os 3 alvos que teve).
+  Só o Germie Bernard passou no crivo. Ainda é pré-temporada, então isso deve ficar enxuto por enquanto — assim
+  que a temporada regular começar, volto a atualizar com mais frequência.`;
 
 function renderHotWaivers(){
   const wrap=$("#tabHotWaivers");
