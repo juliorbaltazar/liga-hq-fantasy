@@ -1,0 +1,88 @@
+name: Sleeper data snapshot
+
+on:
+  schedule:
+    - cron: "0 10 * * *"   # 10:00 UTC daily = 07:00 America/Sao_Paulo, 1h before the Liga HQ insights routine
+  workflow_dispatch: {}     # allow manual trigger from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch league state, rosters and users from Sleeper
+        run: |
+          LEAGUE_ID="1312228455764492288"
+          curl -sf "https://api.sleeper.app/v1/state/nfl" -o /tmp/state.json
+          curl -sf "https://api.sleeper.app/v1/league/${LEAGUE_ID}/rosters" -o /tmp/rosters.json
+          curl -sf "https://api.sleeper.app/v1/league/${LEAGUE_ID}/users" -o /tmp/users.json
+
+      - name: Fetch full player DB and trim to rostered + injured players only
+        run: |
+          curl -sf "https://api.sleeper.app/v1/players/nfl" -o /tmp/players_full.json
+          python3 - <<'PYEOF'
+          import json
+
+          rosters = json.load(open("/tmp/rosters.json"))
+          rostered_ids = set()
+          for r in rosters:
+              for pid in (r.get("players") or []):
+                  rostered_ids.add(pid)
+
+          players_full = json.load(open("/tmp/players_full.json"))
+          trimmed = {}
+          for pid in rostered_ids:
+              p = players_full.get(pid)
+              if not p:
+                  continue
+              trimmed[pid] = {
+                  "n": p.get("full_name") or f"{p.get('first_name','')} {p.get('last_name','')}".strip() or pid,
+                  "p": p.get("position"),
+                  "tm": p.get("team"),
+                  "ist": p.get("injury_status"),
+                  "ibp": p.get("injury_body_part"),
+                  "inote": p.get("injury_notes"),
+                  "pp": p.get("practice_participation"),
+                  "espn": p.get("espn_id"),
+              }
+          json.dump(trimmed, open("/tmp/players_trimmed.json", "w"), ensure_ascii=False)
+          print(f"Rostered players: {len(rostered_ids)}, trimmed entries written: {len(trimmed)}")
+          PYEOF
+
+      - name: Assemble snapshot file
+        run: |
+          mkdir -p liga-hq
+          python3 - <<'PYEOF'
+          import json
+          from datetime import datetime, timezone
+
+          state = json.load(open("/tmp/state.json"))
+          rosters = json.load(open("/tmp/rosters.json"))
+          users = json.load(open("/tmp/users.json"))
+          players = json.load(open("/tmp/players_trimmed.json"))
+
+          snapshot = {
+              "generated_at_utc": datetime.now(timezone.utc).isoformat(),
+              "nfl_state": state,
+              "rosters": rosters,
+              "users": users,
+              "players": players,
+          }
+          json.dump(snapshot, open("liga-hq/sleeper-snapshot.json", "w"), ensure_ascii=False, indent=0)
+          PYEOF
+
+      - name: Commit snapshot if changed
+        run: |
+          git config user.name "sleeper-snapshot-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add liga-hq/sleeper-snapshot.json
+          if git diff --cached --quiet; then
+            echo "No changes to snapshot, skipping commit."
+          else
+            git commit -m "Snapshot: dados do Sleeper $(date -u +%Y-%m-%d)"
+            git push
+          fi
