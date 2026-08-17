@@ -475,9 +475,12 @@ function renderInsights(){
 }
 renderInsights();
 
+// Cada pick carrega week/seasonType (quando foi identificado) e status ("available" ou "picked" se
+// alguém da liga já adicionou — nesse caso mantém no histórico em vez de apagar).
 const HOT_WAIVERS = [
   {
     id:"13274", name:"Germie Bernard", pos:"WR", team:"PIT",
+    week:2, seasonType:"pre", status:"available",
     why:`Pick de 2ª rodada dos Steelers (time subiu no draft pra pegar ele). No primeiro jogo da pré-temporada
       já mostrou por que foi escolha alta — está pronto pra ser o WR3 do time, superando o outro rookie Roman
       Wilson no camp, e é o backup direto de Michael Pittman Jr. Como o Pittman está machucado agora (ver aba
@@ -506,16 +509,40 @@ function renderHotWaivers(){
     </div>`;
     return;
   }
-  const cards=HOT_WAIVERS.map(p=>`<div class="pickcard">
-    <div class="pickhd">
-      ${imgTag(headshotUrl(p.id),"headshot sm",p.pos)}
-      <span class="pos ${p.pos}">${p.pos}</span>
-      <span class="nm">${p.name}</span><span class="tm">${p.team||""}</span>
-    </div>
-    <div class="why">${p.why}</div>
-    <div class="picklinks">${(p.links||[]).map(l=>`<a href="${l.url}" target="_blank" rel="noopener">${l.label}</a>`).join("")}</div>
-  </div>`).join("");
-  wrap.innerHTML=`<div class="card"><div class="hd"><span>Hot Waivers · picks com motivo</span></div>${cards}</div>`;
+  function weekLabel(p){
+    const wk = p.week!=null ? p.week : "?";
+    return p.seasonType==="regular" ? `Semana ${wk}` : `Pré-temporada · Semana ${wk}`;
+  }
+  function weekKey(p){ return `${p.seasonType||"pre"}-${p.week!=null?p.week:0}`; }
+
+  const groups={};
+  HOT_WAIVERS.forEach(p=>{
+    const k=weekKey(p);
+    (groups[k]=groups[k]||{label:weekLabel(p), items:[]}).items.push(p);
+  });
+  // most recent week first: regular season sorts after preseason, higher week number first within each
+  const sortedKeys=Object.keys(groups).sort((a,b)=>{
+    const [aType,aWk]=a.split("-"); const [bType,bWk]=b.split("-");
+    if(aType!==bType) return aType==="regular" ? -1 : 1;
+    return Number(bWk)-Number(aWk);
+  });
+
+  const sections=sortedKeys.map(k=>{
+    const g=groups[k];
+    const cards=g.items.map(p=>`<div class="pickcard">
+      <div class="pickhd">
+        ${imgTag(headshotUrl(p.id),"headshot sm",p.pos)}
+        <span class="pos ${p.pos}">${p.pos}</span>
+        <span class="nm">${p.name}</span><span class="tm">${p.team||""}</span>
+        ${p.status==="picked"?'<span class="badge add" style="margin-left:auto">já foi adicionado</span>':""}
+      </div>
+      <div class="why">${p.why}</div>
+      <div class="picklinks">${(p.links||[]).map(l=>`<a href="${l.url}" target="_blank" rel="noopener">${l.label}</a>`).join("")}</div>
+    </div>`).join("");
+    return `<div class="divHeader">${g.label}</div>${cards}`;
+  }).join("");
+
+  wrap.innerHTML=`<div class="card"><div class="hd"><span>Hot Waivers · picks com motivo</span><span>${HOT_WAIVERS.length} no histórico</span></div>${sections}</div>`;
 }
 renderHotWaivers();
 
