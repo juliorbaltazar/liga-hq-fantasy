@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Tela Compartilhada</title>
+<style>
+  :root{
+    --bg:#0e141b; --panel:#161e28; --panel2:#1c2733; --line:#293544;
+    --txt:#e7edf4; --dim:#8592a3; --dimmer:#5b6675;
+    --go:#37d284; --gold:#f6c945; --hot:#ff6b5e; --accent:#57c7ff;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--txt);height:100%;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  [hidden]{display:none !important}
+  button{cursor:pointer;font-family:inherit}
+  input,select{font-family:inherit}
+
+  #joinScreen{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+  .joinbox{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px;width:100%;max-width:380px}
+  .joinbox h1{margin:0 0 4px;font-size:20px}
+  .joinbox .sub{color:var(--dim);font-size:13px;margin-bottom:20px;line-height:1.5}
+  .field{margin-bottom:14px}
+  .field label{display:block;font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;font-weight:700}
+  .field input,.field select{width:100%;background:var(--panel2);border:1px solid var(--line);border-radius:9px;color:var(--txt);padding:10px 12px;font-size:14px}
+  .joinbtn{width:100%;margin-top:6px;background:var(--go);border:none;color:#08130c;font-weight:800;border-radius:10px;padding:12px 0;font-size:14px}
+  .joinbtn:disabled{opacity:.6}
+  .err{color:var(--hot);font-size:12px;margin-top:10px;min-height:16px}
+
+  #app{display:flex;flex-direction:column;height:100vh}
+  .topbar{display:flex;align-items:center;gap:10px;padding:10px 16px;border-bottom:1px solid var(--line);background:var(--panel);flex-wrap:wrap}
+  .topbar .room{font-weight:800;font-size:13px;letter-spacing:.04em;white-space:nowrap}
+  .topbar .room span{color:var(--dim);font-weight:400}
+  .qualitySel{background:var(--panel2);border:1px solid var(--line);color:var(--dim);border-radius:9px;padding:8px 10px;font-size:12px;font-weight:700}
+  .shareBtn{background:var(--go);border:none;color:#08130c;font-weight:800;border-radius:9px;padding:9px 16px;font-size:13px;white-space:nowrap}
+  .shareBtn.on{background:var(--hot);color:#1a0805}
+  .linkBtn,.leaveBtn{background:var(--panel2);border:1px solid var(--line);color:var(--dim);border-radius:9px;padding:9px 14px;font-size:12px;font-weight:700;white-space:nowrap}
+  .leaveBtn{color:var(--hot);border-color:color-mix(in srgb,var(--hot) 40%,transparent)}
+  .spacer{flex:1}
+  .people{display:flex;gap:6px;flex-wrap:wrap;align-items:center;font-size:12px;color:var(--dim);order:99;width:100%}
+  .chip{background:var(--panel2);border:1px solid var(--line);border-radius:999px;padding:4px 10px;display:flex;align-items:center;gap:5px}
+  .chip .dot{width:6px;height:6px;border-radius:50%;background:var(--dimmer)}
+  .chip.sharing .dot{background:var(--go)}
+  .chip.me{border-color:var(--accent);color:var(--txt)}
+
+  .grid{flex:1;position:relative;overflow:auto;padding:14px;min-height:1400px}
+  .tile{position:absolute;background:var(--panel);border:1px solid var(--line);border-radius:12px;
+    overflow:hidden;touch-action:none;box-shadow:0 4px 18px rgba(0,0,0,.35)}
+  .tile.dragging{opacity:.85;z-index:50;box-shadow:0 8px 30px rgba(0,0,0,.5)}
+  .tile video{width:100%;height:100%;display:block;background:#000;object-fit:contain;pointer-events:none}
+  .tile .label{position:absolute;top:8px;left:8px;background:rgba(0,0,0,.6);color:#fff;font-size:11px;
+    font-weight:700;padding:4px 9px;border-radius:7px;backdrop-filter:blur(4px);cursor:move}
+  .tilebar{position:absolute;top:8px;right:8px;display:flex;gap:6px}
+  .tilebar button{background:rgba(0,0,0,.6);border:none;color:#fff;font-size:13px;width:26px;height:26px;
+    border-radius:7px;backdrop-filter:blur(4px);line-height:1}
+  .volctrl{position:absolute;bottom:8px;right:8px;display:flex;align-items:center;gap:6px;
+    background:rgba(0,0,0,.6);border-radius:7px;padding:4px 9px;backdrop-filter:blur(4px)}
+  .volctrl .muteBtn{background:none;border:none;color:#fff;font-size:13px;padding:0;line-height:1}
+  .volctrl .volSlider{width:64px;accent-color:var(--go)}
+  .resizeHandle{position:absolute;bottom:0;right:0;width:22px;height:22px;cursor:nwse-resize;
+    background:linear-gradient(135deg,transparent 50%,rgba(255,255,255,.35) 50%,rgba(255,255,255,.35) 62%,transparent 62%,
+      transparent 74%,rgba(255,255,255,.35) 74%,rgba(255,255,255,.35) 86%,transparent 86%)}
+  .tile:fullscreen{width:100% !important;height:100% !important;left:0 !important;top:0 !important;border-radius:0}
+  .tile:fullscreen .resizeHandle{display:none}
+  .empty{color:var(--dimmer);text-align:center;padding:60px 20px}
+  .empty b{color:var(--dim)}
+
+  .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--panel2);
+    border:1px solid var(--line);color:var(--txt);padding:10px 16px;border-radius:10px;font-size:13px;
+    opacity:0;pointer-events:none;transition:opacity .2s;max-width:90vw;text-align:center}
+  .toast.show{opacity:1}
+</style>
+</head>
+<body>
+
+<div id="joinScreen">
+  <div class="joinbox">
+    <h1>🖥️ Tela Compartilhada</h1>
+    <div class="sub">Pra usar junto com a call do Discord — qualquer um pode transmitir a tela. Leve por padrão, pra não pesar enquanto vocês jogam.</div>
+    <div class="field">
+      <label>Seu nome</label>
+      <input id="nameInput" placeholder="Como te chamam" autocomplete="off" maxlength="24">
+    </div>
+    <button class="joinbtn" id="joinBtn">Entrar</button>
+    <div class="err" id="joinErr"></div>
+  </div>
+</div>
+
+<div id="app" hidden>
+  <div class="topbar">
+    <div class="room">🖥️ Tela Compartilhada</div>
+    <div class="spacer"></div>
+    <select id="qualitySel" class="qualitySel" title="Qualidade da transmissão">
+      <option value="light" selected>Leve (720p·60fps)</option>
+      <option value="high">Qualidade (1080p·60fps)</option>
+    </select>
+    <button class="linkBtn" id="copyLinkBtn">copiar link</button>
+    <button class="shareBtn" id="shareBtn">🖥️ compartilhar tela</button>
+    <button class="leaveBtn" id="leaveBtn">sair</button>
+    <div class="people" id="peopleList"></div>
+  </div>
+  <div class="grid" id="grid">
+    <div class="empty" id="emptyMsg">Ninguém compartilhando tela ainda.<br><b>Clique em "compartilhar tela"</b> pra começar.</div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+<script>
+const $=s=>document.querySelector(s);
+
+const QUALITY={
+  light:{width:1280,height:720,frameRate:60,maxBitrate:3_500_000},
+  high:{width:1920,height:1080,frameRate:60,maxBitrate:6_000_000}
+};
+
+const ROOM_CODE="sala-principal";
+let myPeer=null, myId=null, roomCode=ROOM_CODE, myName=null, isHost=false;
+let hostConn=null;
+let peerConns={};       // host only: id -> DataConnection
+let roster={};          // id -> {name}
+let myStream=null;
+let mediaCalls={};      // id -> outgoing MediaConnection
+let incomingStreams={}; // id -> {call, stream}
+
+function toast(msg){
+  const t=$("#toast"); t.textContent=msg; t.classList.add("show");
+  clearTimeout(toast._t); toast._t=setTimeout(()=>t.classList.remove("show"),2400);
+}
+
+$("#joinBtn").addEventListener("click", join);
+$("#nameInput").addEventListener("keydown",e=>{if(e.key==="Enter")join();});
+
+function join(){
+  const name=$("#nameInput").value.trim();
+  $("#joinErr").textContent="";
+  if(!name){ $("#joinErr").textContent="Digita seu nome."; return; }
+  myName=name;
+  $("#joinBtn").disabled=true; $("#joinBtn").textContent="conectando...";
+  attemptHost();
+}
+
+function attemptHost(){
+  myPeer=new Peer(roomCode);
+  let settled=false;
+  myPeer.on("open", id=>{
+    if(settled) return; settled=true;
+    isHost=true; myId=id;
+    roster[myId]={name:myName};
+    setupCommonHandlers();
+    enterApp();
+  });
+  myPeer.on("error", err=>{
+    if(settled) return;
+    if(err.type==="unavailable-id"){
+      settled=true;
+      myPeer.destroy();
+      joinAsMember();
+    }else{
+      settled=true;
+      showJoinError("Erro de conexão: "+err.type);
+    }
+  });
+}
+
+function joinAsMember(){
+  myPeer=new Peer();
+  myPeer.on("open", id=>{
+    myId=id;
+    hostConn=myPeer.connect(roomCode, {reliable:true});
+    hostConn.on("open", ()=>{ hostConn.send({type:"join", name:myName, id:myId}); });
+    hostConn.on("data", handleHostData);
+    hostConn.on("close", ()=>{ toast("Perdeu conexão com a sala (quem criou saiu)."); });
+    hostConn.on("error", e=>{ showJoinError("Não consegui entrar na sala: "+e.type); });
+    setupCommonHandlers();
+    enterApp();
+  });
+  myPeer.on("error", err=>{ showJoinError("Erro de conexão: "+err.type); });
+}
+
+function showJoinError(msg){
+  $("#joinBtn").disabled=false; $("#joinBtn").textContent="Entrar na sala";
+  $("#joinErr").textContent=msg;
+}
+
+function handleHostData(data){
+  if(data.type==="roster"){ roster=data.roster; onRosterUpdate(); }
+}
+
+function setupCommonHandlers(){
+  myPeer.on("connection", conn=>{
+    conn.on("data", data=>{
+      if(data.type==="join"){
+        roster[conn.peer]={name:data.name};
+        peerConns[conn.peer]=conn;
+        broadcastRoster();
+        onRosterUpdate();
+      }
+    });
+    conn.on("close", ()=>{
+      if(peerConns[conn.peer]){
+        delete peerConns[conn.peer];
+        delete roster[conn.peer];
+        broadcastRoster();
+        onRosterUpdate();
+      }
+    });
+  });
+
+  myPeer.on("call", call=>{
+    call.answer();
+    call.on("stream", stream=>{
+      incomingStreams[call.peer]={call, stream};
+      renderGrid(); renderPeople();
+    });
+    call.on("close", ()=>{ delete incomingStreams[call.peer]; renderGrid(); renderPeople(); });
+    call.on("error", ()=>{ delete incomingStreams[call.peer]; renderGrid(); renderPeople(); });
+  });
+
+  myPeer.on("disconnected", ()=>{ toast("Conexão instável, tentando reconectar..."); myPeer.reconnect(); });
+}
+
+function broadcastRoster(){
+  if(!isHost) return;
+  Object.values(peerConns).forEach(conn=>{ try{ conn.send({type:"roster", roster}); }catch(e){} });
+}
+
+function onRosterUpdate(){
+  renderPeople();
+  if(myStream){
+    Object.keys(roster).forEach(id=>{
+      if(id!==myId && !mediaCalls[id]) callPeerWithMyStream(id);
+    });
+  }
+  Object.keys(incomingStreams).forEach(id=>{ if(!roster[id]) delete incomingStreams[id]; });
+  renderGrid();
+}
+
+function enterApp(){
+  $("#joinScreen").hidden=true;
+  $("#app").hidden=false;
+  renderPeople();
+  renderGrid();
+}
+
+function renderPeople(){
+  const ids=Object.keys(roster);
+  $("#peopleList").innerHTML = ids.map(id=>{
+    const nm = id===myId ? (roster[id]?.name||myName)+" (você)" : (roster[id]?.name||"?");
+    const sharing = id===myId ? !!myStream : !!incomingStreams[id];
+    return `<span class="chip${id===myId?" me":""}${sharing?" sharing":""}"><span class="dot"></span>${nm}</span>`;
+  }).join("");
+}
+
+let tileLayout={}; // id -> {x,y,w,h}
+let layoutCount=0;
+
+function defaultLayoutFor(){
+  const w=440, h=Math.round(w*9/16);
+  const step=32, cycle=6;
+  const n=layoutCount % cycle;
+  layoutCount++;
+  return {x:14+n*step, y:14+n*step, w, h};
+}
+
+function makeDraggable(tileEl,id){
+  tileEl.addEventListener("pointerdown", e=>{
+    if(e.target.closest("button, input, .resizeHandle")) return;
+    e.preventDefault();
+    try{ tileEl.setPointerCapture(e.pointerId); }catch(err){}
+    tileEl.classList.add("dragging");
+    const startX=e.clientX, startY=e.clientY;
+    const layout=tileLayout[id];
+    const startLeft=layout.x, startTop=layout.y;
+    function onMove(ev){
+      const dx=ev.clientX-startX, dy=ev.clientY-startY;
+      layout.x=Math.max(0,startLeft+dx); layout.y=Math.max(0,startTop+dy);
+      tileEl.style.left=layout.x+"px"; tileEl.style.top=layout.y+"px";
+    }
+    function onUp(ev){
+      try{ tileEl.releasePointerCapture(ev.pointerId); }catch(err){}
+      tileEl.classList.remove("dragging");
+      tileEl.removeEventListener("pointermove", onMove);
+      tileEl.removeEventListener("pointerup", onUp);
+    }
+    tileEl.addEventListener("pointermove", onMove);
+    tileEl.addEventListener("pointerup", onUp);
+  });
+}
+
+function makeResizable(handle,tileEl,id){
+  handle.addEventListener("pointerdown", e=>{
+    e.preventDefault(); e.stopPropagation();
+    try{ handle.setPointerCapture(e.pointerId); }catch(err){}
+    const startX=e.clientX, startY=e.clientY;
+    const layout=tileLayout[id];
+    const startW=layout.w, startH=layout.h;
+    function onMove(ev){
+      const dx=ev.clientX-startX, dy=ev.clientY-startY;
+      layout.w=Math.max(200,startW+dx); layout.h=Math.max(120,startH+dy);
+      tileEl.style.width=layout.w+"px"; tileEl.style.height=layout.h+"px";
+    }
+    function onUp(ev){
+      try{ handle.releasePointerCapture(ev.pointerId); }catch(err){}
+      handle.removeEventListener("pointermove", onMove);
+      handle.removeEventListener("pointerup", onUp);
+    }
+    handle.addEventListener("pointermove", onMove);
+    handle.addEventListener("pointerup", onUp);
+  });
+}
+
+function toggleFullscreen(tileEl){
+  if(document.fullscreenElement===tileEl){
+    document.exitFullscreen();
+    return;
+  }
+  const req = tileEl.requestFullscreen || tileEl.webkitRequestFullscreen;
+  if(req) req.call(tileEl);
+}
+
+function renderGrid(){
+  const grid=$("#grid");
+  const tiles=[];
+  if(myStream) tiles.push({id:myId, name:(roster[myId]?.name||myName)+" (você)", stream:myStream});
+  Object.keys(incomingStreams).forEach(id=>{
+    tiles.push({id, name:roster[id]?.name||"?", stream:incomingStreams[id].stream});
+  });
+
+  if(!tiles.length){
+    grid.innerHTML = `<div class="empty" id="emptyMsg">Ninguém compartilhando tela ainda.<br><b>Clique em "compartilhar tela"</b> pra começar.</div>`;
+    return;
+  }
+
+  const existing={};
+  grid.querySelectorAll(".tile").forEach(t=>{ existing[t.dataset.id]=t; });
+  const emptyMsg=$("#emptyMsg"); if(emptyMsg) emptyMsg.remove();
+
+  tiles.forEach(t=>{
+    let tileEl=existing[t.id];
+    if(tileEl) delete existing[t.id];
+    if(!tileEl || tileEl._stream!==t.stream){
+      if(tileEl) tileEl.remove();
+      if(!tileLayout[t.id]) tileLayout[t.id]=defaultLayoutFor();
+      const layout=tileLayout[t.id];
+
+      tileEl=document.createElement("div");
+      tileEl.className="tile"; tileEl.dataset.id=t.id;
+      tileEl.style.left=layout.x+"px"; tileEl.style.top=layout.y+"px";
+      tileEl.style.width=layout.w+"px"; tileEl.style.height=layout.h+"px";
+
+      const video=document.createElement("video");
+      video.autoplay=true; video.playsInline=true;
+      if(t.id===myId) video.muted=true;
+      video.srcObject=t.stream;
+      tileEl._stream=t.stream;
+      tileEl.appendChild(video);
+
+      const label=document.createElement("div");
+      label.className="label"; label.textContent=t.name;
+      tileEl.appendChild(label);
+
+      const tilebar=document.createElement("div");
+      tilebar.className="tilebar";
+      const fsBtn=document.createElement("button");
+      fsBtn.className="fsBtn"; fsBtn.type="button";
+      fsBtn.title="Tela cheia";
+      fsBtn.textContent="⛶";
+      fsBtn.addEventListener("click",()=>toggleFullscreen(tileEl));
+      tilebar.appendChild(fsBtn);
+      tileEl.appendChild(tilebar);
+
+      if(t.id!==myId){
+        const volWrap=document.createElement("div");
+        volWrap.className="volctrl";
+        const muteBtn=document.createElement("button");
+        muteBtn.className="muteBtn"; muteBtn.type="button"; muteBtn.textContent="🔊";
+        const slider=document.createElement("input");
+        slider.type="range"; slider.min="0"; slider.max="100"; slider.value="100"; slider.className="volSlider";
+        muteBtn.addEventListener("click",()=>{
+          video.muted=!video.muted;
+          muteBtn.textContent = video.muted ? "🔇" : "🔊";
+        });
+        slider.addEventListener("input",()=>{
+          video.volume = Number(slider.value)/100;
+          if(video.volume===0 && !video.muted){ video.muted=true; muteBtn.textContent="🔇"; }
+          else if(video.volume>0 && video.muted){ video.muted=false; muteBtn.textContent="🔊"; }
+        });
+        volWrap.appendChild(muteBtn);
+        volWrap.appendChild(slider);
+        tileEl.appendChild(volWrap);
+      }
+
+      const resizeHandle=document.createElement("div");
+      resizeHandle.className="resizeHandle";
+      tileEl.appendChild(resizeHandle);
+
+      makeDraggable(tileEl, t.id);
+      makeResizable(resizeHandle, tileEl, t.id);
+
+      grid.appendChild(tileEl);
+    }
+  });
+
+  Object.values(existing).forEach(el=>el.remove());
+}
+
+function currentQuality(){ return QUALITY[$("#qualitySel").value] || QUALITY.light; }
+
+function callPeerWithMyStream(id){
+  const call=myPeer.call(id, myStream);
+  mediaCalls[id]=call;
+  call.on("close", ()=>{ delete mediaCalls[id]; });
+  applyBitrateCap(call);
+}
+
+function applyBitrateCap(call){
+  const q=currentQuality();
+  const trySet=()=>{
+    const pc=call.peerConnection;
+    if(!pc) return;
+    const sender=pc.getSenders && pc.getSenders().find(s=>s.track && s.track.kind==="video");
+    if(!sender) return;
+    const params=sender.getParameters();
+    if(!params.encodings) params.encodings=[{}];
+    params.encodings[0].maxBitrate=q.maxBitrate;
+    sender.setParameters(params).catch(()=>{});
+  };
+  setTimeout(trySet, 800);
+}
+
+async function startShare(){
+  const q=currentQuality();
+  try{
+    myStream = await navigator.mediaDevices.getDisplayMedia({
+      video:{ width:{ideal:q.width}, height:{ideal:q.height}, frameRate:{ideal:q.frameRate, max:q.frameRate} },
+      audio:{ echoCancellation:false, noiseSuppression:false, autoGainControl:false }
+    });
+  }catch(e){
+    toast("Não consegui capturar a tela (permissão negada ou cancelado).");
+    return;
+  }
+  const track=myStream.getVideoTracks()[0];
+  if("contentHint" in track) track.contentHint="motion";
+  track.addEventListener("ended", stopShare);
+
+  Object.keys(roster).forEach(id=>{ if(id!==myId) callPeerWithMyStream(id); });
+
+  $("#shareBtn").textContent="⏹️ parar compartilhamento";
+  $("#shareBtn").classList.add("on");
+  renderPeople(); renderGrid();
+}
+
+function stopShare(){
+  if(!myStream) return;
+  myStream.getTracks().forEach(t=>t.stop());
+  Object.values(mediaCalls).forEach(c=>{ try{c.close();}catch(e){} });
+  mediaCalls={};
+  myStream=null;
+  $("#shareBtn").textContent="🖥️ compartilhar tela";
+  $("#shareBtn").classList.remove("on");
+  renderPeople(); renderGrid();
+}
+
+$("#shareBtn").addEventListener("click", ()=>{ myStream ? stopShare() : startShare(); });
+
+$("#copyLinkBtn").addEventListener("click", async ()=>{
+  const link=location.origin+location.pathname;
+  try{ await navigator.clipboard.writeText(link); toast("Link copiado!"); }
+  catch(e){ toast(link); }
+});
+
+$("#leaveBtn").addEventListener("click", cleanupAndLeave);
+
+function cleanupAndLeave(){
+  stopShare();
+  Object.values(peerConns).forEach(c=>{ try{c.close();}catch(e){} });
+  if(hostConn) try{hostConn.close();}catch(e){}
+  if(myPeer) try{myPeer.destroy();}catch(e){}
+  location.href=location.pathname;
+}
+
+window.addEventListener("beforeunload", ()=>{
+  if(myStream) myStream.getTracks().forEach(t=>t.stop());
+  if(myPeer) try{myPeer.destroy();}catch(e){}
+});
+</script>
+</body>
+</html>

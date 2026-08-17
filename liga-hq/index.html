@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Liga HQ · The Heads League</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="masthead">
+    <h1 class="serif">Liga HQ</h1>
+    <span class="sub" id="leagueSub">carregando…</span>
+  </div>
+  <div class="tabs">
+    <button class="tabBtn on" data-tab="standings">Classificação</button>
+    <button class="tabBtn" data-tab="time">Meu Time</button>
+    <button class="tabBtn" data-tab="waivers">Waivers</button>
+    <button class="tabBtn" data-tab="hotwaivers">Hot Waivers</button>
+    <button class="tabBtn" data-tab="lesoes">Lesões</button>
+    <button class="tabBtn" data-tab="usage">Targets/Snaps</button>
+    <button class="tabBtn" data-tab="insights">Insights</button>
+  </div>
+</header>
+
+<div class="status">
+  <span id="statusText">conectando na API do Sleeper…</span>
+  <button class="refreshBtn" id="refreshBtn">↻ atualizar</button>
+</div>
+
+<main>
+  <div id="tabStandings"></div>
+  <div id="tabTime" hidden></div>
+  <div id="tabWaivers" hidden></div>
+  <div id="tabHotWaivers" hidden></div>
+  <div id="tabLesoes" hidden></div>
+  <div id="tabUsage" hidden></div>
+  <div id="tabInsights" hidden></div>
+</main>
+
+<footer>
+  Dados ao vivo da API pública do Sleeper (liga "The Heads League"). Elenco/lesões/targets/classificação atualizam a
+  cada carregamento (ou no botão ↻); a base de jogadores fica em cache local por até 24h. As abas <b>Hot Waivers</b>,
+  <b>Lesões</b> (checagem manual) e <b>Insights</b> são preenchidas à mão, sob pedido.
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
