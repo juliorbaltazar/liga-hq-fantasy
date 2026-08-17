@@ -222,12 +222,16 @@ function renderMeuTime(){
   const rows=all.map(id=>{
     const isStarter=starterSet.has(id);
     const info=displayName(id);
+    const newsRow = info.ist
+      ? `<div class="picklinks" style="margin-top:5px">${injuryLinks(info).map(l=>`<a href="${l.url}" target="_blank" rel="noopener">${l.label}</a>`).join("")}</div>`
+      : "";
     return `<div class="row">
       ${imgTag(photoFor(id),"headshot",info.p)}
       <span class="pos ${info.p}">${info.p}</span>
       <div class="flex1">
         <span class="nm">${info.n}</span><span class="tm">${info.tm||""}</span>${injuryBadge(info)}
         <div class="sub2">${isStarter?"titular":"banco"}</div>
+        ${newsRow}
       </div>
     </div>`;
   }).join("");
