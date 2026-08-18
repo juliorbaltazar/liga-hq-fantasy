@@ -3,3 +3,9 @@
 # chaves reais do LiveKit — nunca commitar
 livekit/.env
 .env
+
+# o baixador de videos tem repositorio proprio
+baixador-videos/
+
+# build local do Netlify
+dist/

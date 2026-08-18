@@ -1,0 +1,15 @@
+# Faz o Netlify publicar SÓ o app de tela, não o repositório inteiro.
+#
+# O repositório tem outras coisas (draft-tracker, liga-hq, configs de servidor)
+# que não têm por que aparecer no site. Este build monta uma pasta com o
+# necessário e publica só ela.
+#
+# Renomear pra index.html deixa a URL limpa: seusite.netlify.app
+# em vez de seusite.netlify.app/tela.html
+
+[build]
+  command = "mkdir -p dist && cp tela.html dist/index.html && cp discord-screenshare.html dist/p2p.html && printf '/*\\n  Permissions-Policy: display-capture=(self)\\n' > dist/_headers"
+  publish = "dist"
+
+# A versão em malha continua acessível em /p2p.html como plano B
+# caso o servidor fique fora do ar.
