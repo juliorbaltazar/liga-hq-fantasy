@@ -239,6 +239,20 @@ function preferH264(pc){
   });
 }
 
+// O controle de congestionamento do Chrome começa baixo e sobe devagar conforme
+// recebe retorno da rede. Contra o servidor esse retorno é mais fraco que numa
+// conexão navegador-a-navegador, então ele ficava travado em ~2 Mbps.
+// Estes parâmetros dão um piso e um ponto de partida altos.
+function boostBitrate(sdp,kbps){
+  const min=Math.round(kbps*0.5), start=Math.round(kbps*0.8);
+  return sdp.replace(/^a=fmtp:(\d+) (.+)$/gm,(line,pt,params)=>{
+    if(/x-google-start-bitrate/.test(params)) return line;
+    // só nos codecs de vídeo (têm profile-level-id ou profile-id)
+    if(!/profile-level-id|profile-id/.test(params)) return line;
+    return `a=fmtp:${pt} ${params};x-google-start-bitrate=${start};x-google-min-bitrate=${min};x-google-max-bitrate=${kbps}`;
+  });
+}
+
 async function sdpExchange(url,offerSdp){
   const r=await fetch(url,{method:"POST",headers:{"Content-Type":"application/sdp"},body:offerSdp});
   if(!r.ok) throw new Error(`servidor respondeu ${r.status}`);
@@ -251,7 +265,8 @@ async function whipPublish(stream,path){
   preferH264(pc);
   await pc.setLocalDescription(await pc.createOffer());
   await waitIce(pc);
-  const answer=await sdpExchange(`${SERVER}/${path}/whip`,pc.localDescription.sdp);
+  const sdp=boostBitrate(pc.localDescription.sdp, Math.round(quality().bitrate/1000));
+  const answer=await sdpExchange(`${SERVER}/${path}/whip`,sdp);
   await pc.setRemoteDescription({type:"answer",sdp:answer});
   applyBitrate(pc);
   return pc;
@@ -283,9 +298,11 @@ function applyBitrate(pc){
       p.encodings[0].maxBitrate=q.bitrate;
       p.encodings[0].maxFramerate=q.fps;
     }else p.encodings[0].maxBitrate=96_000;
-    // prioridade baixa: o roteador deixa os pacotes do jogo passarem na frente
+    // DSCP baixo continua (ajuda o ping do jogo no roteador), mas SEM priority:"low":
+    // com um stream só, aquilo fazia o alocador do Chrome segurar a banda e a
+    // imagem ficava borrada — era sobra da época da malha, onde havia N streams
+    // competindo entre si.
     p.encodings[0].networkPriority="low";
-    p.encodings[0].priority="low";
     s.setParameters(p).catch(()=>{});
   });
 }
