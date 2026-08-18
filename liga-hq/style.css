@@ -126,6 +126,38 @@ main{padding:16px 18px 0}
 .picklinks a:hover{background:color-mix(in srgb,var(--wr) 10%,transparent)}
 
 /* ---- Escalação (lineup analyzer) ---- */
+.scoreSim{padding:13px 15px;border-top:1px solid var(--line)}
+.simBar{display:flex;height:22px;border:1px solid var(--line-strong);overflow:hidden;margin:10px 0 8px}
+.simMe{background:var(--accent);display:flex;align-items:center;justify-content:center;color:#fff;
+  font-size:10.5px;font-weight:800;font-variant-numeric:tabular-nums}
+.simOpp{background:var(--panel2);display:flex;align-items:center;justify-content:center;color:var(--dim);
+  font-size:10.5px;font-weight:800;font-variant-numeric:tabular-nums}
+.simVerdict{font-size:13.5px;line-height:1.6}
+.simVerdict b{color:var(--ink)}
+.simTag{display:inline-block;font-size:9.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;
+  padding:2px 8px;border:1px solid;margin-bottom:8px}
+.simTag.fav{color:var(--good);border-color:var(--good)}
+.simTag.dog{color:var(--bad);border-color:var(--bad)}
+.simTag.even{color:var(--accent2);border-color:var(--accent2)}
+
+.oppRow{display:flex;align-items:center;gap:10px;padding:9px 15px;border-bottom:1px solid var(--line);font-size:13px}
+.oppRow:last-child{border-bottom:none}
+.oppRow .slotTag{min-width:38px;text-align:center}
+.oppRow .nm{font-size:13.5px}
+.oppRow .weak{margin-left:auto;font-size:10.5px;color:var(--bad);border:1px solid var(--bad);padding:2px 7px;flex-shrink:0}
+.oppRow .strong{margin-left:auto;font-size:10.5px;color:var(--good);border:1px solid var(--good);padding:2px 7px;flex-shrink:0}
+
+.trackRow{display:grid;grid-template-columns:52px 1fr auto auto;gap:10px;align-items:center;
+  padding:9px 15px;border-bottom:1px solid var(--line);font-size:13px}
+.trackRow:last-child{border-bottom:none}
+.trackWk{font-size:10.5px;color:var(--dimmer);font-weight:700}
+.trackPts{font-variant-numeric:tabular-nums;font-weight:700;min-width:52px;text-align:right}
+.trackHit{font-size:10px;font-weight:800;padding:2px 7px;border:1px solid}
+.trackHit.ok{color:var(--good);border-color:var(--good)}
+.trackHit.miss{color:var(--bad);border-color:var(--bad)}
+.trackHit.pending{color:var(--dimmer);border-color:var(--line)}
+.trackSummary{padding:12px 15px;font-size:13.5px;line-height:1.6;border-bottom:1px solid var(--line)}
+
 .vsbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 15px;flex-wrap:wrap}
 .vsside{display:flex;align-items:center;gap:9px;min-width:0}
 .vsname{font-weight:800;font-size:14px}
