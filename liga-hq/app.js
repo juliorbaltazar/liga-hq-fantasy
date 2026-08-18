@@ -165,16 +165,73 @@ function setStatus(text, isErr){
 
 function renderAll(){
   renderLineup();
-  renderByes();
   renderStandings();
   renderMeuTime();
   renderWaivers();
   renderLesoes();
   renderUsage();
+  renderSidebar();
+}
+
+// ---- painel lateral: resumo compacto do que importa sem abrir aba nenhuma ----
+function renderSidebar(){
+  renderSideRecord();
+  renderByes();       // agora escreve no cartão lateral
+  renderSideAlerts();
+}
+
+function renderSideRecord(){
+  const el=$("#sideRecord"); if(!el) return;
+  const r=myRoster(); if(!r){ el.innerHTML=""; return; }
+  const s=r.settings||{};
+  const pts=((s.fpts||0)+(s.fpts_decimal||0)/100).toFixed(1);
+  const faab=100-(s.waiver_budget_used||0);
+
+  // posição na divisão
+  const mine=(state.rosters||[]).filter(x=>(x.settings||{}).division===s.division)
+    .sort((a,b)=>((b.settings||{}).wins||0)-((a.settings||{}).wins||0)
+      || (((b.settings||{}).fpts||0)-((a.settings||{}).fpts||0)));
+  const pos=mine.findIndex(x=>x.roster_id===r.roster_id)+1;
+  const divName=(state.league?.metadata||{})["division_"+s.division] || "divisão";
+
+  el.innerHTML=`<div class="mini">
+    <div class="miniHd"><span>First Down Syndrome</span></div>
+    <div class="miniBd">
+      <div class="miniStat"><span class="lbl">recorde</span><span class="val">${s.wins||0}-${s.losses||0}${s.ties?"-"+s.ties:""}</span></div>
+      <div class="miniStat"><span class="lbl">pontos</span><span class="val">${pts}</span></div>
+      <div class="miniStat"><span class="lbl">${divName}</span><span class="val">${pos>0?pos+"º":"—"}</span></div>
+      <div class="miniStat"><span class="lbl">FAAB restante</span><span class="val">$${faab}</span></div>
+    </div>
+  </div>`;
+}
+
+function renderSideAlerts(){
+  const el=$("#sideAlerts"); if(!el) return;
+  const r=myRoster(); if(!r){ el.innerHTML=""; return; }
+
+  const hurt=(r.players||[]).map(id=>({id, ...pl(id)})).filter(p=>p.ist);
+  const items=[];
+
+  if(hurt.length){
+    hurt.slice(0,4).forEach(p=>{
+      const low=(p.ist||"").toLowerCase();
+      const cls = low.includes("out")||low.includes("ir")||low.includes("pup") ? "crit" : "warn";
+      items.push(`<div class="miniAlert ${cls}"><b>${p.n}</b> — ${p.ist}${p.ibp&&p.ibp!=="Undisclosed"?" ("+p.ibp+")":""}</div>`);
+    });
+    if(hurt.length>4) items.push(`<div class="miniAlert">+${hurt.length-4} outros com status</div>`);
+  }else{
+    items.push(`<div class="miniAlert ok">Nenhum jogador do elenco com status de lesão.</div>`);
+  }
+
+  el.innerHTML=`<div class="mini">
+    <div class="miniHd"><span>Alertas</span><span>${hurt.length}</span></div>
+    <div class="miniBd">${items.join("")}</div>
+    <button class="miniMore" data-goto="time">ver elenco completo →</button>
+  </div>`;
 }
 
 function renderStandings(){
-  const wrap=$("#tabStandings");
+  const wrap=$("#paneStandings");
   const meta=state.league.metadata||{};
   const divNames={1:meta.division_1, 2:meta.division_2, 3:meta.division_3};
   const divAvatars={1:meta.division_1_avatar, 2:meta.division_2_avatar, 3:meta.division_3_avatar};
@@ -223,7 +280,7 @@ function renderStandings(){
 }
 
 function renderMeuTime(){
-  const wrap=$("#tabTime");
+  const wrap=$("#paneRoster");
   const r=myRoster();
   if(!r){ wrap.innerHTML='<div class="loading">Não achei seu roster nessa liga.</div>'; return; }
   const s=r.settings||{};
@@ -256,7 +313,7 @@ function renderMeuTime(){
 }
 
 function renderWaivers(){
-  const wrap=$("#tabWaivers");
+  const wrap=$("#paneWaivers");
   const owned=new Set();
   (state.rosters||[]).forEach(r=>(r.players||[]).forEach(id=>owned.add(id)));
 
@@ -491,120 +548,63 @@ const LINEUP = {
 const LINEUP_REQUIREMENTS = {QB:1, RB:2, WR:2, TE:1, K:1, DEF:1};  // FLEX conta à parte
 
 function renderByes(){
-  const wrap=$("#tabByes");
+  const wrap=$("#sideByes");
+  if(!wrap) return;
   const snap=state.snapshot;
   if(!snap || !snap.bye_weeks){
-    wrap.innerHTML=`<div class="card"><div class="insightsMeta">sem dados de bye ainda</div>
-      <div class="insightsBody">O mapa de byes vem do snapshot diário (calendário completo da NFL).
-      Se estiver vazio, é porque a coleta ainda não rodou.</div></div>`;
+    wrap.innerHTML=`<div class="mini"><div class="miniHd"><span>Byes</span></div>
+      <div class="miniBd"><div class="miniEmpty">Mapa de byes ainda não coletado.</div></div></div>`;
     return;
   }
 
-  // Roda a partir do snapshot (arquivo local), não da API — assim a aba funciona mesmo se
-  // a API do Sleeper estiver lenta ou fora do ar.
+  // Sempre do elenco ao vivo quando houver (o usuário troca jogadores); o snapshot é o fallback.
   const snapRoster=(snap.rosters||[]).find(r=>r.owner_id===MY_USER_ID);
   const r=myRoster()||snapRoster;
-  if(!r){
-    wrap.innerHTML=`<div class="card"><div class="insightsBody">Não achei seu elenco no snapshot.</div></div>`;
-    return;
-  }
+  if(!r){ wrap.innerHTML=""; return; }
 
-  const byes=snap.bye_weeks;
-  const snapPlayers=snap.players||{};
+  const byes=snap.bye_weeks, snapPlayers=snap.players||{};
   const roster=(r.players||[]).map(id=>{
     const sp=snapPlayers[id];
     const info = sp ? {n:sp.n, p:sp.p, tm:sp.tm, isDef:false} : displayName(id);
     const team=info.isDef||!info.tm ? id : info.tm;
-    return {id, name:info.n, pos:info.p||"DEF", team, bye:byes[team]||null};
+    return {name:info.n, pos:info.p||"DEF", team, bye:byes[team]||null};
   });
 
-  // agrupa por semana de bye
   const byWeek={};
   roster.forEach(p=>{ if(p.bye) (byWeek[p.bye]=byWeek[p.bye]||[]).push(p); });
-
-  // conta quantos você tem por posição pra saber se sobra gente na semana
   const totalByPos={};
   roster.forEach(p=>{ totalByPos[p.pos]=(totalByPos[p.pos]||0)+1; });
 
-  const weeks=Object.keys(byWeek).map(Number).sort((a,b)=>a-b);
-  if(!weeks.length){
-    wrap.innerHTML=`<div class="card"><div class="insightsBody">Nenhum bye detectado no elenco.</div></div>`;
-    return;
-  }
+  const curWeek=(snap.nfl_state||{}).season_type==="regular" ? (snap.nfl_state||{}).week||0 : 0;
 
-  const cards=weeks.map(wk=>{
-    const outList=byWeek[wk];
-    // quantos sobram por posição nessa semana
-    const outByPos={};
-    outList.forEach(p=>{ outByPos[p.pos]=(outByPos[p.pos]||0)+1; });
-
-    const problems=[];
+  // só interessa a semana em que a formação não fecha
+  const gaps=Object.keys(byWeek).map(Number).sort((a,b)=>a-b).map(wk=>{
+    const out={};
+    byWeek[wk].forEach(p=>{ out[p.pos]=(out[p.pos]||0)+1; });
+    const probs=[];
     Object.keys(LINEUP_REQUIREMENTS).forEach(pos=>{
-      const need=LINEUP_REQUIREMENTS[pos];
-      const have=(totalByPos[pos]||0)-(outByPos[pos]||0);
-      if(have<need){
-        problems.push({pos, need, have, gap:need-have});
-      }
+      const need=LINEUP_REQUIREMENTS[pos], have=(totalByPos[pos]||0)-(out[pos]||0);
+      if(have<need) probs.push({pos, have, need});
     });
-
-    const sev = problems.length ? (problems.some(p=>p.have===0) ? "crit" : "warn") : "ok";
-    const sevTag = sev==="crit"
-      ? `<span class="verdict sit">precisa agir</span>`
-      : sev==="warn" ? `<span class="verdict risky">atenção</span>`
-      : `<span class="verdict start">tranquilo</span>`;
-
-    const players=outList.map(p=>
-      `<span class="metric"><b>${p.name}</b> ${p.pos}·${p.team}</span>`).join("");
-
-    let diagnosis;
-    if(!problems.length){
-      diagnosis=`Você tem reserva suficiente em todas as posições nessa semana — dá pra cobrir sem mexer no elenco.`;
-    }else{
-      const parts=problems.map(p=>{
-        if(p.have===0) return `fica com <b>zero ${p.pos}</b> (precisa de ${p.need})`;
-        return `fica com ${p.have} ${p.pos} pra ${p.need} vagas`;
-      });
-      diagnosis=`<b>Problema:</b> ${parts.join(" e ")}. `
-        + (sev==="crit"
-          ? `Sem ninguém na posição, o sistema escala vazio e você perde os pontos daquela vaga inteira — precisa
-             buscar um substituto no waiver com pelo menos 1-2 semanas de antecedência (quem espera a semana chegar
-             pega o que sobrou).`
-          : `Dá pra sobreviver, mas vai escalar seu pior reserva. Se aparecer alguém bom no waiver antes dessa
-             semana, vale segurar pensando nela.`);
-    }
-
-    return `<div class="slotRow">
-      <div class="slotHd">
-        <span class="slotTag">Semana ${wk}</span>
-        <span class="nm">${outList.length} ${outList.length===1?"jogador":"jogadores"} em bye</span>
-        ${sevTag}
-      </div>
-      <div class="slotMeta">${players}</div>
-      <div class="slotWhy">${diagnosis}</div>
-    </div>`;
-  }).join("");
-
-  const crit=weeks.filter(wk=>{
-    const outByPos={};
-    byWeek[wk].forEach(p=>{ outByPos[p.pos]=(outByPos[p.pos]||0)+1; });
-    return Object.keys(LINEUP_REQUIREMENTS).some(pos=>
-      ((totalByPos[pos]||0)-(outByPos[pos]||0)) < LINEUP_REQUIREMENTS[pos]);
+    return {wk, players:byWeek[wk], probs};
   });
 
-  const header = crit.length
-    ? `<div class="insightsBody" style="border-bottom:1px solid var(--line)">
-        <b>Semanas que exigem preparação:</b> ${crit.map(w=>"semana "+w).join(", ")}. Nessas datas seu elenco não
-        cobre a formação inteira — o ideal é resolver via waiver <b>antes</b> da semana chegar, porque quando ela
-        chega todo mundo da liga está atrás do mesmo tipo de reposição. Detalhe de cada uma abaixo.
-      </div>`
-    : `<div class="insightsBody" style="border-bottom:1px solid var(--line)">
-        Seu elenco cobre todas as semanas de bye sem furo de formação. Nada urgente a fazer.
-      </div>`;
+  const problem=gaps.filter(g=>g.probs.length && g.wk>=curWeek);
+  const rows = problem.length
+    ? problem.slice(0,4).map(g=>{
+        const crit=g.probs.some(p=>p.have===0);
+        const txt=g.probs.map(p=>p.have===0?`sem ${p.pos}`:`${p.have} ${p.pos} p/ ${p.need}`).join(", ");
+        return `<div class="miniAlert ${crit?"crit":"warn"}"><b>Semana ${g.wk}</b> — ${txt}
+          <span class="miniEmpty" style="display:block">${g.players.map(p=>p.name).join(", ")}</span></div>`;
+      }).join("")
+    : `<div class="miniAlert ok">Seu elenco cobre todos os byes sem furo de formação.</div>`;
 
-  wrap.innerHTML=`<div class="card">
-    <div class="hd"><span>Byes do elenco</span><span>${weeks.length} semanas afetadas</span></div>
-    ${header}
-    ${cards}
+  const next=gaps.find(g=>g.wk>=curWeek);
+  const hd = next ? `próximo: semana ${next.wk}` : "";
+
+  wrap.innerHTML=`<div class="mini">
+    <div class="miniHd"><span>Byes</span><span>${hd}</span></div>
+    <div class="miniBd">${rows}</div>
   </div>`;
 }
 
@@ -801,7 +801,7 @@ function renderInjuryCheckHTML(){
 }
 
 function renderLesoes(){
-  const wrap=$("#tabLesoes");
+  const wrap=$("#paneInjuries");
   const rows=[];
   (state.rosters||[]).forEach(r=>{
     (r.players||[]).forEach(id=>{
@@ -831,7 +831,7 @@ function renderLesoes(){
 }
 
 function renderUsage(){
-  const wrap=$("#tabUsage");
+  const wrap=$("#paneUsage");
   const r=myRoster();
   if(!r){ wrap.innerHTML='<div class="loading">Sem roster.</div>'; return; }
 
@@ -868,7 +868,7 @@ function renderUsage(){
 }
 
 function renderInsights(){
-  const wrap=$("#tabInsights");
+  const wrap=$("#paneInsights");
   wrap.innerHTML=`
     <div class="card">
       <div class="insightsMeta">atualizado 17/08/2026 · pré-temporada, semana 2</div>
@@ -961,7 +961,7 @@ const HOT_WAIVERS_NOTE = `Pesquisei de novo em 17/08/2026, incluindo fontes de a
   que a temporada regular começar, volto a atualizar com mais frequência.`;
 
 function renderHotWaivers(){
-  const wrap=$("#tabHotWaivers");
+  const wrap=$("#paneHotWaivers");
   if(!HOT_WAIVERS.length){
     wrap.innerHTML=`<div class="card">
       <div class="insightsMeta">nenhum pick recomendado agora</div>
@@ -1007,14 +1007,23 @@ function renderHotWaivers(){
 renderHotWaivers();
 renderLineup();
 
+const TAB_MAP={lineup:"tabLineup", time:"tabTime", liga:"tabLiga", analises:"tabAnalises"};
+
+function goToTab(name){
+  const id=TAB_MAP[name]; if(!id) return;
+  document.querySelectorAll(".tabBtn").forEach(b=>b.classList.toggle("on", b.dataset.tab===name));
+  document.querySelectorAll("main > section").forEach(s=>s.hidden = s.id!==id);
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+
 document.querySelectorAll(".tabBtn").forEach(btn=>{
-  btn.addEventListener("click",()=>{
-    document.querySelectorAll(".tabBtn").forEach(b=>b.classList.remove("on"));
-    btn.classList.add("on");
-    document.querySelectorAll("main > div").forEach(d=>d.hidden=true);
-    const map={lineup:"tabLineup",standings:"tabStandings",time:"tabTime",waivers:"tabWaivers",byes:"tabByes",hotwaivers:"tabHotWaivers",lesoes:"tabLesoes",usage:"tabUsage",insights:"tabInsights"};
-    $("#"+map[btn.dataset.tab]).hidden=false;
-  });
+  btn.addEventListener("click",()=>goToTab(btn.dataset.tab));
+});
+
+// atalhos dos cartões da lateral
+document.addEventListener("click", e=>{
+  const b=e.target.closest("[data-goto]");
+  if(b) goToTab(b.dataset.goto);
 });
 
 $("#refreshBtn").addEventListener("click", loadAll);

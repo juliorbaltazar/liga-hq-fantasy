@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Liga HQ · The Heads League</title>
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 <header>
@@ -14,14 +14,9 @@
   </div>
   <div class="tabs">
     <button class="tabBtn on" data-tab="lineup">Escalação</button>
-    <button class="tabBtn" data-tab="standings">Classificação</button>
     <button class="tabBtn" data-tab="time">Meu Time</button>
-    <button class="tabBtn" data-tab="waivers">Waivers</button>
-    <button class="tabBtn" data-tab="byes">Byes</button>
-    <button class="tabBtn" data-tab="hotwaivers">Hot Waivers</button>
-    <button class="tabBtn" data-tab="lesoes">Lesões</button>
-    <button class="tabBtn" data-tab="usage">Targets/Snaps</button>
-    <button class="tabBtn" data-tab="insights">Insights</button>
+    <button class="tabBtn" data-tab="liga">Liga</button>
+    <button class="tabBtn" data-tab="analises">Análises</button>
   </div>
 </header>
 
@@ -30,25 +25,44 @@
   <button class="refreshBtn" id="refreshBtn">↻ atualizar</button>
 </div>
 
-<main>
-  <div id="tabLineup"></div>
-  <div id="tabStandings" hidden></div>
-  <div id="tabTime" hidden></div>
-  <div id="tabWaivers" hidden></div>
-  <div id="tabByes" hidden></div>
-  <div id="tabHotWaivers" hidden></div>
-  <div id="tabLesoes" hidden></div>
-  <div id="tabUsage" hidden></div>
-  <div id="tabInsights" hidden></div>
-</main>
+<div class="layout">
+  <main>
+    <!-- ESCALAÇÃO: confronto, escalação recomendada, adversário, banco, registro -->
+    <section id="tabLineup"></section>
+
+    <!-- MEU TIME: elenco + lesões + uso -->
+    <section id="tabTime" hidden>
+      <div id="paneRoster"></div>
+      <div id="paneInjuries"></div>
+      <div id="paneUsage"></div>
+    </section>
+
+    <!-- LIGA: classificação + movimentações -->
+    <section id="tabLiga" hidden>
+      <div id="paneStandings"></div>
+      <div id="paneWaivers"></div>
+    </section>
+
+    <!-- ANÁLISES: insights + hot waivers -->
+    <section id="tabAnalises" hidden>
+      <div id="paneInsights"></div>
+      <div id="paneHotWaivers"></div>
+    </section>
+  </main>
+
+  <aside id="sidebar">
+    <div id="sideRecord"></div>
+    <div id="sideByes"></div>
+    <div id="sideAlerts"></div>
+  </aside>
+</div>
 
 <footer>
-  Dados ao vivo da API pública do Sleeper (liga "The Heads League"). Elenco/lesões/targets/classificação atualizam a
-  cada carregamento (ou no botão ↻); a base de jogadores fica em cache local por até 24h. A aba <b>Escalação</b> é
-  recalculada todo dia com dados de uso, projeção e força da defesa adversária, mais o parecer analítico de cada
-  escolha. As abas <b>Hot Waivers</b>, <b>Lesões</b> (checagem manual) e <b>Insights</b> são preenchidas à mão.
+  Dados ao vivo da API pública do Sleeper (liga "The Heads League"). A aba <b>Escalação</b> é recalculada todo dia
+  com uso, projeção, força da defesa adversária e o parecer de cada escolha. O painel lateral resume recorde,
+  próximos byes e alertas. <b>Análises</b> e a checagem de lesões são curadas diariamente.
 </footer>
 
-<script src="app.js?v=4"></script>
+<script src="app.js?v=5"></script>
 </body>
 </html>

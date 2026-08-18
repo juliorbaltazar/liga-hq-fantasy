@@ -23,8 +23,43 @@
 html,body{margin:0;background:var(--bg);color:var(--ink)}
 body{
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-  max-width:900px;margin:0 auto;padding:0 0 60px;min-height:100vh
+  max-width:1180px;margin:0 auto;padding:0 0 60px;min-height:100vh
 }
+
+/* duas colunas: conteúdo principal + resumo lateral compacto */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:18px;padding:16px 18px 0;align-items:start}
+.layout main{min-width:0}
+#sidebar{position:sticky;top:96px;display:flex;flex-direction:column;gap:12px}
+@media (max-width:860px){
+  .layout{grid-template-columns:minmax(0,1fr);padding:14px 14px 0}
+  #sidebar{position:static;order:-1}
+}
+
+/* cartões compactos da lateral */
+.mini{background:var(--panel);border:1px solid var(--line-strong)}
+.mini .miniHd{padding:8px 12px;border-bottom:1px solid var(--line-strong);background:var(--panel2);
+  font-size:10px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--ink);
+  display:flex;justify-content:space-between;align-items:center;gap:6px}
+.mini .miniBd{padding:10px 12px}
+.miniStat{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:6px}
+.miniStat:last-child{margin-bottom:0}
+.miniStat .lbl{font-size:11px;color:var(--dim)}
+.miniStat .val{font-size:15px;font-weight:800;font-variant-numeric:tabular-nums}
+.miniLine{display:flex;align-items:center;gap:7px;font-size:12px;padding:5px 0;border-bottom:1px solid var(--line)}
+.miniLine:last-child{border-bottom:none}
+.miniLine .nm{font-size:12px;font-weight:700}
+.miniLine .tm{font-size:10px}
+.miniWk{font-size:10px;font-weight:800;color:var(--dim);min-width:26px}
+.miniEmpty{font-size:11.5px;color:var(--dimmer);line-height:1.5}
+.miniAlert{font-size:11.5px;line-height:1.55;padding:7px 0;border-bottom:1px solid var(--line)}
+.miniAlert:last-child{border-bottom:none}
+.miniAlert b{color:var(--ink)}
+.miniAlert.crit{color:var(--bad)}
+.miniAlert.warn{color:var(--accent2)}
+.miniAlert.ok{color:var(--good)}
+.miniMore{display:block;width:100%;background:none;border:none;border-top:1px solid var(--line);
+  padding:7px;font-size:10.5px;font-weight:700;color:var(--dim);text-transform:uppercase;letter-spacing:.05em}
+.miniMore:hover{background:var(--panel2);color:var(--ink)}
 .serif{font-family:Georgia,"Iowan Old Style","Palatino Linotype",Palatino,serif}
 .mono{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-variant-numeric:tabular-nums}
 button{cursor:pointer;font-family:inherit}
@@ -47,7 +82,8 @@ header{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:3px s
 .status .refreshBtn{background:var(--panel);border:1px solid var(--line-strong);color:var(--ink);padding:5px 12px;font-size:11px;font-weight:700}
 .status .err{color:var(--bad)}
 
-main{padding:16px 18px 0}
+/* seções internas de uma aba, com espaçamento entre blocos */
+main > section > div + div{margin-top:0}
 
 .card{background:var(--panel);border:1px solid var(--line-strong);margin-bottom:16px;overflow:hidden}
 .card .hd{padding:11px 15px;border-bottom:2px solid var(--line-strong);font-size:12px;font-weight:700;letter-spacing:.05em;
