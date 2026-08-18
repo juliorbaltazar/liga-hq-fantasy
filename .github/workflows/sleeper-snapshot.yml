@@ -21,12 +21,6 @@ jobs:
           curl -sf "https://api.sleeper.app/v1/league/${LEAGUE_ID}/rosters" -o /tmp/rosters.json
           curl -sf "https://api.sleeper.app/v1/league/${LEAGUE_ID}/users" -o /tmp/users.json
 
-      - name: Fetch current-week matchups
-        run: |
-          LEAGUE_ID="1312228455764492288"
-          WEEK=$(python3 -c "import json;print(json.load(open('/tmp/state.json'))['week'])")
-          curl -sf "https://api.sleeper.app/v1/league/${LEAGUE_ID}/matchups/${WEEK}" -o /tmp/matchups.json || echo "[]" > /tmp/matchups.json
-
       - name: Fetch full player DB and trim to rostered players
         run: |
           curl -sf "https://api.sleeper.app/v1/players/nfl" -o /tmp/players_full.json
@@ -61,26 +55,45 @@ jobs:
           print(f"Rostered players: {len(rostered_ids)}, trimmed entries written: {len(trimmed)}")
           PYEOF
 
-      - name: Fetch NFL schedule (who each team plays this week)
+      - name: Resolve target week (preseason analyses point at regular-season week 1)
+        run: |
+          python3 - <<'PYEOF'
+          import json
+          state = json.load(open("/tmp/state.json"))
+          # During preseason the league doesn't score, so every analysis should aim at
+          # regular-season week 1 — that's the first week that actually counts.
+          if state["season_type"] == "regular":
+              target = {"week": state["week"], "season_type": "regular"}
+          else:
+              target = {"week": 1, "season_type": "regular"}
+          target["season"] = state["season"]
+          json.dump(target, open("/tmp/target.json", "w"))
+          print("target:", target)
+          PYEOF
+
+      - name: Fetch target-week league matchups
+        run: |
+          LEAGUE_ID="1312228455764492288"
+          TW=$(python3 -c "import json;print(json.load(open('/tmp/target.json'))['week'])")
+          curl -sf "https://api.sleeper.app/v1/league/${LEAGUE_ID}/matchups/${TW}" -o /tmp/matchups.json || echo "[]" > /tmp/matchups.json
+
+      - name: Fetch NFL schedule for target week + full-season bye map
         run: |
           python3 - <<'PYEOF'
           import json, urllib.request
 
-          state = json.load(open("/tmp/state.json"))
-          season = state["season"]
-          week = state["week"]
-          stype = state["season_type"]
+          target = json.load(open("/tmp/target.json"))
+          season, tweek = target["season"], target["week"]
 
-          # ESPN's public scoreboard endpoint gives the week's games (home/away per team).
-          # seasontype: 1=preseason, 2=regular, 3=postseason
-          espn_stype = {"pre": 1, "regular": 2, "post": 3}.get(stype, 2)
-          url = (f"https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard"
-                 f"?dates={season}&seasontype={espn_stype}&week={week}")
+          BASE = ("https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard"
+                  "?dates={season}&seasontype=2&week={wk}")
 
-          schedule = {}
-          try:
-              with urllib.request.urlopen(url, timeout=30) as r:
-                  data = json.loads(r.read().decode())
+          def fetch_week(wk):
+              with urllib.request.urlopen(BASE.format(season=season, wk=wk), timeout=30) as r:
+                  return json.loads(r.read().decode())
+
+          def games_of(data):
+              out = {}
               for ev in data.get("events", []):
                   comp = (ev.get("competitions") or [{}])[0]
                   teams = comp.get("competitors", [])
@@ -94,13 +107,43 @@ jobs:
                   a = (away.get("team") or {}).get("abbreviation")
                   if not h or not a:
                       continue
-                  schedule[h] = {"opp": a, "home": True, "kickoff": ev.get("date")}
-                  schedule[a] = {"opp": h, "home": False, "kickoff": ev.get("date")}
-              print(f"Schedule entries: {len(schedule)}")
+                  out[h] = {"opp": a, "home": True, "kickoff": ev.get("date")}
+                  out[a] = {"opp": h, "home": False, "kickoff": ev.get("date")}
+              return out
+
+          schedule = {}
+          try:
+              schedule = games_of(fetch_week(tweek))
+              print(f"Target-week ({tweek}) schedule entries: {len(schedule)}")
           except Exception as e:
-              print(f"Schedule fetch failed ({e}) — continuing without it.")
+              print(f"Target-week schedule fetch failed ({e})")
+
+          # Walk the whole regular season to find each team's bye week (the week they don't appear).
+          # 2026 regular season runs 18 weeks; teams play 17 games, so exactly one week is a bye.
+          byes, weeks_seen = {}, 0
+          all_teams = set()
+          played = {}
+          try:
+              for wk in range(1, 19):
+                  g = games_of(fetch_week(wk))
+                  if not g:
+                      continue
+                  weeks_seen += 1
+                  all_teams.update(g.keys())
+                  for t in g:
+                      played.setdefault(t, set()).add(wk)
+              for t in all_teams:
+                  missing = [w for w in range(1, weeks_seen + 1) if w not in played.get(t, set())]
+                  if len(missing) == 1:
+                      byes[t] = missing[0]
+                  elif missing:
+                      byes[t] = missing[0]
+              print(f"Bye weeks resolved for {len(byes)} teams across {weeks_seen} weeks")
+          except Exception as e:
+              print(f"Bye map build failed ({e}) — continuing without it.")
 
           json.dump(schedule, open("/tmp/schedule.json", "w"))
+          json.dump(byes, open("/tmp/byes.json", "w"))
           PYEOF
 
       - name: Compute defense fantasy-points-allowed by position
@@ -109,42 +152,60 @@ jobs:
           import json, urllib.request
 
           state = json.load(open("/tmp/state.json"))
-          season = state["season"]
-          week = state["week"]
-          stype = state["season_type"]
+          season, week, stype = state["season"], state["week"], state["season_type"]
+          prev = state.get("previous_season")
 
-          # Aggregate every completed week so far this season. Sleeper's DEF stat rows carry
-          # fan_pts_allow_{qb,rb,wr,te,k} — how many fantasy points that defense gave up to
-          # each position. Averaging across weeks gives a matchup-difficulty profile.
           POS_KEYS = ["qb", "rb", "wr", "te", "k"]
-          totals = {}   # team -> {pos: [values]}
 
-          for w in range(1, max(week, 1) + 1):
-              url = f"https://api.sleeper.app/v1/stats/nfl/{stype}/{season}/{w}"
-              try:
-                  with urllib.request.urlopen(url, timeout=60) as r:
-                      wk = json.loads(r.read().decode())
-              except Exception as e:
-                  print(f"week {w} stats fetch failed: {e}")
-                  continue
-              for pid, s in (wk or {}).items():
-                  if not isinstance(s, dict):
+          def collect(season_year, season_type, weeks):
+              """Average fan_pts_allow_* per defense across the given weeks."""
+              totals = {}
+              sampled = 0
+              for w in weeks:
+                  url = f"https://api.sleeper.app/v1/stats/nfl/{season_type}/{season_year}/{w}"
+                  try:
+                      with urllib.request.urlopen(url, timeout=60) as r:
+                          wk = json.loads(r.read().decode())
+                  except Exception as e:
+                      print(f"  {season_year} {season_type} wk{w} failed: {e}")
                       continue
-                  # DEF rows are keyed by team abbreviation (e.g. "PIT")
-                  if not (pid.isalpha() and pid.isupper() and 2 <= len(pid) <= 3):
-                      continue
-                  if not any(f"fan_pts_allow_{p}" in s for p in POS_KEYS):
-                      continue
-                  bucket = totals.setdefault(pid, {p: [] for p in POS_KEYS})
-                  for p in POS_KEYS:
-                      v = s.get(f"fan_pts_allow_{p}")
-                      if v is not None:
-                          bucket[p].append(float(v))
+                  got = False
+                  for pid, s in (wk or {}).items():
+                      if not isinstance(s, dict):
+                          continue
+                      # DEF rows are keyed by team abbreviation (e.g. "PIT")
+                      if not (pid.isalpha() and pid.isupper() and 2 <= len(pid) <= 3):
+                          continue
+                      if not any(f"fan_pts_allow_{p}" in s for p in POS_KEYS):
+                          continue
+                      got = True
+                      bucket = totals.setdefault(pid, {p: [] for p in POS_KEYS})
+                      for p in POS_KEYS:
+                          v = s.get(f"fan_pts_allow_{p}")
+                          if v is not None:
+                              bucket[p].append(float(v))
+                  if got:
+                      sampled += 1
+              avg = {t: {p: (round(sum(v)/len(v), 2) if v else None) for p, v in b.items()}
+                     for t, b in totals.items()}
+              return avg, sampled
 
-          # average per position, then rank teams (rank 1 = allows the MOST = easiest matchup)
-          avg = {}
-          for team, buckets in totals.items():
-              avg[team] = {p: (round(sum(v) / len(v), 2) if v else None) for p, v in buckets.items()}
+          # A single preseason game (backups on the field) is noise. Until the current regular
+          # season has enough weeks of its own, base matchup difficulty on LAST season's full
+          # 18 weeks — a real signal for planning week 1.
+          cur_weeks = list(range(1, week + 1)) if stype == "regular" else []
+          cur_avg, cur_n = collect(season, "regular", cur_weeks) if cur_weeks else ({}, 0)
+
+          prev_avg, prev_n = ({}, 0)
+          if prev and cur_n < 4:
+              prev_avg, prev_n = collect(prev, "regular", list(range(1, 19)))
+
+          if cur_n >= 4:
+              avg, basis, sampled = cur_avg, f"temporada {season} (semanas 1-{week})", cur_n
+          elif prev_n:
+              avg, basis, sampled = prev_avg, f"temporada {prev} completa", prev_n
+          else:
+              avg, basis, sampled = cur_avg, f"temporada {season} (amostra mínima)", cur_n
 
           ranks = {}
           for p in POS_KEYS:
@@ -154,14 +215,14 @@ jobs:
                   ranks.setdefault(t, {})[p] = i
 
           out = {
-              "weeks_sampled": max(week, 1),
-              "season_type": stype,
+              "weeks_sampled": sampled,
+              "basis": basis,
               "avg_fpts_allowed": avg,
               "rank_easiest_first": ranks,
               "_note": "rank 1 = defesa que mais cede pontos fantasy nessa posição (matchup mais fácil)",
           }
           json.dump(out, open("/tmp/def_vs_pos.json", "w"))
-          print(f"Defenses profiled: {len(avg)}")
+          print(f"Defenses profiled: {len(avg)} | basis: {basis} ({sampled} semanas)")
           PYEOF
 
       - name: Compute per-player recent usage trend
@@ -298,15 +359,19 @@ jobs:
           usage = load("/tmp/usage.json", {})
           projections = load("/tmp/projections.json", {})
           baseline = load("/tmp/baseline.json", {})
+          target = load("/tmp/target.json", {})
+          byes = load("/tmp/byes.json", {})
 
           snapshot = {
               "generated_at_utc": datetime.now(timezone.utc).isoformat(),
               "nfl_state": state,
+              "target": target,
               "rosters": rosters,
               "users": users,
               "players": players,
               "matchups": matchups,
               "nfl_schedule": schedule,
+              "bye_weeks": byes,
               "def_vs_pos": def_vs_pos,
               "usage": usage,
               "projections": projections,
