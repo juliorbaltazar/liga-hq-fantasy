@@ -21,7 +21,13 @@ jobs:
           curl -sf "https://api.sleeper.app/v1/league/${LEAGUE_ID}/rosters" -o /tmp/rosters.json
           curl -sf "https://api.sleeper.app/v1/league/${LEAGUE_ID}/users" -o /tmp/users.json
 
-      - name: Fetch full player DB and trim to rostered + injured players only
+      - name: Fetch current-week matchups
+        run: |
+          LEAGUE_ID="1312228455764492288"
+          WEEK=$(python3 -c "import json;print(json.load(open('/tmp/state.json'))['week'])")
+          curl -sf "https://api.sleeper.app/v1/league/${LEAGUE_ID}/matchups/${WEEK}" -o /tmp/matchups.json || echo "[]" > /tmp/matchups.json
+
+      - name: Fetch full player DB and trim to rostered players
         run: |
           curl -sf "https://api.sleeper.app/v1/players/nfl" -o /tmp/players_full.json
           python3 - <<'PYEOF'
@@ -48,9 +54,225 @@ jobs:
                   "inote": p.get("injury_notes"),
                   "pp": p.get("practice_participation"),
                   "espn": p.get("espn_id"),
+                  "num": p.get("number"),
+                  "dc": p.get("depth_chart_order"),
               }
           json.dump(trimmed, open("/tmp/players_trimmed.json", "w"), ensure_ascii=False)
           print(f"Rostered players: {len(rostered_ids)}, trimmed entries written: {len(trimmed)}")
+          PYEOF
+
+      - name: Fetch NFL schedule (who each team plays this week)
+        run: |
+          python3 - <<'PYEOF'
+          import json, urllib.request
+
+          state = json.load(open("/tmp/state.json"))
+          season = state["season"]
+          week = state["week"]
+          stype = state["season_type"]
+
+          # ESPN's public scoreboard endpoint gives the week's games (home/away per team).
+          # seasontype: 1=preseason, 2=regular, 3=postseason
+          espn_stype = {"pre": 1, "regular": 2, "post": 3}.get(stype, 2)
+          url = (f"https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard"
+                 f"?dates={season}&seasontype={espn_stype}&week={week}")
+
+          schedule = {}
+          try:
+              with urllib.request.urlopen(url, timeout=30) as r:
+                  data = json.loads(r.read().decode())
+              for ev in data.get("events", []):
+                  comp = (ev.get("competitions") or [{}])[0]
+                  teams = comp.get("competitors", [])
+                  if len(teams) != 2:
+                      continue
+                  home = next((t for t in teams if t.get("homeAway") == "home"), None)
+                  away = next((t for t in teams if t.get("homeAway") == "away"), None)
+                  if not home or not away:
+                      continue
+                  h = (home.get("team") or {}).get("abbreviation")
+                  a = (away.get("team") or {}).get("abbreviation")
+                  if not h or not a:
+                      continue
+                  schedule[h] = {"opp": a, "home": True, "kickoff": ev.get("date")}
+                  schedule[a] = {"opp": h, "home": False, "kickoff": ev.get("date")}
+              print(f"Schedule entries: {len(schedule)}")
+          except Exception as e:
+              print(f"Schedule fetch failed ({e}) — continuing without it.")
+
+          json.dump(schedule, open("/tmp/schedule.json", "w"))
+          PYEOF
+
+      - name: Compute defense fantasy-points-allowed by position
+        run: |
+          python3 - <<'PYEOF'
+          import json, urllib.request
+
+          state = json.load(open("/tmp/state.json"))
+          season = state["season"]
+          week = state["week"]
+          stype = state["season_type"]
+
+          # Aggregate every completed week so far this season. Sleeper's DEF stat rows carry
+          # fan_pts_allow_{qb,rb,wr,te,k} — how many fantasy points that defense gave up to
+          # each position. Averaging across weeks gives a matchup-difficulty profile.
+          POS_KEYS = ["qb", "rb", "wr", "te", "k"]
+          totals = {}   # team -> {pos: [values]}
+
+          for w in range(1, max(week, 1) + 1):
+              url = f"https://api.sleeper.app/v1/stats/nfl/{stype}/{season}/{w}"
+              try:
+                  with urllib.request.urlopen(url, timeout=60) as r:
+                      wk = json.loads(r.read().decode())
+              except Exception as e:
+                  print(f"week {w} stats fetch failed: {e}")
+                  continue
+              for pid, s in (wk or {}).items():
+                  if not isinstance(s, dict):
+                      continue
+                  # DEF rows are keyed by team abbreviation (e.g. "PIT")
+                  if not (pid.isalpha() and pid.isupper() and 2 <= len(pid) <= 3):
+                      continue
+                  if not any(f"fan_pts_allow_{p}" in s for p in POS_KEYS):
+                      continue
+                  bucket = totals.setdefault(pid, {p: [] for p in POS_KEYS})
+                  for p in POS_KEYS:
+                      v = s.get(f"fan_pts_allow_{p}")
+                      if v is not None:
+                          bucket[p].append(float(v))
+
+          # average per position, then rank teams (rank 1 = allows the MOST = easiest matchup)
+          avg = {}
+          for team, buckets in totals.items():
+              avg[team] = {p: (round(sum(v) / len(v), 2) if v else None) for p, v in buckets.items()}
+
+          ranks = {}
+          for p in POS_KEYS:
+              vals = [(t, a[p]) for t, a in avg.items() if a.get(p) is not None]
+              vals.sort(key=lambda x: x[1], reverse=True)
+              for i, (t, _) in enumerate(vals, start=1):
+                  ranks.setdefault(t, {})[p] = i
+
+          out = {
+              "weeks_sampled": max(week, 1),
+              "season_type": stype,
+              "avg_fpts_allowed": avg,
+              "rank_easiest_first": ranks,
+              "_note": "rank 1 = defesa que mais cede pontos fantasy nessa posição (matchup mais fácil)",
+          }
+          json.dump(out, open("/tmp/def_vs_pos.json", "w"))
+          print(f"Defenses profiled: {len(avg)}")
+          PYEOF
+
+      - name: Compute per-player recent usage trend
+        run: |
+          python3 - <<'PYEOF'
+          import json, urllib.request
+
+          state = json.load(open("/tmp/state.json"))
+          season = state["season"]
+          week = state["week"]
+          stype = state["season_type"]
+          players = json.load(open("/tmp/players_trimmed.json"))
+
+          KEEP = ["pts_ppr", "rec_tgt", "rec", "rec_yd", "rush_att", "rush_yd",
+                  "off_snp", "tm_off_snp", "pass_att", "pass_yd", "pass_td",
+                  "rec_td", "rush_td", "rec_rz_tgt", "rush_rz_att"]
+
+          usage = {}   # pid -> [{week, ...stats}]
+          for w in range(1, max(week, 1) + 1):
+              url = f"https://api.sleeper.app/v1/stats/nfl/{stype}/{season}/{w}"
+              try:
+                  with urllib.request.urlopen(url, timeout=60) as r:
+                      wk = json.loads(r.read().decode())
+              except Exception as e:
+                  print(f"week {w} stats fetch failed: {e}")
+                  continue
+              for pid in players:
+                  s = (wk or {}).get(pid)
+                  if not isinstance(s, dict):
+                      continue
+                  row = {"week": w}
+                  for k in KEEP:
+                      if s.get(k) is not None:
+                          row[k] = s[k]
+                  snp, tm = s.get("off_snp"), s.get("tm_off_snp")
+                  if snp is not None and tm:
+                      row["snap_pct"] = round(100 * float(snp) / float(tm))
+                  if len(row) > 1:
+                      usage.setdefault(pid, []).append(row)
+
+          json.dump(usage, open("/tmp/usage.json", "w"))
+          print(f"Players with usage rows: {len(usage)}")
+          PYEOF
+
+      - name: Fetch Sleeper projections for the current week
+        run: |
+          python3 - <<'PYEOF'
+          import json, urllib.request
+
+          state = json.load(open("/tmp/state.json"))
+          season, week, stype = state["season"], state["week"], state["season_type"]
+          players = json.load(open("/tmp/players_trimmed.json"))
+
+          KEEP = ["pts_ppr", "pts_half_ppr", "rec", "rec_tgt", "rec_yd", "rec_td",
+                  "rush_att", "rush_yd", "rush_td", "pass_yd", "pass_td", "pass_int",
+                  "adp_dd_ppr", "pos_adp_dd_ppr", "gp"]
+
+          url = f"https://api.sleeper.app/v1/projections/nfl/{stype}/{season}/{week}"
+          proj = {}
+          try:
+              with urllib.request.urlopen(url, timeout=60) as r:
+                  raw = json.loads(r.read().decode())
+              for pid in players:
+                  s = (raw or {}).get(pid)
+                  if not isinstance(s, dict):
+                      continue
+                  row = {k: s[k] for k in KEEP if s.get(k) is not None}
+                  if row:
+                      proj[pid] = row
+              print(f"Projections captured: {len(proj)}")
+          except Exception as e:
+              print(f"Projection fetch failed ({e}) — continuing without it.")
+
+          json.dump(proj, open("/tmp/projections.json", "w"))
+          PYEOF
+
+      - name: Fetch previous-season per-player baseline (full-season context)
+        run: |
+          python3 - <<'PYEOF'
+          import json, urllib.request
+
+          state = json.load(open("/tmp/state.json"))
+          prev = state.get("previous_season")
+          players = json.load(open("/tmp/players_trimmed.json"))
+
+          baseline = {}
+          if prev:
+              url = f"https://api.sleeper.app/v1/stats/nfl/regular/{prev}"
+              try:
+                  with urllib.request.urlopen(url, timeout=90) as r:
+                      raw = json.loads(r.read().decode())
+                  KEEP = ["gp", "gs", "pts_ppr", "rec", "rec_tgt", "rec_yd", "rec_td",
+                          "rush_att", "rush_yd", "rush_td", "pass_yd", "pass_td",
+                          "off_snp", "tm_off_snp", "pos_rank_ppr"]
+                  for pid in players:
+                      s = (raw or {}).get(pid)
+                      if not isinstance(s, dict):
+                          continue
+                      row = {k: s[k] for k in KEEP if s.get(k) is not None}
+                      gp = row.get("gp")
+                      if gp:
+                          for per in ("pts_ppr", "rec_tgt", "rush_att"):
+                              if row.get(per) is not None:
+                                  row[f"{per}_per_game"] = round(float(row[per]) / float(gp), 2)
+                      if row:
+                          baseline[pid] = row
+                  print(f"Baseline ({prev}) captured: {len(baseline)}")
+              except Exception as e:
+                  print(f"Baseline fetch failed ({e}) — continuing without it.")
+
+          json.dump(baseline, open("/tmp/baseline.json", "w"))
           PYEOF
 
       - name: Assemble snapshot file
@@ -60,10 +282,22 @@ jobs:
           import json
           from datetime import datetime, timezone
 
+          def load(path, default):
+              try:
+                  return json.load(open(path))
+              except Exception:
+                  return default
+
           state = json.load(open("/tmp/state.json"))
           rosters = json.load(open("/tmp/rosters.json"))
           users = json.load(open("/tmp/users.json"))
           players = json.load(open("/tmp/players_trimmed.json"))
+          matchups = load("/tmp/matchups.json", [])
+          schedule = load("/tmp/schedule.json", {})
+          def_vs_pos = load("/tmp/def_vs_pos.json", {})
+          usage = load("/tmp/usage.json", {})
+          projections = load("/tmp/projections.json", {})
+          baseline = load("/tmp/baseline.json", {})
 
           snapshot = {
               "generated_at_utc": datetime.now(timezone.utc).isoformat(),
@@ -71,8 +305,15 @@ jobs:
               "rosters": rosters,
               "users": users,
               "players": players,
+              "matchups": matchups,
+              "nfl_schedule": schedule,
+              "def_vs_pos": def_vs_pos,
+              "usage": usage,
+              "projections": projections,
+              "prev_season_baseline": baseline,
           }
           json.dump(snapshot, open("liga-hq/sleeper-snapshot.json", "w"), ensure_ascii=False, indent=0)
+          print("snapshot written")
           PYEOF
 
       - name: Commit snapshot if changed
