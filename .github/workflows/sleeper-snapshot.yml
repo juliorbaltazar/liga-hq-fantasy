@@ -88,6 +88,11 @@ jobs:
           BASE = ("https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard"
                   "?dates={season}&seasontype=2&week={wk}")
 
+          # ESPN and Sleeper disagree on a few abbreviations; normalize to Sleeper's so the
+          # schedule keys line up with player teams and defense stats.
+          ABBR = {"WSH": "WAS", "LA": "LAR", "JAC": "JAX"}
+          def norm(a): return ABBR.get(a, a)
+
           def fetch_week(wk):
               with urllib.request.urlopen(BASE.format(season=season, wk=wk), timeout=30) as r:
                   return json.loads(r.read().decode())
@@ -103,8 +108,8 @@ jobs:
                   away = next((t for t in teams if t.get("homeAway") == "away"), None)
                   if not home or not away:
                       continue
-                  h = (home.get("team") or {}).get("abbreviation")
-                  a = (away.get("team") or {}).get("abbreviation")
+                  h = norm((home.get("team") or {}).get("abbreviation"))
+                  a = norm((away.get("team") or {}).get("abbreviation"))
                   if not h or not a:
                       continue
                   out[h] = {"opp": a, "home": True, "kickoff": ev.get("date")}
