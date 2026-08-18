@@ -1,1 +1,5 @@
 .DS_Store
+
+# chaves reais do LiveKit — nunca commitar
+livekit/.env
+.env

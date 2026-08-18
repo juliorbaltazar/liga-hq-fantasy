@@ -1,0 +1,25 @@
+port: 7880
+
+rtc:
+  # Uma porta UDP só, multiplexada. Bem mais simples de liberar no firewall da
+  # Oracle do que a faixa 50000-60000 que a doc às vezes sugere.
+  udp_port: 7882
+  tcp_port: 7881
+  # A VM da Oracle enxerga só o IP privado; sem isso o LiveKit anuncia um
+  # endereço que ninguém de fora alcança e a conexão nunca fecha.
+  use_external_ip: true
+
+redis:
+  address: 127.0.0.1:6379
+
+# Trocado pelo entrypoint a partir do .env — não edite à mão.
+keys:
+  API_KEY_PLACEHOLDER: API_SECRET_PLACEHOLDER
+
+logging:
+  level: info
+
+room:
+  # Sala é criada sozinha quando o primeiro entra e some quando o último sai.
+  auto_create: true
+  empty_timeout: 300

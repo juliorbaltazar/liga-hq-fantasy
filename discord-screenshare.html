@@ -11,27 +11,27 @@
     --go:#37d284; --gold:#f6c945; --hot:#ff6b5e; --accent:#57c7ff;
   }
   *{box-sizing:border-box}
-  html,body{margin:0;background:var(--bg);color:var(--txt);height:100%;
+  html,body{margin:0;background:var(--bg);color:var(--txt);height:100%;overflow:hidden;
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
   [hidden]{display:none !important}
   button{cursor:pointer;font-family:inherit}
   input,select{font-family:inherit}
 
-  #joinScreen{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
-  .joinbox{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px;width:100%;max-width:380px}
+  #joinScreen{height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;overflow:auto}
+  .joinbox{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px;width:100%;max-width:400px}
   .joinbox h1{margin:0 0 4px;font-size:20px}
   .joinbox .sub{color:var(--dim);font-size:13px;margin-bottom:20px;line-height:1.5}
   .field{margin-bottom:14px}
   .field label{display:block;font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;font-weight:700}
   .field input,.field select{width:100%;background:var(--panel2);border:1px solid var(--line);border-radius:9px;color:var(--txt);padding:10px 12px;font-size:14px}
+  .field .hint{font-size:11px;color:var(--dimmer);margin-top:5px;line-height:1.45}
   .joinbtn{width:100%;margin-top:6px;background:var(--go);border:none;color:#08130c;font-weight:800;border-radius:10px;padding:12px 0;font-size:14px}
   .joinbtn:disabled{opacity:.6}
   .err{color:var(--hot);font-size:12px;margin-top:10px;min-height:16px}
 
   #app{display:flex;flex-direction:column;height:100vh}
-  .topbar{display:flex;align-items:center;gap:10px;padding:10px 16px;border-bottom:1px solid var(--line);background:var(--panel);flex-wrap:wrap}
+  .topbar{display:flex;align-items:center;gap:10px;padding:10px 16px;border-bottom:1px solid var(--line);background:var(--panel);flex-wrap:wrap;flex:none}
   .topbar .room{font-weight:800;font-size:13px;letter-spacing:.04em;white-space:nowrap}
-  .topbar .room span{color:var(--dim);font-weight:400}
   .qualitySel{background:var(--panel2);border:1px solid var(--line);color:var(--dim);border-radius:9px;padding:8px 10px;font-size:12px;font-weight:700}
   .shareBtn{background:var(--go);border:none;color:#08130c;font-weight:800;border-radius:9px;padding:9px 16px;font-size:13px;white-space:nowrap}
   .shareBtn.on{background:var(--hot);color:#1a0805}
@@ -44,31 +44,44 @@
   .chip.sharing .dot{background:var(--go)}
   .chip.me{border-color:var(--accent);color:var(--txt)}
 
-  .grid{flex:1;position:relative;overflow:auto;padding:14px;min-height:1400px}
-  .tile{position:absolute;background:var(--panel);border:1px solid var(--line);border-radius:12px;
-    overflow:hidden;touch-action:none;box-shadow:0 4px 18px rgba(0,0,0,.35)}
-  .tile.dragging{opacity:.85;z-index:50;box-shadow:0 8px 30px rgba(0,0,0,.5)}
+  .hud{order:98;width:100%;display:flex;gap:14px;flex-wrap:wrap;align-items:center;
+    font-size:11px;color:var(--dimmer);font-variant-numeric:tabular-nums}
+  .hud b{color:var(--dim);font-weight:700}
+  .hud .warn{color:var(--gold)}
+  .hud .bad{color:var(--hot)}
+
+  .grid{flex:1;position:relative;overflow:hidden;contain:strict}
+  .tile{position:absolute;left:0;top:0;background:var(--panel);border:1px solid var(--line);border-radius:12px;
+    overflow:hidden;touch-action:none;contain:layout paint;will-change:transform}
+  .tile.dragging{opacity:.9;z-index:50;border-color:var(--accent)}
   .tile video{width:100%;height:100%;display:block;background:#000;object-fit:contain;pointer-events:none}
-  .tile .label{position:absolute;top:8px;left:8px;background:rgba(0,0,0,.6);color:#fff;font-size:11px;
-    font-weight:700;padding:4px 9px;border-radius:7px;backdrop-filter:blur(4px);cursor:move}
+  .tile .label{position:absolute;top:8px;left:8px;background:rgba(0,0,0,.72);color:#fff;font-size:11px;
+    font-weight:700;padding:4px 9px;border-radius:7px;cursor:move}
   .tilebar{position:absolute;top:8px;right:8px;display:flex;gap:6px}
-  .tilebar button{background:rgba(0,0,0,.6);border:none;color:#fff;font-size:13px;width:26px;height:26px;
-    border-radius:7px;backdrop-filter:blur(4px);line-height:1}
+  .tilebar button{background:rgba(0,0,0,.72);border:none;color:#fff;font-size:13px;width:26px;height:26px;
+    border-radius:7px;line-height:1}
+  .statbadge{position:absolute;bottom:8px;left:8px;background:rgba(0,0,0,.72);color:#9fb0c4;font-size:10px;
+    padding:3px 7px;border-radius:6px;font-variant-numeric:tabular-nums;pointer-events:none}
   .volctrl{position:absolute;bottom:8px;right:8px;display:flex;align-items:center;gap:6px;
-    background:rgba(0,0,0,.6);border-radius:7px;padding:4px 9px;backdrop-filter:blur(4px)}
+    background:rgba(0,0,0,.72);border-radius:7px;padding:4px 9px}
   .volctrl .muteBtn{background:none;border:none;color:#fff;font-size:13px;padding:0;line-height:1}
   .volctrl .volSlider{width:64px;accent-color:var(--go)}
   .resizeHandle{position:absolute;bottom:0;right:0;width:22px;height:22px;cursor:nwse-resize;
     background:linear-gradient(135deg,transparent 50%,rgba(255,255,255,.35) 50%,rgba(255,255,255,.35) 62%,transparent 62%,
       transparent 74%,rgba(255,255,255,.35) 74%,rgba(255,255,255,.35) 86%,transparent 86%)}
-  .tile:fullscreen{width:100% !important;height:100% !important;left:0 !important;top:0 !important;border-radius:0}
+  .tile:fullscreen{width:100% !important;height:100% !important;transform:none !important;border-radius:0}
   .tile:fullscreen .resizeHandle{display:none}
-  .empty{color:var(--dimmer);text-align:center;padding:60px 20px}
+  .previewOff{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:10px;text-align:center;padding:20px;color:var(--dimmer);font-size:12px;line-height:1.5}
+  .previewOff button{background:var(--panel2);border:1px solid var(--line);color:var(--dim);
+    border-radius:8px;padding:7px 14px;font-size:12px;font-weight:700}
+  .empty{color:var(--dimmer);text-align:center;padding:60px 20px;position:absolute;inset:0;display:flex;
+    flex-direction:column;justify-content:center}
   .empty b{color:var(--dim)}
 
   .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--panel2);
     border:1px solid var(--line);color:var(--txt);padding:10px 16px;border-radius:10px;font-size:13px;
-    opacity:0;pointer-events:none;transition:opacity .2s;max-width:90vw;text-align:center}
+    opacity:0;pointer-events:none;transition:opacity .2s;max-width:90vw;text-align:center;z-index:200}
   .toast.show{opacity:1}
 </style>
 </head>
@@ -77,7 +90,7 @@
 <div id="joinScreen">
   <div class="joinbox">
     <h1>🖥️ Tela Compartilhada</h1>
-    <div class="sub">Pra usar junto com a call do Discord — qualquer um pode transmitir a tela. Leve por padrão, pra não pesar enquanto vocês jogam.</div>
+    <div class="sub">Pra usar junto com a call do Discord. Otimizado pra transmitir jogo sem estourar o ping de quem está jogando.</div>
     <div class="field">
       <label>Seu nome</label>
       <input id="nameInput" placeholder="Como te chamam" autocomplete="off" maxlength="24">
@@ -91,13 +104,12 @@
   <div class="topbar">
     <div class="room">🖥️ Tela Compartilhada</div>
     <div class="spacer"></div>
-    <select id="qualitySel" class="qualitySel" title="Qualidade da transmissão">
-      <option value="light" selected>Leve (720p·60fps)</option>
-      <option value="high">Qualidade (1080p·60fps)</option>
-    </select>
+    <select id="qualitySel" class="qualitySel" title="Teto de upload e resolução da sua transmissão"></select>
+    <select id="codecSel" class="qualitySel" title="Codec de vídeo"></select>
     <button class="linkBtn" id="copyLinkBtn">copiar link</button>
     <button class="shareBtn" id="shareBtn">🖥️ compartilhar tela</button>
     <button class="leaveBtn" id="leaveBtn">sair</button>
+    <div class="hud" id="hud"></div>
     <div class="people" id="peopleList"></div>
   </div>
   <div class="grid" id="grid">
@@ -111,10 +123,31 @@
 <script>
 const $=s=>document.querySelector(s);
 
+// budget = teto de upload TOTAL, dividido entre os espectadores. Numa malha P2P
+// cada espectador custa um encoder e uma cópia do stream no uplink; estourar o
+// uplink enche o buffer do roteador e é o que faz o ping do jogo explodir.
 const QUALITY={
-  light:{width:1280,height:720,frameRate:60,maxBitrate:3_500_000},
-  high:{width:1920,height:1080,frameRate:60,maxBitrate:6_000_000}
+  ultra:{label:"Ultra leve (720p·30) — menor impacto no ping", w:1280,h:720, fps:30, budget:2_000_000},
+  light:{label:"Leve (720p·60)",                                w:1280,h:720, fps:60, budget:4_000_000},
+  high :{label:"Qualidade (1080p·60) — exige upload sobrando",  w:1920,h:1080,fps:60, budget:9_000_000}
 };
+const MIN_PER_PEER=500_000;
+
+const CODECS={
+  H264:"H.264 (acelerado por hardware)",
+  VP8 :"VP8 (compatível)",
+  VP9 :"VP9 (comprime mais, gasta CPU)"
+};
+
+const PEER_OPTS={config:{
+  iceServers:[
+    {urls:"stun:stun.l.google.com:19302"},
+    {urls:["turn:eu-0.turn.peerjs.com:3478","turn:us-0.turn.peerjs.com:3478"],username:"peerjs",credential:"peerjsp"}
+  ],
+  bundlePolicy:"max-bundle",
+  rtcpMuxPolicy:"require",
+  iceCandidatePoolSize:2
+}};
 
 const ROOM_CODE="sala-principal";
 let myPeer=null, myId=null, roomCode=ROOM_CODE, myName=null, isHost=false;
@@ -124,12 +157,52 @@ let roster={};          // id -> {name}
 let myStream=null;
 let mediaCalls={};      // id -> outgoing MediaConnection
 let incomingStreams={}; // id -> {call, stream}
+let localPreview=false;
+let statsTimer=null;
+let prevBytes={};       // key -> {bytes, ts}
+let lastSeen={};        // host: id -> timestamp do último sinal de vida
+let hbTimer=null;
+let leaving=false, rejoining=false, rejoinTries=0;
+const MAX_REJOIN=6;
+
+// O "bye" cobre a saída limpa. O heartbeat cobre o resto (crash, queda de luz,
+// wifi caindo), onde nada chega a ser enviado e o DataChannel só morre depois
+// do timeout de ICE — que é o que deixava nome fantasma na lista.
+const HEARTBEAT_MS=3000, PEER_TIMEOUT_MS=10000;
 
 function toast(msg){
   const t=$("#toast"); t.textContent=msg; t.classList.add("show");
   clearTimeout(toast._t); toast._t=setTimeout(()=>t.classList.remove("show"),2400);
 }
 
+const store={
+  get(k,d){ try{ return localStorage.getItem("sc_"+k) ?? d; }catch(e){ return d; } },
+  set(k,v){ try{ localStorage.setItem("sc_"+k,v); }catch(e){} }
+};
+
+/* ---------- setup dos seletores ---------- */
+$("#qualitySel").innerHTML=Object.entries(QUALITY)
+  .map(([k,q])=>`<option value="${k}">${q.label}</option>`).join("");
+$("#codecSel").innerHTML=Object.entries(CODECS)
+  .map(([k,l])=>`<option value="${k}">${l}</option>`).join("");
+$("#qualitySel").value=store.get("quality","light");
+$("#codecSel").value=store.get("codec","H264");
+$("#nameInput").value=store.get("name","");
+
+function currentQuality(){ return QUALITY[$("#qualitySel").value] || QUALITY.light; }
+function preferredCodec(){ return $("#codecSel").value || "H264"; }
+function viewerCount(){ return Object.keys(mediaCalls).length; }
+// Quem não está olhando consome quase nada, então a sobra vai pra quem está —
+// menos gente assistindo de verdade = mais qualidade pra quem assiste.
+function perPeerBitrate(){
+  const ids=Object.keys(mediaCalls);
+  const idle=ids.filter(id=>viewerNeeds[id]?.fps===IDLE_FPS).length;
+  const active=Math.max(1, ids.length-idle);
+  const budget=currentQuality().budget - idle*IDLE_BITRATE;
+  return Math.max(MIN_PER_PEER, Math.round(budget/active));
+}
+
+/* ---------- entrada na sala ---------- */
 $("#joinBtn").addEventListener("click", join);
 $("#nameInput").addEventListener("keydown",e=>{if(e.key==="Enter")join();});
 
@@ -137,13 +210,13 @@ function join(){
   const name=$("#nameInput").value.trim();
   $("#joinErr").textContent="";
   if(!name){ $("#joinErr").textContent="Digita seu nome."; return; }
-  myName=name;
+  myName=name; store.set("name",name);
   $("#joinBtn").disabled=true; $("#joinBtn").textContent="conectando...";
   attemptHost();
 }
 
 function attemptHost(){
-  myPeer=new Peer(roomCode);
+  myPeer=new Peer(roomCode, PEER_OPTS);
   let settled=false;
   myPeer.on("open", id=>{
     if(settled) return; settled=true;
@@ -154,39 +227,44 @@ function attemptHost(){
   });
   myPeer.on("error", err=>{
     if(settled) return;
+    settled=true;
     if(err.type==="unavailable-id"){
-      settled=true;
       myPeer.destroy();
       joinAsMember();
     }else{
-      settled=true;
       showJoinError("Erro de conexão: "+err.type);
     }
   });
 }
 
 function joinAsMember(){
-  myPeer=new Peer();
+  myPeer=new Peer(PEER_OPTS);
   myPeer.on("open", id=>{
     myId=id;
     hostConn=myPeer.connect(roomCode, {reliable:true});
     hostConn.on("open", ()=>{ hostConn.send({type:"join", name:myName, id:myId}); });
     hostConn.on("data", handleHostData);
-    hostConn.on("close", ()=>{ toast("Perdeu conexão com a sala (quem criou saiu)."); });
-    hostConn.on("error", e=>{ showJoinError("Não consegui entrar na sala: "+e.type); });
+    hostConn.on("close", handleHostLoss);
+    hostConn.on("error", ()=>handleHostLoss());
+    watchIce(hostConn.peerConnection, handleHostLoss);
     setupCommonHandlers();
     enterApp();
   });
   myPeer.on("error", err=>{ showJoinError("Erro de conexão: "+err.type); });
 }
 
+// Depois que já entramos, a tela de login está escondida — erro ali vira
+// tentativa de reconexão, senão a mensagem cai num lugar que ninguém vê.
 function showJoinError(msg){
-  $("#joinBtn").disabled=false; $("#joinBtn").textContent="Entrar na sala";
+  if($("#app").hidden===false){ handleHostLoss(); return; }
+  $("#joinBtn").disabled=false; $("#joinBtn").textContent="Entrar";
   $("#joinErr").textContent=msg;
 }
 
 function handleHostData(data){
   if(data.type==="roster"){ roster=data.roster; onRosterUpdate(); }
+  else if(data.type==="host-closed"){ handleHostLoss(); }
+  else if(data.type==="need" && data.to===myId){ applyNeed(data.from, data.need); }
 }
 
 function setupCommonHandlers(){
@@ -195,28 +273,33 @@ function setupCommonHandlers(){
       if(data.type==="join"){
         roster[conn.peer]={name:data.name};
         peerConns[conn.peer]=conn;
+        lastSeen[conn.peer]=Date.now();
         broadcastRoster();
         onRosterUpdate();
+      }else if(data.type==="hb"){
+        lastSeen[conn.peer]=Date.now();
+      }else if(data.type==="bye"){
+        removePeer(conn.peer);
+      }else if(data.type==="need"){
+        if(data.to===myId) applyNeed(data.from, data.need);
+        else { try{ peerConns[data.to]?.send(data); }catch(e){} }   // repasse entre membros
       }
     });
-    conn.on("close", ()=>{
-      if(peerConns[conn.peer]){
-        delete peerConns[conn.peer];
-        delete roster[conn.peer];
-        broadcastRoster();
-        onRosterUpdate();
-      }
-    });
+    conn.on("close", ()=>removePeer(conn.peer));
+    conn.on("error", ()=>removePeer(conn.peer));
+    watchIce(conn.peerConnection, ()=>removePeer(conn.peer));
   });
 
   myPeer.on("call", call=>{
     call.answer();
     call.on("stream", stream=>{
       incomingStreams[call.peer]={call, stream};
+      tuneReceiver(call);
       renderGrid(); renderPeople();
     });
-    call.on("close", ()=>{ delete incomingStreams[call.peer]; renderGrid(); renderPeople(); });
-    call.on("error", ()=>{ delete incomingStreams[call.peer]; renderGrid(); renderPeople(); });
+    const drop=()=>{ delete incomingStreams[call.peer]; stopStatsLoop(); renderGrid(); renderPeople(); };
+    call.on("close", drop);
+    call.on("error", drop);
   });
 
   myPeer.on("disconnected", ()=>{ toast("Conexão instável, tentando reconectar..."); myPeer.reconnect(); });
@@ -227,12 +310,79 @@ function broadcastRoster(){
   Object.values(peerConns).forEach(conn=>{ try{ conn.send({type:"roster", roster}); }catch(e){} });
 }
 
+function broadcast(msg){
+  Object.values(peerConns).forEach(conn=>{ try{ conn.send(msg); }catch(e){} });
+}
+
+// Ponto único de saída: fecha tudo que pertence ao peer e avisa a sala.
+function removePeer(id){
+  if(!id) return;
+  if(!roster[id] && !peerConns[id] && !incomingStreams[id]) return;
+  try{ peerConns[id]?.close(); }catch(e){}
+  try{ mediaCalls[id]?.close(); }catch(e){}
+  try{ incomingStreams[id]?.call?.close(); }catch(e){}
+  delete peerConns[id]; delete roster[id]; delete lastSeen[id];
+  delete mediaCalls[id]; delete incomingStreams[id];
+  delete tileLayout[id]; delete prevBytes["in:"+id]; delete prevBytes["out:"+id];
+  delete viewerNeeds[id]; delete lastSentNeed[id];
+  broadcastRoster();
+  renderPeople(); renderGrid(); renderHud();
+}
+
+// ICE em failed/closed = peer sumiu de vez. "disconnected" pode ser oscilação
+// passageira, então não derrubamos ninguém por causa dele.
+function watchIce(pc, onDead){
+  if(!pc?.addEventListener) return;
+  pc.addEventListener("iceconnectionstatechange",()=>{
+    if(pc.iceConnectionState==="failed" || pc.iceConnectionState==="closed") onDead();
+  });
+}
+
+function startHeartbeat(){
+  clearInterval(hbTimer);
+  hbTimer=setInterval(()=>{
+    if(isHost){
+      const now=Date.now();
+      Object.keys(peerConns).forEach(id=>{
+        if(now-(lastSeen[id]||0) > PEER_TIMEOUT_MS) removePeer(id);
+      });
+    }else if(hostConn?.open){
+      try{ hostConn.send({type:"hb"}); }catch(e){}
+    }
+  }, HEARTBEAT_MS);
+}
+
+// Host caiu: a sala inteira ficaria com a lista congelada. Cada um tenta
+// reassumir o ID da sala com jitter — o primeiro vira host, os outros pegam
+// "unavailable-id" e entram como membro pelo caminho normal.
+function handleHostLoss(){
+  if(leaving || rejoining) return;
+  if(++rejoinTries > MAX_REJOIN){
+    toast("Não consegui reconectar na sala. Recarregue a página.");
+    return;
+  }
+  rejoining=true;
+  toast("Quem criou a sala saiu — reconectando...");
+  Object.keys(incomingStreams).forEach(id=>{ try{ incomingStreams[id].call?.close(); }catch(e){} });
+  Object.values(mediaCalls).forEach(c=>{ try{ c.close(); }catch(e){} });
+  incomingStreams={}; mediaCalls={}; peerConns={}; lastSeen={};
+  roster={}; hostConn=null;
+  try{ myPeer?.destroy(); }catch(e){}
+  myPeer=null;
+  renderPeople(); renderGrid();
+  // backoff crescente: se a sala inteira caiu junto, evita todo mundo
+  // martelando o broker no mesmo instante
+  const wait=Math.min(400*rejoinTries, 3000)+Math.random()*1200;
+  setTimeout(()=>{ rejoining=false; if(!leaving) attemptHost(); }, wait);
+}
+
 function onRosterUpdate(){
   renderPeople();
   if(myStream){
     Object.keys(roster).forEach(id=>{
       if(id!==myId && !mediaCalls[id]) callPeerWithMyStream(id);
     });
+    refreshAllSenders();
   }
   Object.keys(incomingStreams).forEach(id=>{ if(!roster[id]) delete incomingStreams[id]; });
   renderGrid();
@@ -241,28 +391,246 @@ function onRosterUpdate(){
 function enterApp(){
   $("#joinScreen").hidden=true;
   $("#app").hidden=false;
-  renderPeople();
-  renderGrid();
+  rejoinTries=0; rejoining=false;
+  startHeartbeat();
+  if(myStream) onRosterUpdate();   // retoma a transmissão após trocar de host
+  renderPeople(); renderGrid(); renderHud();
 }
 
 function renderPeople(){
-  const ids=Object.keys(roster);
-  $("#peopleList").innerHTML = ids.map(id=>{
+  $("#peopleList").innerHTML = Object.keys(roster).map(id=>{
     const nm = id===myId ? (roster[id]?.name||myName)+" (você)" : (roster[id]?.name||"?");
     const sharing = id===myId ? !!myStream : !!incomingStreams[id];
     return `<span class="chip${id===myId?" me":""}${sharing?" sharing":""}"><span class="dot"></span>${nm}</span>`;
   }).join("");
 }
 
+/* ---------- WebRTC: codec, encoder e uplink ---------- */
+
+// H.264 costuma usar o encoder de hardware da GPU; VP8/VP9 caem em software e
+// roubam CPU do jogo. packetization-mode=1 é o perfil com melhor suporte a HW.
+function applyCodecPreference(pc){
+  if(!pc || !pc.getTransceivers || !window.RTCRtpSender?.getCapabilities) return;
+  const caps=RTCRtpSender.getCapabilities("video");
+  if(!caps?.codecs) return;
+  const want="video/"+preferredCodec();
+  const match=c=>c.mimeType.toLowerCase()===want.toLowerCase();
+  const wanted=caps.codecs.filter(match)
+    .sort((a,b)=>(/packetization-mode=1/.test(b.sdpFmtpLine||"")?1:0)-(/packetization-mode=1/.test(a.sdpFmtpLine||"")?1:0));
+  if(!wanted.length) return;
+  const rest=caps.codecs.filter(c=>!match(c));
+  pc.getTransceivers().forEach(t=>{
+    if(t.sender?.track?.kind==="video" && t.setCodecPreferences){
+      try{ t.setCodecPreferences([...wanted,...rest]); }catch(e){}
+    }
+  });
+}
+
+function applySenderParams(call){
+  const pc=call.peerConnection;
+  if(!pc?.getSenders) return;
+  const q=currentQuality(), cap=perPeerBitrate();
+  pc.getSenders().forEach(sender=>{
+    if(!sender.track) return;
+    const p=sender.getParameters();
+    if(!p.encodings?.length) p.encodings=[{}];
+    if(sender.track.kind==="video"){
+      // maintain-framerate: sob pressão o encoder derruba resolução, não fps —
+      // jogo com 30fps borrado é jogável, com 60fps travando não é.
+      p.degradationPreference="maintain-framerate";
+      const need=viewerNeeds[call.peer];
+      const idle=need && need.fps===IDLE_FPS;
+      p.encodings[0].scaleResolutionDownBy=scaleFor(call.peer);
+      p.encodings[0].maxFramerate=need?.fps || q.fps;
+      // ninguém olhando = quase nada de upload, o que também libera o uplink pro jogo
+      p.encodings[0].maxBitrate=idle ? Math.min(cap,IDLE_BITRATE) : cap;
+    }else{
+      p.encodings[0].maxBitrate=96_000;
+    }
+    // DSCP baixo: o roteador deixa os pacotes do jogo passarem na frente do stream.
+    p.encodings[0].networkPriority="low";
+    p.encodings[0].priority="low";
+    sender.setParameters(p).catch(()=>{});
+  });
+}
+
+function tuneReceiver(call){
+  const pc=call.peerConnection;
+  if(!pc?.getReceivers) return;
+  pc.getReceivers().forEach(r=>{
+    if("jitterBufferTarget" in r) try{ r.jitterBufferTarget=60; }catch(e){}
+  });
+}
+
+/* ---------- resolução sob demanda ----------
+   Numa malha cada espectador tem o próprio encoder, então dá pra ajustar cada
+   um pro que aquela pessoa está de fato exibindo. Quem está com o tile de 440px
+   não enxerga 1080p, e quem voltou pro jogo (aba escondida) não está olhando.
+   Encodar isso é gastar CPU e uplink em pixel invisível. */
+let viewerNeeds={};   // quem transmite: viewerId -> {w,h,fps}
+let lastSentNeed={};  // quem assiste: sharerId -> assinatura do último envio
+const IDLE_FPS=5, IDLE_W=320, IDLE_H=180, IDLE_BITRATE=200_000;
+
+// Mudar scaleResolutionDownBy reconfigura o encoder e força keyframe. Quantizar
+// evita ficar reconfigurando a cada pixel de resize.
+function quantizeScale(s){
+  return [1,1.25,1.5,2,2.5,3,4,6,8].find(x=>s<=x) || 8;
+}
+
+function computeNeed(id){
+  const tile=document.querySelector(`.tile[data-id="${CSS.escape(id)}"]`);
+  if(document.visibilityState!=="visible" || !tile) return {w:IDLE_W,h:IDLE_H,fps:IDLE_FPS};
+  const r=tile.getBoundingClientRect();
+  const offscreen = r.bottom<0 || r.top>innerHeight || r.right<0 || r.left>innerWidth;
+  if(offscreen || r.width<2) return {w:IDLE_W,h:IDLE_H,fps:IDLE_FPS};
+  const dpr=Math.min(window.devicePixelRatio||1, 2);
+  return {w:Math.round(r.width*dpr), h:Math.round(r.height*dpr), fps:0}; // fps 0 = máximo do preset
+}
+
+function reportNeeds(){
+  Object.keys(incomingStreams).forEach(id=>{
+    const need=computeNeed(id);
+    const key=`${need.w}x${need.h}@${need.fps}`;
+    if(lastSentNeed[id]===key) return;
+    lastSentNeed[id]=key;
+    sendNeed(id, need);
+  });
+}
+let needTimer=null;
+function reportNeedsSoon(){ clearTimeout(needTimer); needTimer=setTimeout(reportNeeds,250); }
+
+// Só o host tem canal com todo mundo, então mensagem entre membros passa por ele.
+function sendNeed(sharerId, need){
+  if(sharerId===myId) return;
+  const msg={type:"need", from:myId, to:sharerId, need};
+  try{
+    if(isHost) peerConns[sharerId]?.send(msg);
+    else hostConn?.send(msg);
+  }catch(e){}
+}
+
+function applyNeed(viewerId, need){
+  if(!need) return;
+  viewerNeeds[viewerId]=need;
+  refreshAllSenders();   // muda o rateio da banda, então todos são reajustados
+}
+
+function scaleFor(peerId){
+  const need=viewerNeeds[peerId];
+  const st=myStream?.getVideoTracks()[0]?.getSettings();
+  if(!need || !st?.width || !st?.height) return 1;
+  const s=Math.min(st.width/Math.max(160,need.w), st.height/Math.max(90,need.h));
+  return quantizeScale(Math.max(1,s));
+}
+
+document.addEventListener("visibilitychange", reportNeeds);
+document.addEventListener("fullscreenchange", reportNeeds);
+window.addEventListener("resize", reportNeedsSoon);
+
+function callPeerWithMyStream(id){
+  const call=myPeer.call(id, myStream);
+  mediaCalls[id]=call;
+  applyCodecPreference(call.peerConnection);   // precisa rodar antes do createOffer resolver
+  applySenderParams(call);
+  const pc=call.peerConnection;
+  if(pc) pc.addEventListener("connectionstatechange",()=>{
+    if(pc.connectionState==="connected") applySenderParams(call);
+  });
+  call.on("close", ()=>{ delete mediaCalls[id]; refreshAllSenders(); renderHud(); });
+}
+
+function refreshAllSenders(){
+  Object.values(mediaCalls).forEach(applySenderParams);
+  renderHud();
+}
+
+/* ---------- captura ---------- */
+async function startShare(){
+  const q=currentQuality();
+  try{
+    myStream = await navigator.mediaDevices.getDisplayMedia({
+      video:{
+        width:{ideal:q.w, max:q.w},
+        height:{ideal:q.h, max:q.h},
+        frameRate:{ideal:q.fps, max:q.fps}
+      },
+      audio:{echoCancellation:false, noiseSuppression:false, autoGainControl:false},
+      selfBrowserSurface:"exclude",   // impede o efeito espelho infinito (queima CPU à toa)
+      surfaceSwitching:"include",
+      systemAudio:"include"
+    });
+  }catch(e){
+    toast("Não consegui capturar a tela (permissão negada ou cancelado).");
+    return;
+  }
+  const track=myStream.getVideoTracks()[0];
+  if("contentHint" in track) track.contentHint="motion";
+  track.addEventListener("ended", stopShare);
+  await clampCapture();
+
+  Object.keys(roster).forEach(id=>{ if(id!==myId) callPeerWithMyStream(id); });
+  refreshAllSenders();   // o rateio só fecha depois que todos entraram na conta
+
+  $("#shareBtn").textContent="⏹️ parar compartilhamento";
+  $("#shareBtn").classList.add("on");
+  startStatsLoop();
+  renderPeople(); renderGrid(); renderHud();
+}
+
+// getDisplayMedia costuma ignorar width/height e entregar a resolução nativa do
+// monitor; sem isso um 1440p capturado vira downscale no encoder a cada frame.
+async function clampCapture(){
+  const track=myStream?.getVideoTracks()[0];
+  if(!track) return;
+  const q=currentQuality();
+  try{
+    await track.applyConstraints({
+      width:{max:q.w}, height:{max:q.h}, frameRate:{max:q.fps}
+    });
+  }catch(e){}
+}
+
+function stopShare(){
+  if(!myStream) return;
+  myStream.getTracks().forEach(t=>t.stop());
+  Object.values(mediaCalls).forEach(c=>{ try{c.close();}catch(e){} });
+  mediaCalls={};
+  viewerNeeds={};
+  myStream=null;
+  stopStatsLoop();
+  $("#shareBtn").textContent="🖥️ compartilhar tela";
+  $("#shareBtn").classList.remove("on");
+  renderPeople(); renderGrid(); renderHud();
+}
+
+$("#shareBtn").addEventListener("click", ()=>{ myStream ? stopShare() : startShare(); });
+
+$("#qualitySel").addEventListener("change", async ()=>{
+  store.set("quality",$("#qualitySel").value);
+  if(myStream){ await clampCapture(); refreshAllSenders(); toast("Qualidade ajustada sem reconectar."); }
+  renderHud();
+});
+
+$("#codecSel").addEventListener("change", ()=>{
+  store.set("codec",$("#codecSel").value);
+  toast(myStream ? "Codec muda na próxima transmissão — pare e recomece." : "Codec salvo.");
+});
+
+/* ---------- layout dos tiles ---------- */
 let tileLayout={}; // id -> {x,y,w,h}
 let layoutCount=0;
 
 function defaultLayoutFor(){
   const w=440, h=Math.round(w*9/16);
-  const step=32, cycle=6;
-  const n=layoutCount % cycle;
+  const step=32, n=layoutCount%6;
   layoutCount++;
   return {x:14+n*step, y:14+n*step, w, h};
+}
+
+function place(tileEl,layout){
+  tileEl.style.transform=`translate3d(${layout.x}px,${layout.y}px,0)`;
+  tileEl.style.width=layout.w+"px";
+  tileEl.style.height=layout.h+"px";
 }
 
 function makeDraggable(tileEl,id){
@@ -271,19 +639,20 @@ function makeDraggable(tileEl,id){
     e.preventDefault();
     try{ tileEl.setPointerCapture(e.pointerId); }catch(err){}
     tileEl.classList.add("dragging");
-    const startX=e.clientX, startY=e.clientY;
-    const layout=tileLayout[id];
+    const startX=e.clientX, startY=e.clientY, layout=tileLayout[id];
     const startLeft=layout.x, startTop=layout.y;
+    const grid=$("#grid");
     function onMove(ev){
-      const dx=ev.clientX-startX, dy=ev.clientY-startY;
-      layout.x=Math.max(0,startLeft+dx); layout.y=Math.max(0,startTop+dy);
-      tileEl.style.left=layout.x+"px"; tileEl.style.top=layout.y+"px";
+      layout.x=Math.max(0,Math.min(grid.clientWidth-40, startLeft+ev.clientX-startX));
+      layout.y=Math.max(0,Math.min(grid.clientHeight-30, startTop+ev.clientY-startY));
+      place(tileEl,layout);
     }
     function onUp(ev){
       try{ tileEl.releasePointerCapture(ev.pointerId); }catch(err){}
       tileEl.classList.remove("dragging");
       tileEl.removeEventListener("pointermove", onMove);
       tileEl.removeEventListener("pointerup", onUp);
+      reportNeedsSoon();
     }
     tileEl.addEventListener("pointermove", onMove);
     tileEl.addEventListener("pointerup", onUp);
@@ -294,18 +663,18 @@ function makeResizable(handle,tileEl,id){
   handle.addEventListener("pointerdown", e=>{
     e.preventDefault(); e.stopPropagation();
     try{ handle.setPointerCapture(e.pointerId); }catch(err){}
-    const startX=e.clientX, startY=e.clientY;
-    const layout=tileLayout[id];
+    const startX=e.clientX, startY=e.clientY, layout=tileLayout[id];
     const startW=layout.w, startH=layout.h;
     function onMove(ev){
-      const dx=ev.clientX-startX, dy=ev.clientY-startY;
-      layout.w=Math.max(200,startW+dx); layout.h=Math.max(120,startH+dy);
-      tileEl.style.width=layout.w+"px"; tileEl.style.height=layout.h+"px";
+      layout.w=Math.max(200,startW+ev.clientX-startX);
+      layout.h=Math.max(120,startH+ev.clientY-startY);
+      place(tileEl,layout);
     }
     function onUp(ev){
       try{ handle.releasePointerCapture(ev.pointerId); }catch(err){}
       handle.removeEventListener("pointermove", onMove);
       handle.removeEventListener("pointerup", onUp);
+      reportNeedsSoon();
     }
     handle.addEventListener("pointermove", onMove);
     handle.addEventListener("pointerup", onUp);
@@ -313,66 +682,64 @@ function makeResizable(handle,tileEl,id){
 }
 
 function toggleFullscreen(tileEl){
-  if(document.fullscreenElement===tileEl){
-    document.exitFullscreen();
-    return;
-  }
-  const req = tileEl.requestFullscreen || tileEl.webkitRequestFullscreen;
+  if(document.fullscreenElement===tileEl){ document.exitFullscreen(); return; }
+  const req=tileEl.requestFullscreen || tileEl.webkitRequestFullscreen;
   if(req) req.call(tileEl);
 }
 
 function renderGrid(){
   const grid=$("#grid");
   const tiles=[];
-  if(myStream) tiles.push({id:myId, name:(roster[myId]?.name||myName)+" (você)", stream:myStream});
+  if(myStream) tiles.push({id:myId, name:(roster[myId]?.name||myName)+" (você)", stream:myStream, mine:true});
   Object.keys(incomingStreams).forEach(id=>{
-    tiles.push({id, name:roster[id]?.name||"?", stream:incomingStreams[id].stream});
+    tiles.push({id, name:roster[id]?.name||"?", stream:incomingStreams[id].stream, mine:false});
   });
 
   if(!tiles.length){
-    grid.innerHTML = `<div class="empty" id="emptyMsg">Ninguém compartilhando tela ainda.<br><b>Clique em "compartilhar tela"</b> pra começar.</div>`;
+    grid.innerHTML=`<div class="empty" id="emptyMsg">Ninguém compartilhando tela ainda.<br><b>Clique em "compartilhar tela"</b> pra começar.</div>`;
     return;
   }
 
   const existing={};
   grid.querySelectorAll(".tile").forEach(t=>{ existing[t.dataset.id]=t; });
-  const emptyMsg=$("#emptyMsg"); if(emptyMsg) emptyMsg.remove();
+  $("#emptyMsg")?.remove();
 
   tiles.forEach(t=>{
+    const key=t.mine ? (localPreview?"on":"off") : "remote";
     let tileEl=existing[t.id];
     if(tileEl) delete existing[t.id];
-    if(!tileEl || tileEl._stream!==t.stream){
-      if(tileEl) tileEl.remove();
-      if(!tileLayout[t.id]) tileLayout[t.id]=defaultLayoutFor();
-      const layout=tileLayout[t.id];
+    if(tileEl && tileEl._stream===t.stream && tileEl._key===key) return;
+    if(tileEl) tileEl.remove();
 
-      tileEl=document.createElement("div");
-      tileEl.className="tile"; tileEl.dataset.id=t.id;
-      tileEl.style.left=layout.x+"px"; tileEl.style.top=layout.y+"px";
-      tileEl.style.width=layout.w+"px"; tileEl.style.height=layout.h+"px";
+    if(!tileLayout[t.id]) tileLayout[t.id]=defaultLayoutFor();
+    tileEl=document.createElement("div");
+    tileEl.className="tile"; tileEl.dataset.id=t.id;
+    tileEl._stream=t.stream; tileEl._key=key;
+    place(tileEl, tileLayout[t.id]);
 
+    if(t.mine && !localPreview){
+      const off=document.createElement("div");
+      off.className="previewOff";
+      off.innerHTML="<div>Transmitindo.<br>Preview desligado pra não gastar GPU do seu jogo.</div>";
+      const btn=document.createElement("button");
+      btn.type="button"; btn.textContent="ver preview";
+      btn.addEventListener("click",()=>{ localPreview=true; renderGrid(); });
+      off.appendChild(btn);
+      tileEl.appendChild(off);
+    }else{
       const video=document.createElement("video");
-      video.autoplay=true; video.playsInline=true;
-      if(t.id===myId) video.muted=true;
+      video.autoplay=true; video.playsInline=true; video.disablePictureInPicture=true;
+      if(t.mine) video.muted=true;
       video.srcObject=t.stream;
-      tileEl._stream=t.stream;
       tileEl.appendChild(video);
+      tileEl._video=video;
 
-      const label=document.createElement("div");
-      label.className="label"; label.textContent=t.name;
-      tileEl.appendChild(label);
+      if(!t.mine){
+        const badge=document.createElement("div");
+        badge.className="statbadge"; badge.textContent="—";
+        tileEl.appendChild(badge);
+        tileEl._badge=badge;
 
-      const tilebar=document.createElement("div");
-      tilebar.className="tilebar";
-      const fsBtn=document.createElement("button");
-      fsBtn.className="fsBtn"; fsBtn.type="button";
-      fsBtn.title="Tela cheia";
-      fsBtn.textContent="⛶";
-      fsBtn.addEventListener("click",()=>toggleFullscreen(tileEl));
-      tilebar.appendChild(fsBtn);
-      tileEl.appendChild(tilebar);
-
-      if(t.id!==myId){
         const volWrap=document.createElement("div");
         volWrap.className="volctrl";
         const muteBtn=document.createElement("button");
@@ -381,91 +748,161 @@ function renderGrid(){
         slider.type="range"; slider.min="0"; slider.max="100"; slider.value="100"; slider.className="volSlider";
         muteBtn.addEventListener("click",()=>{
           video.muted=!video.muted;
-          muteBtn.textContent = video.muted ? "🔇" : "🔊";
+          muteBtn.textContent=video.muted?"🔇":"🔊";
         });
         slider.addEventListener("input",()=>{
-          video.volume = Number(slider.value)/100;
+          video.volume=Number(slider.value)/100;
           if(video.volume===0 && !video.muted){ video.muted=true; muteBtn.textContent="🔇"; }
           else if(video.volume>0 && video.muted){ video.muted=false; muteBtn.textContent="🔊"; }
         });
-        volWrap.appendChild(muteBtn);
-        volWrap.appendChild(slider);
+        volWrap.append(muteBtn, slider);
         tileEl.appendChild(volWrap);
       }
-
-      const resizeHandle=document.createElement("div");
-      resizeHandle.className="resizeHandle";
-      tileEl.appendChild(resizeHandle);
-
-      makeDraggable(tileEl, t.id);
-      makeResizable(resizeHandle, tileEl, t.id);
-
-      grid.appendChild(tileEl);
     }
+
+    const label=document.createElement("div");
+    label.className="label"; label.textContent=t.name;
+    tileEl.appendChild(label);
+
+    const tilebar=document.createElement("div");
+    tilebar.className="tilebar";
+    if(t.mine && localPreview){
+      const offBtn=document.createElement("button");
+      offBtn.type="button"; offBtn.title="Desligar preview"; offBtn.textContent="👁";
+      offBtn.addEventListener("click",()=>{ localPreview=false; renderGrid(); });
+      tilebar.appendChild(offBtn);
+    }
+    const fsBtn=document.createElement("button");
+    fsBtn.type="button"; fsBtn.title="Tela cheia"; fsBtn.textContent="⛶";
+    fsBtn.addEventListener("click",()=>toggleFullscreen(tileEl));
+    tilebar.appendChild(fsBtn);
+    tileEl.appendChild(tilebar);
+
+    const resizeHandle=document.createElement("div");
+    resizeHandle.className="resizeHandle";
+    tileEl.appendChild(resizeHandle);
+
+    makeDraggable(tileEl, t.id);
+    makeResizable(resizeHandle, tileEl, t.id);
+    grid.appendChild(tileEl);
   });
 
   Object.values(existing).forEach(el=>el.remove());
+  if(Object.keys(incomingStreams).length) startStatsLoop();
+  reportNeedsSoon();
 }
 
-function currentQuality(){ return QUALITY[$("#qualitySel").value] || QUALITY.light; }
-
-function callPeerWithMyStream(id){
-  const call=myPeer.call(id, myStream);
-  mediaCalls[id]=call;
-  call.on("close", ()=>{ delete mediaCalls[id]; });
-  applyBitrateCap(call);
+/* ---------- telemetria ---------- */
+function startStatsLoop(){
+  if(statsTimer) return;
+  statsTimer=setInterval(pollStats, 3000);
 }
-
-function applyBitrateCap(call){
-  const q=currentQuality();
-  const trySet=()=>{
-    const pc=call.peerConnection;
-    if(!pc) return;
-    const sender=pc.getSenders && pc.getSenders().find(s=>s.track && s.track.kind==="video");
-    if(!sender) return;
-    const params=sender.getParameters();
-    if(!params.encodings) params.encodings=[{}];
-    params.encodings[0].maxBitrate=q.maxBitrate;
-    sender.setParameters(params).catch(()=>{});
-  };
-  setTimeout(trySet, 800);
-}
-
-async function startShare(){
-  const q=currentQuality();
-  try{
-    myStream = await navigator.mediaDevices.getDisplayMedia({
-      video:{ width:{ideal:q.width}, height:{ideal:q.height}, frameRate:{ideal:q.frameRate, max:q.frameRate} },
-      audio:{ echoCancellation:false, noiseSuppression:false, autoGainControl:false }
-    });
-  }catch(e){
-    toast("Não consegui capturar a tela (permissão negada ou cancelado).");
-    return;
+function stopStatsLoop(){
+  if(!myStream && !Object.keys(incomingStreams).length){
+    clearInterval(statsTimer); statsTimer=null;
   }
-  const track=myStream.getVideoTracks()[0];
-  if("contentHint" in track) track.contentHint="motion";
-  track.addEventListener("ended", stopShare);
-
-  Object.keys(roster).forEach(id=>{ if(id!==myId) callPeerWithMyStream(id); });
-
-  $("#shareBtn").textContent="⏹️ parar compartilhamento";
-  $("#shareBtn").classList.add("on");
-  renderPeople(); renderGrid();
 }
 
-function stopShare(){
-  if(!myStream) return;
-  myStream.getTracks().forEach(t=>t.stop());
-  Object.values(mediaCalls).forEach(c=>{ try{c.close();}catch(e){} });
-  mediaCalls={};
-  myStream=null;
-  $("#shareBtn").textContent="🖥️ compartilhar tela";
-  $("#shareBtn").classList.remove("on");
-  renderPeople(); renderGrid();
+function rate(key,bytes,ts){
+  const prev=prevBytes[key];
+  prevBytes[key]={bytes,ts};
+  if(!prev || ts<=prev.ts) return 0;
+  return (bytes-prev.bytes)*8/((ts-prev.ts)/1000);
 }
 
-$("#shareBtn").addEventListener("click", ()=>{ myStream ? stopShare() : startShare(); });
+let sendStats={bps:0,fps:0,limit:"none",rtt:0,impl:"",hw:null};
 
+// Chrome nomeia o encoder em encoderImplementation. Os de software se
+// identificam (libvpx/OpenH264/libaom); qualquer outro é acelerador da GPU.
+// SimulcastEncoderAdapter envolve o nome, então testamos por substring.
+function isHardwareImpl(impl){
+  if(!impl) return null;
+  if(/libvpx|openh264|libaom|ffmpeg/i.test(impl)) return false;
+  if(/nvenc|videotoolbox|mediafoundation|vaapi|quicksync|v4l2|mediacodec|external/i.test(impl)) return true;
+  return null;
+}
+
+async function pollStats(){
+  if(document.visibilityState!=="visible") return;
+
+  let totalBps=0, fps=0, limit="none", rtt=0, impl="", hw=null;
+  await Promise.all(Object.entries(mediaCalls).map(async ([id,call])=>{
+    const pc=call.peerConnection;
+    if(!pc?.getStats) return;
+    const report=await pc.getStats().catch(()=>null);
+    if(!report) return;
+    report.forEach(s=>{
+      if(s.type==="outbound-rtp" && s.kind==="video"){
+        totalBps+=rate("out:"+id, s.bytesSent||0, s.timestamp);
+        if(s.framesPerSecond) fps=Math.max(fps,s.framesPerSecond);
+        if(s.qualityLimitationReason && s.qualityLimitationReason!=="none") limit=s.qualityLimitationReason;
+        if(s.encoderImplementation) impl=s.encoderImplementation;
+        if(typeof s.powerEfficientEncoder==="boolean") hw=s.powerEfficientEncoder;
+      }
+      if(s.type==="candidate-pair" && s.state==="succeeded" && s.currentRoundTripTime){
+        rtt=Math.max(rtt, s.currentRoundTripTime*1000);
+      }
+    });
+  }));
+  sendStats={bps:totalBps, fps:Math.round(fps), limit, rtt:Math.round(rtt), impl, hw:hw ?? isHardwareImpl(impl)};
+
+  await Promise.all(Object.entries(incomingStreams).map(async ([id,{call}])=>{
+    const pc=call.peerConnection;
+    const tile=document.querySelector(`.tile[data-id="${CSS.escape(id)}"]`);
+    if(!pc?.getStats || !tile?._badge) return;
+    const report=await pc.getStats().catch(()=>null);
+    if(!report) return;
+    report.forEach(s=>{
+      if(s.type==="inbound-rtp" && s.kind==="video"){
+        const bps=rate("in:"+id, s.bytesReceived||0, s.timestamp);
+        tile._badge.textContent=`${Math.round(s.framesPerSecond||0)} fps · ${(bps/1e6).toFixed(1)} Mbps`;
+      }
+    });
+  }));
+
+  renderHud();
+}
+
+function renderHud(){
+  const hud=$("#hud");
+  if(!myStream && !Object.keys(incomingStreams).length){ hud.innerHTML=""; return; }
+  const parts=[];
+  if(myStream){
+    const n=viewerCount();
+    const cap=perPeerBitrate();
+    // soma real: quem está idle entra com IDLE_BITRATE, não com o teto dos ativos
+    const idle=Object.keys(mediaCalls).filter(id=>viewerNeeds[id]?.fps===IDLE_FPS).length;
+    const total=(n-idle)*cap + idle*Math.min(cap,IDLE_BITRATE);
+    parts.push(`<span>enviando pra <b>${n}</b> ${n===1?"pessoa":"pessoas"} · teto <b>${(cap/1e6).toFixed(1)} Mbps</b> cada (${(total/1e6).toFixed(1)} Mbps total)</span>`);
+    if(sendStats.bps) parts.push(`<span>upload real <b>${(sendStats.bps/1e6).toFixed(1)} Mbps</b></span>`);
+    if(n){
+      // carga = soma de 1/escala² por espectador, em % do que seria full-res pra todos
+      const load=Object.keys(mediaCalls).reduce((a,id)=>a+1/Math.pow(scaleFor(id),2),0)/n;
+      const idle=Object.keys(mediaCalls).filter(id=>viewerNeeds[id]?.fps===IDLE_FPS).length;
+      if(load<0.95) parts.push(`<span style="color:var(--go)">encode em <b>${Math.round(load*100)}%</b> do full${idle?` · ${idle} sem olhar`:""}</span>`);
+    }
+    if(sendStats.fps) parts.push(`<span><b>${sendStats.fps} fps</b></span>`);
+    if(sendStats.rtt) parts.push(`<span>rtt <b>${sendStats.rtt} ms</b></span>`);
+    if(sendStats.impl){
+      const nm=sendStats.impl.replace(/SimulcastEncoderAdapter \((.*)\)/,"$1").split(",")[0].trim();
+      if(sendStats.hw===true)
+        parts.push(`<span style="color:var(--go)">encoder <b>${nm}</b> · hardware ✓</span>`);
+      else if(sendStats.hw===false)
+        parts.push(`<span class="warn">encoder <b>${nm}</b> · software (gasta CPU do jogo)</span>`);
+      else
+        parts.push(`<span>encoder <b>${nm}</b></span>`);
+    }
+    if(sendStats.limit==="cpu")
+      parts.push(`<span class="bad">CPU no limite — ${sendStats.hw===false?"teste outro codec no seletor":"baixe pra \"Ultra leve\""}</span>`);
+    else if(sendStats.limit==="bandwidth")
+      parts.push(`<span class="warn">upload no limite — baixe a qualidade pra não afetar seu ping</span>`);
+    if(n>=4 && $("#qualitySel").value==="high")
+      parts.push(`<span class="warn">${n} espectadores em 1080p60 é muito uplink; considere "Leve"</span>`);
+  }
+  hud.innerHTML=parts.join("");
+}
+
+/* ---------- misc ---------- */
 $("#copyLinkBtn").addEventListener("click", async ()=>{
   const link=location.origin+location.pathname;
   try{ await navigator.clipboard.writeText(link); toast("Link copiado!"); }
@@ -474,18 +911,38 @@ $("#copyLinkBtn").addEventListener("click", async ()=>{
 
 $("#leaveBtn").addEventListener("click", cleanupAndLeave);
 
-function cleanupAndLeave(){
-  stopShare();
+// Avisa a sala antes de morrer. Como host, quem sai derruba a sala inteira,
+// então mandamos "host-closed" pra galera reeleger um host na hora em vez de
+// ficar olhando pra uma lista congelada.
+function announceLeave(){
+  if(leaving) return;
+  leaving=true;
+  clearInterval(hbTimer); hbTimer=null;
+  try{
+    if(isHost) broadcast({type:"host-closed"});
+    else if(hostConn?.open) hostConn.send({type:"bye", id:myId});
+  }catch(e){}
+}
+
+function teardown(){
+  announceLeave();
+  if(myStream) myStream.getTracks().forEach(t=>t.stop());
+  // fechar os DataChannels dispara o close no outro lado bem antes do ICE expirar
   Object.values(peerConns).forEach(c=>{ try{c.close();}catch(e){} });
+  Object.values(mediaCalls).forEach(c=>{ try{c.close();}catch(e){} });
   if(hostConn) try{hostConn.close();}catch(e){}
   if(myPeer) try{myPeer.destroy();}catch(e){}
+}
+
+function cleanupAndLeave(){
+  teardown();
   location.href=location.pathname;
 }
 
-window.addEventListener("beforeunload", ()=>{
-  if(myStream) myStream.getTracks().forEach(t=>t.stop());
-  if(myPeer) try{myPeer.destroy();}catch(e){}
-});
+// pagehide pega fechar aba, navegar pra fora e mobile em background — casos
+// onde beforeunload simplesmente não dispara. Os dois juntos, teardown é idempotente.
+window.addEventListener("pagehide", teardown);
+window.addEventListener("beforeunload", teardown);
 </script>
 </body>
 </html>
