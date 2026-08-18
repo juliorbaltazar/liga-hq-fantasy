@@ -1,5 +1,5 @@
 {
-"generated_at_utc": "2026-08-17T23:02:06.837918+00:00",
+"generated_at_utc": "2026-08-18T10:16:27.384711+00:00",
 "nfl_state": {
 "week": 2,
 "leg": 0,
@@ -793,100 +793,30 @@
 }
 ],
 "players": {
-"6819": {
-"n": "Michael Pittman",
-"p": "WR",
+"8228": {
+"n": "Jaylen Warren",
+"p": "RB",
 "tm": "PIT",
-"ist": "Questionable",
-"ibp": "Leg",
-"inote": null,
-"pp": null,
-"espn": 4035687
-},
-"8183": {
-"n": "Brock Purdy",
-"p": "QB",
-"tm": "SF",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
 "espn": null
 },
-"7564": {
-"n": "Ja'Marr Chase",
-"p": "WR",
-"tm": "CIN",
+"12493": {
+"n": "Oronde Gadsden",
+"p": "TE",
+"tm": "LAC",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
 "espn": null
 },
-"13726": {
-"n": "Camden Brown",
-"p": "WR",
-"tm": "DAL",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"12512": {
-"n": "Quinshon Judkins",
-"p": "RB",
-"tm": "CLE",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"12015": {
-"n": "Harrison Mevis",
-"p": "K",
-"tm": "LAR",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"8142": {
-"n": "Alec Pierce",
-"p": "WR",
-"tm": "IND",
-"ist": "PUP",
-"ibp": "Ankle",
-"inote": "Surgery",
-"pp": null,
-"espn": null
-},
-"5045": {
-"n": "Courtland Sutton",
-"p": "WR",
-"tm": "DEN",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 3128429
-},
-"12474": {
-"n": "Woody Marks",
-"p": "RB",
+"HOU": {
+"n": "Houston Texans",
+"p": "DEF",
 "tm": "HOU",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"10213": {
-"n": "Tre Tucker",
-"p": "WR",
-"tm": "LV",
 "ist": null,
 "ibp": null,
 "inote": null,
@@ -903,70 +833,100 @@
 "pp": null,
 "espn": null
 },
-"6790": {
-"n": "D'Andre Swift",
-"p": "RB",
-"tm": "CHI",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 4259545
-},
-"6797": {
-"n": "Justin Herbert",
-"p": "QB",
-"tm": "LAC",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 4038941
-},
-"13417": {
-"n": "De'Zhaun Stribling",
+"12519": {
+"n": "Luther Burden",
 "p": "WR",
+"tm": "CHI",
+"ist": "Questionable",
+"ibp": "Lower Body",
+"inote": null,
+"pp": null,
+"espn": null
+},
+"5189": {
+"n": "Eddy Pineiro",
+"p": "K",
 "tm": "SF",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
-"espn": null
+"espn": 4034949
 },
-"2133": {
-"n": "Davante Adams",
+"11646": {
+"n": "Jalen Coker",
 "p": "WR",
-"tm": "LAR",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 16800
-},
-"12484": {
-"n": "Jayden Higgins",
-"p": "WR",
-"tm": "HOU",
+"tm": "CAR",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
 "espn": null
 },
-"11560": {
-"n": "Caleb Williams",
+"12507": {
+"n": "Omarion Hampton",
+"p": "RB",
+"tm": "LAC",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"13330": {
+"n": "Kenyon Sadiq",
+"p": "TE",
+"tm": "NYJ",
+"ist": "Questionable",
+"ibp": "Abdomen",
+"inote": "Surgery",
+"pp": null,
+"espn": null
+},
+"6904": {
+"n": "Jalen Hurts",
 "p": "QB",
-"tm": "CHI",
+"tm": "PHI",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 4040715
+},
+"11624": {
+"n": "Xavier Worthy",
+"p": "WR",
+"tm": "KC",
+"ist": "Questionable",
+"ibp": "Shoulder",
+"inote": null,
+"pp": null,
+"espn": null
+},
+"8161": {
+"n": "Malik Willis",
+"p": "QB",
+"tm": "MIA",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
 "espn": null
 },
-"SEA": {
-"n": "Seattle Seahawks",
-"p": "DEF",
-"tm": "SEA",
+"9224": {
+"n": "Chase Brown",
+"p": "RB",
+"tm": "CIN",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"8144": {
+"n": "Chris Olave",
+"p": "WR",
+"tm": "NO",
 "ist": null,
 "ibp": null,
 "inote": null,
@@ -983,22 +943,12 @@
 "pp": null,
 "espn": null
 },
-"13298": {
-"n": "KC Concepcion",
-"p": "WR",
-"tm": "CLE",
+"10859": {
+"n": "Sam LaPorta",
+"p": "TE",
+"tm": "DET",
 "ist": null,
 "ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"8146": {
-"n": "Garrett Wilson",
-"p": "WR",
-"tm": "NYJ",
-"ist": "Questionable",
-"ibp": "Illness",
 "inote": null,
 "pp": null,
 "espn": null
@@ -1013,39 +963,79 @@
 "pp": null,
 "espn": null
 },
-"MIN": {
-"n": "Minnesota Vikings",
+"JAX": {
+"n": "Jacksonville Jaguars",
 "p": "DEF",
-"tm": "MIN",
+"tm": "JAX",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
 "espn": null
 },
-"9509": {
-"n": "Bijan Robinson",
-"p": "RB",
-"tm": "ATL",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"11635": {
-"n": "Ladd McConkey",
-"p": "WR",
-"tm": "LAC",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"10859": {
-"n": "Sam LaPorta",
+"9484": {
+"n": "Tucker Kraft",
 "p": "TE",
+"tm": "GB",
+"ist": "Questionable",
+"ibp": "Knee - ACL",
+"inote": "Surgery",
+"pp": null,
+"espn": null
+},
+"421": {
+"n": "Matthew Stafford",
+"p": "QB",
+"tm": "LAR",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 12483
+},
+"12517": {
+"n": "Colston Loveland",
+"p": "TE",
+"tm": "CHI",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"10213": {
+"n": "Tre Tucker",
+"p": "WR",
+"tm": "LV",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"5045": {
+"n": "Courtland Sutton",
+"p": "WR",
+"tm": "DEN",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 3128429
+},
+"7526": {
+"n": "Jaylen Waddle",
+"p": "WR",
+"tm": "DEN",
+"ist": "Questionable",
+"ibp": "Undisclosed",
+"inote": null,
+"pp": null,
+"espn": null
+},
+"9221": {
+"n": "Jahmyr Gibbs",
+"p": "RB",
 "tm": "DET",
 "ist": null,
 "ibp": null,
@@ -1053,12 +1043,132 @@
 "pp": null,
 "espn": null
 },
-"12534": {
-"n": "Kyle Monangai",
-"p": "RB",
+"8167": {
+"n": "Christian Watson",
+"p": "WR",
+"tm": "GB",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"4217": {
+"n": "George Kittle",
+"p": "TE",
+"tm": "SF",
+"ist": "PUP",
+"ibp": "Achilles",
+"inote": "Surgery",
+"pp": null,
+"espn": 3040151
+},
+"7553": {
+"n": "Kyle Pitts",
+"p": "TE",
+"tm": "ATL",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"8259": {
+"n": "Cameron Dicker",
+"p": "K",
+"tm": "LAC",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"11620": {
+"n": "Rome Odunze",
+"p": "WR",
 "tm": "CHI",
-"ist": "Questionable",
-"ibp": "Knee",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"8180": {
+"n": "Jalen Nailor",
+"p": "WR",
+"tm": "LV",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"12518": {
+"n": "Tyler Warren",
+"p": "TE",
+"tm": "IND",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"7567": {
+"n": "Kenny Gainwell",
+"p": "RB",
+"tm": "TB",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"12506": {
+"n": "Harold Fannin",
+"p": "TE",
+"tm": "CLE",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"8110": {
+"n": "Jake Ferguson",
+"p": "TE",
+"tm": "DAL",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"2216": {
+"n": "Mike Evans",
+"p": "WR",
+"tm": "SF",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 16737
+},
+"9756": {
+"n": "Jordan Addison",
+"p": "WR",
+"tm": "MIN",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"12529": {
+"n": "TreVeyon Henderson",
+"p": "RB",
+"tm": "NE",
+"ist": null,
+"ibp": null,
 "inote": null,
 "pp": null,
 "espn": null
@@ -1073,45 +1183,15 @@
 "pp": null,
 "espn": null
 },
-"9225": {
-"n": "Tank Bigsby",
-"p": "RB",
-"tm": "PHI",
-"ist": "Questionable",
-"ibp": "Toe",
-"inote": null,
-"pp": null,
-"espn": null
-},
-"2747": {
-"n": "Jason Myers",
-"p": "K",
-"tm": "SEA",
+"6804": {
+"n": "Jordan Love",
+"p": "QB",
+"tm": "GB",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
-"espn": 2473037
-},
-"1466": {
-"n": "Travis Kelce",
-"p": "TE",
-"tm": "KC",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 15847
-},
-"12713": {
-"n": "Andy Borregales",
-"p": "K",
-"tm": "NE",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
+"espn": 4036378
 },
 "LAR": {
 "n": "Los Angeles Rams",
@@ -1123,140 +1203,30 @@
 "pp": null,
 "espn": null
 },
-"12490": {
-"n": "Bhayshul Tuten",
-"p": "RB",
-"tm": "JAX",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"5859": {
-"n": "A.J. Brown",
-"p": "WR",
-"tm": "NE",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 4047646
-},
-"11631": {
-"n": "Brian Thomas",
-"p": "WR",
-"tm": "JAX",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"4046": {
-"n": "Patrick Mahomes",
-"p": "QB",
-"tm": "KC",
-"ist": "Questionable",
-"ibp": "Knee - ACL",
-"inote": "Surgery",
-"pp": null,
-"espn": 3139477
-},
-"1945": {
-"n": "Chris Boswell",
+"6650": {
+"n": "Chase McLaughlin",
 "p": "K",
-"tm": "PIT",
+"tm": "TB",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
-"espn": 17372
+"espn": 3150744
 },
-"11628": {
-"n": "Marvin Harrison",
+"7049": {
+"n": "Jauan Jennings",
 "p": "WR",
-"tm": "ARI",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"12481": {
-"n": "Cam Skattebo",
-"p": "RB",
-"tm": "NYG",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"421": {
-"n": "Matthew Stafford",
-"p": "QB",
-"tm": "LAR",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 12483
-},
-"9487": {
-"n": "Parker Washington",
-"p": "WR",
-"tm": "JAX",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"12469": {
-"n": "Dylan Sampson",
-"p": "RB",
-"tm": "CLE",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"12508": {
-"n": "Jaxson Dart",
-"p": "QB",
-"tm": "NYG",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"5927": {
-"n": "Terry McLaurin",
-"p": "WR",
-"tm": "WAS",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 3121422
-},
-"2216": {
-"n": "Mike Evans",
-"p": "WR",
-"tm": "SF",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 16737
-},
-"8408": {
-"n": "Jordan Mason",
-"p": "RB",
 "tm": "MIN",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 3886598
+},
+"12489": {
+"n": "RJ Harvey",
+"p": "RB",
+"tm": "DEN",
 "ist": null,
 "ibp": null,
 "inote": null,
@@ -1273,15 +1243,165 @@
 "pp": null,
 "espn": null
 },
-"4035": {
-"n": "Alvin Kamara",
+"6790": {
+"n": "D'Andre Swift",
 "p": "RB",
-"tm": "NO",
+"tm": "CHI",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
-"espn": 3054850
+"espn": 4259545
+},
+"11583": {
+"n": "Jonathon Brooks",
+"p": "RB",
+"tm": "CAR",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"8154": {
+"n": "Brian Robinson",
+"p": "RB",
+"tm": "ATL",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"6797": {
+"n": "Justin Herbert",
+"p": "QB",
+"tm": "LAC",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 4038941
+},
+"8137": {
+"n": "George Pickens",
+"p": "WR",
+"tm": "DAL",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"DEN": {
+"n": "Denver Broncos",
+"p": "DEF",
+"tm": "DEN",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"7042": {
+"n": "Tyler Bass",
+"p": "K",
+"tm": "BUF",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 3917232
+},
+"4046": {
+"n": "Patrick Mahomes",
+"p": "QB",
+"tm": "KC",
+"ist": "Questionable",
+"ibp": "Knee - ACL",
+"inote": "Surgery",
+"pp": null,
+"espn": 3139477
+},
+"12508": {
+"n": "Jaxson Dart",
+"p": "QB",
+"tm": "NYG",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"8183": {
+"n": "Brock Purdy",
+"p": "QB",
+"tm": "SF",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"8112": {
+"n": "Drake London",
+"p": "WR",
+"tm": "ATL",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"2449": {
+"n": "Stefon Diggs",
+"p": "WR",
+"tm": "WAS",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 2976212
+},
+"9480": {
+"n": "Brenton Strange",
+"p": "TE",
+"tm": "JAX",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"11564": {
+"n": "Drake Maye",
+"p": "QB",
+"tm": "NE",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"8155": {
+"n": "Breece Hall",
+"p": "RB",
+"tm": "NYJ",
+"ist": "Questionable",
+"ibp": "Thigh",
+"inote": null,
+"pp": null,
+"espn": null
+},
+"3294": {
+"n": "Dak Prescott",
+"p": "QB",
+"tm": "DAL",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 2577417
 },
 "4199": {
 "n": "Aaron Jones",
@@ -1293,25 +1413,175 @@
 "pp": null,
 "espn": 3042519
 },
-"13287": {
-"n": "Jeremiyah Love",
+"9511": {
+"n": "Keaton Mitchell",
 "p": "RB",
-"tm": "ARI",
-"ist": "Questionable",
-"ibp": "Ankle",
+"tm": "LAC",
+"ist": null,
+"ibp": null,
 "inote": null,
 "pp": null,
 "espn": null
 },
-"13330": {
-"n": "Kenyon Sadiq",
-"p": "TE",
-"tm": "NYJ",
-"ist": "Questionable",
-"ibp": "Abdomen",
+"5872": {
+"n": "Deebo Samuel",
+"p": "WR",
+"tm": "SF",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 3126486
+},
+"12527": {
+"n": "Ashton Jeanty",
+"p": "RB",
+"tm": "LV",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"8142": {
+"n": "Alec Pierce",
+"p": "WR",
+"tm": "IND",
+"ist": "PUP",
+"ibp": "Ankle",
 "inote": "Surgery",
 "pp": null,
 "espn": null
+},
+"12490": {
+"n": "Bhayshul Tuten",
+"p": "RB",
+"tm": "JAX",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"1945": {
+"n": "Chris Boswell",
+"p": "K",
+"tm": "PIT",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 17372
+},
+"11560": {
+"n": "Caleb Williams",
+"p": "QB",
+"tm": "CHI",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"9225": {
+"n": "Tank Bigsby",
+"p": "RB",
+"tm": "PHI",
+"ist": "Questionable",
+"ibp": "Toe",
+"inote": null,
+"pp": null,
+"espn": null
+},
+"9753": {
+"n": "Zach Charbonnet",
+"p": "RB",
+"tm": "SEA",
+"ist": "PUP",
+"ibp": "Knee - ACL",
+"inote": "Surgery",
+"pp": null,
+"espn": null
+},
+"9508": {
+"n": "Tyjae Spears",
+"p": "RB",
+"tm": "TEN",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"8132": {
+"n": "Tyler Allgeier",
+"p": "RB",
+"tm": "ARI",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"7525": {
+"n": "DeVonta Smith",
+"p": "WR",
+"tm": "PHI",
+"ist": "Questionable",
+"ibp": "Hamstring",
+"inote": null,
+"pp": null,
+"espn": null
+},
+"8676": {
+"n": "Rashid Shaheed",
+"p": "WR",
+"tm": "SEA",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"7523": {
+"n": "Trevor Lawrence",
+"p": "QB",
+"tm": "JAX",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"7569": {
+"n": "Nico Collins",
+"p": "WR",
+"tm": "HOU",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"12469": {
+"n": "Dylan Sampson",
+"p": "RB",
+"tm": "CLE",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"6819": {
+"n": "Michael Pittman",
+"p": "WR",
+"tm": "PIT",
+"ist": "Questionable",
+"ibp": "Leg",
+"inote": null,
+"pp": null,
+"espn": 4035687
 },
 "5967": {
 "n": "Tony Pollard",
@@ -1323,19 +1593,49 @@
 "pp": null,
 "espn": 3916148
 },
-"9493": {
-"n": "Puka Nacua",
-"p": "WR",
+"12015": {
+"n": "Harrison Mevis",
+"p": "K",
 "tm": "LAR",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"8138": {
+"n": "James Cook",
+"p": "RB",
+"tm": "BUF",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"13294": {
+"n": "Makai Lemon",
+"p": "WR",
+"tm": "PHI",
 "ist": "Questionable",
 "ibp": "Undisclosed",
 "inote": null,
 "pp": null,
 "espn": null
 },
-"12501": {
-"n": "Matthew Golden",
-"p": "WR",
+"8150": {
+"n": "Kyren Williams",
+"p": "RB",
+"tm": "LAR",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"11581": {
+"n": "MarShawn Lloyd",
+"p": "RB",
 "tm": "GB",
 "ist": null,
 "ibp": null,
@@ -1343,15 +1643,25 @@
 "pp": null,
 "espn": null
 },
-"6806": {
-"n": "J.K. Dobbins",
-"p": "RB",
-"tm": "DEN",
+"13281": {
+"n": "Jordyn Tyson",
+"p": "WR",
+"tm": "NO",
+"ist": "Doubtful",
+"ibp": "Hamstring",
+"inote": "Strain",
+"pp": null,
+"espn": null
+},
+"4983": {
+"n": "DJ Moore",
+"p": "WR",
+"tm": "BUF",
 "ist": "Questionable",
-"ibp": "Undisclosed",
+"ibp": "Lower Body",
 "inote": null,
 "pp": null,
-"espn": 4241985
+"espn": 3915416
 },
 "5849": {
 "n": "Kyler Murray",
@@ -1363,9 +1673,209 @@
 "pp": null,
 "espn": 3917315
 },
-"12506": {
-"n": "Harold Fannin",
+"2747": {
+"n": "Jason Myers",
+"p": "K",
+"tm": "SEA",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 2473037
+},
+"3451": {
+"n": "Ka'imi Fairbairn",
+"p": "K",
+"tm": "HOU",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 2971573
+},
+"11635": {
+"n": "Ladd McConkey",
+"p": "WR",
+"tm": "LAC",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"PHI": {
+"n": "Philadelphia Eagles",
+"p": "DEF",
+"tm": "PHI",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"11610": {
+"n": "Malik Washington",
+"p": "WR",
+"tm": "MIA",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"9509": {
+"n": "Bijan Robinson",
+"p": "RB",
+"tm": "ATL",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"12512": {
+"n": "Quinshon Judkins",
+"p": "RB",
+"tm": "CLE",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"4892": {
+"n": "Baker Mayfield",
+"p": "QB",
+"tm": "TB",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 3052587
+},
+"8134": {
+"n": "Khalil Shakir",
+"p": "WR",
+"tm": "BUF",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"13726": {
+"n": "Camden Brown",
+"p": "WR",
+"tm": "DAL",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"10236": {
+"n": "Dalton Kincaid",
 "p": "TE",
+"tm": "BUF",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"8121": {
+"n": "Romeo Doubs",
+"p": "WR",
+"tm": "NE",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"12533": {
+"n": "Jacory Croskey-Merritt",
+"p": "RB",
+"tm": "WAS",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"5892": {
+"n": "David Montgomery",
+"p": "RB",
+"tm": "HOU",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 4035538
+},
+"11584": {
+"n": "Bucky Irving",
+"p": "RB",
+"tm": "TB",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"8136": {
+"n": "Rachaad White",
+"p": "RB",
+"tm": "WAS",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"8148": {
+"n": "Jameson Williams",
+"p": "WR",
+"tm": "DET",
+"ist": "Questionable",
+"ibp": "Shoulder",
+"inote": null,
+"pp": null,
+"espn": null
+},
+"12713": {
+"n": "Andy Borregales",
+"p": "K",
+"tm": "NE",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"10229": {
+"n": "Rashee Rice",
+"p": "WR",
+"tm": "KC",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"4035": {
+"n": "Alvin Kamara",
+"p": "RB",
+"tm": "NO",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 3054850
+},
+"13346": {
+"n": "Denzel Boston",
+"p": "WR",
 "tm": "CLE",
 "ist": null,
 "ibp": null,
@@ -1383,396 +1893,6 @@
 "pp": null,
 "espn": 3121023
 },
-"11646": {
-"n": "Jalen Coker",
-"p": "WR",
-"tm": "CAR",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"4034": {
-"n": "Christian McCaffrey",
-"p": "RB",
-"tm": "SF",
-"ist": "Questionable",
-"ibp": "Undisclosed",
-"inote": null,
-"pp": null,
-"espn": 3117251
-},
-"7525": {
-"n": "DeVonta Smith",
-"p": "WR",
-"tm": "PHI",
-"ist": "Questionable",
-"ibp": "Hamstring",
-"inote": null,
-"pp": null,
-"espn": null
-},
-"6804": {
-"n": "Jordan Love",
-"p": "QB",
-"tm": "GB",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 4036378
-},
-"11563": {
-"n": "Bo Nix",
-"p": "QB",
-"tm": "DEN",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"11610": {
-"n": "Malik Washington",
-"p": "WR",
-"tm": "MIA",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"12533": {
-"n": "Jacory Croskey-Merritt",
-"p": "RB",
-"tm": "WAS",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"9500": {
-"n": "Josh Downs",
-"p": "WR",
-"tm": "IND",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"DET": {
-"n": "Detroit Lions",
-"p": "DEF",
-"tm": "DET",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"8131": {
-"n": "Isaiah Likely",
-"p": "TE",
-"tm": "NYG",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"11632": {
-"n": "Malik Nabers",
-"p": "WR",
-"tm": "NYG",
-"ist": "Questionable",
-"ibp": "Knee - ACL",
-"inote": "Surgery",
-"pp": null,
-"espn": null
-},
-"5872": {
-"n": "Deebo Samuel",
-"p": "WR",
-"tm": "SF",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 3126486
-},
-"4217": {
-"n": "George Kittle",
-"p": "TE",
-"tm": "SF",
-"ist": "PUP",
-"ibp": "Achilles",
-"inote": "Surgery",
-"pp": null,
-"espn": 3040151
-},
-"13346": {
-"n": "Denzel Boston",
-"p": "WR",
-"tm": "CLE",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"PHI": {
-"n": "Philadelphia Eagles",
-"p": "DEF",
-"tm": "PHI",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"8136": {
-"n": "Rachaad White",
-"p": "RB",
-"tm": "WAS",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"10229": {
-"n": "Rashee Rice",
-"p": "WR",
-"tm": "KC",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"5846": {
-"n": "DK Metcalf",
-"p": "WR",
-"tm": "PIT",
-"ist": "Questionable",
-"ibp": "Undisclosed",
-"inote": null,
-"pp": null,
-"espn": 4047650
-},
-"11624": {
-"n": "Xavier Worthy",
-"p": "WR",
-"tm": "KC",
-"ist": "Questionable",
-"ibp": "Shoulder",
-"inote": null,
-"pp": null,
-"espn": null
-},
-"CLE": {
-"n": "Cleveland Browns",
-"p": "DEF",
-"tm": "CLE",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"3451": {
-"n": "Ka'imi Fairbairn",
-"p": "K",
-"tm": "HOU",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 2971573
-},
-"8205": {
-"n": "Isiah Pacheco",
-"p": "RB",
-"tm": "DET",
-"ist": "Questionable",
-"ibp": "Knee - MCL",
-"inote": null,
-"pp": null,
-"espn": null
-},
-"7594": {
-"n": "Chuba Hubbard",
-"p": "RB",
-"tm": "CAR",
-"ist": "Questionable",
-"ibp": "Hamstring",
-"inote": null,
-"pp": null,
-"espn": null
-},
-"6904": {
-"n": "Jalen Hurts",
-"p": "QB",
-"tm": "PHI",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 4040715
-},
-"8144": {
-"n": "Chris Olave",
-"p": "WR",
-"tm": "NO",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"12507": {
-"n": "Omarion Hampton",
-"p": "RB",
-"tm": "LAC",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"12493": {
-"n": "Oronde Gadsden",
-"p": "TE",
-"tm": "LAC",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"13286": {
-"n": "Jadarian Price",
-"p": "RB",
-"tm": "SEA",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"11583": {
-"n": "Jonathon Brooks",
-"p": "RB",
-"tm": "CAR",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"JAX": {
-"n": "Jacksonville Jaguars",
-"p": "DEF",
-"tm": "JAX",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"9511": {
-"n": "Keaton Mitchell",
-"p": "RB",
-"tm": "LAC",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"6794": {
-"n": "Justin Jefferson",
-"p": "WR",
-"tm": "MIN",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 4262921
-},
-"9754": {
-"n": "Quentin Johnston",
-"p": "WR",
-"tm": "LAC",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"12530": {
-"n": "Travis Hunter",
-"p": "WR",
-"tm": "JAX",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"11586": {
-"n": "Blake Corum",
-"p": "RB",
-"tm": "LAR",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"LAC": {
-"n": "Los Angeles Chargers",
-"p": "DEF",
-"tm": "LAC",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"10219": {
-"n": "Chris Rodriguez",
-"p": "RB",
-"tm": "JAX",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"8110": {
-"n": "Jake Ferguson",
-"p": "TE",
-"tm": "DAL",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"NE": {
-"n": "New England Patriots",
-"p": "DEF",
-"tm": "NE",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
 "7543": {
 "n": "Travis Etienne",
 "p": "RB",
@@ -1783,315 +1903,15 @@
 "pp": null,
 "espn": null
 },
-"11564": {
-"n": "Drake Maye",
-"p": "QB",
-"tm": "NE",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"8180": {
-"n": "Jalen Nailor",
+"13298": {
+"n": "KC Concepcion",
 "p": "WR",
-"tm": "LV",
+"tm": "CLE",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
 "espn": null
-},
-"10236": {
-"n": "Dalton Kincaid",
-"p": "TE",
-"tm": "BUF",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"12517": {
-"n": "Colston Loveland",
-"p": "TE",
-"tm": "CHI",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"12514": {
-"n": "Emeka Egbuka",
-"p": "WR",
-"tm": "TB",
-"ist": "Questionable",
-"ibp": "Undisclosed",
-"inote": null,
-"pp": null,
-"espn": null
-},
-"5892": {
-"n": "David Montgomery",
-"p": "RB",
-"tm": "HOU",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 4035538
-},
-"12519": {
-"n": "Luther Burden",
-"p": "WR",
-"tm": "CHI",
-"ist": "Questionable",
-"ibp": "Lower Body",
-"inote": null,
-"pp": null,
-"espn": null
-},
-"7611": {
-"n": "Rhamondre Stevenson",
-"p": "RB",
-"tm": "NE",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"9226": {
-"n": "De'Von Achane",
-"p": "RB",
-"tm": "MIA",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"4866": {
-"n": "Saquon Barkley",
-"p": "RB",
-"tm": "PHI",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 3929630
-},
-"6801": {
-"n": "Tee Higgins",
-"p": "WR",
-"tm": "CIN",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 4239993
-},
-"12529": {
-"n": "TreVeyon Henderson",
-"p": "RB",
-"tm": "NE",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"DEN": {
-"n": "Denver Broncos",
-"p": "DEF",
-"tm": "DEN",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"12527": {
-"n": "Ashton Jeanty",
-"p": "RB",
-"tm": "LV",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"3294": {
-"n": "Dak Prescott",
-"p": "QB",
-"tm": "DAL",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 2577417
-},
-"8130": {
-"n": "Trey McBride",
-"p": "TE",
-"tm": "ARI",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"9753": {
-"n": "Zach Charbonnet",
-"p": "RB",
-"tm": "SEA",
-"ist": "PUP",
-"ibp": "Knee - ACL",
-"inote": "Surgery",
-"pp": null,
-"espn": null
-},
-"3214": {
-"n": "Hunter Henry",
-"p": "TE",
-"tm": "NE",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 3046439
-},
-"13281": {
-"n": "Jordyn Tyson",
-"p": "WR",
-"tm": "NO",
-"ist": "Doubtful",
-"ibp": "Hamstring",
-"inote": "Strain",
-"pp": null,
-"espn": null
-},
-"9997": {
-"n": "Zay Flowers",
-"p": "WR",
-"tm": "BAL",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"8155": {
-"n": "Breece Hall",
-"p": "RB",
-"tm": "NYJ",
-"ist": "Questionable",
-"ibp": "Thigh",
-"inote": null,
-"pp": null,
-"espn": null
-},
-"8137": {
-"n": "George Pickens",
-"p": "WR",
-"tm": "DAL",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"11655": {
-"n": "Tyrone Tracy",
-"p": "RB",
-"tm": "NYG",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"4881": {
-"n": "Lamar Jackson",
-"p": "QB",
-"tm": "BAL",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 3916387
-},
-"9224": {
-"n": "Chase Brown",
-"p": "RB",
-"tm": "CIN",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"8121": {
-"n": "Romeo Doubs",
-"p": "WR",
-"tm": "NE",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"8167": {
-"n": "Christian Watson",
-"p": "WR",
-"tm": "GB",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"9488": {
-"n": "Jaxon Smith-Njigba",
-"p": "WR",
-"tm": "SEA",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"13279": {
-"n": "Carnell Tate",
-"p": "WR",
-"tm": "TEN",
-"ist": "Questionable",
-"ibp": "Undisclosed",
-"inote": null,
-"pp": null,
-"espn": null
-},
-"6786": {
-"n": "CeeDee Lamb",
-"p": "WR",
-"tm": "DAL",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 4241389
-},
-"3198": {
-"n": "Derrick Henry",
-"p": "RB",
-"tm": "BAL",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 3043078
 },
 "4037": {
 "n": "Chris Godwin",
@@ -2103,200 +1923,10 @@
 "pp": null,
 "espn": 3116165
 },
-"4984": {
-"n": "Josh Allen",
-"p": "QB",
-"tm": "BUF",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 3918298
-},
-"9756": {
-"n": "Jordan Addison",
-"p": "WR",
-"tm": "MIN",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"7526": {
-"n": "Jaylen Waddle",
-"p": "WR",
-"tm": "DEN",
-"ist": "Questionable",
-"ibp": "Undisclosed",
-"inote": null,
-"pp": null,
-"espn": null
-},
-"6770": {
-"n": "Joe Burrow",
-"p": "QB",
-"tm": "CIN",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 3915511
-},
-"7021": {
-"n": "Rico Dowdle",
-"p": "RB",
-"tm": "PIT",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 4038815
-},
-"7049": {
-"n": "Jauan Jennings",
-"p": "WR",
-"tm": "MIN",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 3886598
-},
-"9484": {
-"n": "Tucker Kraft",
-"p": "TE",
-"tm": "GB",
-"ist": "Questionable",
-"ibp": "Knee - ACL",
-"inote": "Surgery",
-"pp": null,
-"espn": null
-},
-"BAL": {
-"n": "Baltimore Ravens",
-"p": "DEF",
-"tm": "BAL",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"8148": {
-"n": "Jameson Williams",
-"p": "WR",
-"tm": "DET",
-"ist": "Questionable",
-"ibp": "Shoulder",
-"inote": null,
-"pp": null,
-"espn": null
-},
-"8259": {
-"n": "Cameron Dicker",
-"p": "K",
-"tm": "LAC",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"11566": {
-"n": "Jayden Daniels",
-"p": "QB",
-"tm": "WAS",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"8132": {
-"n": "Tyler Allgeier",
-"p": "RB",
-"tm": "ARI",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"6813": {
-"n": "Jonathan Taylor",
-"p": "RB",
-"tm": "IND",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 4242335
-},
-"8228": {
-"n": "Jaylen Warren",
-"p": "RB",
-"tm": "PIT",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"11581": {
-"n": "MarShawn Lloyd",
-"p": "RB",
-"tm": "GB",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"5012": {
-"n": "Mark Andrews",
-"p": "TE",
-"tm": "BAL",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 3116365
-},
-"10232": {
-"n": "Michael Wilson",
+"11628": {
+"n": "Marvin Harrison",
 "p": "WR",
 "tm": "ARI",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"13294": {
-"n": "Makai Lemon",
-"p": "WR",
-"tm": "PHI",
-"ist": "Questionable",
-"ibp": "Undisclosed",
-"inote": null,
-"pp": null,
-"espn": null
-},
-"8154": {
-"n": "Brian Robinson",
-"p": "RB",
-"tm": "ATL",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"9480": {
-"n": "Brenton Strange",
-"p": "TE",
-"tm": "JAX",
 "ist": null,
 "ibp": null,
 "inote": null,
@@ -2313,149 +1943,39 @@
 "pp": null,
 "espn": null
 },
-"10222": {
-"n": "Jayden Reed",
-"p": "WR",
-"tm": "GB",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"9508": {
-"n": "Tyjae Spears",
+"3198": {
+"n": "Derrick Henry",
 "p": "RB",
-"tm": "TEN",
+"tm": "BAL",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
-"espn": null
+"espn": 3043078
 },
-"4983": {
-"n": "DJ Moore",
-"p": "WR",
-"tm": "BUF",
-"ist": "Questionable",
-"ibp": "Lower Body",
-"inote": null,
-"pp": null,
-"espn": 3915416
-},
-"8138": {
-"n": "James Cook",
-"p": "RB",
-"tm": "BUF",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"12518": {
-"n": "Tyler Warren",
-"p": "TE",
-"tm": "IND",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"7042": {
-"n": "Tyler Bass",
-"p": "K",
-"tm": "BUF",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 3917232
-},
-"5189": {
-"n": "Eddy Pineiro",
-"p": "K",
-"tm": "SF",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 4034949
-},
-"8150": {
-"n": "Kyren Williams",
-"p": "RB",
-"tm": "LAR",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"8112": {
-"n": "Drake London",
-"p": "WR",
-"tm": "ATL",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"12489": {
-"n": "RJ Harvey",
-"p": "RB",
-"tm": "DEN",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"9221": {
-"n": "Jahmyr Gibbs",
-"p": "RB",
-"tm": "DET",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"7553": {
-"n": "Kyle Pitts",
-"p": "TE",
-"tm": "ATL",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"7588": {
-"n": "Javonte Williams",
-"p": "RB",
-"tm": "DAL",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"8126": {
-"n": "Wan'Dale Robinson",
-"p": "WR",
-"tm": "TEN",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"8161": {
-"n": "Malik Willis",
+"4984": {
+"n": "Josh Allen",
 "p": "QB",
+"tm": "BUF",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 3918298
+},
+"6801": {
+"n": "Tee Higgins",
+"p": "WR",
+"tm": "CIN",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 4239993
+},
+"9226": {
+"n": "De'Von Achane",
+"p": "RB",
 "tm": "MIA",
 "ist": null,
 "ibp": null,
@@ -2463,30 +1983,140 @@
 "pp": null,
 "espn": null
 },
-"7523": {
-"n": "Trevor Lawrence",
-"p": "QB",
-"tm": "JAX",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"11584": {
-"n": "Bucky Irving",
+"8408": {
+"n": "Jordan Mason",
 "p": "RB",
-"tm": "TB",
+"tm": "MIN",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
 "espn": null
 },
-"HOU": {
-"n": "Houston Texans",
+"SEA": {
+"n": "Seattle Seahawks",
 "p": "DEF",
-"tm": "HOU",
+"tm": "SEA",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"8146": {
+"n": "Garrett Wilson",
+"p": "WR",
+"tm": "NYJ",
+"ist": "Questionable",
+"ibp": "Illness",
+"inote": null,
+"pp": null,
+"espn": null
+},
+"13287": {
+"n": "Jeremiyah Love",
+"p": "RB",
+"tm": "ARI",
+"ist": "Questionable",
+"ibp": "Ankle",
+"inote": null,
+"pp": null,
+"espn": null
+},
+"4034": {
+"n": "Christian McCaffrey",
+"p": "RB",
+"tm": "SF",
+"ist": "Questionable",
+"ibp": "Undisclosed",
+"inote": null,
+"pp": null,
+"espn": 3117251
+},
+"CLE": {
+"n": "Cleveland Browns",
+"p": "DEF",
+"tm": "CLE",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"13279": {
+"n": "Carnell Tate",
+"p": "WR",
+"tm": "TEN",
+"ist": "Questionable",
+"ibp": "Undisclosed",
+"inote": null,
+"pp": null,
+"espn": null
+},
+"5850": {
+"n": "Josh Jacobs",
+"p": "RB",
+"tm": "GB",
+"ist": "Questionable",
+"ibp": "Groin",
+"inote": null,
+"pp": null,
+"espn": 4047365
+},
+"NE": {
+"n": "New England Patriots",
+"p": "DEF",
+"tm": "NE",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"MIN": {
+"n": "Minnesota Vikings",
+"p": "DEF",
+"tm": "MIN",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"LAC": {
+"n": "Los Angeles Chargers",
+"p": "DEF",
+"tm": "LAC",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"5927": {
+"n": "Terry McLaurin",
+"p": "WR",
+"tm": "WAS",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 3121422
+},
+"5846": {
+"n": "DK Metcalf",
+"p": "WR",
+"tm": "PIT",
+"ist": "Questionable",
+"ibp": "Undisclosed",
+"inote": null,
+"pp": null,
+"espn": 4047650
+},
+"10232": {
+"n": "Michael Wilson",
+"p": "WR",
+"tm": "ARI",
 "ist": null,
 "ibp": null,
 "inote": null,
@@ -2503,10 +2133,110 @@
 "pp": null,
 "espn": 3916433
 },
-"8676": {
-"n": "Rashid Shaheed",
+"6806": {
+"n": "J.K. Dobbins",
+"p": "RB",
+"tm": "DEN",
+"ist": "Questionable",
+"ibp": "Undisclosed",
+"inote": null,
+"pp": null,
+"espn": 4241985
+},
+"8130": {
+"n": "Trey McBride",
+"p": "TE",
+"tm": "ARI",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"7564": {
+"n": "Ja'Marr Chase",
 "p": "WR",
-"tm": "SEA",
+"tm": "CIN",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"9493": {
+"n": "Puka Nacua",
+"p": "WR",
+"tm": "LAR",
+"ist": "Questionable",
+"ibp": "Undisclosed",
+"inote": null,
+"pp": null,
+"espn": null
+},
+"4881": {
+"n": "Lamar Jackson",
+"p": "QB",
+"tm": "BAL",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 3916387
+},
+"12474": {
+"n": "Woody Marks",
+"p": "RB",
+"tm": "HOU",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"3214": {
+"n": "Hunter Henry",
+"p": "TE",
+"tm": "NE",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 3046439
+},
+"6813": {
+"n": "Jonathan Taylor",
+"p": "RB",
+"tm": "IND",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 4242335
+},
+"10219": {
+"n": "Chris Rodriguez",
+"p": "RB",
+"tm": "JAX",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"7611": {
+"n": "Rhamondre Stevenson",
+"p": "RB",
+"tm": "NE",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"12530": {
+"n": "Travis Hunter",
+"p": "WR",
+"tm": "JAX",
 "ist": null,
 "ibp": null,
 "inote": null,
@@ -2523,58 +2253,168 @@
 "pp": null,
 "espn": null
 },
-"8134": {
-"n": "Khalil Shakir",
+"11632": {
+"n": "Malik Nabers",
 "p": "WR",
-"tm": "BUF",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null
-},
-"5850": {
-"n": "Josh Jacobs",
-"p": "RB",
-"tm": "GB",
+"tm": "NYG",
 "ist": "Questionable",
-"ibp": "Groin",
-"inote": null,
+"ibp": "Knee - ACL",
+"inote": "Surgery",
 "pp": null,
-"espn": 4047365
+"espn": null
 },
-"2449": {
-"n": "Stefon Diggs",
-"p": "WR",
-"tm": "WAS",
+"7021": {
+"n": "Rico Dowdle",
+"p": "RB",
+"tm": "PIT",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
-"espn": 2976212
+"espn": 4038815
 },
-"7567": {
-"n": "Kenny Gainwell",
-"p": "RB",
-"tm": "TB",
+"6794": {
+"n": "Justin Jefferson",
+"p": "WR",
+"tm": "MIN",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 4262921
+},
+"9997": {
+"n": "Zay Flowers",
+"p": "WR",
+"tm": "BAL",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
 "espn": null
 },
-"6650": {
-"n": "Chase McLaughlin",
-"p": "K",
-"tm": "TB",
+"4866": {
+"n": "Saquon Barkley",
+"p": "RB",
+"tm": "PHI",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
-"espn": 3150744
+"espn": 3929630
 },
-"7569": {
-"n": "Nico Collins",
+"11631": {
+"n": "Brian Thomas",
+"p": "WR",
+"tm": "JAX",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"7588": {
+"n": "Javonte Williams",
+"p": "RB",
+"tm": "DAL",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"9487": {
+"n": "Parker Washington",
+"p": "WR",
+"tm": "JAX",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"11563": {
+"n": "Bo Nix",
+"p": "QB",
+"tm": "DEN",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"5012": {
+"n": "Mark Andrews",
+"p": "TE",
+"tm": "BAL",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 3116365
+},
+"9754": {
+"n": "Quentin Johnston",
+"p": "WR",
+"tm": "LAC",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"8205": {
+"n": "Isiah Pacheco",
+"p": "RB",
+"tm": "DET",
+"ist": "Questionable",
+"ibp": "Knee - MCL",
+"inote": null,
+"pp": null,
+"espn": null
+},
+"9500": {
+"n": "Josh Downs",
+"p": "WR",
+"tm": "IND",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"2133": {
+"n": "Davante Adams",
+"p": "WR",
+"tm": "LAR",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 16800
+},
+"12501": {
+"n": "Matthew Golden",
+"p": "WR",
+"tm": "GB",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"12534": {
+"n": "Kyle Monangai",
+"p": "RB",
+"tm": "CHI",
+"ist": "Questionable",
+"ibp": "Knee",
+"inote": null,
+"pp": null,
+"espn": null
+},
+"12484": {
+"n": "Jayden Higgins",
 "p": "WR",
 "tm": "HOU",
 "ist": null,
@@ -2583,20 +2423,180 @@
 "pp": null,
 "espn": null
 },
-"4892": {
-"n": "Baker Mayfield",
-"p": "QB",
-"tm": "TB",
+"8126": {
+"n": "Wan'Dale Robinson",
+"p": "WR",
+"tm": "TEN",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
-"espn": 3052587
+"espn": null
 },
-"11620": {
-"n": "Rome Odunze",
+"11655": {
+"n": "Tyrone Tracy",
+"p": "RB",
+"tm": "NYG",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"1466": {
+"n": "Travis Kelce",
+"p": "TE",
+"tm": "KC",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 15847
+},
+"9488": {
+"n": "Jaxon Smith-Njigba",
 "p": "WR",
-"tm": "CHI",
+"tm": "SEA",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"13417": {
+"n": "De'Zhaun Stribling",
+"p": "WR",
+"tm": "SF",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"12481": {
+"n": "Cam Skattebo",
+"p": "RB",
+"tm": "NYG",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"11566": {
+"n": "Jayden Daniels",
+"p": "QB",
+"tm": "WAS",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"7594": {
+"n": "Chuba Hubbard",
+"p": "RB",
+"tm": "CAR",
+"ist": "Questionable",
+"ibp": "Hamstring",
+"inote": null,
+"pp": null,
+"espn": null
+},
+"11586": {
+"n": "Blake Corum",
+"p": "RB",
+"tm": "LAR",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"13286": {
+"n": "Jadarian Price",
+"p": "RB",
+"tm": "SEA",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"6770": {
+"n": "Joe Burrow",
+"p": "QB",
+"tm": "CIN",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 3915511
+},
+"8131": {
+"n": "Isaiah Likely",
+"p": "TE",
+"tm": "NYG",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"DET": {
+"n": "Detroit Lions",
+"p": "DEF",
+"tm": "DET",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"12514": {
+"n": "Emeka Egbuka",
+"p": "WR",
+"tm": "TB",
+"ist": "Questionable",
+"ibp": "Undisclosed",
+"inote": null,
+"pp": null,
+"espn": null
+},
+"6786": {
+"n": "CeeDee Lamb",
+"p": "WR",
+"tm": "DAL",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 4241389
+},
+"5859": {
+"n": "A.J. Brown",
+"p": "WR",
+"tm": "NE",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 4047646
+},
+"10222": {
+"n": "Jayden Reed",
+"p": "WR",
+"tm": "GB",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null
+},
+"BAL": {
+"n": "Baltimore Ravens",
+"p": "DEF",
+"tm": "BAL",
 "ist": null,
 "ibp": null,
 "inote": null,
