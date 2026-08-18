@@ -125,4 +125,34 @@ main{padding:16px 18px 0}
 .picklinks a{font-size:11px;color:var(--wr);text-decoration:none;border:1px solid var(--wr);padding:3px 9px}
 .picklinks a:hover{background:color-mix(in srgb,var(--wr) 10%,transparent)}
 
+/* ---- Escalação (lineup analyzer) ---- */
+.vsbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 15px;flex-wrap:wrap}
+.vsside{display:flex;align-items:center;gap:9px;min-width:0}
+.vsname{font-weight:800;font-size:14px}
+.vsname.me{color:var(--accent)}
+.vsvs{font-size:11px;color:var(--dimmer);letter-spacing:.1em;font-weight:800;text-transform:uppercase}
+.vsproj{font-size:12px;color:var(--dim);font-variant-numeric:tabular-nums}
+.vsproj b{color:var(--ink);font-size:15px}
+
+.slotRow{padding:13px 15px;border-bottom:1px solid var(--line)}
+.slotRow:last-child{border-bottom:none}
+.slotHd{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.slotTag{font-size:9.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--dim);
+  border:1px solid var(--line);padding:2px 7px;flex-shrink:0}
+.slotRow .nm{font-size:14.5px}
+.verdict{font-size:9px;font-weight:800;letter-spacing:.04em;padding:2px 7px;border:1px solid;margin-left:auto;flex-shrink:0}
+.verdict.start{color:var(--good);border-color:var(--good)}
+.verdict.sit{color:var(--bad);border-color:var(--bad)}
+.verdict.risky{color:var(--accent2);border-color:var(--accent2)}
+.slotWhy{font-size:13.5px;line-height:1.6;margin-top:8px}
+.slotMeta{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.metric{font-size:10.5px;color:var(--dim);border:1px solid var(--line);padding:2px 8px;font-variant-numeric:tabular-nums}
+.metric b{color:var(--ink)}
+.metric.good{border-color:var(--good);color:var(--good)}
+.metric.good b{color:var(--good)}
+.metric.bad{border-color:var(--bad);color:var(--bad)}
+.metric.bad b{color:var(--bad)}
+.benchNote{font-size:12.5px;color:var(--dim);line-height:1.6;margin-top:7px;padding-left:11px;border-left:2px solid var(--line)}
+.benchNote b{color:var(--ink)}
+
 footer{color:var(--dimmer);font-size:11px;text-align:center;padding:22px 24px 0;line-height:1.6;border-top:1px solid var(--line);margin-top:10px}

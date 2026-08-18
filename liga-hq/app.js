@@ -8,7 +8,8 @@ let state={
   players:{},
   transactions:[],
   trendingAdd:[], trendingDrop:[],
-  weeklyStats:{}, statsWeekLabel:""
+  weeklyStats:{}, statsWeekLabel:"",
+  snapshot:null
 };
 
 function headshotUrl(playerId){ return `https://sleepercdn.com/content/nfl/players/thumb/${playerId}.jpg`; }
@@ -142,6 +143,12 @@ async function loadAll(){
       state.statsWeekLabel = `${state.nflState.season_type==="regular"?"semana":"pré-temporada"} ${statsWeek}`;
     }catch(e){ state.weeklyStats={}; state.statsWeekLabel=""; }
 
+    // snapshot committed daily by the GitHub Action — carries matchups, schedule,
+    // defense-vs-position profiles, usage trends, projections and last-season baseline
+    try{
+      state.snapshot = await fetchJSON(`sleeper-snapshot.json?t=${Date.now()}`);
+    }catch(e){ state.snapshot=null; }
+
     $("#leagueSub").innerHTML = `<b>${league.name}</b><br>${league.season} · semana ${week}`;
     setStatus(`atualizado às ${new Date().toLocaleTimeString("pt-BR")}`, false);
     renderAll();
@@ -155,6 +162,7 @@ function setStatus(text, isErr){
 }
 
 function renderAll(){
+  renderLineup();
   renderStandings();
   renderMeuTime();
   renderWaivers();
@@ -287,6 +295,232 @@ function renderWaivers(){
       <div class="hd"><span>Movimentações recentes na liga</span></div>
       ${txRows || '<div class="emptyNote">nenhuma transação recente</div>'}
     </div>`;
+}
+
+// ===================== ESCALAÇÃO RECOMENDADA =====================
+// Preenchido pela rotina diária. `slots` segue a formação da liga (QB/RB/RB/WR/WR/TE/FLEX/K/DEF).
+// Cada slot: {slot, id, name, pos, team, verdict: "start"|"risky", why, metrics:[{label,value,tone}],
+//   alt: {name, why} | null }   ← alt = quem ficou no banco naquela vaga e por quê.
+const LINEUP = {
+  updated: "18/08/2026",
+  week: 2,
+  seasonType: "pre",
+  opponent: {teamName:"No Gi, No Huddle", owner:"joaoscarioli", projected:null},
+  myProjected: null,
+  summary: `<b>Leia isso antes:</b> ainda é <b>pré-temporada</b> — sua liga só pontua a partir da semana 1 da
+    temporada regular, então esse confronto não vale nada de verdade. Estou usando essa semana como ensaio da
+    ferramenta, com os dados reais que já existem. Duas ressalvas honestas sobre a qualidade do sinal agora:
+    <b>(1)</b> o ranking de defesas abaixo vem de <b>um único jogo de pré-temporada</b>, com reservas em campo
+    dos dois lados — é ruído, não tendência, e por isso eu <b>não</b> deixei ele derrubar nenhum titular de elite;
+    <b>(2)</b> as projeções oficiais do Sleeper ainda não saíram pra pré-temporada. A partir da semana 1 regular
+    esses dois furos se fecham sozinhos e a análise fica muito mais afiada. O que já é confiável hoje: status de
+    lesão, quem enfrenta quem, participação em campo (snaps) e o histórico da temporada passada — e é neles que
+    apoiei as decisões.`,
+  slots: [
+    {
+      slot:"QB", id:"4984", name:"Josh Allen", pos:"QB", team:"BUF", verdict:"start",
+      metrics:[
+        {label:"2025", value:"22.0 pts/jogo", tone:"good"},
+        {label:"CAR cede a QB", value:"15.1 (12º)"},
+        {label:"lesão", value:"nenhuma", tone:"good"}
+      ],
+      why:`Único QB do elenco, e não é decisão difícil de qualquer forma: 22.0 pontos por jogo na temporada
+        passada em 17 jogos completos, sem lesão. Carolina foi só o 12º que mais cedeu a QBs no recorte disponível,
+        mas isso é irrelevante num jogador desse patamar — Allen é escalado contra qualquer defesa.`,
+      alt:null
+    },
+    {
+      slot:"RB1", id:"6813", name:"Jonathan Taylor", pos:"RB", team:"IND", verdict:"start",
+      metrics:[
+        {label:"2025", value:"21.3 pts/jogo", tone:"good"},
+        {label:"NE cede a RB", value:"6.7 (29º)", tone:"bad"},
+        {label:"lesão", value:"nenhuma", tone:"good"}
+      ],
+      why:`Confronto ruim no papel — New England aparece como 29ª defesa que menos cede a corredores. Mas escalar
+        mesmo assim, sem pensar duas vezes: 21.3 pontos por jogo em 17 jogos é produção de RB1 absoluto, e o
+        recorte de defesa vem de um jogo de pré-temporada (ou seja, quase sem valor preditivo). Nunca sente um RB
+        desse nível por matchup — muito menos por matchup medido assim.`,
+      alt:null
+    },
+    {
+      slot:"RB2", id:"4866", name:"Saquon Barkley", pos:"RB", team:"PHI", verdict:"start",
+      metrics:[
+        {label:"2025", value:"14.5 pts/jogo", tone:"good"},
+        {label:"BAL cede a RB", value:"5.0 (32º)", tone:"bad"},
+        {label:"lesão", value:"nenhuma", tone:"good"}
+      ],
+      why:`Mesmo raciocínio, com o confronto ainda mais feio no papel: Baltimore é a defesa que menos cedeu a RBs
+        nesse recorte. De novo — um jogo de pré-temporada não é motivo pra sentar alguém que fez 14.5 pontos por
+        jogo. É a sua segunda melhor opção de corrida e entra como titular. Se essa leitura de Baltimore se
+        confirmar na temporada regular (aí sim com amostra real), volto a levantar a questão.`,
+      alt:null
+    },
+    {
+      slot:"WR1", id:"5872", name:"Deebo Samuel", pos:"WR", team:"SF", verdict:"start",
+      metrics:[
+        {label:"2025", value:"11.8 pts/jogo", tone:"good"},
+        {label:"TEN cede a WR", value:"42.0 (4º)", tone:"good"},
+        {label:"lesão", value:"nenhuma", tone:"good"}
+      ],
+      why:`A escolha mais confortável do seu grupo de recebedores nessa semana: é o único dos seus WRs de topo
+        que está <b>100% sem status de lesão</b>, e ainda pega o melhor confronto do grupo — Tennessee aparece
+        como a 4ª defesa que mais cede a wide receivers (42.0 pontos). Saúde + confronto na mesma direção, sem
+        precisar apostar em ninguém se recuperando.`,
+      alt:null
+    },
+    {
+      slot:"WR2", id:"5947", name:"Jakobi Meyers", pos:"WR", team:"JAX", verdict:"start",
+      metrics:[
+        {label:"2025", value:"11.0 pts/jogo"},
+        {label:"NO cede a WR", value:"30.2 (13º)"},
+        {label:"lesão", value:"nenhuma", tone:"good"}
+      ],
+      why:`Escolhido pelo mesmo critério do Deebo: <b>saúde limpa</b>. Seus outros WRs de nome (Metcalf e Waddle)
+        estão os dois como questionable, e nessa vaga não vale correr risco duplo. Meyers entregou 11.0 pontos por
+        jogo em 16 jogos no ano passado — piso confiável — e Nova Orleans é confronto neutro (13º que mais cede).
+        Não é o teto mais alto do elenco, é a aposta mais segura pro segundo WR.`,
+      alt:{name:"DK Metcalf", why:`teto maior e confronto melhor (Green Bay cede 39.1, 7º), mas está questionable
+        e fora dos treinos desde 11/08 — prazo de retorno mais longo que o do Waddle. Se ele treinar normal até
+        o sábado, vira o titular dessa vaga sem discussão.`}
+    },
+    {
+      slot:"TE", id:"12506", name:"Harold Fannin", pos:"TE", team:"CLE", verdict:"start",
+      metrics:[
+        {label:"2025", value:"11.7 pts/jogo", tone:"good"},
+        {label:"CHI cede a TE", value:"3.2 (30º)", tone:"bad"},
+        {label:"lesão", value:"nenhuma", tone:"good"}
+      ],
+      why:`Único TE do elenco, então é escalação obrigatória — mas vale saber o cenário: Chicago aparece como
+        30ª defesa contra tight ends (só 3.2 pontos cedidos). Fannin vem de 11.7 pontos por jogo em 16 jogos como
+        novato, produção muito boa pra posição. Não dá pra fazer nada diferente essa semana, mas se seu TE virar
+        problema recorrente, é a posição mais óbvia pra buscar no waiver.`,
+      alt:null
+    },
+    {
+      slot:"FLEX", id:"7526", name:"Jaylen Waddle", pos:"WR", team:"DEN", verdict:"risky",
+      metrics:[
+        {label:"2025", value:"12.1 pts/jogo", tone:"good"},
+        {label:"ATL cede a WR", value:"31.7 (12º)"},
+        {label:"lesão", value:"questionable", tone:"bad"}
+      ],
+      why:`Aqui é onde vale gastar o risco. Waddle tem o melhor prognóstico entre seus três questionable
+        (~85% — estiramento leve, técnico Sean Payton já falou em volta em 4-5 dias, e ele treinou por fora sem
+        a manga de compressão), e 12.1 pontos por jogo é teto de titular de verdade. Atlanta é confronto neutro
+        (12º). <b>Confira o status dele antes do jogo</b> — se for rebaixado, o Allgeier é a troca direta.`,
+      alt:{name:"Tyler Allgeier", why:`totalmente saudável e com bom confronto (Las Vegas cede 25.0 a RBs, 6º),
+        mas jogou só 9% dos snaps do Arizona na semana 1 — volume baixo demais pra ser titular por escolha. É o
+        plano B imediato se o Waddle não jogar.`}
+    },
+    {
+      slot:"K", id:"8155", name:"Cameron Dicker", pos:"K", team:"LAC", verdict:"start",
+      metrics:[
+        {label:"2025", value:"9.8 pts/jogo"},
+        {label:"lesão", value:"nenhuma", tone:"good"}
+      ],
+      why:`Único kicker do elenco. 9.8 pontos por jogo em 17 jogos no ano passado — é dos kickers mais
+        consistentes da liga, não é posição que você precise mexer.`,
+      alt:null
+    },
+    {
+      slot:"DEF", id:"HOU", name:"Houston Texans", pos:"DEF", team:"HOU", verdict:"start",
+      metrics:[
+        {label:"jogo", value:"vs LAC"},
+        {label:"lesão", value:"—"}
+      ],
+      why:`Única defesa do elenco. Enfrenta o Los Angeles Chargers. Defesa é a posição mais volátil do fantasy e
+        a mais fácil de rotacionar via waiver semana a semana — se você quiser ganhar pontos de graça durante a
+        temporada, é aqui que dá pra caçar confronto (ex: pegar a defesa que enfrenta o pior ataque da semana).`,
+      alt:null
+    }
+  ],
+  benchNotes: [
+    {name:"DK Metcalf (WR, PIT) — questionable",
+     note:`O caso mais importante do seu banco. Confronto excelente (Green Bay cede 39.1 pontos a WRs, 7º maior)
+       e 12.5 pontos por jogo no ano passado, mas está fora dos treinos desde 11/08 e o técnico Mike McCarthy
+       disse que ele estava "difícil" de voltar, com retorno previsto só pra última semana de agosto. Se ele
+       aparecer nos treinos normalmente, ele entra na vaga do Meyers.`},
+    {name:"Kyle Monangai (RB, CHI) — questionable",
+     note:`Chama atenção porque tem o <b>melhor confronto do elenco inteiro</b>: Cleveland aparece como a defesa
+       que MAIS cede a corredores (37.9 pontos, 1º lugar). O problema é o joelho — exames iniciais sem dano
+       estrutural, mas ainda aguardando confirmação. Não passou na frente dos seus RBs de elite, mas se o
+       Taylor ou o Saquon der problema, ele é o substituto natural com um confronto muito favorável.`},
+    {name:"Malik Washington (WR, MIA)",
+     note:`Vale monitorar por outro motivo: no jogo de abertura da pré-temporada, ele e Caleb Douglas foram
+       claramente a dupla de WRs titulares do Miami, com distância dos outros. Ainda com poucos snaps (22%),
+       mas se esse papel se confirmar na temporada regular ele sobe rápido de importância no seu elenco.`},
+    {name:"Rashid Shaheed (WR, SEA) e Jalen Coker (WR, CAR)",
+     note:`Ambos saudáveis, mas ficam de fora essa semana: Shaheed pega o confronto mais difícil do grupo
+       (Dallas cede só 23.7 a WRs, 24º) e Coker jogou apenas 16% dos snaps da Carolina. São profundidade, não
+       opções de escalação no momento.`}
+  ]
+};
+
+function renderLineup(){
+  const wrap=$("#tabLineup");
+  if(!LINEUP.slots.length){
+    wrap.innerHTML=`<div class="card">
+      <div class="insightsMeta">escalação ainda não calculada</div>
+      <div class="insightsBody">
+        Essa aba é montada pela rotina diária, cruzando: força da defesa adversária contra cada posição
+        (pontos fantasy cedidos, calculado a partir dos dados reais do Sleeper), uso recente de cada jogador
+        (snaps, alvos, carries), projeção oficial da semana, histórico da temporada passada, status de lesão e
+        o consenso das fontes de análise. Ela roda toda manhã — se estiver vazia, é porque ainda não rodou
+        desde que essa aba foi criada.
+      </div>
+    </div>`;
+    return;
+  }
+
+  const opp=LINEUP.opponent||{};
+  const vs=`<div class="card">
+    <div class="hd"><span>Semana ${LINEUP.week}${LINEUP.seasonType==="pre"?" · pré-temporada":""}</span><span>atualizado ${LINEUP.updated}</span></div>
+    <div class="vsbar">
+      <div class="vsside">
+        <div>
+          <div class="vsname me">First Down Syndrome</div>
+          <div class="vsproj">projeção ${LINEUP.myProjected!=null?`<b>${LINEUP.myProjected}</b>`:"—"}</div>
+        </div>
+      </div>
+      <div class="vsvs">versus</div>
+      <div class="vsside">
+        <div style="text-align:right">
+          <div class="vsname">${opp.teamName||"—"}</div>
+          <div class="vsproj">projeção ${opp.projected!=null?`<b>${opp.projected}</b>`:"—"}</div>
+        </div>
+      </div>
+    </div>
+    ${LINEUP.summary?`<div class="insightsBody" style="border-top:1px solid var(--line)">${LINEUP.summary}</div>`:""}
+  </div>`;
+
+  const slots=LINEUP.slots.map(s=>{
+    const metrics=(s.metrics||[]).map(m=>
+      `<span class="metric ${m.tone||""}">${m.label} <b>${m.value}</b></span>`).join("");
+    const verdictCls = s.verdict==="risky" ? "risky" : s.verdict==="sit" ? "sit" : "start";
+    const verdictTxt = s.verdict==="risky" ? "com ressalva" : s.verdict==="sit" ? "evitar" : "escalar";
+    return `<div class="slotRow">
+      <div class="slotHd">
+        <span class="slotTag">${s.slot}</span>
+        ${imgTag(headshotUrl(s.id),"headshot sm",s.pos)}
+        <span class="pos ${s.pos}">${s.pos}</span>
+        <span class="nm">${s.name}</span><span class="tm">${s.team||""}</span>
+        <span class="verdict ${verdictCls}">${verdictTxt}</span>
+      </div>
+      ${metrics?`<div class="slotMeta">${metrics}</div>`:""}
+      <div class="slotWhy">${s.why||""}</div>
+      ${s.alt?`<div class="benchNote">no banco nessa vaga: <b>${s.alt.name}</b> — ${s.alt.why}</div>`:""}
+    </div>`;
+  }).join("");
+
+  const bench=(LINEUP.benchNotes||[]).length
+    ? `<div class="card">
+        <div class="hd"><span>Banco · quem monitorar</span></div>
+        ${LINEUP.benchNotes.map(b=>`<div class="slotRow"><div class="slotHd"><span class="nm">${b.name}</span></div><div class="slotWhy">${b.note}</div></div>`).join("")}
+      </div>`
+    : "";
+
+  wrap.innerHTML = vs
+    + `<div class="card"><div class="hd"><span>Escalação recomendada</span><span>${LINEUP.slots.length} vagas</span></div>${slots}</div>`
+    + bench;
 }
 
 const INJURY_CHECKS = {
@@ -545,13 +779,14 @@ function renderHotWaivers(){
   wrap.innerHTML=`<div class="card"><div class="hd"><span>Hot Waivers · picks com motivo</span><span>${HOT_WAIVERS.length} no histórico</span></div>${sections}</div>`;
 }
 renderHotWaivers();
+renderLineup();
 
 document.querySelectorAll(".tabBtn").forEach(btn=>{
   btn.addEventListener("click",()=>{
     document.querySelectorAll(".tabBtn").forEach(b=>b.classList.remove("on"));
     btn.classList.add("on");
     document.querySelectorAll("main > div").forEach(d=>d.hidden=true);
-    const map={standings:"tabStandings",time:"tabTime",waivers:"tabWaivers",hotwaivers:"tabHotWaivers",lesoes:"tabLesoes",usage:"tabUsage",insights:"tabInsights"};
+    const map={lineup:"tabLineup",standings:"tabStandings",time:"tabTime",waivers:"tabWaivers",hotwaivers:"tabHotWaivers",lesoes:"tabLesoes",usage:"tabUsage",insights:"tabInsights"};
     $("#"+map[btn.dataset.tab]).hidden=false;
   });
 });

@@ -13,7 +13,8 @@
     <span class="sub" id="leagueSub">carregando…</span>
   </div>
   <div class="tabs">
-    <button class="tabBtn on" data-tab="standings">Classificação</button>
+    <button class="tabBtn on" data-tab="lineup">Escalação</button>
+    <button class="tabBtn" data-tab="standings">Classificação</button>
     <button class="tabBtn" data-tab="time">Meu Time</button>
     <button class="tabBtn" data-tab="waivers">Waivers</button>
     <button class="tabBtn" data-tab="hotwaivers">Hot Waivers</button>
@@ -29,7 +30,8 @@
 </div>
 
 <main>
-  <div id="tabStandings"></div>
+  <div id="tabLineup"></div>
+  <div id="tabStandings" hidden></div>
   <div id="tabTime" hidden></div>
   <div id="tabWaivers" hidden></div>
   <div id="tabHotWaivers" hidden></div>
@@ -40,8 +42,9 @@
 
 <footer>
   Dados ao vivo da API pública do Sleeper (liga "The Heads League"). Elenco/lesões/targets/classificação atualizam a
-  cada carregamento (ou no botão ↻); a base de jogadores fica em cache local por até 24h. As abas <b>Hot Waivers</b>,
-  <b>Lesões</b> (checagem manual) e <b>Insights</b> são preenchidas à mão, sob pedido.
+  cada carregamento (ou no botão ↻); a base de jogadores fica em cache local por até 24h. A aba <b>Escalação</b> é
+  recalculada todo dia com dados de uso, projeção e força da defesa adversária, mais o parecer analítico de cada
+  escolha. As abas <b>Hot Waivers</b>, <b>Lesões</b> (checagem manual) e <b>Insights</b> são preenchidas à mão.
 </footer>
 
 <script src="app.js"></script>
