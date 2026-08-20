@@ -1005,6 +1005,130 @@ function renderHotWaivers(){
   wrap.innerHTML=`<div class="card"><div class="hd"><span>Hot Waivers · picks com motivo</span><span>${HOT_WAIVERS.length} no histórico</span></div>${sections}</div>`;
 }
 renderHotWaivers();
+
+// ===================== HOT ROOKIES =====================
+// Novatos se destacando no training camp / pré-temporada. Mesma lógica do Hot Waivers:
+// histórico datado por semana, nunca apaga registro antigo, e marca "picked" quando alguém
+// da liga adiciona o jogador. `tier` resume a força do sinal:
+//   "titular"    = já ganhou vaga de titular / está no topo do depth chart
+//   "subindo"    = ganhando espaço com evidência concreta, mas ainda não é titular
+//   "monitorar"  = talento real porém situação travada (elenco cheio, rodízio indefinido)
+const HOT_ROOKIES = [
+  {
+    id:"13296", name:"Caleb Douglas", pos:"WR", team:"MIA",
+    week:2, seasonType:"pre", status:"available", tier:"titular",
+    why:`<b>O mais forte da lista.</b> Escolha de 3ª rodada que subiu o depth chart inteiro no camp e apareceu
+      <b>como titular no primeiro depth chart oficial do Miami</b>, ao lado de Jalen Tolbert e do seu Malik
+      Washington. Perfil raro no elenco: 1,93m e 93kg com 40 jardas em 4.39s — o Miami não tem outro receptor
+      com esse tamanho. O técnico Jeff Hafley destacou justamente a <i>consistência</i> dele ("um dos nossos
+      caras mais consistentes"), que é o que separa hype de papel real. Na estreia de pré-temporada fez uma
+      recepção descrita como "incrível". <b>Por que interessa a você:</b> se ele é titular do mesmo ataque em que
+      o seu Malik Washington também é, o Miami passa a ter dois receptores seus/observados dividindo alvos —
+      vale acompanhar qual dos dois puxa a fila.`,
+    links:[
+      {label:"ESPN: rookie no topo do depth chart", url:"https://www.espn.com/nfl/story/_/id/49601790/dolphins-wr-caleb-douglas-depth-chart-starting-preseason-games"},
+      {label:"Athlon: ganhou vaga de titular", url:"https://athlonsports.com/nfl/miami-dolphins/dolphins-rookie-caleb-douglas-lands-starting-spot-after-turning-heads-at-training-camp"},
+      {label:"NFL.com: \"stud\" chamando atenção", url:"https://www.nfl.com/news/rookie-wr-caleb-douglas-turning-heads-in-dolphins-training-camp"}
+    ]
+  },
+  {
+    id:"13413", name:"Cyrus Allen", pos:"WR", team:"KC",
+    week:2, seasonType:"pre", status:"available", tier:"subindo",
+    why:`Escolha de 5ª rodada que virou <b>o alvo favorito do Patrick Mahomes no camp</b> — o repórter Pete
+      Sweeney (Kansas City Star) escreveu que Mahomes parece procurar por ele toda vez que está em campo, e Andy
+      Reid disse que ele já conquistou a confiança do quarterback. Chegou antes dos veteranos (desde 24/07) e usou
+      esse tempo pra criar entrosamento. Na faculdade fez 13 touchdowns em 2025, <b>3º maior do país</b>. Levou
+      um susto (contusão óssea na canela em 01/08, ficou pouco mais de uma semana fora) mas voltou marcando
+      touchdown com o primeiro time. <b>Ressalva honesta:</b> o ataque do KC é lotado de bocas e ele ainda é 5ª
+      rodada — o teto é alto, o papel na semana 1 não está garantido.`,
+    links:[
+      {label:"ESPN: estrela precoce do camp", url:"https://www.espn.com/nfl/story/_/id/49500558/2026-kansas-city-chiefs-training-camp-cyrus-allen-patrick-mahomes"},
+      {label:"Yahoo: lidera o buzz entre novatos", url:"https://sports.yahoo.com/fantasy/article/cyrus-allen-leads-2026-nfl-rookies-already-generating-fantasy-football-buzz-in-training-camps-145843770.html"},
+      {label:"Yahoo: conquistou a confiança de Mahomes", url:"https://sports.yahoo.com/articles/cyrus-allen-impresses-chiefs-rookie-001217867.html"}
+    ]
+  },
+  {
+    id:"13405", name:"Kaytron Allen", pos:"RB", team:"WAS",
+    week:2, seasonType:"pre", status:"available", tier:"monitorar",
+    why:`Entra aqui porque <b>RB é exatamente sua posição de escassez</b> (você tem só 3, e na semana 10 sobra 1
+      pra 2 vagas). Novato de 6ª rodada, 1,80m e 98kg — o maior corredor do elenco de Washington — com boa visão
+      e equilíbrio no contato, e já é favorito a ficar no elenco final de 53. <b>Mas seja realista:</b> o backfield
+      está congestionado (Croskey-Merritt vem embalado do ano passado, mais Rachaad White, Jerome Ford e
+      McNichols), então ele tem "uma ladeira íngreme pra subir" até virar volume relevante. É nome pra observar
+      caso as peças da frente se machuquem — não é adição urgente hoje.`,
+    links:[
+      {label:"Hogs Haven: novato pra observar no camp", url:"https://www.hogshaven.com/washington-commanders-roster/425980/training-camp-rookies-antonio-williams-drew-stevens-kaytron-allen-joshua-josephs-jaden-bradley"},
+      {label:"Yahoo: pode subir no depth chart?", url:"https://sports.yahoo.com/articles/commanders-film-session-rookie-kaytron-193000524.html"}
+    ]
+  }
+];
+const HOT_ROOKIES_NOTE = `Pesquisa de 18/08/2026 (pré-temporada, semana 2). Critério: prefiro <b>sinal de papel</b>
+  — quem apareceu no depth chart oficial, quem está rodando com o primeiro time, o que o técnico e os repórteres
+  que cobrem o time falam — em vez de estatística de jogo de pré-temporada, que é enganosa (muito ponto feito
+  contra reservas no 4º quarto). Só entram novatos que <b>ainda estão livres</b> na sua liga. Isso fica mais
+  afiado nas semanas 3 e 4 de pré-temporada, quando os titulares jogam mais tempo e o depth chart real aparece.`;
+
+function renderHotRookies(){
+  const wrap=$("#paneHotRookies");
+  if(!wrap) return;
+  if(!HOT_ROOKIES.length){
+    wrap.innerHTML=`<div class="card">
+      <div class="hd"><span>Hot Rookies</span></div>
+      <div class="insightsBody">${HOT_ROOKIES_NOTE}</div>
+    </div>`;
+    return;
+  }
+
+  const TIER={
+    titular:{cls:"start", txt:"já é titular"},
+    subindo:{cls:"risky", txt:"subindo"},
+    monitorar:{cls:"", txt:"monitorar"}
+  };
+
+  function weekLabel(p){
+    const wk=p.week!=null?p.week:"?";
+    return p.seasonType==="regular" ? `Semana ${wk}` : `Pré-temporada · Semana ${wk}`;
+  }
+  const groups={};
+  HOT_ROOKIES.forEach(p=>{
+    const k=`${p.seasonType||"pre"}-${p.week!=null?p.week:0}`;
+    (groups[k]=groups[k]||{label:weekLabel(p), items:[]}).items.push(p);
+  });
+  const keys=Object.keys(groups).sort((a,b)=>{
+    const [at,aw]=a.split("-"), [bt,bw]=b.split("-");
+    if(at!==bt) return at==="regular"?-1:1;
+    return Number(bw)-Number(aw);
+  });
+
+  // ordena por força do sinal dentro de cada semana
+  const rank={titular:0, subindo:1, monitorar:2};
+  const sections=keys.map(k=>{
+    const g=groups[k];
+    const cards=[...g.items].sort((a,b)=>(rank[a.tier]??9)-(rank[b.tier]??9)).map(p=>{
+      const t=TIER[p.tier]||TIER.monitorar;
+      return `<div class="pickcard">
+        <div class="pickhd">
+          ${imgTag(headshotUrl(p.id),"headshot sm",p.pos)}
+          <span class="pos ${p.pos}">${p.pos}</span>
+          <span class="nm">${p.name}</span><span class="tm">${p.team||""}</span>
+          <span class="verdict ${t.cls}" style="margin-left:auto">${t.txt}</span>
+          ${p.status==="picked"?'<span class="badge add">já foi adicionado</span>':""}
+        </div>
+        <div class="why">${p.why}</div>
+        <div class="picklinks">${(p.links||[]).map(l=>`<a href="${l.url}" target="_blank" rel="noopener">${l.label}</a>`).join("")}</div>
+      </div>`;
+    }).join("");
+    return `<div class="divHeader">${g.label}</div>${cards}`;
+  }).join("");
+
+  wrap.innerHTML=`<div class="card">
+    <div class="hd"><span>Hot Rookies · destaques do camp</span><span>${HOT_ROOKIES.length} no histórico</span></div>
+    <div class="insightsBody" style="border-bottom:1px solid var(--line)">${HOT_ROOKIES_NOTE}</div>
+    ${sections}
+  </div>`;
+}
+renderHotRookies();
+
 renderLineup();
 
 const TAB_MAP={lineup:"tabLineup", time:"tabTime", liga:"tabLiga", analises:"tabAnalises"};
