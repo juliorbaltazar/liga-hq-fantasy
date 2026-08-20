@@ -362,7 +362,7 @@ function renderWaivers(){
 // Cada slot: {slot, id, name, pos, team, verdict: "start"|"risky", why, metrics:[{label,value,tone}],
 //   alt: {name, why} | null }   ← alt = quem ficou no banco naquela vaga e por quê.
 const LINEUP = {
-  updated: "18/08/2026",
+  updated: "20/08/2026",
   week: 1,
   seasonType: "regular",
   opponent: {teamName:"Cowboy Sem Cueca", owner:"Marcelorenno", projected:null},
@@ -414,9 +414,10 @@ const LINEUP = {
       why:`Segundo RB titular, e o confronto ajuda bastante: Washington foi a <b>7ª defesa que mais cedeu a
         corredores</b> em 2025 (24.9 pontos por jogo), e ainda é jogo em casa na Filadélfia. Com 14.5 pontos por
         jogo de base, esse é o tipo de semana em que ele pode entregar bem acima da média. Escala tranquilo.`,
-      alt:{name:"Kyle Monangai", why:`tem confronto parecido (Carolina cede 23.6 a RBs, 9º) e é o próximo da
-        fila, mas está questionable e o volume dele é bem menor — fica como reserva de luxo e primeiro substituto
-        se algo acontecer com Taylor ou Saquon.`}
+      alt:{name:"sem alternativa real", why:`o Monangai era o próximo da fila, mas <b>sofreu hiperextensão no
+        joelho e deve perder várias semanas</b> — prazo que encosta na semana 1. Isso deixa você com apenas
+        Taylor e Saquon como RBs confiáveis: os dois <b>têm que jogar</b>, e não há plano B se um deles cair na
+        última hora. Vale procurar um corredor no waiver antes de setembro.`}
     },
     {
       slot:"WR1", id:"11646", name:"Jalen Coker", pos:"WR", team:"CAR", verdict:"risky",
@@ -531,10 +532,11 @@ const LINEUP = {
      note:`Prognóstico bom (estiramento leve, ~85%), mas o confronto da semana 1 é ruim: Kansas City foi a 21ª
        defesa contra WRs (27.9 cedidos). Mesmo saudável, ele fica atrás do Deebo e do Coker nessa semana
        específica por causa do matchup.`},
-    {name:"Kyle Monangai (RB, CHI) — questionable",
-     note:`Confronto bom contra Carolina (23.6 cedidos a RBs, 9º) e é seu terceiro RB. Não passa na frente de
-       Taylor e Saquon, mas é o primeiro nome a entrar se um deles cair — vale confirmar que o joelho está
-       resolvido antes de setembro.`},
+    {name:"Kyle Monangai (RB, CHI) — fora por semanas",
+     note:`<b>Mudou pra pior.</b> A hiperextensão no joelho tirou ele de várias semanas (sem cirurgia, mas o
+       prazo encosta na semana 1). Como você só tem 3 RBs, isso te deixa efetivamente com <b>dois</b> — e a
+       semana 10, quando Saquon e o próprio Monangai estão em bye, fica ainda mais crítica. <b>Ação sugerida:</b>
+       usar parte do FAAB num RB de profundidade antes da temporada começar, em vez de esperar a emergência.`},
     {name:"Tyler Allgeier (RB, ARI)",
      note:`Confronto ruim na semana 1 (Chargers foram a 30ª defesa contra RBs, só 18.4 cedidos) e volume baixo em
        Arizona. É profundidade pra bye weeks, não opção de escalação agora.`}
@@ -750,33 +752,31 @@ function renderLineup(){
 }
 
 const INJURY_CHECKS = {
-  updated: "17/08/2026",
+  updated: "20/08/2026",
   items: [
     {
-      id:"8146", name:"Jaylen Waddle", pos:"WR", team:"DEN",
-      summary:"Estiramento leve na perna esquerda (saiu de um drill individual). Segundo o técnico Sean Payton, sem preocupação de longo prazo — já treinou por fora sem a joelheira/manga de compressão e correndo com mais soltura. Previsão de volta em 4-5 dias.",
-      prob:"~85% pra temporada regular",
+      id:"12534", name:"Kyle Monangai", pos:"RB", team:"CHI",
+      summary:`<b>Piorou desde a última checagem.</b> O que parecia susto virou diagnóstico: hiperextensão no
+        joelho direito, sofrida ao ser derrubado por trás no treino. A ressonância trouxe a parte boa — <b>não
+        precisa de cirurgia</b> — mas a informação de fonte é que ele <b>perde várias semanas</b>, e esse prazo
+        pode encostar na semana 1. Ele vinha sendo tratado pelo técnico Ben Johnson como peça importante atrás
+        do D'Andre Swift, então a lesão também reabre a disputa no backfield do Chicago.`,
+      prob:"~45% pra semana 1 — prazo encosta na data e ainda não há retorno confirmado",
       links:[
-        {label:"Payton dá atualização positiva", url:"https://predominantlyorange.com/sean-payton-provides-positive-update-on-broncos-jaylen-waddle-s-injury-01kzc70e4jhz"},
-        {label:"Linha do tempo de retorno", url:"https://atozsports.com/nfl/denver-broncos-news/broncos-sean-payton-jaylen-waddle-leg-strain-limping-training-camp-recovery-timeline/"}
+        {label:"NBC Sports: perde semanas com joelho hiperestendido", url:"https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-bears-rb-kyle-monangai-will-miss-weeks-with-a-hyperextended-knee"},
+        {label:"ABC7: fonte confirma várias semanas fora", url:"https://abc7chicago.com/post/bears-rb-kyle-monangai-knee-expected-miss-multiple-weeks-source-says/19694796/"},
+        {label:"NBC Fantasy: nota do jogador", url:"https://www.nbcsports.com/fantasy/football/player-news/2026-08-17/kyle-monangai-knee-to-miss-multiple-weeks"}
       ]
     },
     {
-      id:"9509", name:"DK Metcalf", pos:"WR", team:"PIT",
-      summary:"Lesão não divulgada, fora dos treinos desde 11/08. Mike McCarthy disse que ele está \"difícil\" de voltar nesse fim de semana — previsão de retorno só na última semana de agosto. Site aponta que a lesão \"não parece muito séria\", mas o prazo é mais longo que o do Waddle.",
-      prob:"~70% pra essa semana · ~80% pra temporada regular",
+      id:"5846", name:"DK Metcalf", pos:"WR", team:"PIT",
+      summary:`Lesão não divulgada, fora dos treinos desde meados de agosto. O prazo que circulava era de retorno
+        na última semana de agosto — ou seja, com folga pra semana 1. Nada indica gravidade, mas como o Pittsburgh
+        não abriu o diagnóstico, a confirmação só vem quando ele voltar a treinar completo.`,
+      prob:"~80% pra semana 1",
       links:[
-        {label:"Fora com lesão não divulgada", url:"https://www.rotoballer.com/player-news/dk-metcalf-out-with-undisclosed-injury-on-tuesday/1907116"},
-        {label:"McCarthy: \"difícil\" de voltar", url:"https://sports.yahoo.com/articles/mike-mccarthy-dk-metcalf-michael-204000292.html"}
-      ]
-    },
-    {
-      id:"13324", name:"Kyle Monangai", pos:"RB", team:"CHI",
-      summary:"Lesão no joelho direito em treino, saiu mancando. Exames iniciais não mostraram dano estrutural e o time \"acredita que ele está bem\" — mas ainda aguardando ressonância (MRI) pra confirmar. Otimismo cauteloso.",
-      prob:"~80% (aguardando confirmação da ressonância)",
-      links:[
-        {label:"Bears recebem atualização promissora", url:"https://sports.yahoo.com/articles/bears-news-initial-kyle-monangai-233209036.html"},
-        {label:"Vai fazer ressonância, sem dano grave aparente", url:"https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-kyle-monangai-to-have-mri-on-knee-bears-believe-he-avoided-serious-injury"}
+        {label:"RotoWire: lesão não especificada", url:"https://www.rotowire.com/football/headlines/dk-metcalf-injury-dealing-with-unspecified-injury-633218"},
+        {label:"Fora com lesão não divulgada", url:"https://www.rotoballer.com/player-news/dk-metcalf-out-with-undisclosed-injury-on-tuesday/1907116"}
       ]
     }
   ]
