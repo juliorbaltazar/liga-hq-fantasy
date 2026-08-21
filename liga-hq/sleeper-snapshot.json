@@ -1,5 +1,5 @@
 {
-"generated_at_utc": "2026-08-20T10:18:53.739910+00:00",
+"generated_at_utc": "2026-08-21T10:18:51.906678+00:00",
 "nfl_state": {
 "week": 2,
 "leg": 0,
@@ -132,10 +132,11 @@
 "12484",
 "12489",
 "12713",
-"13330",
+"13293",
 "13417",
 "4881",
 "7021",
+"8132",
 "8146",
 "8154",
 "9487",
@@ -144,6 +145,7 @@
 "SEA"
 ],
 "reserve": [
+"12484",
 "9753"
 ],
 "roster_id": 3,
@@ -798,148 +800,76 @@
 }
 ],
 "players": {
-"5012": {
-"n": "Mark Andrews",
-"p": "TE",
-"tm": "BAL",
+"12530": {
+"n": "Travis Hunter",
+"p": "WR",
+"tm": "JAX",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
-"espn": 3116365,
-"num": 89,
+"espn": null,
+"num": 12,
+"dc": 4
+},
+"12493": {
+"n": "Oronde Gadsden",
+"p": "TE",
+"tm": "LAC",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 86,
 "dc": 1
 },
-"11586": {
-"n": "Blake Corum",
-"p": "RB",
-"tm": "LAR",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 24,
-"dc": 2
-},
-"8148": {
-"n": "Jameson Williams",
-"p": "WR",
-"tm": "DET",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 1,
-"dc": 2
-},
-"12501": {
-"n": "Matthew Golden",
-"p": "WR",
-"tm": "GB",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 0,
-"dc": 3
-},
-"2133": {
-"n": "Davante Adams",
-"p": "WR",
-"tm": "LAR",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 16800,
-"num": 17,
-"dc": 2
-},
-"9484": {
-"n": "Tucker Kraft",
+"3214": {
+"n": "Hunter Henry",
 "p": "TE",
-"tm": "GB",
-"ist": "Questionable",
-"ibp": "Knee - ACL",
-"inote": "Surgery",
+"tm": "NE",
+"ist": null,
+"ibp": null,
+"inote": null,
 "pp": null,
-"espn": null,
+"espn": 3046439,
 "num": 85,
 "dc": 1
 },
-"4866": {
-"n": "Saquon Barkley",
+"12469": {
+"n": "Dylan Sampson",
 "p": "RB",
-"tm": "PHI",
+"tm": "CLE",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
-"espn": 3929630,
-"num": 26,
-"dc": 1
-},
-"12534": {
-"n": "Kyle Monangai",
-"p": "RB",
-"tm": "CHI",
-"ist": "Questionable",
-"ibp": "Knee",
-"inote": null,
-"pp": null,
 "espn": null,
-"num": 25,
+"num": 22,
 "dc": 2
 },
-"4984": {
-"n": "Josh Allen",
-"p": "QB",
-"tm": "BUF",
+"10222": {
+"n": "Jayden Reed",
+"p": "WR",
+"tm": "GB",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
-"espn": 3918298,
-"num": 17,
-"dc": 1
+"espn": null,
+"num": 11,
+"dc": 2
 },
-"4199": {
-"n": "Aaron Jones",
-"p": "RB",
-"tm": "MIN",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 3042519,
-"num": 33,
-"dc": 1
-},
-"12517": {
-"n": "Colston Loveland",
+"10859": {
+"n": "Sam LaPorta",
 "p": "TE",
-"tm": "CHI",
-"ist": null,
-"ibp": null,
+"tm": "DET",
+"ist": "Questionable",
+"ibp": "Hip",
 "inote": null,
 "pp": null,
 "espn": null,
-"num": 84,
-"dc": 1
-},
-"9509": {
-"n": "Bijan Robinson",
-"p": "RB",
-"tm": "ATL",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 7,
+"num": 87,
 "dc": 1
 },
 "7611": {
@@ -954,340 +884,52 @@
 "num": 38,
 "dc": 2
 },
-"9480": {
-"n": "Brenton Strange",
-"p": "TE",
+"7543": {
+"n": "Travis Etienne",
+"p": "RB",
+"tm": "NO",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 3,
+"dc": 1
+},
+"5947": {
+"n": "Jakobi Meyers",
+"p": "WR",
 "tm": "JAX",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
-"espn": null,
-"num": 85,
-"dc": 1
+"espn": 3916433,
+"num": 3,
+"dc": 3
 },
-"8138": {
-"n": "James Cook",
+"12527": {
+"n": "Ashton Jeanty",
 "p": "RB",
-"tm": "BUF",
+"tm": "LV",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
 "espn": null,
-"num": 4,
-"dc": 1
-},
-"11655": {
-"n": "Tyrone Tracy",
-"p": "RB",
-"tm": "NYG",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 29,
-"dc": 2
-},
-"12713": {
-"n": "Andy Borregales",
-"p": "K",
-"tm": "NE",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 36,
-"dc": 1
-},
-"4983": {
-"n": "DJ Moore",
-"p": "WR",
-"tm": "BUF",
-"ist": "Questionable",
-"ibp": "Lower Body",
-"inote": null,
-"pp": null,
-"espn": 3915416,
 "num": 2,
 "dc": 1
 },
-"LAC": {
-"n": "Los Angeles Chargers",
-"p": "DEF",
-"tm": "LAC",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": null,
-"dc": null
-},
-"6790": {
-"n": "D'Andre Swift",
+"4034": {
+"n": "Christian McCaffrey",
 "p": "RB",
-"tm": "CHI",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 4259545,
-"num": 4,
-"dc": 1
-},
-"3451": {
-"n": "Ka'imi Fairbairn",
-"p": "K",
-"tm": "HOU",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 2971573,
-"num": 15,
-"dc": 1
-},
-"8134": {
-"n": "Khalil Shakir",
-"p": "WR",
-"tm": "BUF",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 10,
-"dc": 2
-},
-"8150": {
-"n": "Kyren Williams",
-"p": "RB",
-"tm": "LAR",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 23,
-"dc": 1
-},
-"12518": {
-"n": "Tyler Warren",
-"p": "TE",
-"tm": "IND",
-"ist": "Questionable",
-"ibp": "Groin",
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 84,
-"dc": 1
-},
-"6819": {
-"n": "Michael Pittman",
-"p": "WR",
-"tm": "PIT",
-"ist": "Questionable",
-"ibp": "Leg",
-"inote": null,
-"pp": null,
-"espn": 4035687,
-"num": 11,
-"dc": 2
-},
-"11564": {
-"n": "Drake Maye",
-"p": "QB",
-"tm": "NE",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 10,
-"dc": 1
-},
-"9511": {
-"n": "Keaton Mitchell",
-"p": "RB",
-"tm": "LAC",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 34,
-"dc": 2
-},
-"3198": {
-"n": "Derrick Henry",
-"p": "RB",
-"tm": "BAL",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 3043078,
-"num": 22,
-"dc": 1
-},
-"6797": {
-"n": "Justin Herbert",
-"p": "QB",
-"tm": "LAC",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 4038941,
-"num": 10,
-"dc": 1
-},
-"13417": {
-"n": "De'Zhaun Stribling",
-"p": "WR",
 "tm": "SF",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 15,
-"dc": 3
-},
-"7525": {
-"n": "DeVonta Smith",
-"p": "WR",
-"tm": "PHI",
 "ist": "Questionable",
-"ibp": "Hamstring",
+"ibp": "Undisclosed",
 "inote": null,
 "pp": null,
-"espn": null,
-"num": 6,
-"dc": 1
-},
-"10229": {
-"n": "Rashee Rice",
-"p": "WR",
-"tm": "KC",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 4,
-"dc": 1
-},
-"HOU": {
-"n": "Houston Texans",
-"p": "DEF",
-"tm": "HOU",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": null,
-"dc": null
-},
-"13298": {
-"n": "KC Concepcion",
-"p": "WR",
-"tm": "CLE",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 1,
-"dc": 2
-},
-"13286": {
-"n": "Jadarian Price",
-"p": "RB",
-"tm": "SEA",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 8,
-"dc": 1
-},
-"9224": {
-"n": "Chase Brown",
-"p": "RB",
-"tm": "CIN",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 30,
-"dc": 1
-},
-"DET": {
-"n": "Detroit Lions",
-"p": "DEF",
-"tm": "DET",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": null,
-"dc": null
-},
-"12481": {
-"n": "Cam Skattebo",
-"p": "RB",
-"tm": "NYG",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 44,
-"dc": 1
-},
-"6813": {
-"n": "Jonathan Taylor",
-"p": "RB",
-"tm": "IND",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 4242335,
-"num": 28,
-"dc": 1
-},
-"11539": {
-"n": "Jake Bates",
-"p": "K",
-"tm": "DET",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 39,
-"dc": 1
-},
-"6650": {
-"n": "Chase McLaughlin",
-"p": "K",
-"tm": "TB",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 3150744,
-"num": 4,
+"espn": 3117251,
+"num": 23,
 "dc": 1
 },
 "5022": {
@@ -1302,10 +944,622 @@
 "num": 88,
 "dc": 1
 },
-"DEN": {
-"n": "Denver Broncos",
+"10229": {
+"n": "Rashee Rice",
+"p": "WR",
+"tm": "KC",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 4,
+"dc": 1
+},
+"11604": {
+"n": "Brock Bowers",
+"p": "TE",
+"tm": "LV",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 89,
+"dc": 1
+},
+"9484": {
+"n": "Tucker Kraft",
+"p": "TE",
+"tm": "GB",
+"ist": "Questionable",
+"ibp": "Knee - ACL",
+"inote": "Surgery",
+"pp": null,
+"espn": null,
+"num": 85,
+"dc": 1
+},
+"8134": {
+"n": "Khalil Shakir",
+"p": "WR",
+"tm": "BUF",
+"ist": "Questionable",
+"ibp": "Undisclosed",
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 10,
+"dc": 2
+},
+"12015": {
+"n": "Harrison Mevis",
+"p": "K",
+"tm": "LAR",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 92,
+"dc": 1
+},
+"7525": {
+"n": "DeVonta Smith",
+"p": "WR",
+"tm": "PHI",
+"ist": "Questionable",
+"ibp": "Hamstring",
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 6,
+"dc": 1
+},
+"MIN": {
+"n": "Minnesota Vikings",
 "p": "DEF",
+"tm": "MIN",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": null,
+"dc": null
+},
+"5967": {
+"n": "Tony Pollard",
+"p": "RB",
+"tm": "TEN",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 3916148,
+"num": 20,
+"dc": 1
+},
+"9488": {
+"n": "Jaxon Smith-Njigba",
+"p": "WR",
+"tm": "SEA",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 11,
+"dc": 1
+},
+"8259": {
+"n": "Cameron Dicker",
+"p": "K",
+"tm": "LAC",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 11,
+"dc": 1
+},
+"CLE": {
+"n": "Cleveland Browns",
+"p": "DEF",
+"tm": "CLE",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": null,
+"dc": null
+},
+"4217": {
+"n": "George Kittle",
+"p": "TE",
+"tm": "SF",
+"ist": "PUP",
+"ibp": "Achilles",
+"inote": "Surgery",
+"pp": null,
+"espn": 3040151,
+"num": 85,
+"dc": 1
+},
+"10232": {
+"n": "Michael Wilson",
+"p": "WR",
+"tm": "ARI",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 14,
+"dc": 2
+},
+"13281": {
+"n": "Jordyn Tyson",
+"p": "WR",
+"tm": "NO",
+"ist": "Doubtful",
+"ibp": "Hamstring",
+"inote": "Strain",
+"pp": null,
+"espn": null,
+"num": 0,
+"dc": 2
+},
+"6804": {
+"n": "Jordan Love",
+"p": "QB",
+"tm": "GB",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 4036378,
+"num": 10,
+"dc": 1
+},
+"13726": {
+"n": "Camden Brown",
+"p": "WR",
+"tm": "DAL",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 6,
+"dc": null
+},
+"8183": {
+"n": "Brock Purdy",
+"p": "QB",
+"tm": "SF",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 13,
+"dc": 1
+},
+"11560": {
+"n": "Caleb Williams",
+"p": "QB",
+"tm": "CHI",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 18,
+"dc": 1
+},
+"4881": {
+"n": "Lamar Jackson",
+"p": "QB",
+"tm": "BAL",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 3916387,
+"num": 8,
+"dc": 1
+},
+"6801": {
+"n": "Tee Higgins",
+"p": "WR",
+"tm": "CIN",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 4239993,
+"num": 5,
+"dc": 2
+},
+"7042": {
+"n": "Tyler Bass",
+"p": "K",
+"tm": "BUF",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 3917232,
+"num": 16,
+"dc": 1
+},
+"4866": {
+"n": "Saquon Barkley",
+"p": "RB",
+"tm": "PHI",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 3929630,
+"num": 26,
+"dc": 1
+},
+"6904": {
+"n": "Jalen Hurts",
+"p": "QB",
+"tm": "PHI",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 4040715,
+"num": 1,
+"dc": 1
+},
+"7547": {
+"n": "Amon-Ra St. Brown",
+"p": "WR",
+"tm": "DET",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 14,
+"dc": 1
+},
+"6806": {
+"n": "J.K. Dobbins",
+"p": "RB",
 "tm": "DEN",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 4241985,
+"num": 27,
+"dc": 1
+},
+"7523": {
+"n": "Trevor Lawrence",
+"p": "QB",
+"tm": "JAX",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 16,
+"dc": 1
+},
+"SEA": {
+"n": "Seattle Seahawks",
+"p": "DEF",
+"tm": "SEA",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": null,
+"dc": null
+},
+"7021": {
+"n": "Rico Dowdle",
+"p": "RB",
+"tm": "PIT",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 4038815,
+"num": 13,
+"dc": 2
+},
+"12481": {
+"n": "Cam Skattebo",
+"p": "RB",
+"tm": "NYG",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 44,
+"dc": 1
+},
+"12508": {
+"n": "Jaxson Dart",
+"p": "QB",
+"tm": "NYG",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 6,
+"dc": 1
+},
+"8130": {
+"n": "Trey McBride",
+"p": "TE",
+"tm": "ARI",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 85,
+"dc": 1
+},
+"12519": {
+"n": "Luther Burden",
+"p": "WR",
+"tm": "CHI",
+"ist": "Questionable",
+"ibp": "Lower Body",
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 10,
+"dc": 2
+},
+"8142": {
+"n": "Alec Pierce",
+"p": "WR",
+"tm": "IND",
+"ist": "PUP",
+"ibp": "Ankle",
+"inote": "Surgery",
+"pp": null,
+"espn": null,
+"num": 14,
+"dc": 1
+},
+"13298": {
+"n": "KC Concepcion",
+"p": "WR",
+"tm": "CLE",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 1,
+"dc": 1
+},
+"10236": {
+"n": "Dalton Kincaid",
+"p": "TE",
+"tm": "BUF",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 86,
+"dc": 1
+},
+"7594": {
+"n": "Chuba Hubbard",
+"p": "RB",
+"tm": "CAR",
+"ist": "Questionable",
+"ibp": "Hamstring",
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 30,
+"dc": 1
+},
+"8167": {
+"n": "Christian Watson",
+"p": "WR",
+"tm": "GB",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 9,
+"dc": 1
+},
+"5012": {
+"n": "Mark Andrews",
+"p": "TE",
+"tm": "BAL",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 3116365,
+"num": 89,
+"dc": 1
+},
+"7569": {
+"n": "Nico Collins",
+"p": "WR",
+"tm": "HOU",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 12,
+"dc": 1
+},
+"8132": {
+"n": "Tyler Allgeier",
+"p": "RB",
+"tm": "ARI",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 22,
+"dc": 2
+},
+"12507": {
+"n": "Omarion Hampton",
+"p": "RB",
+"tm": "LAC",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 8,
+"dc": 1
+},
+"11539": {
+"n": "Jake Bates",
+"p": "K",
+"tm": "DET",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 39,
+"dc": 1
+},
+"1466": {
+"n": "Travis Kelce",
+"p": "TE",
+"tm": "KC",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 15847,
+"num": 87,
+"dc": 1
+},
+"5850": {
+"n": "Josh Jacobs",
+"p": "RB",
+"tm": "GB",
+"ist": "Questionable",
+"ibp": "Groin",
+"inote": null,
+"pp": null,
+"espn": 4047365,
+"num": 8,
+"dc": 1
+},
+"NE": {
+"n": "New England Patriots",
+"p": "DEF",
+"tm": "NE",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": null,
+"dc": null
+},
+"12545": {
+"n": "Tyler Shough",
+"p": "QB",
+"tm": "NO",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 6,
+"dc": 1
+},
+"8144": {
+"n": "Chris Olave",
+"p": "WR",
+"tm": "NO",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 12,
+"dc": 1
+},
+"9753": {
+"n": "Zach Charbonnet",
+"p": "RB",
+"tm": "SEA",
+"ist": "PUP",
+"ibp": "Knee - ACL",
+"inote": "Surgery",
+"pp": null,
+"espn": null,
+"num": 26,
+"dc": 2
+},
+"8154": {
+"n": "Brian Robinson",
+"p": "RB",
+"tm": "ATL",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 15,
+"dc": 2
+},
+"9509": {
+"n": "Bijan Robinson",
+"p": "RB",
+"tm": "ATL",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 7,
+"dc": 1
+},
+"13417": {
+"n": "De'Zhaun Stribling",
+"p": "WR",
+"tm": "SF",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 15,
+"dc": 3
+},
+"HOU": {
+"n": "Houston Texans",
+"p": "DEF",
+"tm": "HOU",
 "ist": null,
 "ibp": null,
 "inote": null,
@@ -1326,58 +1580,10 @@
 "num": 9,
 "dc": 1
 },
-"3214": {
-"n": "Hunter Henry",
-"p": "TE",
-"tm": "NE",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 3046439,
-"num": 85,
-"dc": 1
-},
-"8408": {
-"n": "Jordan Mason",
-"p": "RB",
-"tm": "MIN",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 27,
-"dc": 2
-},
-"7049": {
-"n": "Jauan Jennings",
-"p": "WR",
-"tm": "MIN",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 3886598,
-"num": 14,
-"dc": 3
-},
-"13413": {
-"n": "Cyrus Allen",
-"p": "WR",
-"tm": "KC",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 13,
-"dc": 4
-},
-"MIN": {
-"n": "Minnesota Vikings",
+"LAR": {
+"n": "Los Angeles Rams",
 "p": "DEF",
-"tm": "MIN",
+"tm": "LAR",
 "ist": null,
 "ibp": null,
 "inote": null,
@@ -1386,616 +1592,16 @@
 "num": null,
 "dc": null
 },
-"7523": {
-"n": "Trevor Lawrence",
-"p": "QB",
-"tm": "JAX",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 16,
-"dc": 1
-},
-"8142": {
-"n": "Alec Pierce",
-"p": "WR",
-"tm": "IND",
-"ist": "PUP",
-"ibp": "Ankle",
-"inote": "Surgery",
-"pp": null,
-"espn": null,
-"num": 14,
-"dc": 1
-},
-"10859": {
-"n": "Sam LaPorta",
-"p": "TE",
-"tm": "DET",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 87,
-"dc": 1
-},
-"12527": {
-"n": "Ashton Jeanty",
-"p": "RB",
-"tm": "LV",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 2,
-"dc": 1
-},
-"8155": {
-"n": "Breece Hall",
-"p": "RB",
-"tm": "NYJ",
-"ist": "Questionable",
-"ibp": "Thigh",
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 20,
-"dc": 1
-},
-"13294": {
-"n": "Makai Lemon",
-"p": "WR",
-"tm": "PHI",
-"ist": "Questionable",
-"ibp": "Undisclosed",
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 9,
-"dc": 2
-},
-"2216": {
-"n": "Mike Evans",
-"p": "WR",
-"tm": "SF",
-"ist": "Questionable",
-"ibp": "Foot",
-"inote": null,
-"pp": null,
-"espn": 16737,
-"num": 5,
-"dc": 1
-},
-"8183": {
-"n": "Brock Purdy",
-"p": "QB",
-"tm": "SF",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 13,
-"dc": 1
-},
-"12514": {
-"n": "Emeka Egbuka",
-"p": "WR",
-"tm": "TB",
-"ist": "Questionable",
-"ibp": "Undisclosed",
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 2,
-"dc": 1
-},
-"11631": {
-"n": "Brian Thomas",
-"p": "WR",
-"tm": "JAX",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 7,
-"dc": 1
-},
-"9493": {
-"n": "Puka Nacua",
-"p": "WR",
-"tm": "LAR",
-"ist": "Questionable",
-"ibp": "Undisclosed",
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 12,
-"dc": 1
-},
-"8205": {
-"n": "Isiah Pacheco",
-"p": "RB",
-"tm": "DET",
-"ist": "Questionable",
-"ibp": "Knee - MCL",
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 10,
-"dc": 2
-},
-"8676": {
-"n": "Rashid Shaheed",
-"p": "WR",
-"tm": "SEA",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 22,
-"dc": 2
-},
-"8121": {
-"n": "Romeo Doubs",
-"p": "WR",
-"tm": "NE",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 87,
-"dc": 2
-},
-"8259": {
-"n": "Cameron Dicker",
+"6650": {
+"n": "Chase McLaughlin",
 "p": "K",
-"tm": "LAC",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 11,
-"dc": 1
-},
-"12519": {
-"n": "Luther Burden",
-"p": "WR",
-"tm": "CHI",
-"ist": "Questionable",
-"ibp": "Lower Body",
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 10,
-"dc": 2
-},
-"4217": {
-"n": "George Kittle",
-"p": "TE",
-"tm": "SF",
-"ist": "PUP",
-"ibp": "Achilles",
-"inote": "Surgery",
-"pp": null,
-"espn": 3040151,
-"num": 85,
-"dc": 1
-},
-"12484": {
-"n": "Jayden Higgins",
-"p": "WR",
-"tm": "HOU",
-"ist": "IR",
-"ibp": "Knee - ACL",
-"inote": "Surgery",
-"pp": null,
-"espn": null,
-"num": 81,
-"dc": 2
-},
-"1466": {
-"n": "Travis Kelce",
-"p": "TE",
-"tm": "KC",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 15847,
-"num": 87,
-"dc": 1
-},
-"8154": {
-"n": "Brian Robinson",
-"p": "RB",
-"tm": "ATL",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 15,
-"dc": 2
-},
-"8137": {
-"n": "George Pickens",
-"p": "WR",
-"tm": "DAL",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 3,
-"dc": 2
-},
-"9508": {
-"n": "Tyjae Spears",
-"p": "RB",
-"tm": "TEN",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 2,
-"dc": 2
-},
-"11632": {
-"n": "Malik Nabers",
-"p": "WR",
-"tm": "NYG",
-"ist": "Questionable",
-"ibp": "Knee - ACL",
-"inote": "Surgery",
-"pp": null,
-"espn": null,
-"num": 1,
-"dc": 1
-},
-"2747": {
-"n": "Jason Myers",
-"p": "K",
-"tm": "SEA",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 2473037,
-"num": 5,
-"dc": 1
-},
-"8112": {
-"n": "Drake London",
-"p": "WR",
-"tm": "ATL",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 5,
-"dc": 1
-},
-"9500": {
-"n": "Josh Downs",
-"p": "WR",
-"tm": "IND",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 2,
-"dc": 2
-},
-"8130": {
-"n": "Trey McBride",
-"p": "TE",
-"tm": "ARI",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 85,
-"dc": 1
-},
-"11584": {
-"n": "Bucky Irving",
-"p": "RB",
 "tm": "TB",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
-"espn": null,
-"num": 7,
-"dc": 1
-},
-"6794": {
-"n": "Justin Jefferson",
-"p": "WR",
-"tm": "MIN",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 4262921,
-"num": 18,
-"dc": 1
-},
-"7543": {
-"n": "Travis Etienne",
-"p": "RB",
-"tm": "NO",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 3,
-"dc": 1
-},
-"8144": {
-"n": "Chris Olave",
-"p": "WR",
-"tm": "NO",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 12,
-"dc": 1
-},
-"12474": {
-"n": "Woody Marks",
-"p": "RB",
-"tm": "HOU",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
+"espn": 3150744,
 "num": 4,
-"dc": 2
-},
-"421": {
-"n": "Matthew Stafford",
-"p": "QB",
-"tm": "LAR",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 12483,
-"num": 9,
-"dc": 1
-},
-"3294": {
-"n": "Dak Prescott",
-"p": "QB",
-"tm": "DAL",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 2577417,
-"num": 4,
-"dc": 1
-},
-"5850": {
-"n": "Josh Jacobs",
-"p": "RB",
-"tm": "GB",
-"ist": "Questionable",
-"ibp": "Groin",
-"inote": null,
-"pp": null,
-"espn": 4047365,
-"num": 8,
-"dc": 1
-},
-"6804": {
-"n": "Jordan Love",
-"p": "QB",
-"tm": "GB",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 4036378,
-"num": 10,
-"dc": 1
-},
-"11560": {
-"n": "Caleb Williams",
-"p": "QB",
-"tm": "CHI",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 18,
-"dc": 1
-},
-"9488": {
-"n": "Jaxon Smith-Njigba",
-"p": "WR",
-"tm": "SEA",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 11,
-"dc": 1
-},
-"12490": {
-"n": "Bhayshul Tuten",
-"p": "RB",
-"tm": "JAX",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 33,
-"dc": 1
-},
-"8167": {
-"n": "Christian Watson",
-"p": "WR",
-"tm": "GB",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 9,
-"dc": 1
-},
-"11635": {
-"n": "Ladd McConkey",
-"p": "WR",
-"tm": "LAC",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 15,
-"dc": 1
-},
-"10213": {
-"n": "Tre Tucker",
-"p": "WR",
-"tm": "LV",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 1,
-"dc": 1
-},
-"4037": {
-"n": "Chris Godwin",
-"p": "WR",
-"tm": "TB",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 3116165,
-"num": 14,
-"dc": 2
-},
-"6770": {
-"n": "Joe Burrow",
-"p": "QB",
-"tm": "CIN",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 3915511,
-"num": 9,
-"dc": 1
-},
-"7042": {
-"n": "Tyler Bass",
-"p": "K",
-"tm": "BUF",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 3917232,
-"num": 16,
-"dc": 1
-},
-"4892": {
-"n": "Baker Mayfield",
-"p": "QB",
-"tm": "TB",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 3052587,
-"num": 6,
-"dc": 1
-},
-"5846": {
-"n": "DK Metcalf",
-"p": "WR",
-"tm": "PIT",
-"ist": "Questionable",
-"ibp": "Undisclosed",
-"inote": null,
-"pp": null,
-"espn": 4047650,
-"num": 4,
-"dc": 1
-},
-"13346": {
-"n": "Denzel Boston",
-"p": "WR",
-"tm": "CLE",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 12,
-"dc": 3
-},
-"12529": {
-"n": "TreVeyon Henderson",
-"p": "RB",
-"tm": "NE",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 32,
-"dc": 1
-},
-"9221": {
-"n": "Jahmyr Gibbs",
-"p": "RB",
-"tm": "DET",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 0,
-"dc": 1
-},
-"12015": {
-"n": "Harrison Mevis",
-"p": "K",
-"tm": "LAR",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 92,
 "dc": 1
 },
 "8110": {
@@ -2010,208 +1616,40 @@
 "num": 87,
 "dc": 1
 },
-"10219": {
-"n": "Chris Rodriguez",
-"p": "RB",
-"tm": "JAX",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 24,
-"dc": 2
-},
-"10232": {
-"n": "Michael Wilson",
+"11624": {
+"n": "Xavier Worthy",
 "p": "WR",
-"tm": "ARI",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 14,
-"dc": 2
-},
-"5189": {
-"n": "Eddy Pineiro",
-"p": "K",
-"tm": "SF",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 4034949,
-"num": 18,
-"dc": 1
-},
-"5947": {
-"n": "Jakobi Meyers",
-"p": "WR",
-"tm": "JAX",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 3916433,
-"num": 3,
-"dc": 3
-},
-"8228": {
-"n": "Jaylen Warren",
-"p": "RB",
-"tm": "PIT",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 30,
-"dc": 1
-},
-"11583": {
-"n": "Jonathon Brooks",
-"p": "RB",
-"tm": "CAR",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 25,
-"dc": 2
-},
-"6801": {
-"n": "Tee Higgins",
-"p": "WR",
-"tm": "CIN",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 4239993,
-"num": 5,
-"dc": 2
-},
-"12526": {
-"n": "Tetairoa McMillan",
-"p": "WR",
-"tm": "CAR",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 4,
-"dc": 1
-},
-"PHI": {
-"n": "Philadelphia Eagles",
-"p": "DEF",
-"tm": "PHI",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": null,
-"dc": null
-},
-"13330": {
-"n": "Kenyon Sadiq",
-"p": "TE",
-"tm": "NYJ",
-"ist": "Questionable",
-"ibp": "Abdomen",
-"inote": "Surgery",
-"pp": null,
-"espn": null,
-"num": 16,
-"dc": 1
-},
-"LAR": {
-"n": "Los Angeles Rams",
-"p": "DEF",
-"tm": "LAR",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": null,
-"dc": null
-},
-"5872": {
-"n": "Deebo Samuel",
-"p": "WR",
-"tm": "SF",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 3126486,
-"num": 19,
-"dc": 2
-},
-"11786": {
-"n": "Cam Little",
-"p": "K",
-"tm": "JAX",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 39,
-"dc": 1
-},
-"12469": {
-"n": "Dylan Sampson",
-"p": "RB",
-"tm": "CLE",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 22,
-"dc": 2
-},
-"11604": {
-"n": "Brock Bowers",
-"p": "TE",
-"tm": "LV",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 89,
-"dc": 1
-},
-"9487": {
-"n": "Parker Washington",
-"p": "WR",
-"tm": "JAX",
-"ist": "Questionable",
-"ibp": "Undisclosed",
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 11,
-"dc": 2
-},
-"4046": {
-"n": "Patrick Mahomes",
-"p": "QB",
 "tm": "KC",
 "ist": "Questionable",
-"ibp": "Knee - ACL",
-"inote": "Surgery",
+"ibp": "Shoulder",
+"inote": null,
 "pp": null,
-"espn": 3139477,
-"num": 15,
+"espn": null,
+"num": 1,
+"dc": 2
+},
+"9221": {
+"n": "Jahmyr Gibbs",
+"p": "RB",
+"tm": "DET",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 0,
+"dc": 1
+},
+"8112": {
+"n": "Drake London",
+"p": "WR",
+"tm": "ATL",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 5,
 "dc": 1
 },
 "7588": {
@@ -2226,40 +1664,40 @@
 "num": 33,
 "dc": 1
 },
-"4034": {
-"n": "Christian McCaffrey",
-"p": "RB",
-"tm": "SF",
+"10213": {
+"n": "Tre Tucker",
+"p": "WR",
+"tm": "LV",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 1,
+"dc": 1
+},
+"13294": {
+"n": "Makai Lemon",
+"p": "WR",
+"tm": "PHI",
 "ist": "Questionable",
 "ibp": "Undisclosed",
 "inote": null,
 "pp": null,
-"espn": 3117251,
-"num": 23,
-"dc": 1
-},
-"12506": {
-"n": "Harold Fannin",
-"p": "TE",
-"tm": "CLE",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
 "espn": null,
-"num": 44,
-"dc": 1
+"num": 9,
+"dc": 2
 },
-"12533": {
-"n": "Jacory Croskey-Merritt",
+"8155": {
+"n": "Breece Hall",
 "p": "RB",
-"tm": "WAS",
-"ist": null,
-"ibp": null,
+"tm": "NYJ",
+"ist": "Questionable",
+"ibp": "Thigh",
 "inote": null,
 "pp": null,
 "espn": null,
-"num": 22,
+"num": 20,
 "dc": 1
 },
 "8161": {
@@ -2274,173 +1712,77 @@
 "num": 2,
 "dc": 1
 },
-"JAX": {
-"n": "Jacksonville Jaguars",
-"p": "DEF",
-"tm": "JAX",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": null,
-"dc": null
-},
-"6904": {
-"n": "Jalen Hurts",
-"p": "QB",
-"tm": "PHI",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 4040715,
-"num": 1,
-"dc": 1
-},
-"7594": {
-"n": "Chuba Hubbard",
-"p": "RB",
-"tm": "CAR",
-"ist": "Questionable",
-"ibp": "Hamstring",
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 30,
-"dc": 1
-},
-"6806": {
-"n": "J.K. Dobbins",
-"p": "RB",
-"tm": "DEN",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 4241985,
-"num": 27,
-"dc": 1
-},
-"11624": {
-"n": "Xavier Worthy",
-"p": "WR",
-"tm": "KC",
-"ist": "Questionable",
-"ibp": "Shoulder",
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 1,
-"dc": 2
-},
-"7569": {
-"n": "Nico Collins",
-"p": "WR",
-"tm": "HOU",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 12,
-"dc": 1
-},
-"10236": {
-"n": "Dalton Kincaid",
-"p": "TE",
-"tm": "BUF",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 86,
-"dc": 1
-},
-"9753": {
-"n": "Zach Charbonnet",
+"13286": {
+"n": "Jadarian Price",
 "p": "RB",
 "tm": "SEA",
-"ist": "PUP",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 8,
+"dc": 1
+},
+"11632": {
+"n": "Malik Nabers",
+"p": "WR",
+"tm": "NYG",
+"ist": "Questionable",
 "ibp": "Knee - ACL",
 "inote": "Surgery",
 "pp": null,
 "espn": null,
-"num": 26,
-"dc": 2
+"num": 1,
+"dc": 1
 },
-"11646": {
-"n": "Jalen Coker",
+"2133": {
+"n": "Davante Adams",
 "p": "WR",
-"tm": "CAR",
+"tm": "LAR",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
-"espn": null,
-"num": 18,
+"espn": 16800,
+"num": 17,
 "dc": 2
 },
-"8126": {
-"n": "Wan'Dale Robinson",
-"p": "WR",
-"tm": "TEN",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 4,
-"dc": 2
-},
-"11533": {
-"n": "Brandon Aubrey",
+"12713": {
+"n": "Andy Borregales",
 "p": "K",
+"tm": "NE",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 36,
+"dc": 1
+},
+"9756": {
+"n": "Jordan Addison",
+"p": "WR",
+"tm": "MIN",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 3,
+"dc": 2
+},
+"3294": {
+"n": "Dak Prescott",
+"p": "QB",
 "tm": "DAL",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
-"espn": null,
-"num": 17,
+"espn": 2577417,
+"num": 4,
 "dc": 1
-},
-"9226": {
-"n": "De'Von Achane",
-"p": "RB",
-"tm": "MIA",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 28,
-"dc": 1
-},
-"11566": {
-"n": "Jayden Daniels",
-"p": "QB",
-"tm": "WAS",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 5,
-"dc": 1
-},
-"4035": {
-"n": "Alvin Kamara",
-"p": "RB",
-"tm": "NO",
-"ist": "Questionable",
-"ibp": "Knee",
-"inote": null,
-"pp": null,
-"espn": 3054850,
-"num": 41,
-"dc": 2
 },
 "5045": {
 "n": "Courtland Sutton",
@@ -2454,65 +1796,77 @@
 "num": 14,
 "dc": 2
 },
-"12545": {
-"n": "Tyler Shough",
-"p": "QB",
-"tm": "NO",
+"4199": {
+"n": "Aaron Jones",
+"p": "RB",
+"tm": "MIN",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
-"espn": null,
-"num": 6,
-"dc": 1
-},
-"13279": {
-"n": "Carnell Tate",
-"p": "WR",
-"tm": "TEN",
-"ist": "Questionable",
-"ibp": "Undisclosed",
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 14,
-"dc": 1
-},
-"8131": {
-"n": "Isaiah Likely",
-"p": "TE",
-"tm": "NYG",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 9,
-"dc": 1
-},
-"2449": {
-"n": "Stefon Diggs",
-"p": "WR",
-"tm": "WAS",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 2976212,
-"num": 18,
+"espn": 3042519,
+"num": 33,
 "dc": 2
 },
-"7547": {
-"n": "Amon-Ra St. Brown",
+"2747": {
+"n": "Jason Myers",
+"p": "K",
+"tm": "SEA",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 2473037,
+"num": 5,
+"dc": 1
+},
+"8121": {
+"n": "Romeo Doubs",
 "p": "WR",
-"tm": "DET",
+"tm": "NE",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
 "espn": null,
-"num": 14,
+"num": 87,
+"dc": 2
+},
+"7526": {
+"n": "Jaylen Waddle",
+"p": "WR",
+"tm": "DEN",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 17,
 "dc": 1
+},
+"8150": {
+"n": "Kyren Williams",
+"p": "RB",
+"tm": "LAR",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 23,
+"dc": 1
+},
+"11631": {
+"n": "Brian Thomas",
+"p": "WR",
+"tm": "JAX",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 7,
+"dc": 2
 },
 "13287": {
 "n": "Jeremiyah Love",
@@ -2520,6 +1874,78 @@
 "tm": "ARI",
 "ist": "Questionable",
 "ibp": "Ankle",
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 4,
+"dc": 1
+},
+"8138": {
+"n": "James Cook",
+"p": "RB",
+"tm": "BUF",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 4,
+"dc": 1
+},
+"4983": {
+"n": "DJ Moore",
+"p": "WR",
+"tm": "BUF",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 3915416,
+"num": 2,
+"dc": 1
+},
+"13346": {
+"n": "Denzel Boston",
+"p": "WR",
+"tm": "CLE",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 12,
+"dc": 3
+},
+"12518": {
+"n": "Tyler Warren",
+"p": "TE",
+"tm": "IND",
+"ist": "Questionable",
+"ibp": "Groin",
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 84,
+"dc": 1
+},
+"11655": {
+"n": "Tyrone Tracy",
+"p": "RB",
+"tm": "NYG",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 29,
+"dc": 2
+},
+"12526": {
+"n": "Tetairoa McMillan",
+"p": "WR",
+"tm": "CAR",
+"ist": null,
+"ibp": null,
 "inote": null,
 "pp": null,
 "espn": null,
@@ -2538,40 +1964,64 @@
 "num": 17,
 "dc": 1
 },
-"11610": {
-"n": "Malik Washington",
-"p": "WR",
-"tm": "MIA",
+"DEN": {
+"n": "Denver Broncos",
+"p": "DEF",
+"tm": "DEN",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
 "espn": null,
-"num": 6,
-"dc": 1
+"num": null,
+"dc": null
 },
-"6786": {
-"n": "CeeDee Lamb",
+"8137": {
+"n": "George Pickens",
 "p": "WR",
 "tm": "DAL",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
-"espn": 4241389,
-"num": 88,
-"dc": 1
+"espn": null,
+"num": 3,
+"dc": 2
 },
-"11628": {
-"n": "Marvin Harrison",
+"8205": {
+"n": "Isiah Pacheco",
+"p": "RB",
+"tm": "DET",
+"ist": "Questionable",
+"ibp": "Knee - MCL",
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 10,
+"dc": 2
+},
+"2449": {
+"n": "Stefon Diggs",
 "p": "WR",
-"tm": "ARI",
+"tm": "WAS",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
-"espn": null,
+"espn": 2976212,
 "num": 18,
+"dc": 2
+},
+"4046": {
+"n": "Patrick Mahomes",
+"p": "QB",
+"tm": "KC",
+"ist": "Questionable",
+"ibp": "Knee - ACL",
+"inote": "Surgery",
+"pp": null,
+"espn": 3139477,
+"num": 15,
 "dc": 1
 },
 "8136": {
@@ -2586,112 +2036,28 @@
 "num": 1,
 "dc": 2
 },
-"12508": {
-"n": "Jaxson Dart",
-"p": "QB",
-"tm": "NYG",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 6,
-"dc": 1
-},
-"12530": {
-"n": "Travis Hunter",
-"p": "WR",
-"tm": "JAX",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 12,
-"dc": 4
-},
-"5859": {
-"n": "A.J. Brown",
-"p": "WR",
-"tm": "NE",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 4047646,
-"num": 1,
-"dc": 1
-},
-"9225": {
-"n": "Tank Bigsby",
+"8408": {
+"n": "Jordan Mason",
 "p": "RB",
-"tm": "PHI",
+"tm": "MIN",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
 "espn": null,
-"num": 8,
-"dc": 2
-},
-"10222": {
-"n": "Jayden Reed",
-"p": "WR",
-"tm": "GB",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 11,
-"dc": 2
-},
-"BAL": {
-"n": "Baltimore Ravens",
-"p": "DEF",
-"tm": "BAL",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": null,
-"dc": null
-},
-"7564": {
-"n": "Ja'Marr Chase",
-"p": "WR",
-"tm": "CIN",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 1,
+"num": 27,
 "dc": 1
 },
-"SEA": {
-"n": "Seattle Seahawks",
-"p": "DEF",
-"tm": "SEA",
+"6794": {
+"n": "Justin Jefferson",
+"p": "WR",
+"tm": "MIN",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
-"espn": null,
-"num": null,
-"dc": null
-},
-"11563": {
-"n": "Bo Nix",
-"p": "QB",
-"tm": "DEN",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 10,
+"espn": 4262921,
+"num": 18,
 "dc": 1
 },
 "9997": {
@@ -2706,8 +2072,8 @@
 "num": 4,
 "dc": 1
 },
-"7567": {
-"n": "Kenny Gainwell",
+"11584": {
+"n": "Bucky Irving",
 "p": "RB",
 "tm": "TB",
 "ist": null,
@@ -2715,8 +2081,8 @@
 "inote": null,
 "pp": null,
 "espn": null,
-"num": 1,
-"dc": 2
+"num": 7,
+"dc": 1
 },
 "9754": {
 "n": "Quentin Johnston",
@@ -2730,41 +2096,269 @@
 "num": 1,
 "dc": 2
 },
-"12512": {
-"n": "Quinshon Judkins",
-"p": "RB",
-"tm": "CLE",
-"ist": "Questionable",
-"ibp": "Undisclosed",
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 10,
-"dc": 1
-},
-"13281": {
-"n": "Jordyn Tyson",
+"11628": {
+"n": "Marvin Harrison",
 "p": "WR",
-"tm": "NO",
-"ist": "Doubtful",
-"ibp": "Hamstring",
-"inote": "Strain",
-"pp": null,
-"espn": null,
-"num": 0,
-"dc": 2
-},
-"7553": {
-"n": "Kyle Pitts",
-"p": "TE",
-"tm": "ATL",
+"tm": "ARI",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
 "espn": null,
-"num": 8,
+"num": 18,
 "dc": 1
+},
+"7564": {
+"n": "Ja'Marr Chase",
+"p": "WR",
+"tm": "CIN",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 1,
+"dc": 1
+},
+"9226": {
+"n": "De'Von Achane",
+"p": "RB",
+"tm": "MIA",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 28,
+"dc": 1
+},
+"8146": {
+"n": "Garrett Wilson",
+"p": "WR",
+"tm": "NYJ",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 5,
+"dc": 1
+},
+"11583": {
+"n": "Jonathon Brooks",
+"p": "RB",
+"tm": "CAR",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 25,
+"dc": 2
+},
+"12534": {
+"n": "Kyle Monangai",
+"p": "RB",
+"tm": "CHI",
+"ist": "Questionable",
+"ibp": "Knee",
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 25,
+"dc": 2
+},
+"5859": {
+"n": "A.J. Brown",
+"p": "WR",
+"tm": "NE",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 4047646,
+"num": 1,
+"dc": 1
+},
+"8126": {
+"n": "Wan'Dale Robinson",
+"p": "WR",
+"tm": "TEN",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 4,
+"dc": 2
+},
+"2216": {
+"n": "Mike Evans",
+"p": "WR",
+"tm": "SF",
+"ist": "Questionable",
+"ibp": "Foot",
+"inote": null,
+"pp": null,
+"espn": 16737,
+"num": 5,
+"dc": 1
+},
+"12474": {
+"n": "Woody Marks",
+"p": "RB",
+"tm": "HOU",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 4,
+"dc": 2
+},
+"12517": {
+"n": "Colston Loveland",
+"p": "TE",
+"tm": "CHI",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 84,
+"dc": 1
+},
+"LAC": {
+"n": "Los Angeles Chargers",
+"p": "DEF",
+"tm": "LAC",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": null,
+"dc": null
+},
+"6819": {
+"n": "Michael Pittman",
+"p": "WR",
+"tm": "PIT",
+"ist": "Questionable",
+"ibp": "Leg",
+"inote": null,
+"pp": null,
+"espn": 4035687,
+"num": 11,
+"dc": 2
+},
+"12514": {
+"n": "Emeka Egbuka",
+"p": "WR",
+"tm": "TB",
+"ist": "Questionable",
+"ibp": "Undisclosed",
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 2,
+"dc": 1
+},
+"5892": {
+"n": "David Montgomery",
+"p": "RB",
+"tm": "HOU",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 4035538,
+"num": 32,
+"dc": 1
+},
+"4037": {
+"n": "Chris Godwin",
+"p": "WR",
+"tm": "TB",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 3116165,
+"num": 14,
+"dc": 2
+},
+"11586": {
+"n": "Blake Corum",
+"p": "RB",
+"tm": "LAR",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 24,
+"dc": 2
+},
+"9224": {
+"n": "Chase Brown",
+"p": "RB",
+"tm": "CIN",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 30,
+"dc": 1
+},
+"12529": {
+"n": "TreVeyon Henderson",
+"p": "RB",
+"tm": "NE",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 32,
+"dc": 1
+},
+"4984": {
+"n": "Josh Allen",
+"p": "QB",
+"tm": "BUF",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 3918298,
+"num": 17,
+"dc": 1
+},
+"8151": {
+"n": "Kenneth Walker",
+"p": "RB",
+"tm": "KC",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 9,
+"dc": 1
+},
+"13293": {
+"n": "Ja'Kobi Lane",
+"p": "WR",
+"tm": "BAL",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 6,
+"dc": 3
 },
 "11620": {
 "n": "Rome Odunze",
@@ -2778,22 +2372,262 @@
 "num": 15,
 "dc": 1
 },
-"13726": {
-"n": "Camden Brown",
+"12501": {
+"n": "Matthew Golden",
 "p": "WR",
-"tm": "DAL",
+"tm": "GB",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
 "espn": null,
-"num": 6,
+"num": 0,
+"dc": 3
+},
+"11564": {
+"n": "Drake Maye",
+"p": "QB",
+"tm": "NE",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 10,
+"dc": 1
+},
+"9508": {
+"n": "Tyjae Spears",
+"p": "RB",
+"tm": "TEN",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 2,
+"dc": 2
+},
+"12533": {
+"n": "Jacory Croskey-Merritt",
+"p": "RB",
+"tm": "WAS",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 22,
+"dc": 1
+},
+"3451": {
+"n": "Ka'imi Fairbairn",
+"p": "K",
+"tm": "HOU",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 2971573,
+"num": 15,
+"dc": 1
+},
+"10219": {
+"n": "Chris Rodriguez",
+"p": "RB",
+"tm": "JAX",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 24,
+"dc": 2
+},
+"9480": {
+"n": "Brenton Strange",
+"p": "TE",
+"tm": "JAX",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 85,
+"dc": 1
+},
+"6797": {
+"n": "Justin Herbert",
+"p": "QB",
+"tm": "LAC",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 4038941,
+"num": 10,
+"dc": 1
+},
+"12512": {
+"n": "Quinshon Judkins",
+"p": "RB",
+"tm": "CLE",
+"ist": "Questionable",
+"ibp": "Undisclosed",
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 10,
+"dc": 1
+},
+"11566": {
+"n": "Jayden Daniels",
+"p": "QB",
+"tm": "WAS",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 5,
+"dc": 1
+},
+"6790": {
+"n": "D'Andre Swift",
+"p": "RB",
+"tm": "CHI",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 4259545,
+"num": 4,
+"dc": 1
+},
+"5189": {
+"n": "Eddy Pineiro",
+"p": "K",
+"tm": "SF",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 4034949,
+"num": 18,
+"dc": 1
+},
+"13413": {
+"n": "Cyrus Allen",
+"p": "WR",
+"tm": "KC",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 13,
+"dc": 4
+},
+"BAL": {
+"n": "Baltimore Ravens",
+"p": "DEF",
+"tm": "BAL",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": null,
 "dc": null
 },
-"7526": {
-"n": "Jaylen Waddle",
+"6813": {
+"n": "Jonathan Taylor",
+"p": "RB",
+"tm": "IND",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 4242335,
+"num": 28,
+"dc": 1
+},
+"12484": {
+"n": "Jayden Higgins",
 "p": "WR",
-"tm": "DEN",
+"tm": "HOU",
+"ist": "IR",
+"ibp": "Knee - ACL",
+"inote": "Surgery",
+"pp": null,
+"espn": null,
+"num": 81,
+"dc": 5
+},
+"PHI": {
+"n": "Philadelphia Eagles",
+"p": "DEF",
+"tm": "PHI",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": null,
+"dc": null
+},
+"11635": {
+"n": "Ladd McConkey",
+"p": "WR",
+"tm": "LAC",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 15,
+"dc": 1
+},
+"5849": {
+"n": "Kyler Murray",
+"p": "QB",
+"tm": "MIN",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 3917315,
+"num": 1,
+"dc": 1
+},
+"5846": {
+"n": "DK Metcalf",
+"p": "WR",
+"tm": "PIT",
+"ist": "Questionable",
+"ibp": "Undisclosed",
+"inote": null,
+"pp": null,
+"espn": 4047650,
+"num": 4,
+"dc": 1
+},
+"5872": {
+"n": "Deebo Samuel",
+"p": "WR",
+"tm": "SF",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 3126486,
+"num": 19,
+"dc": 2
+},
+"11533": {
+"n": "Brandon Aubrey",
+"p": "K",
+"tm": "DAL",
 "ist": null,
 "ibp": null,
 "inote": null,
@@ -2814,10 +2648,106 @@
 "num": 12,
 "dc": 2
 },
-"12507": {
-"n": "Omarion Hampton",
+"8676": {
+"n": "Rashid Shaheed",
+"p": "WR",
+"tm": "SEA",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 22,
+"dc": 2
+},
+"DET": {
+"n": "Detroit Lions",
+"p": "DEF",
+"tm": "DET",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": null,
+"dc": null
+},
+"7567": {
+"n": "Kenny Gainwell",
 "p": "RB",
-"tm": "LAC",
+"tm": "TB",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 1,
+"dc": 2
+},
+"11610": {
+"n": "Malik Washington",
+"p": "WR",
+"tm": "MIA",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 6,
+"dc": 1
+},
+"9500": {
+"n": "Josh Downs",
+"p": "WR",
+"tm": "IND",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 2,
+"dc": 2
+},
+"421": {
+"n": "Matthew Stafford",
+"p": "QB",
+"tm": "LAR",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 12483,
+"num": 9,
+"dc": 1
+},
+"8148": {
+"n": "Jameson Williams",
+"p": "WR",
+"tm": "DET",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 1,
+"dc": 2
+},
+"11786": {
+"n": "Cam Little",
+"p": "K",
+"tm": "JAX",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 39,
+"dc": 1
+},
+"7553": {
+"n": "Kyle Pitts",
+"p": "TE",
+"tm": "ATL",
 "ist": null,
 "ibp": null,
 "inote": null,
@@ -2826,27 +2756,135 @@
 "num": 8,
 "dc": 1
 },
-"5892": {
-"n": "David Montgomery",
-"p": "RB",
-"tm": "HOU",
-"ist": null,
-"ibp": null,
+"13279": {
+"n": "Carnell Tate",
+"p": "WR",
+"tm": "TEN",
+"ist": "Questionable",
+"ibp": "Undisclosed",
 "inote": null,
 "pp": null,
-"espn": 4035538,
-"num": 32,
+"espn": null,
+"num": 14,
 "dc": 1
 },
-"8151": {
-"n": "Kenneth Walker",
-"p": "RB",
-"tm": "KC",
+"JAX": {
+"n": "Jacksonville Jaguars",
+"p": "DEF",
+"tm": "JAX",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
 "espn": null,
+"num": null,
+"dc": null
+},
+"8131": {
+"n": "Isaiah Likely",
+"p": "TE",
+"tm": "NYG",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 9,
+"dc": 1
+},
+"4035": {
+"n": "Alvin Kamara",
+"p": "RB",
+"tm": "NO",
+"ist": "Questionable",
+"ibp": "Knee",
+"inote": null,
+"pp": null,
+"espn": 3054850,
+"num": 41,
+"dc": 2
+},
+"11646": {
+"n": "Jalen Coker",
+"p": "WR",
+"tm": "CAR",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 18,
+"dc": 2
+},
+"11563": {
+"n": "Bo Nix",
+"p": "QB",
+"tm": "DEN",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 10,
+"dc": 1
+},
+"3198": {
+"n": "Derrick Henry",
+"p": "RB",
+"tm": "BAL",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 3043078,
+"num": 22,
+"dc": 1
+},
+"7049": {
+"n": "Jauan Jennings",
+"p": "WR",
+"tm": "MIN",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 3886598,
+"num": 14,
+"dc": 3
+},
+"9225": {
+"n": "Tank Bigsby",
+"p": "RB",
+"tm": "PHI",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 8,
+"dc": 2
+},
+"4892": {
+"n": "Baker Mayfield",
+"p": "QB",
+"tm": "TB",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 3052587,
+"num": 6,
+"dc": 1
+},
+"6770": {
+"n": "Joe Burrow",
+"p": "QB",
+"tm": "CIN",
+"ist": null,
+"ibp": null,
+"inote": null,
+"pp": null,
+"espn": 3915511,
 "num": 9,
 "dc": 1
 },
@@ -2862,112 +2900,88 @@
 "num": 32,
 "dc": 2
 },
-"7021": {
-"n": "Rico Dowdle",
+"9487": {
+"n": "Parker Washington",
+"p": "WR",
+"tm": "JAX",
+"ist": "Questionable",
+"ibp": "Undisclosed",
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 11,
+"dc": 1
+},
+"9493": {
+"n": "Puka Nacua",
+"p": "WR",
+"tm": "LAR",
+"ist": "Questionable",
+"ibp": "Undisclosed",
+"inote": null,
+"pp": null,
+"espn": null,
+"num": 12,
+"dc": 1
+},
+"8228": {
+"n": "Jaylen Warren",
 "p": "RB",
 "tm": "PIT",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
-"espn": 4038815,
-"num": 13,
-"dc": 2
-},
-"8146": {
-"n": "Garrett Wilson",
-"p": "WR",
-"tm": "NYJ",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
 "espn": null,
-"num": 5,
+"num": 30,
 "dc": 1
 },
-"9756": {
-"n": "Jordan Addison",
-"p": "WR",
-"tm": "MIN",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": 3,
-"dc": 2
-},
-"CLE": {
-"n": "Cleveland Browns",
-"p": "DEF",
-"tm": "CLE",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": null,
-"num": null,
-"dc": null
-},
-"12493": {
-"n": "Oronde Gadsden",
-"p": "TE",
+"9511": {
+"n": "Keaton Mitchell",
+"p": "RB",
 "tm": "LAC",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
 "espn": null,
-"num": 86,
-"dc": 1
+"num": 34,
+"dc": 2
 },
-"NE": {
-"n": "New England Patriots",
-"p": "DEF",
-"tm": "NE",
+"12506": {
+"n": "Harold Fannin",
+"p": "TE",
+"tm": "CLE",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
 "espn": null,
-"num": null,
-"dc": null
-},
-"4881": {
-"n": "Lamar Jackson",
-"p": "QB",
-"tm": "BAL",
-"ist": null,
-"ibp": null,
-"inote": null,
-"pp": null,
-"espn": 3916387,
-"num": 8,
+"num": 44,
 "dc": 1
 },
-"5967": {
-"n": "Tony Pollard",
+"12490": {
+"n": "Bhayshul Tuten",
 "p": "RB",
-"tm": "TEN",
+"tm": "JAX",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
-"espn": 3916148,
-"num": 20,
+"espn": null,
+"num": 33,
 "dc": 1
 },
-"5849": {
-"n": "Kyler Murray",
-"p": "QB",
-"tm": "MIN",
+"6786": {
+"n": "CeeDee Lamb",
+"p": "WR",
+"tm": "DAL",
 "ist": null,
 "ibp": null,
 "inote": null,
 "pp": null,
-"espn": 3917315,
-"num": 1,
+"espn": 4241389,
+"num": 88,
 "dc": 1
 }
 },
@@ -3105,10 +3119,11 @@
 "12484",
 "12489",
 "12713",
-"13330",
+"13293",
 "13417",
 "4881",
 "7021",
+"8132",
 "8146",
 "8154",
 "9487",
@@ -3148,10 +3163,11 @@
 "12484": 0.0,
 "12489": 0.0,
 "12713": 0.0,
-"13330": 0.0,
+"13293": 0.0,
 "13417": 0.0,
 "4881": 0.0,
 "7021": 0.0,
+"8132": 0.0,
 "8146": 0.0,
 "8154": 0.0,
 "9487": 0.0,
@@ -3882,38 +3898,38 @@
 }
 },
 "bye_weeks": {
-"CHI": 10,
-"NO": 8,
-"LV": 13,
-"WAS": 7,
-"ARI": 14,
-"NYG": 8,
-"KC": 5,
-"IND": 13,
-"ATL": 11,
-"BAL": 13,
-"PIT": 9,
-"TB": 10,
-"CLE": 11,
-"MIN": 6,
-"DEN": 10,
-"JAX": 7,
-"NE": 11,
-"LAR": 11,
-"SF": 8,
-"PHI": 10,
-"HOU": 8,
-"MIA": 6,
-"SEA": 11,
 "CAR": 5,
-"GB": 11,
-"DAL": 14,
-"TEN": 9,
-"NYJ": 13,
 "BUF": 7,
+"MIA": 6,
+"NO": 8,
+"CLE": 11,
+"CHI": 10,
 "CIN": 6,
+"GB": 11,
+"SEA": 11,
+"NYG": 8,
+"WAS": 7,
+"DEN": 10,
+"PHI": 10,
+"LAC": 7,
+"TB": 10,
+"HOU": 8,
+"PIT": 9,
+"MIN": 6,
+"DAL": 14,
+"SF": 8,
+"KC": 5,
+"TEN": 9,
+"NE": 11,
+"NYJ": 13,
+"BAL": 13,
 "DET": 6,
-"LAC": 7
+"ATL": 11,
+"JAX": 7,
+"IND": 13,
+"LV": 13,
+"ARI": 14,
+"LAR": 11
 },
 "def_vs_pos": {
 "weeks_sampled": 18,
@@ -4373,91 +4389,69 @@
 "_note": "rank 1 = defesa que mais cede pontos fantasy nessa posição (matchup mais fácil)"
 },
 "usage": {
-"5012": [
+"12530": [
 {
 "week": 1,
-"tm_off_snp": 80.0
+"tm_off_snp": 68.0
 }
 ],
-"11586": [
+"12493": [
 {
 "week": 1,
-"tm_off_snp": 54.0
+"pts_ppr": 4.1,
+"rec_tgt": 3.0,
+"rec": 2.0,
+"rec_yd": 21.0,
+"off_snp": 20.0,
+"tm_off_snp": 66.0,
+"rec_rz_tgt": 1.0,
+"snap_pct": 30
+},
+{
+"week": 2,
+"pts_ppr": 4.4,
+"rec_tgt": 3.0,
+"rec": 2.0,
+"rec_yd": 24.0
 }
 ],
-"8148": [
+"3214": [
+{
+"week": 1,
+"tm_off_snp": 73.0
+}
+],
+"12469": [
+{
+"week": 1,
+"pts_ppr": 6.9,
+"rec_tgt": 2.0,
+"rec": 2.0,
+"rec_yd": 43.0,
+"rush_att": 4.0,
+"rush_yd": 6.0,
+"off_snp": 15.0,
+"tm_off_snp": 66.0,
+"snap_pct": 23
+}
+],
+"10222": [
+{
+"week": 1,
+"pts_ppr": 2.9,
+"rec_tgt": 2.0,
+"rec": 1.0,
+"rec_yd": 19.0,
+"off_snp": 7.0,
+"tm_off_snp": 60.0,
+"rec_rz_tgt": 1.0,
+"snap_pct": 12
+}
+],
+"10859": [
 {
 "week": 1,
 "tm_off_snp": 66.0
-}
-],
-"12501": [
-{
-"week": 1,
-"off_snp": 9.0,
-"tm_off_snp": 60.0,
-"snap_pct": 15
-}
-],
-"2133": [
-{
-"week": 1,
-"tm_off_snp": 54.0
-}
-],
-"9484": [
-{
-"week": 1,
-"tm_off_snp": 60.0
-}
-],
-"4866": [
-{
-"week": 1,
-"tm_off_snp": 44.0
-}
-],
-"12534": [
-{
-"week": 1,
-"tm_off_snp": 64.0
-}
-],
-"4984": [
-{
-"week": 1,
-"pts_ppr": 8.44,
-"off_snp": 15.0,
-"tm_off_snp": 67.0,
-"pass_att": 8.0,
-"pass_yd": 111.0,
-"pass_td": 1.0,
-"snap_pct": 22
-}
-],
-"4199": [
-{
-"week": 1,
-"pts_ppr": 2.7,
-"rec_tgt": 1.0,
-"rush_att": 3.0,
-"rush_yd": 27.0,
-"off_snp": 5.0,
-"tm_off_snp": 59.0,
-"rec_rz_tgt": 1.0,
-"snap_pct": 8
-}
-],
-"12517": [
-{
-"week": 1,
-"tm_off_snp": 64.0
-}
-],
-"9509": [
-{
-"week": 1,
-"tm_off_snp": 60.0
 }
 ],
 "7611": [
@@ -4466,72 +4460,60 @@
 "tm_off_snp": 73.0
 }
 ],
-"9480": [
+"7543": [
+{
+"week": 1,
+"tm_off_snp": 66.0
+}
+],
+"5947": [
 {
 "week": 1,
 "tm_off_snp": 68.0
 }
 ],
-"8138": [
+"12527": [
 {
 "week": 1,
-"pts_ppr": 2.1,
-"rush_att": 5.0,
-"rush_yd": 21.0,
-"off_snp": 11.0,
-"tm_off_snp": 67.0,
-"rush_rz_att": 1.0,
-"snap_pct": 16
-}
-],
-"11655": [
-{
-"week": 1,
-"pts_ppr": 0.5,
+"pts_ppr": 1.6,
 "rec_tgt": 1.0,
-"rush_att": 2.0,
-"rush_yd": 5.0,
+"rush_att": 3.0,
+"rush_yd": 16.0,
 "off_snp": 7.0,
-"tm_off_snp": 54.0,
-"snap_pct": 13
+"tm_off_snp": 58.0,
+"snap_pct": 12
 }
 ],
-"12713": [
+"4034": [
 {
 "week": 1,
-"pts_ppr": 7.0,
-"tm_off_snp": 73.0
+"tm_off_snp": 77.0
 }
 ],
-"4983": [
+"5022": [
 {
 "week": 1,
-"pts_ppr": 9.1,
-"rec_tgt": 4.0,
-"rec": 3.0,
-"rec_yd": 61.0,
-"off_snp": 11.0,
-"tm_off_snp": 67.0,
-"rec_rz_tgt": 1.0,
-"snap_pct": 16
+"tm_off_snp": 44.0
 }
 ],
-"LAC": [
+"10229": [
 {
 "week": 1,
-"pts_ppr": 9.0
+"tm_off_snp": 70.0
 }
 ],
-"6790": [
+"11604": [
 {
 "week": 1,
-"tm_off_snp": 64.0
+"off_snp": 1.0,
+"tm_off_snp": 58.0,
+"snap_pct": 2
 }
 ],
-"3451": [
+"9484": [
 {
 "week": 1,
-"tm_off_snp": 53.0
+"tm_off_snp": 60.0
 }
 ],
 "8134": [
@@ -4546,59 +4528,11 @@
 "snap_pct": 12
 }
 ],
-"8150": [
+"12015": [
 {
 "week": 1,
+"pts_ppr": 9.0,
 "tm_off_snp": 54.0
-}
-],
-"12518": [
-{
-"week": 1,
-"tm_off_snp": 65.0
-}
-],
-"6819": [
-{
-"week": 1,
-"tm_off_snp": 68.0
-}
-],
-"11564": [
-{
-"week": 1,
-"tm_off_snp": 73.0
-}
-],
-"9511": [
-{
-"week": 1,
-"tm_off_snp": 66.0
-}
-],
-"3198": [
-{
-"week": 1,
-"tm_off_snp": 80.0
-}
-],
-"6797": [
-{
-"week": 1,
-"tm_off_snp": 66.0
-}
-],
-"13417": [
-{
-"week": 1,
-"pts_ppr": 13.3,
-"rec_tgt": 8.0,
-"rec": 7.0,
-"rec_yd": 63.0,
-"off_snp": 22.0,
-"tm_off_snp": 77.0,
-"rec_rz_tgt": 1.0,
-"snap_pct": 29
 }
 ],
 "7525": [
@@ -4607,16 +4541,209 @@
 "tm_off_snp": 44.0
 }
 ],
-"10229": [
+"MIN": [
 {
 "week": 1,
-"tm_off_snp": 70.0
+"pts_ppr": 12.0
 }
 ],
-"HOU": [
+"5967": [
 {
 "week": 1,
-"pts_ppr": 7.0
+"pts_ppr": 8.2,
+"rush_att": 4.0,
+"rush_yd": 22.0,
+"off_snp": 9.0,
+"tm_off_snp": 61.0,
+"rush_td": 1.0,
+"rush_rz_att": 1.0,
+"snap_pct": 15
+}
+],
+"9488": [
+{
+"week": 1,
+"tm_off_snp": 56.0
+}
+],
+"8259": [
+{
+"week": 1,
+"pts_ppr": 7.0,
+"tm_off_snp": 66.0
+},
+{
+"week": 2,
+"pts_ppr": 2.0
+}
+],
+"CLE": [
+{
+"week": 1,
+"pts_ppr": 3.0
+}
+],
+"10232": [
+{
+"week": 1,
+"pts_ppr": 4.3,
+"rec_tgt": 2.0,
+"rec": 2.0,
+"rec_yd": 23.0,
+"off_snp": 7.0,
+"tm_off_snp": 69.0,
+"snap_pct": 10
+}
+],
+"13281": [
+{
+"week": 1,
+"tm_off_snp": 66.0
+}
+],
+"6804": [
+{
+"week": 1,
+"pts_ppr": 0.72,
+"off_snp": 9.0,
+"tm_off_snp": 60.0,
+"pass_att": 5.0,
+"pass_yd": 18.0,
+"snap_pct": 15
+}
+],
+"13726": [
+{
+"week": 1,
+"pts_ppr": 21.2,
+"rec_tgt": 3.0,
+"rec": 3.0,
+"rec_yd": 62.0,
+"off_snp": 27.0,
+"tm_off_snp": 66.0,
+"rec_td": 2.0,
+"rec_rz_tgt": 1.0,
+"snap_pct": 41
+}
+],
+"8183": [
+{
+"week": 1,
+"tm_off_snp": 77.0
+},
+{
+"week": 2,
+"pts_ppr": 1.46,
+"rush_att": 1.0,
+"rush_yd": 3.0,
+"pass_att": 6.0,
+"pass_yd": 29.0
+}
+],
+"11560": [
+{
+"week": 1,
+"tm_off_snp": 64.0
+}
+],
+"4881": [
+{
+"week": 1,
+"tm_off_snp": 80.0
+}
+],
+"6801": [
+{
+"week": 1,
+"off_snp": 11.0,
+"tm_off_snp": 70.0,
+"snap_pct": 16
+}
+],
+"7042": [
+{
+"week": 1,
+"pts_ppr": 11.0,
+"tm_off_snp": 67.0
+}
+],
+"4866": [
+{
+"week": 1,
+"tm_off_snp": 44.0
+}
+],
+"6904": [
+{
+"week": 1,
+"tm_off_snp": 44.0
+}
+],
+"7547": [
+{
+"week": 1,
+"tm_off_snp": 66.0
+}
+],
+"6806": [
+{
+"week": 1,
+"tm_off_snp": 74.0
+}
+],
+"7523": [
+{
+"week": 1,
+"tm_off_snp": 68.0
+}
+],
+"SEA": [
+{
+"week": 1,
+"pts_ppr": 2.0
+}
+],
+"7021": [
+{
+"week": 1,
+"tm_off_snp": 68.0
+}
+],
+"12481": [
+{
+"week": 1,
+"pts_ppr": 1.9,
+"rush_att": 4.0,
+"rush_yd": 19.0,
+"off_snp": 5.0,
+"tm_off_snp": 54.0,
+"snap_pct": 9
+}
+],
+"12508": [
+{
+"week": 1,
+"pts_ppr": 5.04,
+"off_snp": 14.0,
+"tm_off_snp": 54.0,
+"pass_att": 4.0,
+"pass_yd": 26.0,
+"pass_td": 1.0,
+"snap_pct": 26
+}
+],
+"8130": [
+{
+"week": 1,
+"off_snp": 1.0,
+"tm_off_snp": 69.0,
+"snap_pct": 1
+}
+],
+"12519": [
+{
+"week": 1,
+"tm_off_snp": 64.0
 }
 ],
 "13298": [
@@ -4635,44 +4762,63 @@
 "snap_pct": 38
 }
 ],
-"13286": [
+"10236": [
 {
 "week": 1,
-"tm_off_snp": 56.0
-}
-],
-"9224": [
-{
-"week": 1,
-"pts_ppr": 1.6,
-"rush_att": 5.0,
-"rush_yd": 16.0,
 "off_snp": 9.0,
-"tm_off_snp": 70.0,
+"tm_off_snp": 67.0,
 "snap_pct": 13
 }
 ],
-"DET": [
+"7594": [
 {
 "week": 1,
-"pts_ppr": 5.0
+"tm_off_snp": 62.0
 }
 ],
-"12481": [
+"8167": [
+{
+"week": 1,
+"rec_tgt": 1.0,
+"off_snp": 8.0,
+"tm_off_snp": 60.0,
+"snap_pct": 13
+}
+],
+"5012": [
+{
+"week": 1,
+"tm_off_snp": 80.0
+}
+],
+"7569": [
+{
+"week": 1,
+"tm_off_snp": 53.0
+}
+],
+"8132": [
 {
 "week": 1,
 "pts_ppr": 1.9,
 "rush_att": 4.0,
 "rush_yd": 19.0,
-"off_snp": 5.0,
-"tm_off_snp": 54.0,
+"off_snp": 6.0,
+"tm_off_snp": 69.0,
+"rush_rz_att": 1.0,
 "snap_pct": 9
 }
 ],
-"6813": [
+"12507": [
 {
 "week": 1,
-"tm_off_snp": 65.0
+"tm_off_snp": 66.0
+},
+{
+"week": 2,
+"pts_ppr": -0.1,
+"rush_att": 1.0,
+"rush_yd": -1.0
 }
 ],
 "11539": [
@@ -4682,189 +4828,34 @@
 "tm_off_snp": 66.0
 }
 ],
-"6650": [
+"1466": [
 {
 "week": 1,
-"pts_ppr": 4.0,
-"tm_off_snp": 63.0
+"tm_off_snp": 70.0
 }
 ],
-"5022": [
+"5850": [
 {
 "week": 1,
-"tm_off_snp": 44.0
+"tm_off_snp": 60.0
 }
 ],
-"DEN": [
+"NE": [
 {
 "week": 1,
 "pts_ppr": 15.0
 }
 ],
-"1945": [
-{
-"week": 1,
-"pts_ppr": 1.0,
-"tm_off_snp": 68.0
-}
-],
-"3214": [
-{
-"week": 1,
-"tm_off_snp": 73.0
-}
-],
-"8408": [
-{
-"week": 1,
-"pts_ppr": 1.7,
-"rush_att": 3.0,
-"rush_yd": 17.0,
-"off_snp": 4.0,
-"tm_off_snp": 59.0,
-"snap_pct": 7
-}
-],
-"7049": [
-{
-"week": 1,
-"off_snp": 4.0,
-"tm_off_snp": 59.0,
-"snap_pct": 7
-}
-],
-"13413": [
-{
-"week": 1,
-"pts_ppr": 4.0,
-"rec_tgt": 5.0,
-"rec": 2.0,
-"rec_yd": 20.0,
-"off_snp": 36.0,
-"tm_off_snp": 70.0,
-"rec_rz_tgt": 1.0,
-"snap_pct": 51
-}
-],
-"MIN": [
-{
-"week": 1,
-"pts_ppr": 12.0
-}
-],
-"7523": [
-{
-"week": 1,
-"tm_off_snp": 68.0
-}
-],
-"10859": [
+"12545": [
 {
 "week": 1,
 "tm_off_snp": 66.0
 }
 ],
-"12527": [
-{
-"week": 1,
-"pts_ppr": 1.6,
-"rec_tgt": 1.0,
-"rush_att": 3.0,
-"rush_yd": 16.0,
-"off_snp": 7.0,
-"tm_off_snp": 58.0,
-"snap_pct": 12
-}
-],
-"8155": [
-{
-"week": 1,
-"pts_ppr": 1.6,
-"rush_att": 4.0,
-"rush_yd": 16.0,
-"off_snp": 10.0,
-"tm_off_snp": 60.0,
-"rush_rz_att": 1.0,
-"snap_pct": 17
-}
-],
-"13294": [
-{
-"week": 1,
-"tm_off_snp": 44.0
-}
-],
-"2216": [
-{
-"week": 1,
-"tm_off_snp": 77.0
-}
-],
-"8183": [
-{
-"week": 1,
-"tm_off_snp": 77.0
-}
-],
-"12514": [
-{
-"week": 1,
-"tm_off_snp": 63.0
-}
-],
-"11631": [
-{
-"week": 1,
-"tm_off_snp": 68.0
-}
-],
-"9493": [
-{
-"week": 1,
-"tm_off_snp": 54.0
-}
-],
-"8205": [
+"8144": [
 {
 "week": 1,
 "tm_off_snp": 66.0
-}
-],
-"8676": [
-{
-"week": 1,
-"tm_off_snp": 56.0
-}
-],
-"8121": [
-{
-"week": 1,
-"tm_off_snp": 73.0
-}
-],
-"8259": [
-{
-"week": 1,
-"pts_ppr": 7.0,
-"tm_off_snp": 66.0
-}
-],
-"12519": [
-{
-"week": 1,
-"tm_off_snp": 64.0
-}
-],
-"12484": [
-{
-"week": 1,
-"tm_off_snp": 53.0
-}
-],
-"1466": [
-{
-"week": 1,
-"tm_off_snp": 70.0
 }
 ],
 "8154": [
@@ -4878,37 +4869,78 @@
 "snap_pct": 13
 }
 ],
-"8137": [
+"9509": [
+{
+"week": 1,
+"tm_off_snp": 60.0
+}
+],
+"13417": [
+{
+"week": 1,
+"pts_ppr": 13.3,
+"rec_tgt": 8.0,
+"rec": 7.0,
+"rec_yd": 63.0,
+"off_snp": 22.0,
+"tm_off_snp": 77.0,
+"rec_rz_tgt": 1.0,
+"snap_pct": 29
+},
+{
+"week": 2,
+"pts_ppr": 8.6,
+"rec_tgt": 5.0,
+"rec": 4.0,
+"rec_yd": 46.0
+}
+],
+"HOU": [
+{
+"week": 1,
+"pts_ppr": 7.0
+},
+{
+"week": 2,
+"pts_ppr": 9.0
+}
+],
+"1945": [
+{
+"week": 1,
+"pts_ppr": 1.0,
+"tm_off_snp": 68.0
+}
+],
+"LAR": [
+{
+"week": 1,
+"pts_ppr": 6.0
+}
+],
+"6650": [
+{
+"week": 1,
+"pts_ppr": 4.0,
+"tm_off_snp": 63.0
+}
+],
+"8110": [
 {
 "week": 1,
 "tm_off_snp": 66.0
 }
 ],
-"9508": [
+"11624": [
 {
 "week": 1,
-"pts_ppr": 4.9,
-"rec_tgt": 1.0,
-"rec": 1.0,
-"rec_yd": 4.0,
-"rush_att": 4.0,
-"rush_yd": 35.0,
-"off_snp": 13.0,
-"tm_off_snp": 61.0,
-"rush_rz_att": 1.0,
-"snap_pct": 21
+"tm_off_snp": 70.0
 }
 ],
-"11632": [
+"9221": [
 {
 "week": 1,
-"tm_off_snp": 54.0
-}
-],
-"2747": [
-{
-"week": 1,
-"tm_off_snp": 56.0
+"tm_off_snp": 66.0
 }
 ],
 "8112": [
@@ -4919,107 +4951,7 @@
 "snap_pct": 3
 }
 ],
-"9500": [
-{
-"week": 1,
-"tm_off_snp": 65.0
-}
-],
-"8130": [
-{
-"week": 1,
-"off_snp": 1.0,
-"tm_off_snp": 69.0,
-"snap_pct": 1
-}
-],
-"11584": [
-{
-"week": 1,
-"tm_off_snp": 63.0
-}
-],
-"6794": [
-{
-"week": 1,
-"tm_off_snp": 59.0
-}
-],
-"7543": [
-{
-"week": 1,
-"tm_off_snp": 66.0
-}
-],
-"8144": [
-{
-"week": 1,
-"tm_off_snp": 66.0
-}
-],
-"12474": [
-{
-"week": 1,
-"tm_off_snp": 53.0
-}
-],
-"421": [
-{
-"week": 1,
-"tm_off_snp": 54.0
-}
-],
-"3294": [
-{
-"week": 1,
-"tm_off_snp": 66.0
-}
-],
-"5850": [
-{
-"week": 1,
-"tm_off_snp": 60.0
-}
-],
-"6804": [
-{
-"week": 1,
-"pts_ppr": 0.72,
-"off_snp": 9.0,
-"tm_off_snp": 60.0,
-"pass_att": 5.0,
-"pass_yd": 18.0,
-"snap_pct": 15
-}
-],
-"11560": [
-{
-"week": 1,
-"tm_off_snp": 64.0
-}
-],
-"9488": [
-{
-"week": 1,
-"tm_off_snp": 56.0
-}
-],
-"12490": [
-{
-"week": 1,
-"tm_off_snp": 68.0
-}
-],
-"8167": [
-{
-"week": 1,
-"rec_tgt": 1.0,
-"off_snp": 8.0,
-"tm_off_snp": 60.0,
-"snap_pct": 13
-}
-],
-"11635": [
+"7588": [
 {
 "week": 1,
 "tm_off_snp": 66.0
@@ -5038,236 +4970,22 @@
 "snap_pct": 16
 }
 ],
-"4037": [
+"13294": [
 {
 "week": 1,
-"tm_off_snp": 63.0
+"tm_off_snp": 44.0
 }
 ],
-"6770": [
+"8155": [
 {
 "week": 1,
-"pts_ppr": 1.56,
-"off_snp": 13.0,
-"tm_off_snp": 70.0,
-"pass_att": 6.0,
-"pass_yd": 39.0,
-"snap_pct": 19
-}
-],
-"7042": [
-{
-"week": 1,
-"pts_ppr": 11.0,
-"tm_off_snp": 67.0
-}
-],
-"4892": [
-{
-"week": 1,
-"tm_off_snp": 63.0
-}
-],
-"5846": [
-{
-"week": 1,
-"tm_off_snp": 68.0
-}
-],
-"13346": [
-{
-"week": 1,
-"pts_ppr": 2.5,
-"rec_tgt": 2.0,
-"rec": 1.0,
-"rec_yd": 15.0,
-"off_snp": 26.0,
-"tm_off_snp": 66.0,
-"snap_pct": 39
-}
-],
-"12529": [
-{
-"week": 1,
-"tm_off_snp": 73.0
-}
-],
-"9221": [
-{
-"week": 1,
-"tm_off_snp": 66.0
-}
-],
-"12015": [
-{
-"week": 1,
-"pts_ppr": 9.0,
-"tm_off_snp": 54.0
-}
-],
-"8110": [
-{
-"week": 1,
-"tm_off_snp": 66.0
-}
-],
-"10219": [
-{
-"week": 1,
-"tm_off_snp": 68.0
-}
-],
-"10232": [
-{
-"week": 1,
-"pts_ppr": 4.3,
-"rec_tgt": 2.0,
-"rec": 2.0,
-"rec_yd": 23.0,
-"off_snp": 7.0,
-"tm_off_snp": 69.0,
-"snap_pct": 10
-}
-],
-"5189": [
-{
-"week": 1,
-"pts_ppr": 9.0,
-"tm_off_snp": 77.0
-}
-],
-"5947": [
-{
-"week": 1,
-"tm_off_snp": 68.0
-}
-],
-"8228": [
-{
-"week": 1,
-"tm_off_snp": 68.0
-}
-],
-"11583": [
-{
-"week": 1,
-"pts_ppr": 2.4,
-"rec_tgt": 1.0,
-"rec": 1.0,
-"rec_yd": 9.0,
-"rush_att": 3.0,
-"rush_yd": 5.0,
-"off_snp": 8.0,
-"tm_off_snp": 62.0,
-"snap_pct": 13
-}
-],
-"6801": [
-{
-"week": 1,
-"off_snp": 11.0,
-"tm_off_snp": 70.0,
-"snap_pct": 16
-}
-],
-"12526": [
-{
-"week": 1,
-"off_snp": 10.0,
-"tm_off_snp": 62.0,
-"snap_pct": 16
-}
-],
-"PHI": [
-{
-"week": 1,
-"pts_ppr": 8.0
-}
-],
-"13330": [
-{
-"week": 1,
-"tm_off_snp": 60.0
-}
-],
-"LAR": [
-{
-"week": 1,
-"pts_ppr": 6.0
-}
-],
-"5872": [
-{
-"week": 1,
-"tm_off_snp": 77.0
-}
-],
-"11786": [
-{
-"week": 1,
-"pts_ppr": 12.0,
-"tm_off_snp": 68.0
-}
-],
-"12469": [
-{
-"week": 1,
-"pts_ppr": 6.9,
-"rec_tgt": 2.0,
-"rec": 2.0,
-"rec_yd": 43.0,
+"pts_ppr": 1.6,
 "rush_att": 4.0,
-"rush_yd": 6.0,
-"off_snp": 15.0,
-"tm_off_snp": 66.0,
-"snap_pct": 23
-}
-],
-"11604": [
-{
-"week": 1,
-"off_snp": 1.0,
-"tm_off_snp": 58.0,
-"snap_pct": 2
-}
-],
-"9487": [
-{
-"week": 1,
-"tm_off_snp": 68.0
-}
-],
-"4046": [
-{
-"week": 1,
-"tm_off_snp": 70.0
-}
-],
-"7588": [
-{
-"week": 1,
-"tm_off_snp": 66.0
-}
-],
-"4034": [
-{
-"week": 1,
-"tm_off_snp": 77.0
-}
-],
-"12506": [
-{
-"week": 1,
-"rec_tgt": 1.0,
-"off_snp": 9.0,
-"tm_off_snp": 66.0,
-"snap_pct": 14
-}
-],
-"12533": [
-{
-"week": 1,
-"tm_off_snp": 71.0
+"rush_yd": 16.0,
+"off_snp": 10.0,
+"tm_off_snp": 60.0,
+"rush_rz_att": 1.0,
+"snap_pct": 17
 }
 ],
 "8161": [
@@ -5284,97 +5002,44 @@
 "snap_pct": 25
 }
 ],
-"JAX": [
+"13286": [
 {
 "week": 1,
-"pts_ppr": 7.0
+"tm_off_snp": 56.0
 }
 ],
-"6904": [
+"11632": [
 {
 "week": 1,
-"tm_off_snp": 44.0
+"tm_off_snp": 54.0
 }
 ],
-"7594": [
+"2133": [
 {
 "week": 1,
-"tm_off_snp": 62.0
+"tm_off_snp": 54.0
 }
 ],
-"6806": [
+"12713": [
 {
 "week": 1,
-"tm_off_snp": 74.0
+"pts_ppr": 7.0,
+"tm_off_snp": 73.0
 }
 ],
-"11624": [
+"9756": [
 {
 "week": 1,
-"tm_off_snp": 70.0
-}
-],
-"7569": [
-{
-"week": 1,
-"tm_off_snp": 53.0
-}
-],
-"10236": [
-{
-"week": 1,
+"pts_ppr": 1.8,
+"rec_tgt": 1.0,
+"rec": 1.0,
+"rec_yd": 8.0,
 "off_snp": 9.0,
-"tm_off_snp": 67.0,
-"snap_pct": 13
+"tm_off_snp": 59.0,
+"snap_pct": 15
 }
 ],
-"11646": [
-{
-"week": 1,
-"off_snp": 10.0,
-"tm_off_snp": 62.0,
-"snap_pct": 16
-}
-],
-"8126": [
-{
-"week": 1,
-"pts_ppr": 3.9,
-"rec_tgt": 4.0,
-"rec": 2.0,
-"rec_yd": 19.0,
-"off_snp": 17.0,
-"tm_off_snp": 61.0,
-"snap_pct": 28
-}
-],
-"11533": [
-{
-"week": 1,
-"pts_ppr": 5.0,
-"tm_off_snp": 66.0
-}
-],
-"9226": [
-{
-"week": 1,
-"pts_ppr": 9.9,
-"rush_att": 7.0,
-"rush_yd": 39.0,
-"off_snp": 14.0,
-"tm_off_snp": 55.0,
-"rush_td": 1.0,
-"rush_rz_att": 3.0,
-"snap_pct": 25
-}
-],
-"11566": [
-{
-"week": 1,
-"tm_off_snp": 71.0
-}
-],
-"4035": [
+"3294": [
 {
 "week": 1,
 "tm_off_snp": 66.0
@@ -5392,44 +5057,47 @@
 "snap_pct": 18
 }
 ],
-"12545": [
+"4199": [
 {
 "week": 1,
-"tm_off_snp": 66.0
-}
-],
-"13279": [
-{
-"week": 1,
-"rec_tgt": 3.0,
-"off_snp": 16.0,
-"tm_off_snp": 61.0,
+"pts_ppr": 2.7,
+"rec_tgt": 1.0,
+"rush_att": 3.0,
+"rush_yd": 27.0,
+"off_snp": 5.0,
+"tm_off_snp": 59.0,
 "rec_rz_tgt": 1.0,
-"snap_pct": 26
+"snap_pct": 8
 }
 ],
-"8131": [
+"2747": [
 {
 "week": 1,
-"pts_ppr": 3.1,
-"rec_tgt": 2.0,
-"rec": 2.0,
-"rec_yd": 11.0,
-"off_snp": 6.0,
-"tm_off_snp": 54.0,
-"snap_pct": 11
+"tm_off_snp": 56.0
 }
 ],
-"2449": [
+"8121": [
 {
 "week": 1,
-"tm_off_snp": 71.0
+"tm_off_snp": 73.0
 }
 ],
-"7547": [
+"7526": [
 {
 "week": 1,
-"tm_off_snp": 66.0
+"tm_off_snp": 74.0
+}
+],
+"8150": [
+{
+"week": 1,
+"tm_off_snp": 54.0
+}
+],
+"11631": [
+{
+"week": 1,
+"tm_off_snp": 68.0
 }
 ],
 "13287": [
@@ -5448,25 +5116,141 @@
 "snap_pct": 35
 }
 ],
+"8138": [
+{
+"week": 1,
+"pts_ppr": 2.1,
+"rush_att": 5.0,
+"rush_yd": 21.0,
+"off_snp": 11.0,
+"tm_off_snp": 67.0,
+"rush_rz_att": 1.0,
+"snap_pct": 16
+}
+],
+"4983": [
+{
+"week": 1,
+"pts_ppr": 9.1,
+"rec_tgt": 4.0,
+"rec": 3.0,
+"rec_yd": 61.0,
+"off_snp": 11.0,
+"tm_off_snp": 67.0,
+"rec_rz_tgt": 1.0,
+"snap_pct": 16
+}
+],
+"13346": [
+{
+"week": 1,
+"pts_ppr": 2.5,
+"rec_tgt": 2.0,
+"rec": 1.0,
+"rec_yd": 15.0,
+"off_snp": 26.0,
+"tm_off_snp": 66.0,
+"snap_pct": 39
+}
+],
+"12518": [
+{
+"week": 1,
+"tm_off_snp": 65.0
+}
+],
+"11655": [
+{
+"week": 1,
+"pts_ppr": 0.5,
+"rec_tgt": 1.0,
+"rush_att": 2.0,
+"rush_yd": 5.0,
+"off_snp": 7.0,
+"tm_off_snp": 54.0,
+"snap_pct": 13
+}
+],
+"12526": [
+{
+"week": 1,
+"off_snp": 10.0,
+"tm_off_snp": 62.0,
+"snap_pct": 16
+}
+],
 "5927": [
 {
 "week": 1,
 "tm_off_snp": 71.0
 }
 ],
-"11610": [
+"DEN": [
 {
 "week": 1,
-"pts_ppr": 4.5,
-"rec_tgt": 3.0,
-"rec": 3.0,
-"rec_yd": 15.0,
-"off_snp": 12.0,
-"tm_off_snp": 55.0,
-"snap_pct": 22
+"pts_ppr": 15.0
 }
 ],
-"6786": [
+"8137": [
+{
+"week": 1,
+"tm_off_snp": 66.0
+}
+],
+"8205": [
+{
+"week": 1,
+"tm_off_snp": 66.0
+}
+],
+"2449": [
+{
+"week": 1,
+"tm_off_snp": 71.0
+}
+],
+"4046": [
+{
+"week": 1,
+"tm_off_snp": 70.0
+}
+],
+"8136": [
+{
+"week": 1,
+"tm_off_snp": 71.0
+}
+],
+"8408": [
+{
+"week": 1,
+"pts_ppr": 1.7,
+"rush_att": 3.0,
+"rush_yd": 17.0,
+"off_snp": 4.0,
+"tm_off_snp": 59.0,
+"snap_pct": 7
+}
+],
+"6794": [
+{
+"week": 1,
+"tm_off_snp": 59.0
+}
+],
+"9997": [
+{
+"week": 1,
+"tm_off_snp": 80.0
+}
+],
+"11584": [
+{
+"week": 1,
+"tm_off_snp": 63.0
+}
+],
+"9754": [
 {
 "week": 1,
 "tm_off_snp": 66.0
@@ -5486,67 +5270,6 @@
 "snap_pct": 16
 }
 ],
-"8136": [
-{
-"week": 1,
-"tm_off_snp": 71.0
-}
-],
-"12508": [
-{
-"week": 1,
-"pts_ppr": 5.04,
-"off_snp": 14.0,
-"tm_off_snp": 54.0,
-"pass_att": 4.0,
-"pass_yd": 26.0,
-"pass_td": 1.0,
-"snap_pct": 26
-}
-],
-"12530": [
-{
-"week": 1,
-"tm_off_snp": 68.0
-}
-],
-"5859": [
-{
-"week": 1,
-"tm_off_snp": 73.0
-}
-],
-"9225": [
-{
-"week": 1,
-"pts_ppr": 0.5,
-"rec_tgt": 1.0,
-"rush_att": 2.0,
-"rush_yd": 5.0,
-"off_snp": 10.0,
-"tm_off_snp": 44.0,
-"snap_pct": 23
-}
-],
-"10222": [
-{
-"week": 1,
-"pts_ppr": 2.9,
-"rec_tgt": 2.0,
-"rec": 1.0,
-"rec_yd": 19.0,
-"off_snp": 7.0,
-"tm_off_snp": 60.0,
-"rec_rz_tgt": 1.0,
-"snap_pct": 12
-}
-],
-"BAL": [
-{
-"week": 1,
-"pts_ppr": 5.0
-}
-],
 "7564": [
 {
 "week": 1,
@@ -5559,34 +5282,262 @@
 "snap_pct": 19
 }
 ],
-"SEA": [
+"9226": [
 {
 "week": 1,
-"pts_ppr": 2.0
+"pts_ppr": 9.9,
+"rush_att": 7.0,
+"rush_yd": 39.0,
+"off_snp": 14.0,
+"tm_off_snp": 55.0,
+"rush_td": 1.0,
+"rush_rz_att": 3.0,
+"snap_pct": 25
 }
 ],
-"11563": [
+"8146": [
 {
 "week": 1,
-"tm_off_snp": 74.0
+"pts_ppr": 5.2,
+"rec_tgt": 3.0,
+"rec": 2.0,
+"rec_yd": 32.0,
+"off_snp": 11.0,
+"tm_off_snp": 60.0,
+"rec_rz_tgt": 1.0,
+"snap_pct": 18
 }
 ],
-"9997": [
+"11583": [
 {
 "week": 1,
-"tm_off_snp": 80.0
+"pts_ppr": 2.4,
+"rec_tgt": 1.0,
+"rec": 1.0,
+"rec_yd": 9.0,
+"rush_att": 3.0,
+"rush_yd": 5.0,
+"off_snp": 8.0,
+"tm_off_snp": 62.0,
+"snap_pct": 13
 }
 ],
-"7567": [
+"12534": [
+{
+"week": 1,
+"tm_off_snp": 64.0
+}
+],
+"5859": [
+{
+"week": 1,
+"tm_off_snp": 73.0
+}
+],
+"8126": [
+{
+"week": 1,
+"pts_ppr": 3.9,
+"rec_tgt": 4.0,
+"rec": 2.0,
+"rec_yd": 19.0,
+"off_snp": 17.0,
+"tm_off_snp": 61.0,
+"snap_pct": 28
+}
+],
+"2216": [
+{
+"week": 1,
+"tm_off_snp": 77.0
+}
+],
+"12474": [
+{
+"week": 1,
+"tm_off_snp": 53.0
+},
+{
+"week": 2,
+"pts_ppr": 11.3,
+"rec_tgt": 1.0,
+"rec": 1.0,
+"rec_yd": 6.0,
+"rush_att": 4.0,
+"rush_yd": 37.0,
+"rush_td": 1.0
+}
+],
+"12517": [
+{
+"week": 1,
+"tm_off_snp": 64.0
+}
+],
+"LAC": [
+{
+"week": 1,
+"pts_ppr": 9.0
+},
+{
+"week": 2,
+"pts_ppr": 6.0
+}
+],
+"6819": [
+{
+"week": 1,
+"tm_off_snp": 68.0
+}
+],
+"12514": [
 {
 "week": 1,
 "tm_off_snp": 63.0
 }
 ],
-"9754": [
+"5892": [
+{
+"week": 1,
+"tm_off_snp": 53.0
+}
+],
+"4037": [
+{
+"week": 1,
+"tm_off_snp": 63.0
+}
+],
+"11586": [
+{
+"week": 1,
+"tm_off_snp": 54.0
+}
+],
+"9224": [
+{
+"week": 1,
+"pts_ppr": 1.6,
+"rush_att": 5.0,
+"rush_yd": 16.0,
+"off_snp": 9.0,
+"tm_off_snp": 70.0,
+"snap_pct": 13
+}
+],
+"12529": [
+{
+"week": 1,
+"tm_off_snp": 73.0
+}
+],
+"4984": [
+{
+"week": 1,
+"pts_ppr": 8.44,
+"off_snp": 15.0,
+"tm_off_snp": 67.0,
+"pass_att": 8.0,
+"pass_yd": 111.0,
+"pass_td": 1.0,
+"snap_pct": 22
+}
+],
+"8151": [
+{
+"week": 1,
+"off_snp": 1.0,
+"tm_off_snp": 70.0,
+"snap_pct": 1
+}
+],
+"13293": [
+{
+"week": 1,
+"pts_ppr": 12.8,
+"rec_tgt": 3.0,
+"rec": 3.0,
+"rec_yd": 38.0,
+"off_snp": 27.0,
+"tm_off_snp": 80.0,
+"rec_td": 1.0,
+"rec_rz_tgt": 1.0,
+"snap_pct": 34
+}
+],
+"11620": [
+{
+"week": 1,
+"tm_off_snp": 64.0
+}
+],
+"12501": [
+{
+"week": 1,
+"off_snp": 9.0,
+"tm_off_snp": 60.0,
+"snap_pct": 15
+}
+],
+"11564": [
+{
+"week": 1,
+"tm_off_snp": 73.0
+}
+],
+"9508": [
+{
+"week": 1,
+"pts_ppr": 4.9,
+"rec_tgt": 1.0,
+"rec": 1.0,
+"rec_yd": 4.0,
+"rush_att": 4.0,
+"rush_yd": 35.0,
+"off_snp": 13.0,
+"tm_off_snp": 61.0,
+"rush_rz_att": 1.0,
+"snap_pct": 21
+}
+],
+"12533": [
+{
+"week": 1,
+"tm_off_snp": 71.0
+}
+],
+"3451": [
+{
+"week": 1,
+"tm_off_snp": 53.0
+},
+{
+"week": 2,
+"pts_ppr": 12.0
+}
+],
+"10219": [
+{
+"week": 1,
+"tm_off_snp": 68.0
+}
+],
+"9480": [
+{
+"week": 1,
+"tm_off_snp": 68.0
+}
+],
+"6797": [
 {
 "week": 1,
 "tm_off_snp": 66.0
+},
+{
+"week": 2,
+"pts_ppr": 0.36,
+"pass_att": 2.0,
+"pass_yd": 9.0
 }
 ],
 "12512": [
@@ -5600,10 +5551,177 @@
 "snap_pct": 12
 }
 ],
-"13281": [
+"11566": [
+{
+"week": 1,
+"tm_off_snp": 71.0
+}
+],
+"6790": [
+{
+"week": 1,
+"tm_off_snp": 64.0
+}
+],
+"5189": [
+{
+"week": 1,
+"pts_ppr": 9.0,
+"tm_off_snp": 77.0
+},
+{
+"week": 2,
+"pts_ppr": 13.0
+}
+],
+"13413": [
+{
+"week": 1,
+"pts_ppr": 4.0,
+"rec_tgt": 5.0,
+"rec": 2.0,
+"rec_yd": 20.0,
+"off_snp": 36.0,
+"tm_off_snp": 70.0,
+"rec_rz_tgt": 1.0,
+"snap_pct": 51
+}
+],
+"BAL": [
+{
+"week": 1,
+"pts_ppr": 5.0
+}
+],
+"6813": [
+{
+"week": 1,
+"tm_off_snp": 65.0
+}
+],
+"12484": [
+{
+"week": 1,
+"tm_off_snp": 53.0
+}
+],
+"PHI": [
+{
+"week": 1,
+"pts_ppr": 8.0
+}
+],
+"11635": [
 {
 "week": 1,
 "tm_off_snp": 66.0
+},
+{
+"week": 2,
+"rec_tgt": 1.0
+}
+],
+"5849": [
+{
+"week": 1,
+"pts_ppr": 0.4,
+"off_snp": 9.0,
+"tm_off_snp": 59.0,
+"pass_att": 3.0,
+"pass_yd": 10.0,
+"snap_pct": 15
+}
+],
+"5846": [
+{
+"week": 1,
+"tm_off_snp": 68.0
+}
+],
+"5872": [
+{
+"week": 1,
+"tm_off_snp": 77.0
+},
+{
+"week": 2,
+"pts_ppr": 1.4,
+"rec_tgt": 2.0,
+"rec": 1.0,
+"rec_yd": 4.0
+}
+],
+"11533": [
+{
+"week": 1,
+"pts_ppr": 5.0,
+"tm_off_snp": 66.0
+}
+],
+"12489": [
+{
+"week": 1,
+"pts_ppr": 1.6,
+"rush_att": 5.0,
+"rush_yd": 16.0,
+"off_snp": 11.0,
+"tm_off_snp": 74.0,
+"snap_pct": 15
+}
+],
+"8676": [
+{
+"week": 1,
+"tm_off_snp": 56.0
+}
+],
+"DET": [
+{
+"week": 1,
+"pts_ppr": 5.0
+}
+],
+"7567": [
+{
+"week": 1,
+"tm_off_snp": 63.0
+}
+],
+"11610": [
+{
+"week": 1,
+"pts_ppr": 4.5,
+"rec_tgt": 3.0,
+"rec": 3.0,
+"rec_yd": 15.0,
+"off_snp": 12.0,
+"tm_off_snp": 55.0,
+"snap_pct": 22
+}
+],
+"9500": [
+{
+"week": 1,
+"tm_off_snp": 65.0
+}
+],
+"421": [
+{
+"week": 1,
+"tm_off_snp": 54.0
+}
+],
+"8148": [
+{
+"week": 1,
+"tm_off_snp": 66.0
+}
+],
+"11786": [
+{
+"week": 1,
+"pts_ppr": 12.0,
+"tm_off_snp": 68.0
 }
 ],
 "7553": [
@@ -5618,61 +5736,95 @@
 "snap_pct": 13
 }
 ],
-"11620": [
+"13279": [
 {
 "week": 1,
-"tm_off_snp": 64.0
-}
-],
-"13726": [
-{
-"week": 1,
-"pts_ppr": 21.2,
 "rec_tgt": 3.0,
-"rec": 3.0,
-"rec_yd": 62.0,
-"off_snp": 27.0,
-"tm_off_snp": 66.0,
-"rec_td": 2.0,
+"off_snp": 16.0,
+"tm_off_snp": 61.0,
 "rec_rz_tgt": 1.0,
-"snap_pct": 41
+"snap_pct": 26
 }
 ],
-"7526": [
+"JAX": [
 {
 "week": 1,
-"tm_off_snp": 74.0
+"pts_ppr": 7.0
 }
 ],
-"12489": [
+"8131": [
 {
 "week": 1,
-"pts_ppr": 1.6,
-"rush_att": 5.0,
-"rush_yd": 16.0,
-"off_snp": 11.0,
-"tm_off_snp": 74.0,
-"snap_pct": 15
+"pts_ppr": 3.1,
+"rec_tgt": 2.0,
+"rec": 2.0,
+"rec_yd": 11.0,
+"off_snp": 6.0,
+"tm_off_snp": 54.0,
+"snap_pct": 11
 }
 ],
-"12507": [
+"4035": [
 {
 "week": 1,
 "tm_off_snp": 66.0
 }
 ],
-"5892": [
+"11646": [
 {
 "week": 1,
-"tm_off_snp": 53.0
+"off_snp": 10.0,
+"tm_off_snp": 62.0,
+"snap_pct": 16
 }
 ],
-"8151": [
+"11563": [
 {
 "week": 1,
-"off_snp": 1.0,
+"tm_off_snp": 74.0
+}
+],
+"3198": [
+{
+"week": 1,
+"tm_off_snp": 80.0
+}
+],
+"7049": [
+{
+"week": 1,
+"off_snp": 4.0,
+"tm_off_snp": 59.0,
+"snap_pct": 7
+}
+],
+"9225": [
+{
+"week": 1,
+"pts_ppr": 0.5,
+"rec_tgt": 1.0,
+"rush_att": 2.0,
+"rush_yd": 5.0,
+"off_snp": 10.0,
+"tm_off_snp": 44.0,
+"snap_pct": 23
+}
+],
+"4892": [
+{
+"week": 1,
+"tm_off_snp": 63.0
+}
+],
+"6770": [
+{
+"week": 1,
+"pts_ppr": 1.56,
+"off_snp": 13.0,
 "tm_off_snp": 70.0,
-"snap_pct": 1
+"pass_att": 6.0,
+"pass_yd": 39.0,
+"snap_pct": 19
 }
 ],
 "11581": [
@@ -5689,485 +5841,516 @@
 "snap_pct": 20
 }
 ],
-"7021": [
+"9487": [
 {
 "week": 1,
 "tm_off_snp": 68.0
 }
 ],
-"8146": [
+"9493": [
 {
 "week": 1,
-"pts_ppr": 5.2,
-"rec_tgt": 3.0,
-"rec": 2.0,
-"rec_yd": 32.0,
-"off_snp": 11.0,
-"tm_off_snp": 60.0,
-"rec_rz_tgt": 1.0,
-"snap_pct": 18
+"tm_off_snp": 54.0
 }
 ],
-"9756": [
+"8228": [
 {
 "week": 1,
-"pts_ppr": 1.8,
+"tm_off_snp": 68.0
+}
+],
+"9511": [
+{
+"week": 1,
+"tm_off_snp": 66.0
+},
+{
+"week": 2,
+"pts_ppr": 2.0,
 "rec_tgt": 1.0,
 "rec": 1.0,
-"rec_yd": 8.0,
+"rec_yd": 11.0,
+"rush_att": 3.0,
+"rush_yd": -1.0
+}
+],
+"12506": [
+{
+"week": 1,
+"rec_tgt": 1.0,
 "off_snp": 9.0,
-"tm_off_snp": 59.0,
-"snap_pct": 15
-}
-],
-"CLE": [
-{
-"week": 1,
-"pts_ppr": 3.0
-}
-],
-"12493": [
-{
-"week": 1,
-"pts_ppr": 4.1,
-"rec_tgt": 3.0,
-"rec": 2.0,
-"rec_yd": 21.0,
-"off_snp": 20.0,
 "tm_off_snp": 66.0,
-"rec_rz_tgt": 1.0,
-"snap_pct": 30
+"snap_pct": 14
 }
 ],
-"NE": [
+"12490": [
 {
 "week": 1,
-"pts_ppr": 15.0
+"tm_off_snp": 68.0
 }
 ],
-"4881": [
+"6786": [
 {
 "week": 1,
-"tm_off_snp": 80.0
-}
-],
-"5967": [
-{
-"week": 1,
-"pts_ppr": 8.2,
-"rush_att": 4.0,
-"rush_yd": 22.0,
-"off_snp": 9.0,
-"tm_off_snp": 61.0,
-"rush_td": 1.0,
-"rush_rz_att": 1.0,
-"snap_pct": 15
-}
-],
-"5849": [
-{
-"week": 1,
-"pts_ppr": 0.4,
-"off_snp": 9.0,
-"tm_off_snp": 59.0,
-"pass_att": 3.0,
-"pass_yd": 10.0,
-"snap_pct": 15
+"tm_off_snp": 66.0
 }
 ]
 },
 "projections": {
-"5012": {
+"12530": {
 "adp_dd_ppr": 1000.0
 },
-"11586": {
-"adp_dd_ppr": 1000.0
-},
-"8148": {
-"adp_dd_ppr": 1000.0
-},
-"12501": {
-"adp_dd_ppr": 1000.0
-},
-"2133": {
-"adp_dd_ppr": 1000.0
-},
-"9484": {
-"adp_dd_ppr": 1000.0
-},
-"4866": {
-"adp_dd_ppr": 1000.0
-},
-"12534": {
-"adp_dd_ppr": 1000.0
-},
-"4984": {
-"adp_dd_ppr": 1000.0
-},
-"4199": {
-"adp_dd_ppr": 1000.0
-},
-"12517": {
-"adp_dd_ppr": 1000.0
-},
-"9509": {
-"adp_dd_ppr": 1000.0
-},
-"7611": {
-"adp_dd_ppr": 1000.0
-},
-"9480": {
-"adp_dd_ppr": 1000.0
-},
-"8138": {
-"adp_dd_ppr": 1000.0
-},
-"11655": {
-"adp_dd_ppr": 1000.0
-},
-"12713": {
-"adp_dd_ppr": 1000.0
-},
-"4983": {
-"adp_dd_ppr": 1000.0
-},
-"6790": {
-"adp_dd_ppr": 1000.0
-},
-"3451": {
-"adp_dd_ppr": 1000.0
-},
-"8134": {
-"adp_dd_ppr": 1000.0
-},
-"8150": {
-"adp_dd_ppr": 1000.0
-},
-"12518": {
-"adp_dd_ppr": 1000.0
-},
-"6819": {
-"adp_dd_ppr": 1000.0
-},
-"11564": {
-"adp_dd_ppr": 1000.0
-},
-"9511": {
-"adp_dd_ppr": 1000.0
-},
-"3198": {
-"adp_dd_ppr": 1000.0
-},
-"6797": {
-"adp_dd_ppr": 1000.0
-},
-"13417": {
-"adp_dd_ppr": 1000.0
-},
-"7525": {
-"adp_dd_ppr": 1000.0
-},
-"10229": {
-"adp_dd_ppr": 1000.0
-},
-"13298": {
-"adp_dd_ppr": 1000.0
-},
-"13286": {
-"adp_dd_ppr": 1000.0
-},
-"9224": {
-"adp_dd_ppr": 1000.0
-},
-"12481": {
-"adp_dd_ppr": 1000.0
-},
-"6813": {
-"adp_dd_ppr": 1000.0
-},
-"11539": {
-"adp_dd_ppr": 1000.0
-},
-"6650": {
-"adp_dd_ppr": 1000.0
-},
-"5022": {
-"adp_dd_ppr": 1000.0
-},
-"1945": {
+"12493": {
 "adp_dd_ppr": 1000.0
 },
 "3214": {
 "adp_dd_ppr": 1000.0
 },
-"8408": {
+"12469": {
 "adp_dd_ppr": 1000.0
 },
-"7049": {
-"adp_dd_ppr": 1000.0
-},
-"13413": {
-"adp_dd_ppr": 1000.0
-},
-"7523": {
-"adp_dd_ppr": 1000.0
-},
-"8142": {
+"10222": {
 "adp_dd_ppr": 1000.0
 },
 "10859": {
 "adp_dd_ppr": 1000.0
 },
-"12527": {
-"adp_dd_ppr": 1000.0
-},
-"8155": {
-"adp_dd_ppr": 1000.0
-},
-"13294": {
-"adp_dd_ppr": 1000.0
-},
-"2216": {
-"adp_dd_ppr": 1000.0
-},
-"8183": {
-"adp_dd_ppr": 1000.0
-},
-"12514": {
-"adp_dd_ppr": 1000.0
-},
-"11631": {
-"adp_dd_ppr": 1000.0
-},
-"9493": {
-"adp_dd_ppr": 1000.0
-},
-"8205": {
-"adp_dd_ppr": 1000.0
-},
-"8676": {
-"adp_dd_ppr": 1000.0
-},
-"8121": {
-"adp_dd_ppr": 1000.0
-},
-"8259": {
-"adp_dd_ppr": 1000.0
-},
-"12519": {
-"adp_dd_ppr": 1000.0
-},
-"4217": {
-"adp_dd_ppr": 1000.0
-},
-"12484": {
-"adp_dd_ppr": 1000.0
-},
-"1466": {
-"adp_dd_ppr": 1000.0
-},
-"8154": {
-"adp_dd_ppr": 1000.0
-},
-"8137": {
-"adp_dd_ppr": 1000.0
-},
-"9508": {
-"adp_dd_ppr": 1000.0
-},
-"11632": {
-"adp_dd_ppr": 1000.0
-},
-"2747": {
-"adp_dd_ppr": 1000.0
-},
-"8112": {
-"adp_dd_ppr": 1000.0
-},
-"9500": {
-"adp_dd_ppr": 1000.0
-},
-"8130": {
-"adp_dd_ppr": 1000.0
-},
-"11584": {
-"adp_dd_ppr": 1000.0
-},
-"6794": {
+"7611": {
 "adp_dd_ppr": 1000.0
 },
 "7543": {
 "adp_dd_ppr": 1000.0
 },
-"8144": {
-"adp_dd_ppr": 1000.0
-},
-"12474": {
-"adp_dd_ppr": 1000.0
-},
-"421": {
-"adp_dd_ppr": 1000.0
-},
-"3294": {
-"adp_dd_ppr": 1000.0
-},
-"5850": {
-"adp_dd_ppr": 1000.0
-},
-"6804": {
-"adp_dd_ppr": 1000.0
-},
-"11560": {
-"adp_dd_ppr": 1000.0
-},
-"9488": {
-"adp_dd_ppr": 1000.0
-},
-"12490": {
-"adp_dd_ppr": 1000.0
-},
-"8167": {
-"adp_dd_ppr": 1000.0
-},
-"11635": {
-"adp_dd_ppr": 1000.0
-},
-"10213": {
-"adp_dd_ppr": 1000.0
-},
-"4037": {
-"adp_dd_ppr": 1000.0
-},
-"6770": {
-"adp_dd_ppr": 1000.0
-},
-"7042": {
-"adp_dd_ppr": 1000.0
-},
-"4892": {
-"adp_dd_ppr": 1000.0
-},
-"5846": {
-"adp_dd_ppr": 1000.0
-},
-"13346": {
-"adp_dd_ppr": 1000.0
-},
-"12529": {
-"adp_dd_ppr": 1000.0
-},
-"9221": {
-"adp_dd_ppr": 1000.0
-},
-"12015": {
-"adp_dd_ppr": 1000.0
-},
-"8110": {
-"adp_dd_ppr": 1000.0
-},
-"10219": {
-"adp_dd_ppr": 1000.0
-},
-"10232": {
-"adp_dd_ppr": 1000.0
-},
-"5189": {
-"adp_dd_ppr": 1000.0
-},
 "5947": {
 "adp_dd_ppr": 1000.0
 },
-"8228": {
-"adp_dd_ppr": 1000.0
-},
-"11583": {
-"adp_dd_ppr": 1000.0
-},
-"6801": {
-"adp_dd_ppr": 1000.0
-},
-"12526": {
-"adp_dd_ppr": 1000.0
-},
-"13330": {
-"adp_dd_ppr": 1000.0
-},
-"5872": {
-"adp_dd_ppr": 1000.0
-},
-"11786": {
-"adp_dd_ppr": 1000.0
-},
-"12469": {
-"adp_dd_ppr": 1000.0
-},
-"11604": {
-"adp_dd_ppr": 1000.0
-},
-"9487": {
-"adp_dd_ppr": 1000.0
-},
-"4046": {
-"adp_dd_ppr": 1000.0
-},
-"7588": {
+"12527": {
 "adp_dd_ppr": 1000.0
 },
 "4034": {
 "adp_dd_ppr": 1000.0
 },
-"12506": {
+"5022": {
 "adp_dd_ppr": 1000.0
 },
-"12533": {
+"10229": {
 "adp_dd_ppr": 1000.0
 },
-"8161": {
+"11604": {
+"adp_dd_ppr": 1000.0
+},
+"9484": {
+"adp_dd_ppr": 1000.0
+},
+"8134": {
+"adp_dd_ppr": 1000.0
+},
+"12015": {
+"adp_dd_ppr": 1000.0
+},
+"7525": {
+"adp_dd_ppr": 1000.0
+},
+"5967": {
+"adp_dd_ppr": 1000.0
+},
+"9488": {
+"adp_dd_ppr": 1000.0
+},
+"8259": {
+"adp_dd_ppr": 1000.0
+},
+"4217": {
+"adp_dd_ppr": 1000.0
+},
+"10232": {
+"adp_dd_ppr": 1000.0
+},
+"13281": {
+"adp_dd_ppr": 1000.0
+},
+"6804": {
+"adp_dd_ppr": 1000.0
+},
+"13726": {
+"adp_dd_ppr": 1000.0
+},
+"8183": {
+"adp_dd_ppr": 1000.0
+},
+"11560": {
+"adp_dd_ppr": 1000.0
+},
+"4881": {
+"adp_dd_ppr": 1000.0
+},
+"6801": {
+"adp_dd_ppr": 1000.0
+},
+"7042": {
+"adp_dd_ppr": 1000.0
+},
+"4866": {
 "adp_dd_ppr": 1000.0
 },
 "6904": {
 "adp_dd_ppr": 1000.0
 },
-"7594": {
+"7547": {
 "adp_dd_ppr": 1000.0
 },
 "6806": {
 "adp_dd_ppr": 1000.0
 },
-"11624": {
+"7523": {
 "adp_dd_ppr": 1000.0
 },
-"7569": {
+"7021": {
+"adp_dd_ppr": 1000.0
+},
+"12481": {
+"adp_dd_ppr": 1000.0
+},
+"12508": {
+"adp_dd_ppr": 1000.0
+},
+"8130": {
+"adp_dd_ppr": 1000.0
+},
+"12519": {
+"adp_dd_ppr": 1000.0
+},
+"8142": {
+"adp_dd_ppr": 1000.0
+},
+"13298": {
 "adp_dd_ppr": 1000.0
 },
 "10236": {
 "adp_dd_ppr": 1000.0
 },
+"7594": {
+"adp_dd_ppr": 1000.0
+},
+"8167": {
+"adp_dd_ppr": 1000.0
+},
+"5012": {
+"adp_dd_ppr": 1000.0
+},
+"7569": {
+"adp_dd_ppr": 1000.0
+},
+"8132": {
+"adp_dd_ppr": 1000.0
+},
+"12507": {
+"adp_dd_ppr": 1000.0
+},
+"11539": {
+"adp_dd_ppr": 1000.0
+},
+"1466": {
+"adp_dd_ppr": 1000.0
+},
+"5850": {
+"adp_dd_ppr": 1000.0
+},
+"12545": {
+"adp_dd_ppr": 1000.0
+},
+"8144": {
+"adp_dd_ppr": 1000.0
+},
 "9753": {
 "adp_dd_ppr": 1000.0
 },
-"11646": {
+"8154": {
 "adp_dd_ppr": 1000.0
 },
-"8126": {
+"9509": {
 "adp_dd_ppr": 1000.0
 },
-"11533": {
+"13417": {
 "adp_dd_ppr": 1000.0
 },
-"9226": {
+"1945": {
 "adp_dd_ppr": 1000.0
 },
-"11566": {
+"6650": {
 "adp_dd_ppr": 1000.0
 },
-"4035": {
+"8110": {
+"adp_dd_ppr": 1000.0
+},
+"11624": {
+"adp_dd_ppr": 1000.0
+},
+"9221": {
+"adp_dd_ppr": 1000.0
+},
+"8112": {
+"adp_dd_ppr": 1000.0
+},
+"7588": {
+"adp_dd_ppr": 1000.0
+},
+"10213": {
+"adp_dd_ppr": 1000.0
+},
+"13294": {
+"adp_dd_ppr": 1000.0
+},
+"8155": {
+"adp_dd_ppr": 1000.0
+},
+"8161": {
+"adp_dd_ppr": 1000.0
+},
+"13286": {
+"adp_dd_ppr": 1000.0
+},
+"11632": {
+"adp_dd_ppr": 1000.0
+},
+"2133": {
+"adp_dd_ppr": 1000.0
+},
+"12713": {
+"adp_dd_ppr": 1000.0
+},
+"9756": {
+"adp_dd_ppr": 1000.0
+},
+"3294": {
 "adp_dd_ppr": 1000.0
 },
 "5045": {
 "adp_dd_ppr": 1000.0
 },
-"12545": {
+"4199": {
+"adp_dd_ppr": 1000.0
+},
+"2747": {
+"adp_dd_ppr": 1000.0
+},
+"8121": {
+"adp_dd_ppr": 1000.0
+},
+"7526": {
+"adp_dd_ppr": 1000.0
+},
+"8150": {
+"adp_dd_ppr": 1000.0
+},
+"11631": {
+"adp_dd_ppr": 1000.0
+},
+"13287": {
+"adp_dd_ppr": 1000.0
+},
+"8138": {
+"adp_dd_ppr": 1000.0
+},
+"4983": {
+"adp_dd_ppr": 1000.0
+},
+"13346": {
+"adp_dd_ppr": 1000.0
+},
+"12518": {
+"adp_dd_ppr": 1000.0
+},
+"11655": {
+"adp_dd_ppr": 1000.0
+},
+"12526": {
+"adp_dd_ppr": 1000.0
+},
+"5927": {
+"adp_dd_ppr": 1000.0
+},
+"8137": {
+"adp_dd_ppr": 1000.0
+},
+"8205": {
+"adp_dd_ppr": 1000.0
+},
+"2449": {
+"adp_dd_ppr": 1000.0
+},
+"4046": {
+"adp_dd_ppr": 1000.0
+},
+"8136": {
+"adp_dd_ppr": 1000.0
+},
+"8408": {
+"adp_dd_ppr": 1000.0
+},
+"6794": {
+"adp_dd_ppr": 1000.0
+},
+"9997": {
+"adp_dd_ppr": 1000.0
+},
+"11584": {
+"adp_dd_ppr": 1000.0
+},
+"9754": {
+"adp_dd_ppr": 1000.0
+},
+"11628": {
+"adp_dd_ppr": 1000.0
+},
+"7564": {
+"adp_dd_ppr": 1000.0
+},
+"9226": {
+"adp_dd_ppr": 1000.0
+},
+"8146": {
+"adp_dd_ppr": 1000.0
+},
+"11583": {
+"adp_dd_ppr": 1000.0
+},
+"12534": {
+"adp_dd_ppr": 1000.0
+},
+"5859": {
+"adp_dd_ppr": 1000.0
+},
+"8126": {
+"adp_dd_ppr": 1000.0
+},
+"2216": {
+"adp_dd_ppr": 1000.0
+},
+"12474": {
+"adp_dd_ppr": 1000.0
+},
+"12517": {
+"adp_dd_ppr": 1000.0
+},
+"6819": {
+"adp_dd_ppr": 1000.0
+},
+"12514": {
+"adp_dd_ppr": 1000.0
+},
+"5892": {
+"adp_dd_ppr": 1000.0
+},
+"4037": {
+"adp_dd_ppr": 1000.0
+},
+"11586": {
+"adp_dd_ppr": 1000.0
+},
+"9224": {
+"adp_dd_ppr": 1000.0
+},
+"12529": {
+"adp_dd_ppr": 1000.0
+},
+"4984": {
+"adp_dd_ppr": 1000.0
+},
+"8151": {
+"adp_dd_ppr": 1000.0
+},
+"13293": {
+"adp_dd_ppr": 1000.0
+},
+"11620": {
+"adp_dd_ppr": 1000.0
+},
+"12501": {
+"adp_dd_ppr": 1000.0
+},
+"11564": {
+"adp_dd_ppr": 1000.0
+},
+"9508": {
+"adp_dd_ppr": 1000.0
+},
+"12533": {
+"adp_dd_ppr": 1000.0
+},
+"3451": {
+"adp_dd_ppr": 1000.0
+},
+"10219": {
+"adp_dd_ppr": 1000.0
+},
+"9480": {
+"adp_dd_ppr": 1000.0
+},
+"6797": {
+"adp_dd_ppr": 1000.0
+},
+"12512": {
+"adp_dd_ppr": 1000.0
+},
+"11566": {
+"adp_dd_ppr": 1000.0
+},
+"6790": {
+"adp_dd_ppr": 1000.0
+},
+"5189": {
+"adp_dd_ppr": 1000.0
+},
+"13413": {
+"adp_dd_ppr": 1000.0
+},
+"6813": {
+"adp_dd_ppr": 1000.0
+},
+"12484": {
+"adp_dd_ppr": 1000.0
+},
+"11635": {
+"adp_dd_ppr": 1000.0
+},
+"5849": {
+"adp_dd_ppr": 1000.0
+},
+"5846": {
+"adp_dd_ppr": 1000.0
+},
+"5872": {
+"adp_dd_ppr": 1000.0
+},
+"11533": {
+"adp_dd_ppr": 1000.0
+},
+"12489": {
+"adp_dd_ppr": 1000.0
+},
+"8676": {
+"adp_dd_ppr": 1000.0
+},
+"7567": {
+"adp_dd_ppr": 1000.0
+},
+"11610": {
+"adp_dd_ppr": 1000.0
+},
+"9500": {
+"adp_dd_ppr": 1000.0
+},
+"421": {
+"adp_dd_ppr": 1000.0
+},
+"8148": {
+"adp_dd_ppr": 1000.0
+},
+"11786": {
+"adp_dd_ppr": 1000.0
+},
+"7553": {
 "adp_dd_ppr": 1000.0
 },
 "13279": {
@@ -6176,316 +6359,147 @@
 "8131": {
 "adp_dd_ppr": 1000.0
 },
-"2449": {
+"4035": {
 "adp_dd_ppr": 1000.0
 },
-"7547": {
-"adp_dd_ppr": 1000.0
-},
-"13287": {
-"adp_dd_ppr": 1000.0
-},
-"5927": {
-"adp_dd_ppr": 1000.0
-},
-"11610": {
-"adp_dd_ppr": 1000.0
-},
-"6786": {
-"adp_dd_ppr": 1000.0
-},
-"11628": {
-"adp_dd_ppr": 1000.0
-},
-"8136": {
-"adp_dd_ppr": 1000.0
-},
-"12508": {
-"adp_dd_ppr": 1000.0
-},
-"12530": {
-"adp_dd_ppr": 1000.0
-},
-"5859": {
-"adp_dd_ppr": 1000.0
-},
-"9225": {
-"adp_dd_ppr": 1000.0
-},
-"10222": {
-"adp_dd_ppr": 1000.0
-},
-"7564": {
+"11646": {
 "adp_dd_ppr": 1000.0
 },
 "11563": {
 "adp_dd_ppr": 1000.0
 },
-"9997": {
+"3198": {
 "adp_dd_ppr": 1000.0
 },
-"7567": {
+"7049": {
 "adp_dd_ppr": 1000.0
 },
-"9754": {
+"9225": {
 "adp_dd_ppr": 1000.0
 },
-"12512": {
+"4892": {
 "adp_dd_ppr": 1000.0
 },
-"13281": {
-"adp_dd_ppr": 1000.0
-},
-"7553": {
-"adp_dd_ppr": 1000.0
-},
-"11620": {
-"adp_dd_ppr": 1000.0
-},
-"13726": {
-"adp_dd_ppr": 1000.0
-},
-"7526": {
-"adp_dd_ppr": 1000.0
-},
-"12489": {
-"adp_dd_ppr": 1000.0
-},
-"12507": {
-"adp_dd_ppr": 1000.0
-},
-"5892": {
-"adp_dd_ppr": 1000.0
-},
-"8151": {
+"6770": {
 "adp_dd_ppr": 1000.0
 },
 "11581": {
 "adp_dd_ppr": 1000.0
 },
-"7021": {
+"9487": {
 "adp_dd_ppr": 1000.0
 },
-"8146": {
+"9493": {
 "adp_dd_ppr": 1000.0
 },
-"9756": {
+"8228": {
 "adp_dd_ppr": 1000.0
 },
-"12493": {
+"9511": {
 "adp_dd_ppr": 1000.0
 },
-"4881": {
+"12506": {
 "adp_dd_ppr": 1000.0
 },
-"5967": {
+"12490": {
 "adp_dd_ppr": 1000.0
 },
-"5849": {
+"6786": {
 "adp_dd_ppr": 1000.0
 }
 },
 "prev_season_baseline": {
-"5012": {
-"gp": 17.0,
-"gs": 11.0,
-"pts_ppr": 131.0,
-"rec": 48.0,
-"rec_tgt": 70.0,
-"rec_yd": 422.0,
-"rec_td": 5.0,
-"rush_att": 10.0,
-"rush_yd": 48.0,
-"rush_td": 1.0,
-"off_snp": 600.0,
-"tm_off_snp": 963.0,
-"pos_rank_ppr": 16,
-"pts_ppr_per_game": 7.71,
-"rec_tgt_per_game": 4.12,
-"rush_att_per_game": 0.59
-},
-"11586": {
-"gp": 17.0,
-"pts_ppr": 122.2,
-"rec": 8.0,
-"rec_tgt": 14.0,
-"rec_yd": 36.0,
-"rush_att": 145.0,
-"rush_yd": 746.0,
-"rush_td": 6.0,
-"off_snp": 307.0,
-"tm_off_snp": 1060.0,
-"pos_rank_ppr": 40,
-"pts_ppr_per_game": 7.19,
-"rec_tgt_per_game": 0.82,
-"rush_att_per_game": 8.53
-},
-"8148": {
-"gp": 17.0,
-"gs": 15.0,
-"pts_ppr": 219.9,
-"rec": 65.0,
-"rec_tgt": 102.0,
-"rec_yd": 1117.0,
-"rec_td": 7.0,
-"rush_att": 6.0,
-"rush_yd": 12.0,
-"off_snp": 923.0,
-"tm_off_snp": 1026.0,
-"pos_rank_ppr": 12,
-"pts_ppr_per_game": 12.94,
-"rec_tgt_per_game": 6.0,
-"rush_att_per_game": 0.35
-},
-"12501": {
-"gp": 14.0,
-"gs": 5.0,
-"pts_ppr": 70.0,
-"rec": 29.0,
-"rec_tgt": 44.0,
-"rec_yd": 361.0,
-"rush_att": 10.0,
-"rush_yd": 49.0,
-"off_snp": 401.0,
-"tm_off_snp": 803.0,
-"pos_rank_ppr": 89,
-"pts_ppr_per_game": 5.0,
-"rec_tgt_per_game": 3.14,
-"rush_att_per_game": 0.71
-},
-"2133": {
-"gp": 14.0,
-"gs": 14.0,
-"pts_ppr": 222.9,
-"rec": 60.0,
-"rec_tgt": 114.0,
-"rec_yd": 789.0,
-"rec_td": 14.0,
-"off_snp": 635.0,
-"tm_off_snp": 903.0,
-"pos_rank_ppr": 9,
-"pts_ppr_per_game": 15.92,
-"rec_tgt_per_game": 8.14
-},
-"9484": {
-"gp": 8.0,
-"gs": 8.0,
-"pts_ppr": 117.2,
-"rec": 32.0,
-"rec_tgt": 44.0,
-"rec_yd": 489.0,
-"rec_td": 6.0,
-"rush_att": 1.0,
-"rush_yd": 3.0,
-"off_snp": 439.0,
-"tm_off_snp": 510.0,
-"pos_rank_ppr": 24,
-"pts_ppr_per_game": 14.65,
-"rec_tgt_per_game": 5.5,
-"rush_att_per_game": 0.12
-},
-"4866": {
-"gp": 16.0,
-"gs": 16.0,
-"pts_ppr": 232.3,
-"rec": 37.0,
-"rec_tgt": 50.0,
-"rec_yd": 273.0,
-"rec_td": 2.0,
-"rush_att": 280.0,
-"rush_yd": 1140.0,
-"rush_td": 7.0,
-"off_snp": 773.0,
-"tm_off_snp": 988.0,
-"pos_rank_ppr": 14,
-"pts_ppr_per_game": 14.52,
-"rec_tgt_per_game": 3.12,
-"rush_att_per_game": 17.5
-},
-"12534": {
-"gp": 17.0,
-"gs": 1.0,
-"pts_ppr": 146.7,
-"rec": 18.0,
-"rec_tgt": 30.0,
-"rec_yd": 164.0,
-"rush_att": 169.0,
-"rush_yd": 783.0,
-"rush_td": 5.0,
-"off_snp": 455.0,
-"tm_off_snp": 1099.0,
-"pos_rank_ppr": 30,
-"pts_ppr_per_game": 8.63,
-"rec_tgt_per_game": 1.76,
-"rush_att_per_game": 9.94
-},
-"4984": {
-"gp": 17.0,
-"gs": 17.0,
-"pts_ppr": 374.62,
-"rush_att": 112.0,
-"rush_yd": 579.0,
-"rush_td": 14.0,
-"pass_yd": 3668.0,
-"pass_td": 25.0,
-"off_snp": 1033.0,
-"tm_off_snp": 1057.0,
-"pos_rank_ppr": 1,
-"pts_ppr_per_game": 22.04,
-"rush_att_per_game": 6.59
-},
-"4199": {
-"gp": 12.0,
-"gs": 12.0,
-"pts_ppr": 118.7,
+"12530": {
+"gp": 7.0,
+"gs": 4.0,
+"pts_ppr": 63.8,
 "rec": 28.0,
-"rec_tgt": 41.0,
-"rec_yd": 199.0,
+"rec_tgt": 45.0,
+"rec_yd": 298.0,
 "rec_td": 1.0,
-"rush_att": 132.0,
-"rush_yd": 548.0,
-"rush_td": 2.0,
-"off_snp": 366.0,
-"tm_off_snp": 664.0,
-"pos_rank_ppr": 41,
-"pts_ppr_per_game": 9.89,
-"rec_tgt_per_game": 3.42,
-"rush_att_per_game": 11.0
-},
-"12517": {
-"gp": 16.0,
-"gs": 11.0,
-"pts_ppr": 165.1,
-"rec": 58.0,
-"rec_tgt": 82.0,
-"rec_yd": 713.0,
-"rec_td": 6.0,
 "rush_att": 1.0,
-"rush_yd": -2.0,
-"off_snp": 651.0,
-"tm_off_snp": 1031.0,
-"pos_rank_ppr": 12,
-"pts_ppr_per_game": 10.32,
-"rec_tgt_per_game": 5.12,
-"rush_att_per_game": 0.06
+"off_snp": 324.0,
+"tm_off_snp": 486.0,
+"pos_rank_ppr": 97,
+"pts_ppr_per_game": 9.11,
+"rec_tgt_per_game": 6.43,
+"rush_att_per_game": 0.14
 },
-"9509": {
+"12493": {
+"gp": 15.0,
+"gs": 7.0,
+"pts_ppr": 131.4,
+"rec": 49.0,
+"rec_tgt": 69.0,
+"rec_yd": 664.0,
+"rec_td": 3.0,
+"off_snp": 595.0,
+"tm_off_snp": 949.0,
+"pos_rank_ppr": 15,
+"pts_ppr_per_game": 8.76,
+"rec_tgt_per_game": 4.6
+},
+"3214": {
 "gp": 17.0,
 "gs": 17.0,
-"pts_ppr": 370.8,
-"rec": 79.0,
-"rec_tgt": 103.0,
-"rec_yd": 820.0,
-"rec_td": 4.0,
-"rush_att": 287.0,
-"rush_yd": 1478.0,
-"rush_td": 7.0,
-"off_snp": 807.0,
-"tm_off_snp": 1033.0,
-"pos_rank_ppr": 2,
-"pts_ppr_per_game": 21.81,
-"rec_tgt_per_game": 6.06,
-"rush_att_per_game": 16.88
+"pts_ppr": 178.8,
+"rec": 60.0,
+"rec_tgt": 87.0,
+"rec_yd": 768.0,
+"rec_td": 7.0,
+"off_snp": 835.0,
+"tm_off_snp": 1035.0,
+"pos_rank_ppr": 9,
+"pts_ppr_per_game": 10.52,
+"rec_tgt_per_game": 5.12
+},
+"12469": {
+"gp": 15.0,
+"gs": 2.0,
+"pts_ppr": 87.6,
+"rec": 33.0,
+"rec_tgt": 40.0,
+"rec_yd": 271.0,
+"rec_td": 2.0,
+"rush_att": 65.0,
+"rush_yd": 175.0,
+"off_snp": 223.0,
+"tm_off_snp": 908.0,
+"pos_rank_ppr": 55,
+"pts_ppr_per_game": 5.84,
+"rec_tgt_per_game": 2.67,
+"rush_att_per_game": 4.33
+},
+"10222": {
+"gp": 7.0,
+"gs": 3.0,
+"pts_ppr": 48.5,
+"rec": 19.0,
+"rec_tgt": 22.0,
+"rec_yd": 207.0,
+"rec_td": 1.0,
+"rush_att": 3.0,
+"rush_yd": 28.0,
+"off_snp": 161.0,
+"tm_off_snp": 354.0,
+"pos_rank_ppr": 115,
+"pts_ppr_per_game": 6.93,
+"rec_tgt_per_game": 3.14,
+"rush_att_per_game": 0.43
+},
+"10859": {
+"gp": 9.0,
+"gs": 9.0,
+"pts_ppr": 106.9,
+"rec": 40.0,
+"rec_tgt": 49.0,
+"rec_yd": 489.0,
+"rec_td": 3.0,
+"off_snp": 517.0,
+"tm_off_snp": 572.0,
+"pos_rank_ppr": 27,
+"pts_ppr_per_game": 11.88,
+"rec_tgt_per_game": 5.44
 },
 "7611": {
 "gp": 14.0,
@@ -6505,492 +6519,40 @@
 "rec_tgt_per_game": 2.64,
 "rush_att_per_game": 9.29
 },
-"9480": {
-"gp": 12.0,
-"gs": 12.0,
-"pts_ppr": 118.0,
-"rec": 46.0,
-"rec_tgt": 60.0,
-"rec_yd": 540.0,
-"rec_td": 3.0,
-"off_snp": 553.0,
-"tm_off_snp": 723.0,
-"pos_rank_ppr": 23,
-"pts_ppr_per_game": 9.83,
-"rec_tgt_per_game": 5.0
-},
-"8138": {
+"7543": {
 "gp": 17.0,
-"gs": 17.0,
-"pts_ppr": 302.2,
-"rec": 33.0,
-"rec_tgt": 40.0,
-"rec_yd": 291.0,
-"rec_td": 2.0,
-"rush_att": 309.0,
-"rush_yd": 1621.0,
-"rush_td": 12.0,
-"off_snp": 637.0,
-"tm_off_snp": 1057.0,
-"pos_rank_ppr": 6,
-"pts_ppr_per_game": 17.78,
-"rec_tgt_per_game": 2.35,
-"rush_att_per_game": 18.18
-},
-"11655": {
-"gp": 15.0,
-"gs": 11.0,
-"pts_ppr": 160.8,
+"gs": 16.0,
+"pts_ppr": 253.9,
 "rec": 36.0,
-"rec_tgt": 48.0,
-"rec_yd": 288.0,
-"rec_td": 2.0,
-"rush_att": 176.0,
-"rush_yd": 740.0,
-"rush_td": 2.0,
-"off_snp": 496.0,
-"tm_off_snp": 923.0,
-"pos_rank_ppr": 28,
-"pts_ppr_per_game": 10.72,
-"rec_tgt_per_game": 3.2,
-"rush_att_per_game": 11.73
-},
-"12713": {
-"gp": 17.0,
-"pts_ppr": 142.0,
-"tm_off_snp": 1035.0,
-"pos_rank_ppr": 10,
-"pts_ppr_per_game": 8.35
-},
-"4983": {
-"gp": 17.0,
-"gs": 17.0,
-"pts_ppr": 170.18,
-"rec": 50.0,
-"rec_tgt": 85.0,
-"rec_yd": 682.0,
+"rec_tgt": 52.0,
+"rec_yd": 292.0,
 "rec_td": 6.0,
-"rush_att": 15.0,
-"rush_yd": 79.0,
-"rush_td": 1.0,
-"pass_yd": 2.0,
-"pass_td": 1.0,
-"off_snp": 932.0,
-"tm_off_snp": 1099.0,
-"pos_rank_ppr": 35,
-"pts_ppr_per_game": 10.01,
-"rec_tgt_per_game": 5.0,
-"rush_att_per_game": 0.88
-},
-"LAC": {
-"gp": 17.0,
-"pts_ppr": 114.0,
-"pos_rank_ppr": 15,
-"pts_ppr_per_game": 6.71
-},
-"6790": {
-"gp": 16.0,
-"gs": 16.0,
-"pts_ppr": 228.6,
-"rec": 34.0,
-"rec_tgt": 48.0,
-"rec_yd": 299.0,
-"rec_td": 1.0,
-"rush_att": 223.0,
-"rush_yd": 1087.0,
-"rush_td": 9.0,
-"off_snp": 589.0,
-"tm_off_snp": 1019.0,
-"pos_rank_ppr": 15,
-"pts_ppr_per_game": 14.29,
-"rec_tgt_per_game": 3.0,
-"rush_att_per_game": 13.94
-},
-"3451": {
-"gp": 15.0,
-"pts_ppr": 190.0,
-"tm_off_snp": 947.0,
-"pos_rank_ppr": 2,
-"pts_ppr_per_game": 12.67
-},
-"8134": {
-"gp": 16.0,
-"gs": 10.0,
-"pts_ppr": 166.4,
-"rec": 72.0,
-"rec_tgt": 95.0,
-"rec_yd": 719.0,
-"rec_td": 4.0,
-"rush_att": 1.0,
-"rush_yd": 5.0,
-"off_snp": 635.0,
-"tm_off_snp": 1057.0,
-"pos_rank_ppr": 36,
-"pts_ppr_per_game": 10.4,
-"rec_tgt_per_game": 5.94,
-"rush_att_per_game": 0.06
-},
-"8150": {
-"gp": 17.0,
-"gs": 17.0,
-"pts_ppr": 263.3,
-"rec": 36.0,
-"rec_tgt": 50.0,
-"rec_yd": 281.0,
-"rec_td": 3.0,
-"rush_att": 259.0,
-"rush_yd": 1252.0,
-"rush_td": 10.0,
-"off_snp": 725.0,
-"tm_off_snp": 1060.0,
-"pos_rank_ppr": 9,
-"pts_ppr_per_game": 15.49,
-"rec_tgt_per_game": 2.94,
-"rush_att_per_game": 15.24
-},
-"12518": {
-"gp": 17.0,
-"gs": 12.0,
-"pts_ppr": 188.5,
-"rec": 76.0,
-"rec_tgt": 112.0,
-"rec_yd": 817.0,
-"rec_td": 4.0,
-"rush_att": 6.0,
-"rush_yd": 8.0,
-"rush_td": 1.0,
-"off_snp": 846.0,
-"tm_off_snp": 1007.0,
-"pos_rank_ppr": 4,
-"pts_ppr_per_game": 11.09,
-"rec_tgt_per_game": 6.59,
-"rush_att_per_game": 0.35
-},
-"6819": {
-"gp": 17.0,
-"gs": 16.0,
-"pts_ppr": 202.4,
-"rec": 80.0,
-"rec_tgt": 111.0,
-"rec_yd": 784.0,
-"rec_td": 7.0,
-"off_snp": 860.0,
-"tm_off_snp": 1007.0,
-"pos_rank_ppr": 18,
-"pts_ppr_per_game": 11.91,
-"rec_tgt_per_game": 6.53
-},
-"11564": {
-"gp": 17.0,
-"gs": 17.0,
-"pts_ppr": 359.96,
-"rec": 1.0,
-"rec_tgt": 1.0,
-"rec_yd": 2.0,
-"rush_att": 103.0,
-"rush_yd": 450.0,
-"rush_td": 4.0,
-"pass_yd": 4394.0,
-"pass_td": 31.0,
-"off_snp": 1005.0,
-"tm_off_snp": 1035.0,
-"pos_rank_ppr": 2,
-"pts_ppr_per_game": 21.17,
-"rec_tgt_per_game": 0.06,
-"rush_att_per_game": 6.06
-},
-"9511": {
-"gp": 13.0,
-"pts_ppr": 55.4,
-"rec": 9.0,
-"rec_tgt": 12.0,
-"rec_yd": 63.0,
-"rush_att": 59.0,
-"rush_yd": 341.0,
-"rush_td": 1.0,
-"off_snp": 125.0,
-"tm_off_snp": 745.0,
-"pos_rank_ppr": 66,
-"pts_ppr_per_game": 4.26,
-"rec_tgt_per_game": 0.92,
-"rush_att_per_game": 4.54
-},
-"3198": {
-"gp": 17.0,
-"gs": 17.0,
-"pts_ppr": 279.5,
-"rec": 15.0,
-"rec_tgt": 21.0,
-"rec_yd": 150.0,
-"rush_att": 307.0,
-"rush_yd": 1595.0,
-"rush_td": 16.0,
-"off_snp": 519.0,
-"tm_off_snp": 963.0,
-"pos_rank_ppr": 8,
-"pts_ppr_per_game": 16.44,
-"rec_tgt_per_game": 1.24,
-"rush_att_per_game": 18.06
-},
-"6797": {
-"gp": 16.0,
-"gs": 16.0,
-"pts_ppr": 299.88,
-"rush_att": 83.0,
-"rush_yd": 498.0,
-"rush_td": 2.0,
-"pass_yd": 3727.0,
-"pass_td": 26.0,
-"off_snp": 1043.0,
-"tm_off_snp": 1072.0,
-"pos_rank_ppr": 10,
-"pts_ppr_per_game": 18.74,
-"rush_att_per_game": 5.19
-},
-"13417": {
-"pos_rank_ppr": 899
-},
-"7525": {
-"gp": 17.0,
-"gs": 16.0,
-"pts_ppr": 201.8,
-"rec": 77.0,
-"rec_tgt": 113.0,
-"rec_yd": 1008.0,
-"rec_td": 4.0,
-"off_snp": 879.0,
-"tm_off_snp": 988.0,
-"pos_rank_ppr": 20,
-"pts_ppr_per_game": 11.87,
-"rec_tgt_per_game": 6.65
-},
-"10229": {
-"gp": 8.0,
-"gs": 8.0,
-"pts_ppr": 150.1,
-"rec": 53.0,
-"rec_tgt": 78.0,
-"rec_yd": 571.0,
-"rec_td": 5.0,
-"rush_att": 5.0,
-"rush_yd": 20.0,
-"rush_td": 1.0,
-"off_snp": 415.0,
-"tm_off_snp": 567.0,
-"pos_rank_ppr": 40,
-"pts_ppr_per_game": 18.76,
-"rec_tgt_per_game": 9.75,
-"rush_att_per_game": 0.62
-},
-"HOU": {
-"gp": 17.0,
-"pts_ppr": 166.0,
-"pos_rank_ppr": 2,
-"pts_ppr_per_game": 9.76
-},
-"13298": {
-"pos_rank_ppr": 296
-},
-"13286": {
-"pos_rank_ppr": 442
-},
-"9224": {
-"gp": 17.0,
-"gs": 17.0,
-"pts_ppr": 282.6,
-"rec": 69.0,
-"rec_tgt": 88.0,
-"rec_yd": 437.0,
-"rec_td": 5.0,
-"rush_att": 232.0,
-"rush_yd": 1019.0,
-"rush_td": 6.0,
-"off_snp": 700.0,
-"tm_off_snp": 1043.0,
-"pos_rank_ppr": 7,
-"pts_ppr_per_game": 16.62,
-"rec_tgt_per_game": 5.18,
-"rush_att_per_game": 13.65
-},
-"DET": {
-"gp": 17.0,
-"pts_ppr": 110.0,
-"pos_rank_ppr": 16,
-"pts_ppr_per_game": 6.47
-},
-"12481": {
-"gp": 8.0,
-"gs": 5.0,
-"pts_ppr": 127.7,
-"rec": 24.0,
-"rec_tgt": 32.0,
-"rec_yd": 207.0,
-"rec_td": 2.0,
-"rush_att": 101.0,
-"rush_yd": 410.0,
-"rush_td": 5.0,
-"off_snp": 295.0,
-"tm_off_snp": 545.0,
-"pos_rank_ppr": 37,
-"pts_ppr_per_game": 15.96,
-"rec_tgt_per_game": 4.0,
-"rush_att_per_game": 12.62
-},
-"6813": {
-"gp": 17.0,
-"gs": 17.0,
-"pts_ppr": 362.3,
-"rec": 46.0,
-"rec_tgt": 55.0,
-"rec_yd": 378.0,
-"rec_td": 2.0,
-"rush_att": 323.0,
-"rush_yd": 1585.0,
-"rush_td": 18.0,
-"off_snp": 849.0,
-"tm_off_snp": 1007.0,
-"pos_rank_ppr": 4,
-"pts_ppr_per_game": 21.31,
-"rec_tgt_per_game": 3.24,
-"rush_att_per_game": 19.0
-},
-"11539": {
-"gp": 17.0,
-"pts_ppr": 143.0,
-"tm_off_snp": 1026.0,
-"pos_rank_ppr": 9,
-"pts_ppr_per_game": 8.41
-},
-"6650": {
-"gp": 17.0,
-"pts_ppr": 149.0,
-"tm_off_snp": 1134.0,
-"pos_rank_ppr": 7,
-"pts_ppr_per_game": 8.76
-},
-"5022": {
-"gp": 15.0,
-"gs": 15.0,
-"pts_ppr": 185.1,
-"rec": 60.0,
-"rec_tgt": 82.0,
-"rec_yd": 591.0,
-"rec_td": 11.0,
-"off_snp": 787.0,
-"tm_off_snp": 928.0,
-"pos_rank_ppr": 7,
-"pts_ppr_per_game": 12.34,
-"rec_tgt_per_game": 5.47
-},
-"DEN": {
-"gp": 17.0,
-"pts_ppr": 147.0,
-"pos_rank_ppr": 5,
-"pts_ppr_per_game": 8.65
-},
-"1945": {
-"gp": 17.0,
-"pts_ppr": 144.0,
-"tm_off_snp": 956.0,
-"pos_rank_ppr": 8,
-"pts_ppr_per_game": 8.47
-},
-"3214": {
-"gp": 17.0,
-"gs": 17.0,
-"pts_ppr": 178.8,
-"rec": 60.0,
-"rec_tgt": 87.0,
-"rec_yd": 768.0,
-"rec_td": 7.0,
-"off_snp": 835.0,
-"tm_off_snp": 1035.0,
-"pos_rank_ppr": 9,
-"pts_ppr_per_game": 10.52,
-"rec_tgt_per_game": 5.12
-},
-"8408": {
-"gp": 16.0,
-"gs": 5.0,
-"pts_ppr": 128.9,
-"rec": 14.0,
-"rec_tgt": 16.0,
-"rec_yd": 51.0,
-"rush_att": 159.0,
-"rush_yd": 758.0,
-"rush_td": 6.0,
-"off_snp": 386.0,
-"tm_off_snp": 880.0,
-"pos_rank_ppr": 36,
-"pts_ppr_per_game": 8.06,
-"rec_tgt_per_game": 1.0,
-"rush_att_per_game": 9.94
-},
-"7049": {
-"gp": 15.0,
-"gs": 15.0,
-"pts_ppr": 173.3,
-"rec": 55.0,
-"rec_tgt": 90.0,
-"rec_yd": 643.0,
-"rec_td": 9.0,
-"off_snp": 795.0,
-"tm_off_snp": 972.0,
-"pos_rank_ppr": 33,
-"pts_ppr_per_game": 11.55,
-"rec_tgt_per_game": 6.0
-},
-"13413": {
-"pos_rank_ppr": 651
-},
-"MIN": {
-"gp": 17.0,
-"pts_ppr": 149.0,
-"pos_rank_ppr": 3,
-"pts_ppr_per_game": 8.76
-},
-"7523": {
-"gp": 17.0,
-"gs": 17.0,
-"pts_ppr": 350.18,
-"rush_att": 82.0,
-"rush_yd": 359.0,
-"rush_td": 9.0,
-"pass_yd": 4007.0,
-"pass_td": 29.0,
-"off_snp": 1064.0,
+"rush_att": 260.0,
+"rush_yd": 1107.0,
+"rush_td": 7.0,
+"off_snp": 657.0,
 "tm_off_snp": 1089.0,
-"pos_rank_ppr": 4,
-"pts_ppr_per_game": 20.6,
-"rush_att_per_game": 4.82
+"pos_rank_ppr": 10,
+"pts_ppr_per_game": 14.94,
+"rec_tgt_per_game": 3.06,
+"rush_att_per_game": 15.29
 },
-"8142": {
-"gp": 15.0,
-"gs": 14.0,
-"pts_ppr": 183.3,
-"rec": 47.0,
-"rec_tgt": 84.0,
-"rec_yd": 1003.0,
-"rec_td": 6.0,
-"off_snp": 769.0,
-"tm_off_snp": 880.0,
-"pos_rank_ppr": 28,
-"pts_ppr_per_game": 12.22,
-"rec_tgt_per_game": 5.6
-},
-"10859": {
-"gp": 9.0,
-"gs": 9.0,
-"pts_ppr": 106.9,
-"rec": 40.0,
-"rec_tgt": 49.0,
-"rec_yd": 489.0,
+"5947": {
+"gp": 16.0,
+"gs": 13.0,
+"pts_ppr": 175.8,
+"rec": 75.0,
+"rec_tgt": 110.0,
+"rec_yd": 835.0,
 "rec_td": 3.0,
-"off_snp": 517.0,
-"tm_off_snp": 572.0,
-"pos_rank_ppr": 27,
-"pts_ppr_per_game": 11.88,
-"rec_tgt_per_game": 5.44
+"rush_att": 5.0,
+"rush_yd": 13.0,
+"off_snp": 824.0,
+"tm_off_snp": 967.0,
+"pos_rank_ppr": 32,
+"pts_ppr_per_game": 10.99,
+"rec_tgt_per_game": 6.88,
+"rush_att_per_game": 0.31
 },
 "12527": {
 "gp": 17.0,
@@ -7010,159 +6572,167 @@
 "rec_tgt_per_game": 4.29,
 "rush_att_per_game": 15.65
 },
-"8155": {
-"gp": 16.0,
-"gs": 16.0,
-"pts_ppr": 207.66,
-"rec": 36.0,
-"rec_tgt": 48.0,
-"rec_yd": 350.0,
-"rec_td": 1.0,
-"rush_att": 243.0,
-"rush_yd": 1065.0,
-"rush_td": 4.0,
-"pass_yd": 4.0,
-"pass_td": 1.0,
-"off_snp": 640.0,
-"tm_off_snp": 999.0,
-"pos_rank_ppr": 19,
-"pts_ppr_per_game": 12.98,
-"rec_tgt_per_game": 3.0,
-"rush_att_per_game": 15.19
+"4034": {
+"gp": 17.0,
+"gs": 17.0,
+"pts_ppr": 416.6,
+"rec": 102.0,
+"rec_tgt": 129.0,
+"rec_yd": 924.0,
+"rec_td": 7.0,
+"rush_att": 311.0,
+"rush_yd": 1202.0,
+"rush_td": 10.0,
+"off_snp": 932.0,
+"tm_off_snp": 1123.0,
+"pos_rank_ppr": 1,
+"pts_ppr_per_game": 24.51,
+"rec_tgt_per_game": 7.59,
+"rush_att_per_game": 18.29
 },
-"13294": {
-"pos_rank_ppr": 232
+"5022": {
+"gp": 15.0,
+"gs": 15.0,
+"pts_ppr": 185.1,
+"rec": 60.0,
+"rec_tgt": 82.0,
+"rec_yd": 591.0,
+"rec_td": 11.0,
+"off_snp": 787.0,
+"tm_off_snp": 928.0,
+"pos_rank_ppr": 7,
+"pts_ppr_per_game": 12.34,
+"rec_tgt_per_game": 5.47
 },
-"2216": {
+"10229": {
 "gp": 8.0,
 "gs": 8.0,
-"pts_ppr": 84.8,
-"rec": 30.0,
-"rec_tgt": 61.0,
-"rec_yd": 368.0,
-"rec_td": 3.0,
-"off_snp": 357.0,
-"tm_off_snp": 546.0,
-"pos_rank_ppr": 76,
-"pts_ppr_per_game": 10.6,
-"rec_tgt_per_game": 7.62
-},
-"8183": {
-"gp": 9.0,
-"gs": 9.0,
-"pts_ppr": 187.38,
-"rush_att": 33.0,
-"rush_yd": 147.0,
-"rush_td": 3.0,
-"pass_yd": 2167.0,
-"pass_td": 20.0,
-"off_snp": 576.0,
-"tm_off_snp": 588.0,
-"pos_rank_ppr": 24,
-"pts_ppr_per_game": 20.82,
-"rush_att_per_game": 3.67
-},
-"12514": {
-"gp": 17.0,
-"gs": 13.0,
-"pts_ppr": 195.7,
-"rec": 63.0,
-"rec_tgt": 127.0,
-"rec_yd": 938.0,
-"rec_td": 6.0,
-"rush_att": 2.0,
-"rush_yd": 9.0,
-"off_snp": 886.0,
-"tm_off_snp": 1134.0,
-"pos_rank_ppr": 23,
-"pts_ppr_per_game": 11.51,
-"rec_tgt_per_game": 7.47,
-"rush_att_per_game": 0.12
-},
-"11631": {
-"gp": 14.0,
-"gs": 14.0,
-"pts_ppr": 138.8,
-"rec": 48.0,
-"rec_tgt": 91.0,
-"rec_yd": 707.0,
-"rec_td": 2.0,
-"rush_att": 3.0,
-"rush_yd": 21.0,
+"pts_ppr": 150.1,
+"rec": 53.0,
+"rec_tgt": 78.0,
+"rec_yd": 571.0,
+"rec_td": 5.0,
+"rush_att": 5.0,
+"rush_yd": 20.0,
 "rush_td": 1.0,
-"off_snp": 706.0,
-"tm_off_snp": 894.0,
-"pos_rank_ppr": 42,
-"pts_ppr_per_game": 9.91,
-"rec_tgt_per_game": 6.5,
-"rush_att_per_game": 0.21
-},
-"9493": {
-"gp": 16.0,
-"gs": 15.0,
-"pts_ppr": 375.0,
-"rec": 129.0,
-"rec_tgt": 166.0,
-"rec_yd": 1715.0,
-"rec_td": 10.0,
-"rush_att": 10.0,
-"rush_yd": 105.0,
-"rush_td": 1.0,
-"off_snp": 675.0,
-"tm_off_snp": 990.0,
-"pos_rank_ppr": 1,
-"pts_ppr_per_game": 23.44,
-"rec_tgt_per_game": 10.38,
+"off_snp": 415.0,
+"tm_off_snp": 567.0,
+"pos_rank_ppr": 40,
+"pts_ppr_per_game": 18.76,
+"rec_tgt_per_game": 9.75,
 "rush_att_per_game": 0.62
 },
-"8205": {
-"gp": 13.0,
-"gs": 12.0,
-"pts_ppr": 87.3,
-"rec": 19.0,
-"rec_tgt": 26.0,
-"rec_yd": 101.0,
-"rec_td": 1.0,
-"rush_att": 118.0,
-"rush_yd": 462.0,
-"rush_td": 1.0,
-"off_snp": 424.0,
-"tm_off_snp": 823.0,
-"pos_rank_ppr": 56,
-"pts_ppr_per_game": 6.72,
-"rec_tgt_per_game": 2.0,
-"rush_att_per_game": 9.08
+"11604": {
+"gp": 12.0,
+"gs": 8.0,
+"pts_ppr": 176.2,
+"rec": 64.0,
+"rec_tgt": 86.0,
+"rec_yd": 680.0,
+"rec_td": 7.0,
+"rush_att": 2.0,
+"rush_yd": 2.0,
+"off_snp": 605.0,
+"tm_off_snp": 708.0,
+"pos_rank_ppr": 11,
+"pts_ppr_per_game": 14.68,
+"rec_tgt_per_game": 7.17,
+"rush_att_per_game": 0.17
 },
-"8676": {
-"gp": 18.0,
-"gs": 13.0,
-"pts_ppr": 156.6,
-"rec": 59.0,
-"rec_tgt": 92.0,
-"rec_yd": 687.0,
-"rec_td": 2.0,
-"rush_att": 9.0,
-"rush_yd": 69.0,
-"off_snp": 705.0,
-"tm_off_snp": 1162.0,
-"pos_rank_ppr": 39,
-"pts_ppr_per_game": 8.7,
-"rec_tgt_per_game": 5.11,
-"rush_att_per_game": 0.5
-},
-"8121": {
-"gp": 16.0,
-"gs": 15.0,
-"pts_ppr": 165.4,
-"rec": 55.0,
-"rec_tgt": 85.0,
-"rec_yd": 724.0,
+"9484": {
+"gp": 8.0,
+"gs": 8.0,
+"pts_ppr": 117.2,
+"rec": 32.0,
+"rec_tgt": 44.0,
+"rec_yd": 489.0,
 "rec_td": 6.0,
-"off_snp": 780.0,
-"tm_off_snp": 1000.0,
-"pos_rank_ppr": 37,
-"pts_ppr_per_game": 10.34,
-"rec_tgt_per_game": 5.31
+"rush_att": 1.0,
+"rush_yd": 3.0,
+"off_snp": 439.0,
+"tm_off_snp": 510.0,
+"pos_rank_ppr": 24,
+"pts_ppr_per_game": 14.65,
+"rec_tgt_per_game": 5.5,
+"rush_att_per_game": 0.12
+},
+"8134": {
+"gp": 16.0,
+"gs": 10.0,
+"pts_ppr": 166.4,
+"rec": 72.0,
+"rec_tgt": 95.0,
+"rec_yd": 719.0,
+"rec_td": 4.0,
+"rush_att": 1.0,
+"rush_yd": 5.0,
+"off_snp": 635.0,
+"tm_off_snp": 1057.0,
+"pos_rank_ppr": 36,
+"pts_ppr_per_game": 10.4,
+"rec_tgt_per_game": 5.94,
+"rush_att_per_game": 0.06
+},
+"12015": {
+"gp": 9.0,
+"pts_ppr": 81.0,
+"tm_off_snp": 527.0,
+"pos_rank_ppr": 30,
+"pts_ppr_per_game": 9.0
+},
+"7525": {
+"gp": 17.0,
+"gs": 16.0,
+"pts_ppr": 201.8,
+"rec": 77.0,
+"rec_tgt": 113.0,
+"rec_yd": 1008.0,
+"rec_td": 4.0,
+"off_snp": 879.0,
+"tm_off_snp": 988.0,
+"pos_rank_ppr": 20,
+"pts_ppr_per_game": 11.87,
+"rec_tgt_per_game": 6.65
+},
+"MIN": {
+"gp": 17.0,
+"pts_ppr": 149.0,
+"pos_rank_ppr": 3,
+"pts_ppr_per_game": 8.76
+},
+"5967": {
+"gp": 17.0,
+"gs": 17.0,
+"pts_ppr": 185.8,
+"rec": 33.0,
+"rec_tgt": 41.0,
+"rec_yd": 206.0,
+"rush_att": 242.0,
+"rush_yd": 1082.0,
+"rush_td": 5.0,
+"off_snp": 623.0,
+"tm_off_snp": 1002.0,
+"pos_rank_ppr": 23,
+"pts_ppr_per_game": 10.93,
+"rec_tgt_per_game": 2.41,
+"rush_att_per_game": 14.24
+},
+"9488": {
+"gp": 17.0,
+"gs": 17.0,
+"pts_ppr": 359.9,
+"rec": 119.0,
+"rec_tgt": 163.0,
+"rec_yd": 1793.0,
+"rec_td": 10.0,
+"rush_att": 7.0,
+"rush_yd": 36.0,
+"off_snp": 829.0,
+"tm_off_snp": 1064.0,
+"pos_rank_ppr": 2,
+"pts_ppr_per_game": 21.17,
+"rec_tgt_per_game": 9.59,
+"rush_att_per_game": 0.41
 },
 "8259": {
 "gp": 17.0,
@@ -7171,22 +6741,11 @@
 "pos_rank_ppr": 4,
 "pts_ppr_per_game": 9.76
 },
-"12519": {
-"gp": 15.0,
-"gs": 5.0,
-"pts_ppr": 127.9,
-"rec": 47.0,
-"rec_tgt": 60.0,
-"rec_yd": 652.0,
-"rec_td": 2.0,
-"rush_att": 6.0,
-"rush_yd": 37.0,
-"off_snp": 368.0,
-"tm_off_snp": 955.0,
-"pos_rank_ppr": 48,
-"pts_ppr_per_game": 8.53,
-"rec_tgt_per_game": 4.0,
-"rush_att_per_game": 0.4
+"CLE": {
+"gp": 17.0,
+"pts_ppr": 144.0,
+"pos_rank_ppr": 6,
+"pts_ppr_per_game": 8.47
 },
 "4217": {
 "gp": 11.0,
@@ -7205,284 +6764,22 @@
 "rec_tgt_per_game": 6.27,
 "rush_att_per_game": 0.09
 },
-"12484": {
+"10232": {
 "gp": 17.0,
-"gs": 10.0,
-"pts_ppr": 129.5,
-"rec": 41.0,
-"rec_tgt": 68.0,
-"rec_yd": 525.0,
-"rec_td": 6.0,
-"off_snp": 616.0,
-"tm_off_snp": 1092.0,
-"pos_rank_ppr": 47,
-"pts_ppr_per_game": 7.62,
-"rec_tgt_per_game": 4.0
-},
-"1466": {
-"gp": 17.0,
-"gs": 17.0,
-"pts_ppr": 193.2,
-"rec": 76.0,
-"rec_tgt": 108.0,
-"rec_yd": 851.0,
-"rec_td": 5.0,
-"rush_att": 1.0,
-"rush_yd": 1.0,
-"off_snp": 851.0,
-"tm_off_snp": 1049.0,
-"pos_rank_ppr": 3,
-"pts_ppr_per_game": 11.36,
-"rec_tgt_per_game": 6.35,
-"rush_att_per_game": 0.06
-},
-"8154": {
-"gp": 17.0,
-"pts_ppr": 62.5,
-"rec": 8.0,
-"rec_tgt": 12.0,
-"rec_yd": 25.0,
-"rush_att": 92.0,
-"rush_yd": 400.0,
-"rush_td": 2.0,
-"off_snp": 190.0,
-"tm_off_snp": 1123.0,
-"pos_rank_ppr": 63,
-"pts_ppr_per_game": 3.68,
-"rec_tgt_per_game": 0.71,
-"rush_att_per_game": 5.41
-},
-"8137": {
-"gp": 17.0,
-"gs": 15.0,
-"pts_ppr": 291.9,
-"rec": 93.0,
-"rec_tgt": 137.0,
-"rec_yd": 1429.0,
-"rec_td": 9.0,
-"off_snp": 943.0,
-"tm_off_snp": 1131.0,
-"pos_rank_ppr": 5,
-"pts_ppr_per_game": 17.17,
-"rec_tgt_per_game": 8.06
-},
-"9508": {
-"gp": 13.0,
-"gs": 1.0,
-"pts_ppr": 111.7,
-"rec": 45.0,
-"rec_tgt": 50.0,
-"rec_yd": 264.0,
-"rush_att": 72.0,
-"rush_yd": 283.0,
-"rush_td": 2.0,
-"off_snp": 349.0,
-"tm_off_snp": 759.0,
-"pos_rank_ppr": 44,
-"pts_ppr_per_game": 8.59,
-"rec_tgt_per_game": 3.85,
-"rush_att_per_game": 5.54
-},
-"11632": {
-"gp": 4.0,
-"gs": 4.0,
-"pts_ppr": 57.1,
-"rec": 18.0,
-"rec_tgt": 35.0,
-"rec_yd": 271.0,
-"rec_td": 2.0,
-"off_snp": 216.0,
-"tm_off_snp": 277.0,
-"pos_rank_ppr": 102,
-"pts_ppr_per_game": 14.28,
-"rec_tgt_per_game": 8.75
-},
-"2747": {
-"gp": 17.0,
-"pts_ppr": 195.0,
-"tm_off_snp": 1064.0,
-"pos_rank_ppr": 1,
-"pts_ppr_per_game": 11.47
-},
-"8112": {
-"gp": 12.0,
-"gs": 12.0,
-"pts_ppr": 201.9,
-"rec": 68.0,
-"rec_tgt": 112.0,
-"rec_yd": 919.0,
+"gs": 13.0,
+"pts_ppr": 220.6,
+"rec": 78.0,
+"rec_tgt": 126.0,
+"rec_yd": 1006.0,
 "rec_td": 7.0,
-"off_snp": 650.0,
-"tm_off_snp": 723.0,
-"pos_rank_ppr": 19,
-"pts_ppr_per_game": 16.82,
-"rec_tgt_per_game": 9.33
-},
-"9500": {
-"gp": 16.0,
-"gs": 11.0,
-"pts_ppr": 136.4,
-"rec": 58.0,
-"rec_tgt": 88.0,
-"rec_yd": 566.0,
-"rec_td": 4.0,
-"rush_att": 2.0,
-"rush_yd": -2.0,
-"off_snp": 553.0,
-"tm_off_snp": 947.0,
-"pos_rank_ppr": 44,
-"pts_ppr_per_game": 8.53,
-"rec_tgt_per_game": 5.5,
-"rush_att_per_game": 0.12
-},
-"8130": {
-"gp": 17.0,
-"gs": 17.0,
-"pts_ppr": 315.9,
-"rec": 126.0,
-"rec_tgt": 169.0,
-"rec_yd": 1239.0,
-"rec_td": 11.0,
-"off_snp": 981.0,
+"off_snp": 872.0,
 "tm_off_snp": 1077.0,
-"pos_rank_ppr": 1,
-"pts_ppr_per_game": 18.58,
-"rec_tgt_per_game": 9.94
-},
-"11584": {
-"gp": 10.0,
-"gs": 9.0,
-"pts_ppr": 138.5,
-"rec": 30.0,
-"rec_tgt": 35.0,
-"rec_yd": 277.0,
-"rec_td": 3.0,
-"rush_att": 173.0,
-"rush_yd": 588.0,
-"rush_td": 1.0,
-"off_snp": 421.0,
-"tm_off_snp": 684.0,
-"pos_rank_ppr": 34,
-"pts_ppr_per_game": 13.85,
-"rec_tgt_per_game": 3.5,
-"rush_att_per_game": 17.3
-},
-"6794": {
-"gp": 17.0,
-"gs": 17.0,
-"pts_ppr": 201.5,
-"rec": 84.0,
-"rec_tgt": 141.0,
-"rec_yd": 1048.0,
-"rec_td": 2.0,
-"rush_att": 2.0,
-"rush_yd": 7.0,
-"off_snp": 890.0,
-"tm_off_snp": 934.0,
-"pos_rank_ppr": 21,
-"pts_ppr_per_game": 11.85,
-"rec_tgt_per_game": 8.29,
-"rush_att_per_game": 0.12
-},
-"7543": {
-"gp": 17.0,
-"gs": 16.0,
-"pts_ppr": 253.9,
-"rec": 36.0,
-"rec_tgt": 52.0,
-"rec_yd": 292.0,
-"rec_td": 6.0,
-"rush_att": 260.0,
-"rush_yd": 1107.0,
-"rush_td": 7.0,
-"off_snp": 657.0,
-"tm_off_snp": 1089.0,
 "pos_rank_ppr": 10,
-"pts_ppr_per_game": 14.94,
-"rec_tgt_per_game": 3.06,
-"rush_att_per_game": 15.29
+"pts_ppr_per_game": 12.98,
+"rec_tgt_per_game": 7.41
 },
-"8144": {
-"gp": 16.0,
-"gs": 16.0,
-"pts_ppr": 269.0,
-"rec": 100.0,
-"rec_tgt": 156.0,
-"rec_yd": 1163.0,
-"rec_td": 9.0,
-"rush_att": 1.0,
-"rush_yd": -3.0,
-"off_snp": 887.0,
-"tm_off_snp": 1056.0,
-"pos_rank_ppr": 6,
-"pts_ppr_per_game": 16.81,
-"rec_tgt_per_game": 9.75,
-"rush_att_per_game": 0.06
-},
-"12474": {
-"gp": 16.0,
-"gs": 8.0,
-"pts_ppr": 151.1,
-"rec": 24.0,
-"rec_tgt": 36.0,
-"rec_yd": 208.0,
-"rec_td": 3.0,
-"rush_att": 196.0,
-"rush_yd": 703.0,
-"rush_td": 2.0,
-"off_snp": 540.0,
-"tm_off_snp": 1027.0,
-"pos_rank_ppr": 29,
-"pts_ppr_per_game": 9.44,
-"rec_tgt_per_game": 2.25,
-"rush_att_per_game": 12.25
-},
-"421": {
-"gp": 17.0,
-"gs": 17.0,
-"pts_ppr": 358.38,
-"rush_att": 29.0,
-"rush_yd": 1.0,
-"pass_yd": 4707.0,
-"pass_td": 46.0,
-"off_snp": 1045.0,
-"tm_off_snp": 1060.0,
-"pos_rank_ppr": 3,
-"pts_ppr_per_game": 21.08,
-"rush_att_per_game": 1.71
-},
-"3294": {
-"gp": 17.0,
-"gs": 17.0,
-"pts_ppr": 323.78,
-"rush_att": 53.0,
-"rush_yd": 177.0,
-"rush_td": 2.0,
-"pass_yd": 4552.0,
-"pass_td": 30.0,
-"off_snp": 1107.0,
-"tm_off_snp": 1131.0,
-"pos_rank_ppr": 6,
-"pts_ppr_per_game": 19.05,
-"rush_att_per_game": 3.12
-},
-"5850": {
-"gp": 15.0,
-"gs": 15.0,
-"pts_ppr": 237.1,
-"rec": 36.0,
-"rec_tgt": 44.0,
-"rec_yd": 282.0,
-"rec_td": 1.0,
-"rush_att": 234.0,
-"rush_yd": 929.0,
-"rush_td": 13.0,
-"off_snp": 554.0,
-"tm_off_snp": 934.0,
-"pos_rank_ppr": 13,
-"pts_ppr_per_game": 15.81,
-"rec_tgt_per_game": 2.93,
-"rush_att_per_game": 15.6
+"13281": {
+"pos_rank_ppr": 644
 },
 "6804": {
 "gp": 15.0,
@@ -7497,6 +6794,24 @@
 "pos_rank_ppr": 15,
 "pts_ppr_per_game": 16.08,
 "rush_att_per_game": 3.13
+},
+"13726": {
+"pos_rank_ppr": 634
+},
+"8183": {
+"gp": 9.0,
+"gs": 9.0,
+"pts_ppr": 187.38,
+"rush_att": 33.0,
+"rush_yd": 147.0,
+"rush_td": 3.0,
+"pass_yd": 2167.0,
+"pass_td": 20.0,
+"off_snp": 576.0,
+"tm_off_snp": 588.0,
+"pos_rank_ppr": 24,
+"pts_ppr_per_game": 20.82,
+"rush_att_per_game": 3.67
 },
 "11560": {
 "gp": 17.0,
@@ -7518,39 +6833,256 @@
 "rec_tgt_per_game": 0.12,
 "rush_att_per_game": 4.53
 },
-"9488": {
+"4881": {
+"gp": 13.0,
+"gs": 13.0,
+"pts_ppr": 221.86,
+"rush_att": 67.0,
+"rush_yd": 349.0,
+"rush_td": 2.0,
+"pass_yd": 2549.0,
+"pass_td": 21.0,
+"off_snp": 651.0,
+"tm_off_snp": 704.0,
+"pos_rank_ppr": 20,
+"pts_ppr_per_game": 17.07,
+"rush_att_per_game": 5.15
+},
+"6801": {
+"gp": 15.0,
+"gs": 14.0,
+"pts_ppr": 211.6,
+"rec": 59.0,
+"rec_tgt": 98.0,
+"rec_yd": 846.0,
+"rec_td": 11.0,
+"off_snp": 710.0,
+"tm_off_snp": 884.0,
+"pos_rank_ppr": 15,
+"pts_ppr_per_game": 14.11,
+"rec_tgt_per_game": 6.53
+},
+"7042": {
+"pos_rank_ppr": 150
+},
+"4866": {
+"gp": 16.0,
+"gs": 16.0,
+"pts_ppr": 232.3,
+"rec": 37.0,
+"rec_tgt": 50.0,
+"rec_yd": 273.0,
+"rec_td": 2.0,
+"rush_att": 280.0,
+"rush_yd": 1140.0,
+"rush_td": 7.0,
+"off_snp": 773.0,
+"tm_off_snp": 988.0,
+"pos_rank_ppr": 14,
+"pts_ppr_per_game": 14.52,
+"rec_tgt_per_game": 3.12,
+"rush_att_per_game": 17.5
+},
+"6904": {
+"gp": 16.0,
+"gs": 16.0,
+"pts_ppr": 305.06,
+"rush_att": 105.0,
+"rush_yd": 421.0,
+"rush_td": 8.0,
+"pass_yd": 3224.0,
+"pass_td": 25.0,
+"off_snp": 965.0,
+"tm_off_snp": 988.0,
+"pos_rank_ppr": 8,
+"pts_ppr_per_game": 19.07,
+"rush_att_per_game": 6.56
+},
+"7547": {
 "gp": 17.0,
 "gs": 17.0,
-"pts_ppr": 359.9,
-"rec": 119.0,
-"rec_tgt": 163.0,
-"rec_yd": 1793.0,
-"rec_td": 10.0,
-"rush_att": 7.0,
-"rush_yd": 36.0,
-"off_snp": 829.0,
-"tm_off_snp": 1064.0,
-"pos_rank_ppr": 2,
-"pts_ppr_per_game": 21.17,
-"rec_tgt_per_game": 9.59,
-"rush_att_per_game": 0.41
+"pts_ppr": 324.0,
+"rec": 117.0,
+"rec_tgt": 172.0,
+"rec_yd": 1401.0,
+"rec_td": 11.0,
+"rush_att": 3.0,
+"rush_yd": 9.0,
+"off_snp": 870.0,
+"tm_off_snp": 1026.0,
+"pos_rank_ppr": 3,
+"pts_ppr_per_game": 19.06,
+"rec_tgt_per_game": 10.12,
+"rush_att_per_game": 0.18
 },
-"12490": {
-"gp": 15.0,
-"pts_ppr": 88.6,
-"rec": 10.0,
+"6806": {
+"gp": 10.0,
+"gs": 9.0,
+"pts_ppr": 115.9,
+"rec": 11.0,
 "rec_tgt": 14.0,
-"rec_yd": 79.0,
+"rec_yd": 37.0,
+"rush_att": 153.0,
+"rush_yd": 772.0,
+"rush_td": 4.0,
+"off_snp": 340.0,
+"tm_off_snp": 669.0,
+"pos_rank_ppr": 43,
+"pts_ppr_per_game": 11.59,
+"rec_tgt_per_game": 1.4,
+"rush_att_per_game": 15.3
+},
+"7523": {
+"gp": 17.0,
+"gs": 17.0,
+"pts_ppr": 350.18,
+"rush_att": 82.0,
+"rush_yd": 359.0,
+"rush_td": 9.0,
+"pass_yd": 4007.0,
+"pass_td": 29.0,
+"off_snp": 1064.0,
+"tm_off_snp": 1089.0,
+"pos_rank_ppr": 4,
+"pts_ppr_per_game": 20.6,
+"rush_att_per_game": 4.82
+},
+"SEA": {
+"gp": 17.0,
+"pts_ppr": 181.0,
+"pos_rank_ppr": 1,
+"pts_ppr_per_game": 10.65
+},
+"7021": {
+"gp": 17.0,
+"gs": 11.0,
+"pts_ppr": 216.3,
+"rec": 39.0,
+"rec_tgt": 50.0,
+"rec_yd": 297.0,
+"rec_td": 1.0,
+"rush_att": 236.0,
+"rush_yd": 1076.0,
+"rush_td": 6.0,
+"off_snp": 591.0,
+"tm_off_snp": 1061.0,
+"pos_rank_ppr": 18,
+"pts_ppr_per_game": 12.72,
+"rec_tgt_per_game": 2.94,
+"rush_att_per_game": 13.88
+},
+"12481": {
+"gp": 8.0,
+"gs": 5.0,
+"pts_ppr": 127.7,
+"rec": 24.0,
+"rec_tgt": 32.0,
+"rec_yd": 207.0,
 "rec_td": 2.0,
-"rush_att": 83.0,
-"rush_yd": 307.0,
+"rush_att": 101.0,
+"rush_yd": 410.0,
 "rush_td": 5.0,
-"off_snp": 199.0,
-"tm_off_snp": 950.0,
-"pos_rank_ppr": 53,
-"pts_ppr_per_game": 5.91,
-"rec_tgt_per_game": 0.93,
-"rush_att_per_game": 5.53
+"off_snp": 295.0,
+"tm_off_snp": 545.0,
+"pos_rank_ppr": 37,
+"pts_ppr_per_game": 15.96,
+"rec_tgt_per_game": 4.0,
+"rush_att_per_game": 12.62
+},
+"12508": {
+"gp": 14.0,
+"gs": 12.0,
+"pts_ppr": 246.58,
+"rush_att": 86.0,
+"rush_yd": 487.0,
+"rush_td": 9.0,
+"pass_yd": 2272.0,
+"pass_td": 15.0,
+"off_snp": 699.0,
+"tm_off_snp": 918.0,
+"pos_rank_ppr": 14,
+"pts_ppr_per_game": 17.61,
+"rush_att_per_game": 6.14
+},
+"8130": {
+"gp": 17.0,
+"gs": 17.0,
+"pts_ppr": 315.9,
+"rec": 126.0,
+"rec_tgt": 169.0,
+"rec_yd": 1239.0,
+"rec_td": 11.0,
+"off_snp": 981.0,
+"tm_off_snp": 1077.0,
+"pos_rank_ppr": 1,
+"pts_ppr_per_game": 18.58,
+"rec_tgt_per_game": 9.94
+},
+"12519": {
+"gp": 15.0,
+"gs": 5.0,
+"pts_ppr": 127.9,
+"rec": 47.0,
+"rec_tgt": 60.0,
+"rec_yd": 652.0,
+"rec_td": 2.0,
+"rush_att": 6.0,
+"rush_yd": 37.0,
+"off_snp": 368.0,
+"tm_off_snp": 955.0,
+"pos_rank_ppr": 48,
+"pts_ppr_per_game": 8.53,
+"rec_tgt_per_game": 4.0,
+"rush_att_per_game": 0.4
+},
+"8142": {
+"gp": 15.0,
+"gs": 14.0,
+"pts_ppr": 183.3,
+"rec": 47.0,
+"rec_tgt": 84.0,
+"rec_yd": 1003.0,
+"rec_td": 6.0,
+"off_snp": 769.0,
+"tm_off_snp": 880.0,
+"pos_rank_ppr": 28,
+"pts_ppr_per_game": 12.22,
+"rec_tgt_per_game": 5.6
+},
+"13298": {
+"pos_rank_ppr": 296
+},
+"10236": {
+"gp": 12.0,
+"gs": 4.0,
+"pts_ppr": 126.1,
+"rec": 39.0,
+"rec_tgt": 49.0,
+"rec_yd": 571.0,
+"rec_td": 5.0,
+"off_snp": 292.0,
+"tm_off_snp": 728.0,
+"pos_rank_ppr": 20,
+"pts_ppr_per_game": 10.51,
+"rec_tgt_per_game": 4.08
+},
+"7594": {
+"gp": 15.0,
+"gs": 6.0,
+"pts_ppr": 125.4,
+"rec": 30.0,
+"rec_tgt": 39.0,
+"rec_yd": 223.0,
+"rec_td": 3.0,
+"rush_att": 134.0,
+"rush_yd": 511.0,
+"rush_td": 1.0,
+"off_snp": 432.0,
+"tm_off_snp": 924.0,
+"pos_rank_ppr": 38,
+"pts_ppr_per_game": 8.36,
+"rec_tgt_per_game": 2.6,
+"rush_att_per_game": 8.93
 },
 "8167": {
 "gp": 10.0,
@@ -7569,121 +7101,269 @@
 "rec_tgt_per_game": 5.5,
 "rush_att_per_game": 0.1
 },
-"11635": {
-"gp": 16.0,
-"gs": 12.0,
-"pts_ppr": 180.9,
-"rec": 66.0,
-"rec_tgt": 106.0,
-"rec_yd": 789.0,
-"rec_td": 6.0,
-"off_snp": 838.0,
-"tm_off_snp": 1072.0,
-"pos_rank_ppr": 30,
-"pts_ppr_per_game": 11.31,
-"rec_tgt_per_game": 6.62
-},
-"10213": {
+"5012": {
 "gp": 17.0,
-"gs": 17.0,
-"pts_ppr": 161.7,
-"rec": 57.0,
-"rec_tgt": 92.0,
-"rec_yd": 696.0,
+"gs": 11.0,
+"pts_ppr": 131.0,
+"rec": 48.0,
+"rec_tgt": 70.0,
+"rec_yd": 422.0,
 "rec_td": 5.0,
-"rush_att": 11.0,
-"rush_yd": 51.0,
-"off_snp": 881.0,
-"tm_off_snp": 931.0,
-"pos_rank_ppr": 38,
-"pts_ppr_per_game": 9.51,
-"rec_tgt_per_game": 5.41,
-"rush_att_per_game": 0.65
-},
-"4037": {
-"gp": 9.0,
-"gs": 6.0,
-"pts_ppr": 83.0,
-"rec": 33.0,
-"rec_tgt": 51.0,
-"rec_yd": 360.0,
-"rec_td": 2.0,
-"off_snp": 428.0,
-"tm_off_snp": 605.0,
-"pos_rank_ppr": 78,
-"pts_ppr_per_game": 9.22,
-"rec_tgt_per_game": 5.67
-},
-"6770": {
-"gp": 8.0,
-"gs": 8.0,
-"pts_ppr": 139.46,
-"rush_att": 14.0,
-"rush_yd": 41.0,
-"pass_yd": 1809.0,
-"pass_td": 17.0,
-"off_snp": 411.0,
-"tm_off_snp": 478.0,
-"pos_rank_ppr": 29,
-"pts_ppr_per_game": 17.43,
-"rush_att_per_game": 1.75
-},
-"7042": {
-"pos_rank_ppr": 150
-},
-"4892": {
-"gp": 17.0,
-"gs": 17.0,
-"pts_ppr": 282.92,
-"rush_att": 55.0,
-"rush_yd": 382.0,
+"rush_att": 10.0,
+"rush_yd": 48.0,
 "rush_td": 1.0,
-"pass_yd": 3693.0,
-"pass_td": 26.0,
-"off_snp": 1099.0,
-"tm_off_snp": 1134.0,
-"pos_rank_ppr": 12,
-"pts_ppr_per_game": 16.64,
-"rush_att_per_game": 3.24
+"off_snp": 600.0,
+"tm_off_snp": 963.0,
+"pos_rank_ppr": 16,
+"pts_ppr_per_game": 7.71,
+"rec_tgt_per_game": 4.12,
+"rush_att_per_game": 0.59
 },
-"5846": {
+"7569": {
 "gp": 15.0,
 "gs": 15.0,
-"pts_ppr": 187.2,
-"rec": 59.0,
-"rec_tgt": 99.0,
-"rec_yd": 850.0,
+"pts_ppr": 226.2,
+"rec": 71.0,
+"rec_tgt": 120.0,
+"rec_yd": 1117.0,
 "rec_td": 6.0,
 "rush_att": 2.0,
-"rush_yd": 12.0,
+"rush_yd": 15.0,
 "rush_td": 1.0,
-"off_snp": 776.0,
-"tm_off_snp": 890.0,
-"pos_rank_ppr": 26,
-"pts_ppr_per_game": 12.48,
-"rec_tgt_per_game": 6.6,
+"off_snp": 778.0,
+"tm_off_snp": 1012.0,
+"pos_rank_ppr": 8,
+"pts_ppr_per_game": 15.08,
+"rec_tgt_per_game": 8.0,
 "rush_att_per_game": 0.13
 },
-"13346": {
-"pos_rank_ppr": 443
-},
-"12529": {
+"8132": {
 "gp": 17.0,
-"gs": 4.0,
-"pts_ppr": 206.2,
-"rec": 35.0,
-"rec_tgt": 42.0,
-"rec_yd": 221.0,
+"gs": 2.0,
+"pts_ppr": 123.0,
+"rec": 14.0,
+"rec_tgt": 16.0,
+"rec_yd": 96.0,
+"rush_att": 143.0,
+"rush_yd": 514.0,
+"rush_td": 8.0,
+"off_snp": 305.0,
+"tm_off_snp": 1033.0,
+"pos_rank_ppr": 39,
+"pts_ppr_per_game": 7.24,
+"rec_tgt_per_game": 0.94,
+"rush_att_per_game": 8.41
+},
+"12507": {
+"gp": 9.0,
+"gs": 6.0,
+"pts_ppr": 135.7,
+"rec": 32.0,
+"rec_tgt": 35.0,
+"rec_yd": 192.0,
 "rec_td": 1.0,
-"rush_att": 180.0,
-"rush_yd": 911.0,
-"rush_td": 9.0,
-"off_snp": 477.0,
-"tm_off_snp": 1035.0,
-"pos_rank_ppr": 21,
-"pts_ppr_per_game": 12.13,
-"rec_tgt_per_game": 2.47,
-"rush_att_per_game": 10.59
+"rush_att": 124.0,
+"rush_yd": 545.0,
+"rush_td": 4.0,
+"off_snp": 384.0,
+"tm_off_snp": 606.0,
+"pos_rank_ppr": 35,
+"pts_ppr_per_game": 15.08,
+"rec_tgt_per_game": 3.89,
+"rush_att_per_game": 13.78
+},
+"11539": {
+"gp": 17.0,
+"pts_ppr": 143.0,
+"tm_off_snp": 1026.0,
+"pos_rank_ppr": 9,
+"pts_ppr_per_game": 8.41
+},
+"1466": {
+"gp": 17.0,
+"gs": 17.0,
+"pts_ppr": 193.2,
+"rec": 76.0,
+"rec_tgt": 108.0,
+"rec_yd": 851.0,
+"rec_td": 5.0,
+"rush_att": 1.0,
+"rush_yd": 1.0,
+"off_snp": 851.0,
+"tm_off_snp": 1049.0,
+"pos_rank_ppr": 3,
+"pts_ppr_per_game": 11.36,
+"rec_tgt_per_game": 6.35,
+"rush_att_per_game": 0.06
+},
+"5850": {
+"gp": 15.0,
+"gs": 15.0,
+"pts_ppr": 237.1,
+"rec": 36.0,
+"rec_tgt": 44.0,
+"rec_yd": 282.0,
+"rec_td": 1.0,
+"rush_att": 234.0,
+"rush_yd": 929.0,
+"rush_td": 13.0,
+"off_snp": 554.0,
+"tm_off_snp": 934.0,
+"pos_rank_ppr": 13,
+"pts_ppr_per_game": 15.81,
+"rec_tgt_per_game": 2.93,
+"rush_att_per_game": 15.6
+},
+"NE": {
+"gp": 17.0,
+"pts_ppr": 130.0,
+"pos_rank_ppr": 10,
+"pts_ppr_per_game": 7.65
+},
+"12545": {
+"gp": 11.0,
+"gs": 9.0,
+"pts_ppr": 163.96,
+"rush_att": 45.0,
+"rush_yd": 186.0,
+"rush_td": 3.0,
+"pass_yd": 2384.0,
+"pass_td": 10.0,
+"off_snp": 537.0,
+"tm_off_snp": 1056.0,
+"pos_rank_ppr": 26,
+"pts_ppr_per_game": 14.91,
+"rush_att_per_game": 4.09
+},
+"8144": {
+"gp": 16.0,
+"gs": 16.0,
+"pts_ppr": 269.0,
+"rec": 100.0,
+"rec_tgt": 156.0,
+"rec_yd": 1163.0,
+"rec_td": 9.0,
+"rush_att": 1.0,
+"rush_yd": -3.0,
+"off_snp": 887.0,
+"tm_off_snp": 1056.0,
+"pos_rank_ppr": 6,
+"pts_ppr_per_game": 16.81,
+"rec_tgt_per_game": 9.75,
+"rush_att_per_game": 0.06
+},
+"9753": {
+"gp": 16.0,
+"pts_ppr": 181.4,
+"rec": 20.0,
+"rec_tgt": 24.0,
+"rec_yd": 144.0,
+"rush_att": 184.0,
+"rush_yd": 730.0,
+"rush_td": 12.0,
+"off_snp": 489.0,
+"tm_off_snp": 1007.0,
+"pos_rank_ppr": 24,
+"pts_ppr_per_game": 11.34,
+"rec_tgt_per_game": 1.5,
+"rush_att_per_game": 11.5
+},
+"8154": {
+"gp": 17.0,
+"pts_ppr": 62.5,
+"rec": 8.0,
+"rec_tgt": 12.0,
+"rec_yd": 25.0,
+"rush_att": 92.0,
+"rush_yd": 400.0,
+"rush_td": 2.0,
+"off_snp": 190.0,
+"tm_off_snp": 1123.0,
+"pos_rank_ppr": 63,
+"pts_ppr_per_game": 3.68,
+"rec_tgt_per_game": 0.71,
+"rush_att_per_game": 5.41
+},
+"9509": {
+"gp": 17.0,
+"gs": 17.0,
+"pts_ppr": 370.8,
+"rec": 79.0,
+"rec_tgt": 103.0,
+"rec_yd": 820.0,
+"rec_td": 4.0,
+"rush_att": 287.0,
+"rush_yd": 1478.0,
+"rush_td": 7.0,
+"off_snp": 807.0,
+"tm_off_snp": 1033.0,
+"pos_rank_ppr": 2,
+"pts_ppr_per_game": 21.81,
+"rec_tgt_per_game": 6.06,
+"rush_att_per_game": 16.88
+},
+"13417": {
+"pos_rank_ppr": 899
+},
+"HOU": {
+"gp": 17.0,
+"pts_ppr": 166.0,
+"pos_rank_ppr": 2,
+"pts_ppr_per_game": 9.76
+},
+"1945": {
+"gp": 17.0,
+"pts_ppr": 144.0,
+"tm_off_snp": 956.0,
+"pos_rank_ppr": 8,
+"pts_ppr_per_game": 8.47
+},
+"LAR": {
+"gp": 17.0,
+"pts_ppr": 142.0,
+"pos_rank_ppr": 8,
+"pts_ppr_per_game": 8.35
+},
+"6650": {
+"gp": 17.0,
+"pts_ppr": 149.0,
+"tm_off_snp": 1134.0,
+"pos_rank_ppr": 7,
+"pts_ppr_per_game": 8.76
+},
+"8110": {
+"gp": 17.0,
+"gs": 10.0,
+"pts_ppr": 188.1,
+"rec": 82.0,
+"rec_tgt": 102.0,
+"rec_yd": 600.0,
+"rec_td": 8.0,
+"rush_att": 1.0,
+"rush_yd": 1.0,
+"off_snp": 753.0,
+"tm_off_snp": 1131.0,
+"pos_rank_ppr": 5,
+"pts_ppr_per_game": 11.06,
+"rec_tgt_per_game": 6.0,
+"rush_att_per_game": 0.06
+},
+"11624": {
+"gp": 14.0,
+"gs": 13.0,
+"pts_ppr": 109.9,
+"rec": 42.0,
+"rec_tgt": 73.0,
+"rec_yd": 532.0,
+"rec_td": 1.0,
+"rush_att": 11.0,
+"rush_yd": 87.0,
+"off_snp": 645.0,
+"tm_off_snp": 917.0,
+"pos_rank_ppr": 59,
+"pts_ppr_per_game": 7.85,
+"rec_tgt_per_game": 5.21,
+"rush_att_per_game": 0.79
 },
 "9221": {
 "gp": 17.0,
@@ -7703,119 +7383,350 @@
 "rec_tgt_per_game": 5.53,
 "rush_att_per_game": 14.29
 },
-"12015": {
-"gp": 9.0,
-"pts_ppr": 81.0,
-"tm_off_snp": 527.0,
-"pos_rank_ppr": 30,
-"pts_ppr_per_game": 9.0
-},
-"8110": {
-"gp": 17.0,
-"gs": 10.0,
-"pts_ppr": 188.1,
-"rec": 82.0,
-"rec_tgt": 102.0,
-"rec_yd": 600.0,
-"rec_td": 8.0,
-"rush_att": 1.0,
-"rush_yd": 1.0,
-"off_snp": 753.0,
-"tm_off_snp": 1131.0,
-"pos_rank_ppr": 5,
-"pts_ppr_per_game": 11.06,
-"rec_tgt_per_game": 6.0,
-"rush_att_per_game": 0.06
-},
-"10219": {
-"gp": 13.0,
-"gs": 7.0,
-"pts_ppr": 92.0,
-"rec": 3.0,
-"rec_tgt": 4.0,
-"rec_yd": 30.0,
-"rush_att": 112.0,
-"rush_yd": 500.0,
-"rush_td": 6.0,
-"off_snp": 226.0,
-"tm_off_snp": 741.0,
-"pos_rank_ppr": 51,
-"pts_ppr_per_game": 7.08,
-"rec_tgt_per_game": 0.31,
-"rush_att_per_game": 8.62
-},
-"10232": {
-"gp": 17.0,
-"gs": 13.0,
-"pts_ppr": 220.6,
-"rec": 78.0,
-"rec_tgt": 126.0,
-"rec_yd": 1006.0,
+"8112": {
+"gp": 12.0,
+"gs": 12.0,
+"pts_ppr": 201.9,
+"rec": 68.0,
+"rec_tgt": 112.0,
+"rec_yd": 919.0,
 "rec_td": 7.0,
-"off_snp": 872.0,
-"tm_off_snp": 1077.0,
-"pos_rank_ppr": 10,
-"pts_ppr_per_game": 12.98,
-"rec_tgt_per_game": 7.41
+"off_snp": 650.0,
+"tm_off_snp": 723.0,
+"pos_rank_ppr": 19,
+"pts_ppr_per_game": 16.82,
+"rec_tgt_per_game": 9.33
 },
-"5189": {
-"gp": 14.0,
-"pts_ppr": 135.0,
-"tm_off_snp": 910.0,
-"pos_rank_ppr": 13,
-"pts_ppr_per_game": 9.64
-},
-"5947": {
+"7588": {
 "gp": 16.0,
-"gs": 13.0,
-"pts_ppr": 175.8,
-"rec": 75.0,
-"rec_tgt": 110.0,
-"rec_yd": 835.0,
-"rec_td": 3.0,
-"rush_att": 5.0,
-"rush_yd": 13.0,
-"off_snp": 824.0,
-"tm_off_snp": 967.0,
-"pos_rank_ppr": 32,
-"pts_ppr_per_game": 10.99,
-"rec_tgt_per_game": 6.88,
-"rush_att_per_game": 0.31
-},
-"8228": {
-"gp": 16.0,
-"gs": 14.0,
-"pts_ppr": 217.1,
-"rec": 40.0,
-"rec_tgt": 45.0,
-"rec_yd": 333.0,
+"gs": 16.0,
+"pts_ppr": 242.8,
+"rec": 35.0,
+"rec_tgt": 51.0,
+"rec_yd": 137.0,
 "rec_td": 2.0,
-"rush_att": 211.0,
-"rush_yd": 958.0,
-"rush_td": 6.0,
-"off_snp": 461.0,
-"tm_off_snp": 903.0,
-"pos_rank_ppr": 17,
-"pts_ppr_per_game": 13.57,
-"rec_tgt_per_game": 2.81,
-"rush_att_per_game": 13.19
+"rush_att": 252.0,
+"rush_yd": 1201.0,
+"rush_td": 11.0,
+"off_snp": 769.0,
+"tm_off_snp": 1131.0,
+"pos_rank_ppr": 12,
+"pts_ppr_per_game": 15.18,
+"rec_tgt_per_game": 3.19,
+"rush_att_per_game": 15.75
 },
-"11583": {
-"pos_rank_ppr": 664
+"10213": {
+"gp": 17.0,
+"gs": 17.0,
+"pts_ppr": 161.7,
+"rec": 57.0,
+"rec_tgt": 92.0,
+"rec_yd": 696.0,
+"rec_td": 5.0,
+"rush_att": 11.0,
+"rush_yd": 51.0,
+"off_snp": 881.0,
+"tm_off_snp": 931.0,
+"pos_rank_ppr": 38,
+"pts_ppr_per_game": 9.51,
+"rec_tgt_per_game": 5.41,
+"rush_att_per_game": 0.65
 },
-"6801": {
-"gp": 15.0,
+"13294": {
+"pos_rank_ppr": 232
+},
+"8155": {
+"gp": 16.0,
+"gs": 16.0,
+"pts_ppr": 207.66,
+"rec": 36.0,
+"rec_tgt": 48.0,
+"rec_yd": 350.0,
+"rec_td": 1.0,
+"rush_att": 243.0,
+"rush_yd": 1065.0,
+"rush_td": 4.0,
+"pass_yd": 4.0,
+"pass_td": 1.0,
+"off_snp": 640.0,
+"tm_off_snp": 999.0,
+"pos_rank_ppr": 19,
+"pts_ppr_per_game": 12.98,
+"rec_tgt_per_game": 3.0,
+"rush_att_per_game": 15.19
+},
+"8161": {
+"gp": 4.0,
+"gs": 1.0,
+"pts_ppr": 51.18,
+"rush_att": 22.0,
+"rush_yd": 123.0,
+"rush_td": 2.0,
+"pass_yd": 422.0,
+"pass_td": 3.0,
+"off_snp": 98.0,
+"tm_off_snp": 1000.0,
+"pos_rank_ppr": 45,
+"pts_ppr_per_game": 12.79,
+"rush_att_per_game": 5.5
+},
+"13286": {
+"pos_rank_ppr": 442
+},
+"11632": {
+"gp": 4.0,
+"gs": 4.0,
+"pts_ppr": 57.1,
+"rec": 18.0,
+"rec_tgt": 35.0,
+"rec_yd": 271.0,
+"rec_td": 2.0,
+"off_snp": 216.0,
+"tm_off_snp": 277.0,
+"pos_rank_ppr": 102,
+"pts_ppr_per_game": 14.28,
+"rec_tgt_per_game": 8.75
+},
+"2133": {
+"gp": 14.0,
 "gs": 14.0,
-"pts_ppr": 211.6,
-"rec": 59.0,
-"rec_tgt": 98.0,
-"rec_yd": 846.0,
-"rec_td": 11.0,
-"off_snp": 710.0,
-"tm_off_snp": 884.0,
-"pos_rank_ppr": 15,
-"pts_ppr_per_game": 14.11,
-"rec_tgt_per_game": 6.53
+"pts_ppr": 222.9,
+"rec": 60.0,
+"rec_tgt": 114.0,
+"rec_yd": 789.0,
+"rec_td": 14.0,
+"off_snp": 635.0,
+"tm_off_snp": 903.0,
+"pos_rank_ppr": 9,
+"pts_ppr_per_game": 15.92,
+"rec_tgt_per_game": 8.14
+},
+"12713": {
+"gp": 17.0,
+"pts_ppr": 142.0,
+"tm_off_snp": 1035.0,
+"pos_rank_ppr": 10,
+"pts_ppr_per_game": 8.35
+},
+"9756": {
+"gp": 14.0,
+"gs": 12.0,
+"pts_ppr": 135.1,
+"rec": 42.0,
+"rec_tgt": 79.0,
+"rec_yd": 610.0,
+"rec_td": 3.0,
+"rush_att": 2.0,
+"rush_yd": 81.0,
+"rush_td": 1.0,
+"off_snp": 652.0,
+"tm_off_snp": 771.0,
+"pos_rank_ppr": 45,
+"pts_ppr_per_game": 9.65,
+"rec_tgt_per_game": 5.64,
+"rush_att_per_game": 0.14
+},
+"3294": {
+"gp": 17.0,
+"gs": 17.0,
+"pts_ppr": 323.78,
+"rush_att": 53.0,
+"rush_yd": 177.0,
+"rush_td": 2.0,
+"pass_yd": 4552.0,
+"pass_td": 30.0,
+"off_snp": 1107.0,
+"tm_off_snp": 1131.0,
+"pos_rank_ppr": 6,
+"pts_ppr_per_game": 19.05,
+"rush_att_per_game": 3.12
+},
+"5045": {
+"gp": 17.0,
+"gs": 16.0,
+"pts_ppr": 219.7,
+"rec": 74.0,
+"rec_tgt": 124.0,
+"rec_yd": 1017.0,
+"rec_td": 7.0,
+"off_snp": 929.0,
+"tm_off_snp": 1081.0,
+"pos_rank_ppr": 13,
+"pts_ppr_per_game": 12.92,
+"rec_tgt_per_game": 7.29
+},
+"4199": {
+"gp": 12.0,
+"gs": 12.0,
+"pts_ppr": 118.7,
+"rec": 28.0,
+"rec_tgt": 41.0,
+"rec_yd": 199.0,
+"rec_td": 1.0,
+"rush_att": 132.0,
+"rush_yd": 548.0,
+"rush_td": 2.0,
+"off_snp": 366.0,
+"tm_off_snp": 664.0,
+"pos_rank_ppr": 41,
+"pts_ppr_per_game": 9.89,
+"rec_tgt_per_game": 3.42,
+"rush_att_per_game": 11.0
+},
+"2747": {
+"gp": 17.0,
+"pts_ppr": 195.0,
+"tm_off_snp": 1064.0,
+"pos_rank_ppr": 1,
+"pts_ppr_per_game": 11.47
+},
+"8121": {
+"gp": 16.0,
+"gs": 15.0,
+"pts_ppr": 165.4,
+"rec": 55.0,
+"rec_tgt": 85.0,
+"rec_yd": 724.0,
+"rec_td": 6.0,
+"off_snp": 780.0,
+"tm_off_snp": 1000.0,
+"pos_rank_ppr": 37,
+"pts_ppr_per_game": 10.34,
+"rec_tgt_per_game": 5.31
+},
+"7526": {
+"gp": 16.0,
+"gs": 16.0,
+"pts_ppr": 194.12,
+"rec": 64.0,
+"rec_tgt": 100.0,
+"rec_yd": 910.0,
+"rec_td": 6.0,
+"rush_att": 2.0,
+"rush_yd": 28.0,
+"pass_yd": 8.0,
+"off_snp": 724.0,
+"tm_off_snp": 927.0,
+"pos_rank_ppr": 24,
+"pts_ppr_per_game": 12.13,
+"rec_tgt_per_game": 6.25,
+"rush_att_per_game": 0.12
+},
+"8150": {
+"gp": 17.0,
+"gs": 17.0,
+"pts_ppr": 263.3,
+"rec": 36.0,
+"rec_tgt": 50.0,
+"rec_yd": 281.0,
+"rec_td": 3.0,
+"rush_att": 259.0,
+"rush_yd": 1252.0,
+"rush_td": 10.0,
+"off_snp": 725.0,
+"tm_off_snp": 1060.0,
+"pos_rank_ppr": 9,
+"pts_ppr_per_game": 15.49,
+"rec_tgt_per_game": 2.94,
+"rush_att_per_game": 15.24
+},
+"11631": {
+"gp": 14.0,
+"gs": 14.0,
+"pts_ppr": 138.8,
+"rec": 48.0,
+"rec_tgt": 91.0,
+"rec_yd": 707.0,
+"rec_td": 2.0,
+"rush_att": 3.0,
+"rush_yd": 21.0,
+"rush_td": 1.0,
+"off_snp": 706.0,
+"tm_off_snp": 894.0,
+"pos_rank_ppr": 42,
+"pts_ppr_per_game": 9.91,
+"rec_tgt_per_game": 6.5,
+"rush_att_per_game": 0.21
+},
+"13287": {
+"pos_rank_ppr": 396
+},
+"8138": {
+"gp": 17.0,
+"gs": 17.0,
+"pts_ppr": 302.2,
+"rec": 33.0,
+"rec_tgt": 40.0,
+"rec_yd": 291.0,
+"rec_td": 2.0,
+"rush_att": 309.0,
+"rush_yd": 1621.0,
+"rush_td": 12.0,
+"off_snp": 637.0,
+"tm_off_snp": 1057.0,
+"pos_rank_ppr": 6,
+"pts_ppr_per_game": 17.78,
+"rec_tgt_per_game": 2.35,
+"rush_att_per_game": 18.18
+},
+"4983": {
+"gp": 17.0,
+"gs": 17.0,
+"pts_ppr": 170.18,
+"rec": 50.0,
+"rec_tgt": 85.0,
+"rec_yd": 682.0,
+"rec_td": 6.0,
+"rush_att": 15.0,
+"rush_yd": 79.0,
+"rush_td": 1.0,
+"pass_yd": 2.0,
+"pass_td": 1.0,
+"off_snp": 932.0,
+"tm_off_snp": 1099.0,
+"pos_rank_ppr": 35,
+"pts_ppr_per_game": 10.01,
+"rec_tgt_per_game": 5.0,
+"rush_att_per_game": 0.88
+},
+"13346": {
+"pos_rank_ppr": 443
+},
+"12518": {
+"gp": 17.0,
+"gs": 12.0,
+"pts_ppr": 188.5,
+"rec": 76.0,
+"rec_tgt": 112.0,
+"rec_yd": 817.0,
+"rec_td": 4.0,
+"rush_att": 6.0,
+"rush_yd": 8.0,
+"rush_td": 1.0,
+"off_snp": 846.0,
+"tm_off_snp": 1007.0,
+"pos_rank_ppr": 4,
+"pts_ppr_per_game": 11.09,
+"rec_tgt_per_game": 6.59,
+"rush_att_per_game": 0.35
+},
+"11655": {
+"gp": 15.0,
+"gs": 11.0,
+"pts_ppr": 160.8,
+"rec": 36.0,
+"rec_tgt": 48.0,
+"rec_yd": 288.0,
+"rec_td": 2.0,
+"rush_att": 176.0,
+"rush_yd": 740.0,
+"rush_td": 2.0,
+"off_snp": 496.0,
+"tm_off_snp": 923.0,
+"pos_rank_ppr": 28,
+"pts_ppr_per_game": 10.72,
+"rec_tgt_per_game": 3.2,
+"rush_att_per_game": 11.73
 },
 "12526": {
 "gp": 17.0,
@@ -7831,95 +7742,71 @@
 "pts_ppr_per_game": 12.44,
 "rec_tgt_per_game": 7.18
 },
-"PHI": {
+"5927": {
+"gp": 10.0,
+"gs": 10.0,
+"pts_ppr": 114.2,
+"rec": 38.0,
+"rec_tgt": 60.0,
+"rec_yd": 582.0,
+"rec_td": 3.0,
+"off_snp": 385.0,
+"tm_off_snp": 551.0,
+"pos_rank_ppr": 56,
+"pts_ppr_per_game": 11.42,
+"rec_tgt_per_game": 6.0
+},
+"DEN": {
 "gp": 17.0,
-"pts_ppr": 143.0,
-"pos_rank_ppr": 7,
-"pts_ppr_per_game": 8.41
-},
-"13330": {
-"pos_rank_ppr": 463
-},
-"LAR": {
-"gp": 17.0,
-"pts_ppr": 142.0,
-"pos_rank_ppr": 8,
-"pts_ppr_per_game": 8.35
-},
-"5872": {
-"gp": 16.0,
-"gs": 12.0,
-"pts_ppr": 188.2,
-"rec": 72.0,
-"rec_tgt": 99.0,
-"rec_yd": 727.0,
-"rec_td": 5.0,
-"rush_att": 17.0,
-"rush_yd": 75.0,
-"rush_td": 1.0,
-"off_snp": 664.0,
-"tm_off_snp": 918.0,
-"pos_rank_ppr": 25,
-"pts_ppr_per_game": 11.76,
-"rec_tgt_per_game": 6.19,
-"rush_att_per_game": 1.06
-},
-"11786": {
-"gp": 17.0,
-"pts_ppr": 159.0,
-"tm_off_snp": 1089.0,
+"pts_ppr": 147.0,
 "pos_rank_ppr": 5,
-"pts_ppr_per_game": 9.35
+"pts_ppr_per_game": 8.65
 },
-"12469": {
-"gp": 15.0,
-"gs": 2.0,
-"pts_ppr": 87.6,
-"rec": 33.0,
-"rec_tgt": 40.0,
-"rec_yd": 271.0,
-"rec_td": 2.0,
-"rush_att": 65.0,
-"rush_yd": 175.0,
-"off_snp": 223.0,
-"tm_off_snp": 908.0,
-"pos_rank_ppr": 55,
-"pts_ppr_per_game": 5.84,
-"rec_tgt_per_game": 2.67,
-"rush_att_per_game": 4.33
+"8137": {
+"gp": 17.0,
+"gs": 15.0,
+"pts_ppr": 291.9,
+"rec": 93.0,
+"rec_tgt": 137.0,
+"rec_yd": 1429.0,
+"rec_td": 9.0,
+"off_snp": 943.0,
+"tm_off_snp": 1131.0,
+"pos_rank_ppr": 5,
+"pts_ppr_per_game": 17.17,
+"rec_tgt_per_game": 8.06
 },
-"11604": {
-"gp": 12.0,
-"gs": 8.0,
-"pts_ppr": 176.2,
-"rec": 64.0,
-"rec_tgt": 86.0,
-"rec_yd": 680.0,
-"rec_td": 7.0,
-"rush_att": 2.0,
-"rush_yd": 2.0,
-"off_snp": 605.0,
-"tm_off_snp": 708.0,
-"pos_rank_ppr": 11,
-"pts_ppr_per_game": 14.68,
-"rec_tgt_per_game": 7.17,
-"rush_att_per_game": 0.17
+"8205": {
+"gp": 13.0,
+"gs": 12.0,
+"pts_ppr": 87.3,
+"rec": 19.0,
+"rec_tgt": 26.0,
+"rec_yd": 101.0,
+"rec_td": 1.0,
+"rush_att": 118.0,
+"rush_yd": 462.0,
+"rush_td": 1.0,
+"off_snp": 424.0,
+"tm_off_snp": 823.0,
+"pos_rank_ppr": 56,
+"pts_ppr_per_game": 6.72,
+"rec_tgt_per_game": 2.0,
+"rush_att_per_game": 9.08
 },
-"9487": {
-"gp": 16.0,
-"gs": 7.0,
-"pts_ppr": 184.7,
-"rec": 58.0,
-"rec_tgt": 95.0,
-"rec_yd": 847.0,
-"rec_td": 5.0,
-"rush_att": 7.0,
-"off_snp": 627.0,
-"tm_off_snp": 1025.0,
-"pos_rank_ppr": 27,
-"pts_ppr_per_game": 11.54,
-"rec_tgt_per_game": 5.94,
-"rush_att_per_game": 0.44
+"2449": {
+"gp": 17.0,
+"gs": 17.0,
+"pts_ppr": 210.3,
+"rec": 85.0,
+"rec_tgt": 102.0,
+"rec_yd": 1013.0,
+"rec_td": 4.0,
+"off_snp": 560.0,
+"tm_off_snp": 1035.0,
+"pos_rank_ppr": 17,
+"pts_ppr_per_game": 12.37,
+"rec_tgt_per_game": 6.0
 },
 "4046": {
 "gp": 14.0,
@@ -7940,447 +7827,6 @@
 "rec_tgt_per_game": 0.07,
 "rush_att_per_game": 4.57
 },
-"7588": {
-"gp": 16.0,
-"gs": 16.0,
-"pts_ppr": 242.8,
-"rec": 35.0,
-"rec_tgt": 51.0,
-"rec_yd": 137.0,
-"rec_td": 2.0,
-"rush_att": 252.0,
-"rush_yd": 1201.0,
-"rush_td": 11.0,
-"off_snp": 769.0,
-"tm_off_snp": 1131.0,
-"pos_rank_ppr": 12,
-"pts_ppr_per_game": 15.18,
-"rec_tgt_per_game": 3.19,
-"rush_att_per_game": 15.75
-},
-"4034": {
-"gp": 17.0,
-"gs": 17.0,
-"pts_ppr": 416.6,
-"rec": 102.0,
-"rec_tgt": 129.0,
-"rec_yd": 924.0,
-"rec_td": 7.0,
-"rush_att": 311.0,
-"rush_yd": 1202.0,
-"rush_td": 10.0,
-"off_snp": 932.0,
-"tm_off_snp": 1123.0,
-"pos_rank_ppr": 1,
-"pts_ppr_per_game": 24.51,
-"rec_tgt_per_game": 7.59,
-"rush_att_per_game": 18.29
-},
-"12506": {
-"gp": 16.0,
-"gs": 13.0,
-"pts_ppr": 186.4,
-"rec": 72.0,
-"rec_tgt": 107.0,
-"rec_yd": 731.0,
-"rec_td": 6.0,
-"rush_att": 7.0,
-"rush_yd": 13.0,
-"rush_td": 1.0,
-"off_snp": 786.0,
-"tm_off_snp": 1031.0,
-"pos_rank_ppr": 6,
-"pts_ppr_per_game": 11.65,
-"rec_tgt_per_game": 6.69,
-"rush_att_per_game": 0.44
-},
-"12533": {
-"gp": 17.0,
-"gs": 7.0,
-"pts_ppr": 140.3,
-"rec": 9.0,
-"rec_tgt": 13.0,
-"rec_yd": 68.0,
-"rush_att": 175.0,
-"rush_yd": 805.0,
-"rush_td": 8.0,
-"off_snp": 381.0,
-"tm_off_snp": 985.0,
-"pos_rank_ppr": 33,
-"pts_ppr_per_game": 8.25,
-"rec_tgt_per_game": 0.76,
-"rush_att_per_game": 10.29
-},
-"8161": {
-"gp": 4.0,
-"gs": 1.0,
-"pts_ppr": 51.18,
-"rush_att": 22.0,
-"rush_yd": 123.0,
-"rush_td": 2.0,
-"pass_yd": 422.0,
-"pass_td": 3.0,
-"off_snp": 98.0,
-"tm_off_snp": 1000.0,
-"pos_rank_ppr": 45,
-"pts_ppr_per_game": 12.79,
-"rush_att_per_game": 5.5
-},
-"JAX": {
-"gp": 17.0,
-"pts_ppr": 148.0,
-"pos_rank_ppr": 4,
-"pts_ppr_per_game": 8.71
-},
-"6904": {
-"gp": 16.0,
-"gs": 16.0,
-"pts_ppr": 305.06,
-"rush_att": 105.0,
-"rush_yd": 421.0,
-"rush_td": 8.0,
-"pass_yd": 3224.0,
-"pass_td": 25.0,
-"off_snp": 965.0,
-"tm_off_snp": 988.0,
-"pos_rank_ppr": 8,
-"pts_ppr_per_game": 19.07,
-"rush_att_per_game": 6.56
-},
-"7594": {
-"gp": 15.0,
-"gs": 6.0,
-"pts_ppr": 125.4,
-"rec": 30.0,
-"rec_tgt": 39.0,
-"rec_yd": 223.0,
-"rec_td": 3.0,
-"rush_att": 134.0,
-"rush_yd": 511.0,
-"rush_td": 1.0,
-"off_snp": 432.0,
-"tm_off_snp": 924.0,
-"pos_rank_ppr": 38,
-"pts_ppr_per_game": 8.36,
-"rec_tgt_per_game": 2.6,
-"rush_att_per_game": 8.93
-},
-"6806": {
-"gp": 10.0,
-"gs": 9.0,
-"pts_ppr": 115.9,
-"rec": 11.0,
-"rec_tgt": 14.0,
-"rec_yd": 37.0,
-"rush_att": 153.0,
-"rush_yd": 772.0,
-"rush_td": 4.0,
-"off_snp": 340.0,
-"tm_off_snp": 669.0,
-"pos_rank_ppr": 43,
-"pts_ppr_per_game": 11.59,
-"rec_tgt_per_game": 1.4,
-"rush_att_per_game": 15.3
-},
-"11624": {
-"gp": 14.0,
-"gs": 13.0,
-"pts_ppr": 109.9,
-"rec": 42.0,
-"rec_tgt": 73.0,
-"rec_yd": 532.0,
-"rec_td": 1.0,
-"rush_att": 11.0,
-"rush_yd": 87.0,
-"off_snp": 645.0,
-"tm_off_snp": 917.0,
-"pos_rank_ppr": 59,
-"pts_ppr_per_game": 7.85,
-"rec_tgt_per_game": 5.21,
-"rush_att_per_game": 0.79
-},
-"7569": {
-"gp": 15.0,
-"gs": 15.0,
-"pts_ppr": 226.2,
-"rec": 71.0,
-"rec_tgt": 120.0,
-"rec_yd": 1117.0,
-"rec_td": 6.0,
-"rush_att": 2.0,
-"rush_yd": 15.0,
-"rush_td": 1.0,
-"off_snp": 778.0,
-"tm_off_snp": 1012.0,
-"pos_rank_ppr": 8,
-"pts_ppr_per_game": 15.08,
-"rec_tgt_per_game": 8.0,
-"rush_att_per_game": 0.13
-},
-"10236": {
-"gp": 12.0,
-"gs": 4.0,
-"pts_ppr": 126.1,
-"rec": 39.0,
-"rec_tgt": 49.0,
-"rec_yd": 571.0,
-"rec_td": 5.0,
-"off_snp": 292.0,
-"tm_off_snp": 728.0,
-"pos_rank_ppr": 20,
-"pts_ppr_per_game": 10.51,
-"rec_tgt_per_game": 4.08
-},
-"9753": {
-"gp": 16.0,
-"pts_ppr": 181.4,
-"rec": 20.0,
-"rec_tgt": 24.0,
-"rec_yd": 144.0,
-"rush_att": 184.0,
-"rush_yd": 730.0,
-"rush_td": 12.0,
-"off_snp": 489.0,
-"tm_off_snp": 1007.0,
-"pos_rank_ppr": 24,
-"pts_ppr_per_game": 11.34,
-"rec_tgt_per_game": 1.5,
-"rush_att_per_game": 11.5
-},
-"11646": {
-"gp": 11.0,
-"gs": 3.0,
-"pts_ppr": 90.4,
-"rec": 33.0,
-"rec_tgt": 43.0,
-"rec_yd": 394.0,
-"rec_td": 3.0,
-"off_snp": 439.0,
-"tm_off_snp": 648.0,
-"pos_rank_ppr": 69,
-"pts_ppr_per_game": 8.22,
-"rec_tgt_per_game": 3.91
-},
-"8126": {
-"gp": 16.0,
-"gs": 15.0,
-"pts_ppr": 217.9,
-"rec": 92.0,
-"rec_tgt": 140.0,
-"rec_yd": 1014.0,
-"rec_td": 4.0,
-"rush_att": 3.0,
-"rush_yd": 5.0,
-"off_snp": 973.0,
-"tm_off_snp": 1072.0,
-"pos_rank_ppr": 14,
-"pts_ppr_per_game": 13.62,
-"rec_tgt_per_game": 8.75,
-"rush_att_per_game": 0.19
-},
-"11533": {
-"gp": 17.0,
-"pts_ppr": 180.6,
-"rush_att": 1.0,
-"rush_yd": 6.0,
-"tm_off_snp": 1131.0,
-"pos_rank_ppr": 3,
-"pts_ppr_per_game": 10.62,
-"rush_att_per_game": 0.06
-},
-"9226": {
-"gp": 16.0,
-"gs": 16.0,
-"pts_ppr": 322.8,
-"rec": 67.0,
-"rec_tgt": 85.0,
-"rec_yd": 488.0,
-"rec_td": 4.0,
-"rush_att": 238.0,
-"rush_yd": 1350.0,
-"rush_td": 8.0,
-"off_snp": 697.0,
-"tm_off_snp": 927.0,
-"pos_rank_ppr": 5,
-"pts_ppr_per_game": 20.18,
-"rec_tgt_per_game": 5.31,
-"rush_att_per_game": 14.88
-},
-"11566": {
-"gp": 7.0,
-"gs": 7.0,
-"pts_ppr": 117.28,
-"rush_att": 58.0,
-"rush_yd": 278.0,
-"rush_td": 2.0,
-"pass_yd": 1262.0,
-"pass_td": 8.0,
-"off_snp": 405.0,
-"tm_off_snp": 447.0,
-"pos_rank_ppr": 34,
-"pts_ppr_per_game": 16.75,
-"rush_att_per_game": 8.29
-},
-"4035": {
-"gp": 11.0,
-"gs": 11.0,
-"pts_ppr": 100.7,
-"rec": 33.0,
-"rec_tgt": 39.0,
-"rec_yd": 186.0,
-"rush_att": 131.0,
-"rush_yd": 471.0,
-"rush_td": 1.0,
-"off_snp": 457.0,
-"tm_off_snp": 725.0,
-"pos_rank_ppr": 46,
-"pts_ppr_per_game": 9.15,
-"rec_tgt_per_game": 3.55,
-"rush_att_per_game": 11.91
-},
-"5045": {
-"gp": 17.0,
-"gs": 16.0,
-"pts_ppr": 219.7,
-"rec": 74.0,
-"rec_tgt": 124.0,
-"rec_yd": 1017.0,
-"rec_td": 7.0,
-"off_snp": 929.0,
-"tm_off_snp": 1081.0,
-"pos_rank_ppr": 13,
-"pts_ppr_per_game": 12.92,
-"rec_tgt_per_game": 7.29
-},
-"12545": {
-"gp": 11.0,
-"gs": 9.0,
-"pts_ppr": 163.96,
-"rush_att": 45.0,
-"rush_yd": 186.0,
-"rush_td": 3.0,
-"pass_yd": 2384.0,
-"pass_td": 10.0,
-"off_snp": 537.0,
-"tm_off_snp": 1056.0,
-"pos_rank_ppr": 26,
-"pts_ppr_per_game": 14.91,
-"rush_att_per_game": 4.09
-},
-"13279": {
-"pos_rank_ppr": 785
-},
-"8131": {
-"gp": 14.0,
-"gs": 7.0,
-"pts_ppr": 61.7,
-"rec": 27.0,
-"rec_tgt": 36.0,
-"rec_yd": 307.0,
-"rec_td": 1.0,
-"off_snp": 462.0,
-"tm_off_snp": 799.0,
-"pos_rank_ppr": 45,
-"pts_ppr_per_game": 4.41,
-"rec_tgt_per_game": 2.57
-},
-"2449": {
-"gp": 17.0,
-"gs": 17.0,
-"pts_ppr": 210.3,
-"rec": 85.0,
-"rec_tgt": 102.0,
-"rec_yd": 1013.0,
-"rec_td": 4.0,
-"off_snp": 560.0,
-"tm_off_snp": 1035.0,
-"pos_rank_ppr": 17,
-"pts_ppr_per_game": 12.37,
-"rec_tgt_per_game": 6.0
-},
-"7547": {
-"gp": 17.0,
-"gs": 17.0,
-"pts_ppr": 324.0,
-"rec": 117.0,
-"rec_tgt": 172.0,
-"rec_yd": 1401.0,
-"rec_td": 11.0,
-"rush_att": 3.0,
-"rush_yd": 9.0,
-"off_snp": 870.0,
-"tm_off_snp": 1026.0,
-"pos_rank_ppr": 3,
-"pts_ppr_per_game": 19.06,
-"rec_tgt_per_game": 10.12,
-"rush_att_per_game": 0.18
-},
-"13287": {
-"pos_rank_ppr": 396
-},
-"5927": {
-"gp": 10.0,
-"gs": 10.0,
-"pts_ppr": 114.2,
-"rec": 38.0,
-"rec_tgt": 60.0,
-"rec_yd": 582.0,
-"rec_td": 3.0,
-"off_snp": 385.0,
-"tm_off_snp": 551.0,
-"pos_rank_ppr": 56,
-"pts_ppr_per_game": 11.42,
-"rec_tgt_per_game": 6.0
-},
-"11610": {
-"gp": 17.0,
-"gs": 6.0,
-"pts_ppr": 116.7,
-"rec": 46.0,
-"rec_tgt": 65.0,
-"rec_yd": 317.0,
-"rec_td": 3.0,
-"rush_att": 17.0,
-"rush_yd": 110.0,
-"rush_td": 1.0,
-"off_snp": 523.0,
-"tm_off_snp": 927.0,
-"pos_rank_ppr": 54,
-"pts_ppr_per_game": 6.86,
-"rec_tgt_per_game": 3.82,
-"rush_att_per_game": 1.0
-},
-"6786": {
-"gp": 14.0,
-"gs": 13.0,
-"pts_ppr": 200.9,
-"rec": 75.0,
-"rec_tgt": 117.0,
-"rec_yd": 1077.0,
-"rec_td": 3.0,
-"rush_att": 1.0,
-"rush_yd": 2.0,
-"off_snp": 707.0,
-"tm_off_snp": 947.0,
-"pos_rank_ppr": 22,
-"pts_ppr_per_game": 14.35,
-"rec_tgt_per_game": 8.36,
-"rush_att_per_game": 0.07
-},
-"11628": {
-"gp": 12.0,
-"gs": 10.0,
-"pts_ppr": 127.8,
-"rec": 41.0,
-"rec_tgt": 73.0,
-"rec_yd": 608.0,
-"rec_td": 4.0,
-"off_snp": 566.0,
-"tm_off_snp": 788.0,
-"pos_rank_ppr": 49,
-"pts_ppr_per_game": 10.65,
-"rec_tgt_per_game": 6.08
-},
 "8136": {
 "gp": 17.0,
 "gs": 8.0,
@@ -8398,130 +7844,39 @@
 "rec_tgt_per_game": 2.65,
 "rush_att_per_game": 7.76
 },
-"12508": {
-"gp": 14.0,
-"gs": 12.0,
-"pts_ppr": 246.58,
-"rush_att": 86.0,
-"rush_yd": 487.0,
-"rush_td": 9.0,
-"pass_yd": 2272.0,
-"pass_td": 15.0,
-"off_snp": 699.0,
-"tm_off_snp": 918.0,
-"pos_rank_ppr": 14,
-"pts_ppr_per_game": 17.61,
-"rush_att_per_game": 6.14
-},
-"12530": {
-"gp": 7.0,
-"gs": 4.0,
-"pts_ppr": 63.8,
-"rec": 28.0,
-"rec_tgt": 45.0,
-"rec_yd": 298.0,
-"rec_td": 1.0,
-"rush_att": 1.0,
-"off_snp": 324.0,
-"tm_off_snp": 486.0,
-"pos_rank_ppr": 97,
-"pts_ppr_per_game": 9.11,
-"rec_tgt_per_game": 6.43,
-"rush_att_per_game": 0.14
-},
-"5859": {
-"gp": 15.0,
-"gs": 15.0,
-"pts_ppr": 220.3,
-"rec": 78.0,
-"rec_tgt": 121.0,
-"rec_yd": 1003.0,
-"rec_td": 7.0,
-"off_snp": 843.0,
-"tm_off_snp": 931.0,
-"pos_rank_ppr": 11,
-"pts_ppr_per_game": 14.69,
-"rec_tgt_per_game": 8.07
-},
-"9225": {
-"gp": 17.0,
-"gs": 1.0,
-"pts_ppr": 53.8,
-"rec": 3.0,
-"rec_tgt": 4.0,
-"rec_yd": 32.0,
-"rush_att": 63.0,
-"rush_yd": 356.0,
-"rush_td": 2.0,
-"off_snp": 101.0,
-"tm_off_snp": 991.0,
-"pos_rank_ppr": 68,
-"pts_ppr_per_game": 3.16,
-"rec_tgt_per_game": 0.24,
-"rush_att_per_game": 3.71
-},
-"10222": {
-"gp": 7.0,
-"gs": 3.0,
-"pts_ppr": 48.5,
-"rec": 19.0,
-"rec_tgt": 22.0,
-"rec_yd": 207.0,
-"rec_td": 1.0,
-"rush_att": 3.0,
-"rush_yd": 28.0,
-"off_snp": 161.0,
-"tm_off_snp": 354.0,
-"pos_rank_ppr": 115,
-"pts_ppr_per_game": 6.93,
-"rec_tgt_per_game": 3.14,
-"rush_att_per_game": 0.43
-},
-"BAL": {
-"gp": 17.0,
-"pts_ppr": 106.0,
-"pos_rank_ppr": 17,
-"pts_ppr_per_game": 6.24
-},
-"7564": {
+"8408": {
 "gp": 16.0,
-"gs": 16.0,
-"pts_ppr": 313.6,
-"rec": 125.0,
-"rec_tgt": 185.0,
-"rec_yd": 1412.0,
-"rec_td": 8.0,
-"rush_att": 3.0,
-"rush_yd": 14.0,
-"off_snp": 919.0,
-"tm_off_snp": 978.0,
-"pos_rank_ppr": 4,
-"pts_ppr_per_game": 19.6,
-"rec_tgt_per_game": 11.56,
-"rush_att_per_game": 0.19
+"gs": 5.0,
+"pts_ppr": 128.9,
+"rec": 14.0,
+"rec_tgt": 16.0,
+"rec_yd": 51.0,
+"rush_att": 159.0,
+"rush_yd": 758.0,
+"rush_td": 6.0,
+"off_snp": 386.0,
+"tm_off_snp": 880.0,
+"pos_rank_ppr": 36,
+"pts_ppr_per_game": 8.06,
+"rec_tgt_per_game": 1.0,
+"rush_att_per_game": 9.94
 },
-"SEA": {
-"gp": 17.0,
-"pts_ppr": 181.0,
-"pos_rank_ppr": 1,
-"pts_ppr_per_game": 10.65
-},
-"11563": {
+"6794": {
 "gp": 17.0,
 "gs": 17.0,
-"pts_ppr": 315.84,
-"rec_tgt": 1.0,
-"rush_att": 83.0,
-"rush_yd": 356.0,
-"rush_td": 5.0,
-"pass_yd": 3931.0,
-"pass_td": 25.0,
-"off_snp": 1077.0,
-"tm_off_snp": 1081.0,
-"pos_rank_ppr": 7,
-"pts_ppr_per_game": 18.58,
-"rec_tgt_per_game": 0.06,
-"rush_att_per_game": 4.88
+"pts_ppr": 201.5,
+"rec": 84.0,
+"rec_tgt": 141.0,
+"rec_yd": 1048.0,
+"rec_td": 2.0,
+"rush_att": 2.0,
+"rush_yd": 7.0,
+"off_snp": 890.0,
+"tm_off_snp": 934.0,
+"pos_rank_ppr": 21,
+"pts_ppr_per_game": 11.85,
+"rec_tgt_per_game": 8.29,
+"rush_att_per_game": 0.12
 },
 "9997": {
 "gp": 17.0,
@@ -8541,23 +7896,23 @@
 "rec_tgt_per_game": 6.94,
 "rush_att_per_game": 0.59
 },
-"7567": {
-"gp": 17.0,
-"gs": 2.0,
-"pts_ppr": 222.3,
-"rec": 73.0,
-"rec_tgt": 85.0,
-"rec_yd": 486.0,
+"11584": {
+"gp": 10.0,
+"gs": 9.0,
+"pts_ppr": 138.5,
+"rec": 30.0,
+"rec_tgt": 35.0,
+"rec_yd": 277.0,
 "rec_td": 3.0,
-"rush_att": 114.0,
-"rush_yd": 537.0,
-"rush_td": 5.0,
-"off_snp": 467.0,
-"tm_off_snp": 956.0,
-"pos_rank_ppr": 16,
-"pts_ppr_per_game": 13.08,
-"rec_tgt_per_game": 5.0,
-"rush_att_per_game": 6.71
+"rush_att": 173.0,
+"rush_yd": 588.0,
+"rush_td": 1.0,
+"off_snp": 421.0,
+"tm_off_snp": 684.0,
+"pos_rank_ppr": 34,
+"pts_ppr_per_game": 13.85,
+"rec_tgt_per_game": 3.5,
+"rush_att_per_game": 17.3
 },
 "9754": {
 "gp": 14.0,
@@ -8576,110 +7931,205 @@
 "rec_tgt_per_game": 6.07,
 "rush_att_per_game": 0.14
 },
-"12512": {
-"gp": 15.0,
-"gs": 14.0,
-"pts_ppr": 169.8,
-"rec": 26.0,
-"rec_tgt": 36.0,
-"rec_yd": 171.0,
-"rush_att": 230.0,
-"rush_yd": 827.0,
-"rush_td": 7.0,
-"off_snp": 452.0,
-"tm_off_snp": 903.0,
-"pos_rank_ppr": 26,
-"pts_ppr_per_game": 11.32,
-"rec_tgt_per_game": 2.4,
-"rush_att_per_game": 15.33
-},
-"13281": {
-"pos_rank_ppr": 644
-},
-"7553": {
-"gp": 17.0,
-"gs": 17.0,
-"pts_ppr": 210.8,
-"rec": 88.0,
-"rec_tgt": 118.0,
-"rec_yd": 928.0,
-"rec_td": 5.0,
-"off_snp": 903.0,
-"tm_off_snp": 1033.0,
-"pos_rank_ppr": 2,
-"pts_ppr_per_game": 12.4,
-"rec_tgt_per_game": 6.94
-},
-"11620": {
+"11628": {
 "gp": 12.0,
-"gs": 12.0,
-"pts_ppr": 146.1,
-"rec": 44.0,
-"rec_tgt": 90.0,
-"rec_yd": 661.0,
-"rec_td": 6.0,
-"off_snp": 733.0,
-"tm_off_snp": 899.0,
-"pos_rank_ppr": 41,
-"pts_ppr_per_game": 12.17,
-"rec_tgt_per_game": 7.5
+"gs": 10.0,
+"pts_ppr": 127.8,
+"rec": 41.0,
+"rec_tgt": 73.0,
+"rec_yd": 608.0,
+"rec_td": 4.0,
+"off_snp": 566.0,
+"tm_off_snp": 788.0,
+"pos_rank_ppr": 49,
+"pts_ppr_per_game": 10.65,
+"rec_tgt_per_game": 6.08
 },
-"13726": {
-"pos_rank_ppr": 634
-},
-"7526": {
+"7564": {
 "gp": 16.0,
 "gs": 16.0,
-"pts_ppr": 194.12,
-"rec": 64.0,
-"rec_tgt": 100.0,
-"rec_yd": 910.0,
+"pts_ppr": 313.6,
+"rec": 125.0,
+"rec_tgt": 185.0,
+"rec_yd": 1412.0,
+"rec_td": 8.0,
+"rush_att": 3.0,
+"rush_yd": 14.0,
+"off_snp": 919.0,
+"tm_off_snp": 978.0,
+"pos_rank_ppr": 4,
+"pts_ppr_per_game": 19.6,
+"rec_tgt_per_game": 11.56,
+"rush_att_per_game": 0.19
+},
+"9226": {
+"gp": 16.0,
+"gs": 16.0,
+"pts_ppr": 322.8,
+"rec": 67.0,
+"rec_tgt": 85.0,
+"rec_yd": 488.0,
+"rec_td": 4.0,
+"rush_att": 238.0,
+"rush_yd": 1350.0,
+"rush_td": 8.0,
+"off_snp": 697.0,
+"tm_off_snp": 927.0,
+"pos_rank_ppr": 5,
+"pts_ppr_per_game": 20.18,
+"rec_tgt_per_game": 5.31,
+"rush_att_per_game": 14.88
+},
+"8146": {
+"gp": 7.0,
+"gs": 7.0,
+"pts_ppr": 99.5,
+"rec": 36.0,
+"rec_tgt": 59.0,
+"rec_yd": 395.0,
+"rec_td": 4.0,
+"off_snp": 383.0,
+"tm_off_snp": 431.0,
+"pos_rank_ppr": 62,
+"pts_ppr_per_game": 14.21,
+"rec_tgt_per_game": 8.43
+},
+"11583": {
+"pos_rank_ppr": 664
+},
+"12534": {
+"gp": 17.0,
+"gs": 1.0,
+"pts_ppr": 146.7,
+"rec": 18.0,
+"rec_tgt": 30.0,
+"rec_yd": 164.0,
+"rush_att": 169.0,
+"rush_yd": 783.0,
+"rush_td": 5.0,
+"off_snp": 455.0,
+"tm_off_snp": 1099.0,
+"pos_rank_ppr": 30,
+"pts_ppr_per_game": 8.63,
+"rec_tgt_per_game": 1.76,
+"rush_att_per_game": 9.94
+},
+"5859": {
+"gp": 15.0,
+"gs": 15.0,
+"pts_ppr": 220.3,
+"rec": 78.0,
+"rec_tgt": 121.0,
+"rec_yd": 1003.0,
+"rec_td": 7.0,
+"off_snp": 843.0,
+"tm_off_snp": 931.0,
+"pos_rank_ppr": 11,
+"pts_ppr_per_game": 14.69,
+"rec_tgt_per_game": 8.07
+},
+"8126": {
+"gp": 16.0,
+"gs": 15.0,
+"pts_ppr": 217.9,
+"rec": 92.0,
+"rec_tgt": 140.0,
+"rec_yd": 1014.0,
+"rec_td": 4.0,
+"rush_att": 3.0,
+"rush_yd": 5.0,
+"off_snp": 973.0,
+"tm_off_snp": 1072.0,
+"pos_rank_ppr": 14,
+"pts_ppr_per_game": 13.62,
+"rec_tgt_per_game": 8.75,
+"rush_att_per_game": 0.19
+},
+"2216": {
+"gp": 8.0,
+"gs": 8.0,
+"pts_ppr": 84.8,
+"rec": 30.0,
+"rec_tgt": 61.0,
+"rec_yd": 368.0,
+"rec_td": 3.0,
+"off_snp": 357.0,
+"tm_off_snp": 546.0,
+"pos_rank_ppr": 76,
+"pts_ppr_per_game": 10.6,
+"rec_tgt_per_game": 7.62
+},
+"12474": {
+"gp": 16.0,
+"gs": 8.0,
+"pts_ppr": 151.1,
+"rec": 24.0,
+"rec_tgt": 36.0,
+"rec_yd": 208.0,
+"rec_td": 3.0,
+"rush_att": 196.0,
+"rush_yd": 703.0,
+"rush_td": 2.0,
+"off_snp": 540.0,
+"tm_off_snp": 1027.0,
+"pos_rank_ppr": 29,
+"pts_ppr_per_game": 9.44,
+"rec_tgt_per_game": 2.25,
+"rush_att_per_game": 12.25
+},
+"12517": {
+"gp": 16.0,
+"gs": 11.0,
+"pts_ppr": 165.1,
+"rec": 58.0,
+"rec_tgt": 82.0,
+"rec_yd": 713.0,
+"rec_td": 6.0,
+"rush_att": 1.0,
+"rush_yd": -2.0,
+"off_snp": 651.0,
+"tm_off_snp": 1031.0,
+"pos_rank_ppr": 12,
+"pts_ppr_per_game": 10.32,
+"rec_tgt_per_game": 5.12,
+"rush_att_per_game": 0.06
+},
+"LAC": {
+"gp": 17.0,
+"pts_ppr": 114.0,
+"pos_rank_ppr": 15,
+"pts_ppr_per_game": 6.71
+},
+"6819": {
+"gp": 17.0,
+"gs": 16.0,
+"pts_ppr": 202.4,
+"rec": 80.0,
+"rec_tgt": 111.0,
+"rec_yd": 784.0,
+"rec_td": 7.0,
+"off_snp": 860.0,
+"tm_off_snp": 1007.0,
+"pos_rank_ppr": 18,
+"pts_ppr_per_game": 11.91,
+"rec_tgt_per_game": 6.53
+},
+"12514": {
+"gp": 17.0,
+"gs": 13.0,
+"pts_ppr": 195.7,
+"rec": 63.0,
+"rec_tgt": 127.0,
+"rec_yd": 938.0,
 "rec_td": 6.0,
 "rush_att": 2.0,
-"rush_yd": 28.0,
-"pass_yd": 8.0,
-"off_snp": 724.0,
-"tm_off_snp": 927.0,
-"pos_rank_ppr": 24,
-"pts_ppr_per_game": 12.13,
-"rec_tgt_per_game": 6.25,
+"rush_yd": 9.0,
+"off_snp": 886.0,
+"tm_off_snp": 1134.0,
+"pos_rank_ppr": 23,
+"pts_ppr_per_game": 11.51,
+"rec_tgt_per_game": 7.47,
 "rush_att_per_game": 0.12
-},
-"12489": {
-"gp": 17.0,
-"gs": 7.0,
-"pts_ppr": 206.6,
-"rec": 47.0,
-"rec_tgt": 58.0,
-"rec_yd": 356.0,
-"rec_td": 5.0,
-"rush_att": 146.0,
-"rush_yd": 540.0,
-"rush_td": 7.0,
-"off_snp": 448.0,
-"tm_off_snp": 1081.0,
-"pos_rank_ppr": 20,
-"pts_ppr_per_game": 12.15,
-"rec_tgt_per_game": 3.41,
-"rush_att_per_game": 8.59
-},
-"12507": {
-"gp": 9.0,
-"gs": 6.0,
-"pts_ppr": 135.7,
-"rec": 32.0,
-"rec_tgt": 35.0,
-"rec_yd": 192.0,
-"rec_td": 1.0,
-"rush_att": 124.0,
-"rush_yd": 545.0,
-"rush_td": 4.0,
-"off_snp": 384.0,
-"tm_off_snp": 606.0,
-"pos_rank_ppr": 35,
-"pts_ppr_per_game": 15.08,
-"rec_tgt_per_game": 3.89,
-"rush_att_per_game": 13.78
 },
 "5892": {
 "gp": 17.0,
@@ -8699,6 +8149,87 @@
 "rec_tgt_per_game": 1.71,
 "rush_att_per_game": 9.29
 },
+"4037": {
+"gp": 9.0,
+"gs": 6.0,
+"pts_ppr": 83.0,
+"rec": 33.0,
+"rec_tgt": 51.0,
+"rec_yd": 360.0,
+"rec_td": 2.0,
+"off_snp": 428.0,
+"tm_off_snp": 605.0,
+"pos_rank_ppr": 78,
+"pts_ppr_per_game": 9.22,
+"rec_tgt_per_game": 5.67
+},
+"11586": {
+"gp": 17.0,
+"pts_ppr": 122.2,
+"rec": 8.0,
+"rec_tgt": 14.0,
+"rec_yd": 36.0,
+"rush_att": 145.0,
+"rush_yd": 746.0,
+"rush_td": 6.0,
+"off_snp": 307.0,
+"tm_off_snp": 1060.0,
+"pos_rank_ppr": 40,
+"pts_ppr_per_game": 7.19,
+"rec_tgt_per_game": 0.82,
+"rush_att_per_game": 8.53
+},
+"9224": {
+"gp": 17.0,
+"gs": 17.0,
+"pts_ppr": 282.6,
+"rec": 69.0,
+"rec_tgt": 88.0,
+"rec_yd": 437.0,
+"rec_td": 5.0,
+"rush_att": 232.0,
+"rush_yd": 1019.0,
+"rush_td": 6.0,
+"off_snp": 700.0,
+"tm_off_snp": 1043.0,
+"pos_rank_ppr": 7,
+"pts_ppr_per_game": 16.62,
+"rec_tgt_per_game": 5.18,
+"rush_att_per_game": 13.65
+},
+"12529": {
+"gp": 17.0,
+"gs": 4.0,
+"pts_ppr": 206.2,
+"rec": 35.0,
+"rec_tgt": 42.0,
+"rec_yd": 221.0,
+"rec_td": 1.0,
+"rush_att": 180.0,
+"rush_yd": 911.0,
+"rush_td": 9.0,
+"off_snp": 477.0,
+"tm_off_snp": 1035.0,
+"pos_rank_ppr": 21,
+"pts_ppr_per_game": 12.13,
+"rec_tgt_per_game": 2.47,
+"rush_att_per_game": 10.59
+},
+"4984": {
+"gp": 17.0,
+"gs": 17.0,
+"pts_ppr": 374.62,
+"rush_att": 112.0,
+"rush_yd": 579.0,
+"rush_td": 14.0,
+"pass_yd": 3668.0,
+"pass_td": 25.0,
+"off_snp": 1033.0,
+"tm_off_snp": 1057.0,
+"pos_rank_ppr": 1,
+"pts_ppr_per_game": 22.04,
+"rush_att_per_game": 6.59
+},
 "8151": {
 "gp": 17.0,
 "gs": 17.0,
@@ -8716,116 +8247,262 @@
 "rec_tgt_per_game": 2.12,
 "rush_att_per_game": 13.0
 },
-"11581": {
-"pos_rank_ppr": 666
+"13293": {
+"pos_rank_ppr": 441
 },
-"7021": {
-"gp": 17.0,
-"gs": 11.0,
-"pts_ppr": 216.3,
-"rec": 39.0,
-"rec_tgt": 50.0,
-"rec_yd": 297.0,
-"rec_td": 1.0,
-"rush_att": 236.0,
-"rush_yd": 1076.0,
-"rush_td": 6.0,
-"off_snp": 591.0,
-"tm_off_snp": 1061.0,
-"pos_rank_ppr": 18,
-"pts_ppr_per_game": 12.72,
-"rec_tgt_per_game": 2.94,
-"rush_att_per_game": 13.88
-},
-"8146": {
-"gp": 7.0,
-"gs": 7.0,
-"pts_ppr": 99.5,
-"rec": 36.0,
-"rec_tgt": 59.0,
-"rec_yd": 395.0,
-"rec_td": 4.0,
-"off_snp": 383.0,
-"tm_off_snp": 431.0,
-"pos_rank_ppr": 62,
-"pts_ppr_per_game": 14.21,
-"rec_tgt_per_game": 8.43
-},
-"9756": {
-"gp": 14.0,
+"11620": {
+"gp": 12.0,
 "gs": 12.0,
-"pts_ppr": 135.1,
-"rec": 42.0,
-"rec_tgt": 79.0,
-"rec_yd": 610.0,
-"rec_td": 3.0,
-"rush_att": 2.0,
-"rush_yd": 81.0,
-"rush_td": 1.0,
-"off_snp": 652.0,
-"tm_off_snp": 771.0,
-"pos_rank_ppr": 45,
-"pts_ppr_per_game": 9.65,
-"rec_tgt_per_game": 5.64,
-"rush_att_per_game": 0.14
+"pts_ppr": 146.1,
+"rec": 44.0,
+"rec_tgt": 90.0,
+"rec_yd": 661.0,
+"rec_td": 6.0,
+"off_snp": 733.0,
+"tm_off_snp": 899.0,
+"pos_rank_ppr": 41,
+"pts_ppr_per_game": 12.17,
+"rec_tgt_per_game": 7.5
 },
-"CLE": {
-"gp": 17.0,
-"pts_ppr": 144.0,
-"pos_rank_ppr": 6,
-"pts_ppr_per_game": 8.47
+"12501": {
+"gp": 14.0,
+"gs": 5.0,
+"pts_ppr": 70.0,
+"rec": 29.0,
+"rec_tgt": 44.0,
+"rec_yd": 361.0,
+"rush_att": 10.0,
+"rush_yd": 49.0,
+"off_snp": 401.0,
+"tm_off_snp": 803.0,
+"pos_rank_ppr": 89,
+"pts_ppr_per_game": 5.0,
+"rec_tgt_per_game": 3.14,
+"rush_att_per_game": 0.71
 },
-"12493": {
-"gp": 15.0,
-"gs": 7.0,
-"pts_ppr": 131.4,
-"rec": 49.0,
-"rec_tgt": 69.0,
-"rec_yd": 664.0,
-"rec_td": 3.0,
-"off_snp": 595.0,
-"tm_off_snp": 949.0,
-"pos_rank_ppr": 15,
-"pts_ppr_per_game": 8.76,
-"rec_tgt_per_game": 4.6
-},
-"NE": {
-"gp": 17.0,
-"pts_ppr": 130.0,
-"pos_rank_ppr": 10,
-"pts_ppr_per_game": 7.65
-},
-"4881": {
-"gp": 13.0,
-"gs": 13.0,
-"pts_ppr": 221.86,
-"rush_att": 67.0,
-"rush_yd": 349.0,
-"rush_td": 2.0,
-"pass_yd": 2549.0,
-"pass_td": 21.0,
-"off_snp": 651.0,
-"tm_off_snp": 704.0,
-"pos_rank_ppr": 20,
-"pts_ppr_per_game": 17.07,
-"rush_att_per_game": 5.15
-},
-"5967": {
+"11564": {
 "gp": 17.0,
 "gs": 17.0,
-"pts_ppr": 185.8,
-"rec": 33.0,
-"rec_tgt": 41.0,
-"rec_yd": 206.0,
-"rush_att": 242.0,
-"rush_yd": 1082.0,
-"rush_td": 5.0,
-"off_snp": 623.0,
-"tm_off_snp": 1002.0,
+"pts_ppr": 359.96,
+"rec": 1.0,
+"rec_tgt": 1.0,
+"rec_yd": 2.0,
+"rush_att": 103.0,
+"rush_yd": 450.0,
+"rush_td": 4.0,
+"pass_yd": 4394.0,
+"pass_td": 31.0,
+"off_snp": 1005.0,
+"tm_off_snp": 1035.0,
+"pos_rank_ppr": 2,
+"pts_ppr_per_game": 21.17,
+"rec_tgt_per_game": 0.06,
+"rush_att_per_game": 6.06
+},
+"9508": {
+"gp": 13.0,
+"gs": 1.0,
+"pts_ppr": 111.7,
+"rec": 45.0,
+"rec_tgt": 50.0,
+"rec_yd": 264.0,
+"rush_att": 72.0,
+"rush_yd": 283.0,
+"rush_td": 2.0,
+"off_snp": 349.0,
+"tm_off_snp": 759.0,
+"pos_rank_ppr": 44,
+"pts_ppr_per_game": 8.59,
+"rec_tgt_per_game": 3.85,
+"rush_att_per_game": 5.54
+},
+"12533": {
+"gp": 17.0,
+"gs": 7.0,
+"pts_ppr": 140.3,
+"rec": 9.0,
+"rec_tgt": 13.0,
+"rec_yd": 68.0,
+"rush_att": 175.0,
+"rush_yd": 805.0,
+"rush_td": 8.0,
+"off_snp": 381.0,
+"tm_off_snp": 985.0,
+"pos_rank_ppr": 33,
+"pts_ppr_per_game": 8.25,
+"rec_tgt_per_game": 0.76,
+"rush_att_per_game": 10.29
+},
+"3451": {
+"gp": 15.0,
+"pts_ppr": 190.0,
+"tm_off_snp": 947.0,
+"pos_rank_ppr": 2,
+"pts_ppr_per_game": 12.67
+},
+"10219": {
+"gp": 13.0,
+"gs": 7.0,
+"pts_ppr": 92.0,
+"rec": 3.0,
+"rec_tgt": 4.0,
+"rec_yd": 30.0,
+"rush_att": 112.0,
+"rush_yd": 500.0,
+"rush_td": 6.0,
+"off_snp": 226.0,
+"tm_off_snp": 741.0,
+"pos_rank_ppr": 51,
+"pts_ppr_per_game": 7.08,
+"rec_tgt_per_game": 0.31,
+"rush_att_per_game": 8.62
+},
+"9480": {
+"gp": 12.0,
+"gs": 12.0,
+"pts_ppr": 118.0,
+"rec": 46.0,
+"rec_tgt": 60.0,
+"rec_yd": 540.0,
+"rec_td": 3.0,
+"off_snp": 553.0,
+"tm_off_snp": 723.0,
 "pos_rank_ppr": 23,
-"pts_ppr_per_game": 10.93,
-"rec_tgt_per_game": 2.41,
-"rush_att_per_game": 14.24
+"pts_ppr_per_game": 9.83,
+"rec_tgt_per_game": 5.0
+},
+"6797": {
+"gp": 16.0,
+"gs": 16.0,
+"pts_ppr": 299.88,
+"rush_att": 83.0,
+"rush_yd": 498.0,
+"rush_td": 2.0,
+"pass_yd": 3727.0,
+"pass_td": 26.0,
+"off_snp": 1043.0,
+"tm_off_snp": 1072.0,
+"pos_rank_ppr": 10,
+"pts_ppr_per_game": 18.74,
+"rush_att_per_game": 5.19
+},
+"12512": {
+"gp": 15.0,
+"gs": 14.0,
+"pts_ppr": 169.8,
+"rec": 26.0,
+"rec_tgt": 36.0,
+"rec_yd": 171.0,
+"rush_att": 230.0,
+"rush_yd": 827.0,
+"rush_td": 7.0,
+"off_snp": 452.0,
+"tm_off_snp": 903.0,
+"pos_rank_ppr": 26,
+"pts_ppr_per_game": 11.32,
+"rec_tgt_per_game": 2.4,
+"rush_att_per_game": 15.33
+},
+"11566": {
+"gp": 7.0,
+"gs": 7.0,
+"pts_ppr": 117.28,
+"rush_att": 58.0,
+"rush_yd": 278.0,
+"rush_td": 2.0,
+"pass_yd": 1262.0,
+"pass_td": 8.0,
+"off_snp": 405.0,
+"tm_off_snp": 447.0,
+"pos_rank_ppr": 34,
+"pts_ppr_per_game": 16.75,
+"rush_att_per_game": 8.29
+},
+"6790": {
+"gp": 16.0,
+"gs": 16.0,
+"pts_ppr": 228.6,
+"rec": 34.0,
+"rec_tgt": 48.0,
+"rec_yd": 299.0,
+"rec_td": 1.0,
+"rush_att": 223.0,
+"rush_yd": 1087.0,
+"rush_td": 9.0,
+"off_snp": 589.0,
+"tm_off_snp": 1019.0,
+"pos_rank_ppr": 15,
+"pts_ppr_per_game": 14.29,
+"rec_tgt_per_game": 3.0,
+"rush_att_per_game": 13.94
+},
+"5189": {
+"gp": 14.0,
+"pts_ppr": 135.0,
+"tm_off_snp": 910.0,
+"pos_rank_ppr": 13,
+"pts_ppr_per_game": 9.64
+},
+"13413": {
+"pos_rank_ppr": 651
+},
+"BAL": {
+"gp": 17.0,
+"pts_ppr": 106.0,
+"pos_rank_ppr": 17,
+"pts_ppr_per_game": 6.24
+},
+"6813": {
+"gp": 17.0,
+"gs": 17.0,
+"pts_ppr": 362.3,
+"rec": 46.0,
+"rec_tgt": 55.0,
+"rec_yd": 378.0,
+"rec_td": 2.0,
+"rush_att": 323.0,
+"rush_yd": 1585.0,
+"rush_td": 18.0,
+"off_snp": 849.0,
+"tm_off_snp": 1007.0,
+"pos_rank_ppr": 4,
+"pts_ppr_per_game": 21.31,
+"rec_tgt_per_game": 3.24,
+"rush_att_per_game": 19.0
+},
+"12484": {
+"gp": 17.0,
+"gs": 10.0,
+"pts_ppr": 129.5,
+"rec": 41.0,
+"rec_tgt": 68.0,
+"rec_yd": 525.0,
+"rec_td": 6.0,
+"off_snp": 616.0,
+"tm_off_snp": 1092.0,
+"pos_rank_ppr": 47,
+"pts_ppr_per_game": 7.62,
+"rec_tgt_per_game": 4.0
+},
+"PHI": {
+"gp": 17.0,
+"pts_ppr": 143.0,
+"pos_rank_ppr": 7,
+"pts_ppr_per_game": 8.41
+},
+"11635": {
+"gp": 16.0,
+"gs": 12.0,
+"pts_ppr": 180.9,
+"rec": 66.0,
+"rec_tgt": 106.0,
+"rec_yd": 789.0,
+"rec_td": 6.0,
+"off_snp": 838.0,
+"tm_off_snp": 1072.0,
+"pos_rank_ppr": 30,
+"pts_ppr_per_game": 11.31,
+"rec_tgt_per_game": 6.62
 },
 "5849": {
 "gp": 5.0,
@@ -8841,6 +8518,469 @@
 "pos_rank_ppr": 38,
 "pts_ppr_per_game": 16.16,
 "rush_att_per_game": 5.8
+},
+"5846": {
+"gp": 15.0,
+"gs": 15.0,
+"pts_ppr": 187.2,
+"rec": 59.0,
+"rec_tgt": 99.0,
+"rec_yd": 850.0,
+"rec_td": 6.0,
+"rush_att": 2.0,
+"rush_yd": 12.0,
+"rush_td": 1.0,
+"off_snp": 776.0,
+"tm_off_snp": 890.0,
+"pos_rank_ppr": 26,
+"pts_ppr_per_game": 12.48,
+"rec_tgt_per_game": 6.6,
+"rush_att_per_game": 0.13
+},
+"5872": {
+"gp": 16.0,
+"gs": 12.0,
+"pts_ppr": 188.2,
+"rec": 72.0,
+"rec_tgt": 99.0,
+"rec_yd": 727.0,
+"rec_td": 5.0,
+"rush_att": 17.0,
+"rush_yd": 75.0,
+"rush_td": 1.0,
+"off_snp": 664.0,
+"tm_off_snp": 918.0,
+"pos_rank_ppr": 25,
+"pts_ppr_per_game": 11.76,
+"rec_tgt_per_game": 6.19,
+"rush_att_per_game": 1.06
+},
+"11533": {
+"gp": 17.0,
+"pts_ppr": 180.6,
+"rush_att": 1.0,
+"rush_yd": 6.0,
+"tm_off_snp": 1131.0,
+"pos_rank_ppr": 3,
+"pts_ppr_per_game": 10.62,
+"rush_att_per_game": 0.06
+},
+"12489": {
+"gp": 17.0,
+"gs": 7.0,
+"pts_ppr": 206.6,
+"rec": 47.0,
+"rec_tgt": 58.0,
+"rec_yd": 356.0,
+"rec_td": 5.0,
+"rush_att": 146.0,
+"rush_yd": 540.0,
+"rush_td": 7.0,
+"off_snp": 448.0,
+"tm_off_snp": 1081.0,
+"pos_rank_ppr": 20,
+"pts_ppr_per_game": 12.15,
+"rec_tgt_per_game": 3.41,
+"rush_att_per_game": 8.59
+},
+"8676": {
+"gp": 18.0,
+"gs": 13.0,
+"pts_ppr": 156.6,
+"rec": 59.0,
+"rec_tgt": 92.0,
+"rec_yd": 687.0,
+"rec_td": 2.0,
+"rush_att": 9.0,
+"rush_yd": 69.0,
+"off_snp": 705.0,
+"tm_off_snp": 1162.0,
+"pos_rank_ppr": 39,
+"pts_ppr_per_game": 8.7,
+"rec_tgt_per_game": 5.11,
+"rush_att_per_game": 0.5
+},
+"DET": {
+"gp": 17.0,
+"pts_ppr": 110.0,
+"pos_rank_ppr": 16,
+"pts_ppr_per_game": 6.47
+},
+"7567": {
+"gp": 17.0,
+"gs": 2.0,
+"pts_ppr": 222.3,
+"rec": 73.0,
+"rec_tgt": 85.0,
+"rec_yd": 486.0,
+"rec_td": 3.0,
+"rush_att": 114.0,
+"rush_yd": 537.0,
+"rush_td": 5.0,
+"off_snp": 467.0,
+"tm_off_snp": 956.0,
+"pos_rank_ppr": 16,
+"pts_ppr_per_game": 13.08,
+"rec_tgt_per_game": 5.0,
+"rush_att_per_game": 6.71
+},
+"11610": {
+"gp": 17.0,
+"gs": 6.0,
+"pts_ppr": 116.7,
+"rec": 46.0,
+"rec_tgt": 65.0,
+"rec_yd": 317.0,
+"rec_td": 3.0,
+"rush_att": 17.0,
+"rush_yd": 110.0,
+"rush_td": 1.0,
+"off_snp": 523.0,
+"tm_off_snp": 927.0,
+"pos_rank_ppr": 54,
+"pts_ppr_per_game": 6.86,
+"rec_tgt_per_game": 3.82,
+"rush_att_per_game": 1.0
+},
+"9500": {
+"gp": 16.0,
+"gs": 11.0,
+"pts_ppr": 136.4,
+"rec": 58.0,
+"rec_tgt": 88.0,
+"rec_yd": 566.0,
+"rec_td": 4.0,
+"rush_att": 2.0,
+"rush_yd": -2.0,
+"off_snp": 553.0,
+"tm_off_snp": 947.0,
+"pos_rank_ppr": 44,
+"pts_ppr_per_game": 8.53,
+"rec_tgt_per_game": 5.5,
+"rush_att_per_game": 0.12
+},
+"421": {
+"gp": 17.0,
+"gs": 17.0,
+"pts_ppr": 358.38,
+"rush_att": 29.0,
+"rush_yd": 1.0,
+"pass_yd": 4707.0,
+"pass_td": 46.0,
+"off_snp": 1045.0,
+"tm_off_snp": 1060.0,
+"pos_rank_ppr": 3,
+"pts_ppr_per_game": 21.08,
+"rush_att_per_game": 1.71
+},
+"8148": {
+"gp": 17.0,
+"gs": 15.0,
+"pts_ppr": 219.9,
+"rec": 65.0,
+"rec_tgt": 102.0,
+"rec_yd": 1117.0,
+"rec_td": 7.0,
+"rush_att": 6.0,
+"rush_yd": 12.0,
+"off_snp": 923.0,
+"tm_off_snp": 1026.0,
+"pos_rank_ppr": 12,
+"pts_ppr_per_game": 12.94,
+"rec_tgt_per_game": 6.0,
+"rush_att_per_game": 0.35
+},
+"11786": {
+"gp": 17.0,
+"pts_ppr": 159.0,
+"tm_off_snp": 1089.0,
+"pos_rank_ppr": 5,
+"pts_ppr_per_game": 9.35
+},
+"7553": {
+"gp": 17.0,
+"gs": 17.0,
+"pts_ppr": 210.8,
+"rec": 88.0,
+"rec_tgt": 118.0,
+"rec_yd": 928.0,
+"rec_td": 5.0,
+"off_snp": 903.0,
+"tm_off_snp": 1033.0,
+"pos_rank_ppr": 2,
+"pts_ppr_per_game": 12.4,
+"rec_tgt_per_game": 6.94
+},
+"13279": {
+"pos_rank_ppr": 785
+},
+"JAX": {
+"gp": 17.0,
+"pts_ppr": 148.0,
+"pos_rank_ppr": 4,
+"pts_ppr_per_game": 8.71
+},
+"8131": {
+"gp": 14.0,
+"gs": 7.0,
+"pts_ppr": 61.7,
+"rec": 27.0,
+"rec_tgt": 36.0,
+"rec_yd": 307.0,
+"rec_td": 1.0,
+"off_snp": 462.0,
+"tm_off_snp": 799.0,
+"pos_rank_ppr": 45,
+"pts_ppr_per_game": 4.41,
+"rec_tgt_per_game": 2.57
+},
+"4035": {
+"gp": 11.0,
+"gs": 11.0,
+"pts_ppr": 100.7,
+"rec": 33.0,
+"rec_tgt": 39.0,
+"rec_yd": 186.0,
+"rush_att": 131.0,
+"rush_yd": 471.0,
+"rush_td": 1.0,
+"off_snp": 457.0,
+"tm_off_snp": 725.0,
+"pos_rank_ppr": 46,
+"pts_ppr_per_game": 9.15,
+"rec_tgt_per_game": 3.55,
+"rush_att_per_game": 11.91
+},
+"11646": {
+"gp": 11.0,
+"gs": 3.0,
+"pts_ppr": 90.4,
+"rec": 33.0,
+"rec_tgt": 43.0,
+"rec_yd": 394.0,
+"rec_td": 3.0,
+"off_snp": 439.0,
+"tm_off_snp": 648.0,
+"pos_rank_ppr": 69,
+"pts_ppr_per_game": 8.22,
+"rec_tgt_per_game": 3.91
+},
+"11563": {
+"gp": 17.0,
+"gs": 17.0,
+"pts_ppr": 315.84,
+"rec_tgt": 1.0,
+"rush_att": 83.0,
+"rush_yd": 356.0,
+"rush_td": 5.0,
+"pass_yd": 3931.0,
+"pass_td": 25.0,
+"off_snp": 1077.0,
+"tm_off_snp": 1081.0,
+"pos_rank_ppr": 7,
+"pts_ppr_per_game": 18.58,
+"rec_tgt_per_game": 0.06,
+"rush_att_per_game": 4.88
+},
+"3198": {
+"gp": 17.0,
+"gs": 17.0,
+"pts_ppr": 279.5,
+"rec": 15.0,
+"rec_tgt": 21.0,
+"rec_yd": 150.0,
+"rush_att": 307.0,
+"rush_yd": 1595.0,
+"rush_td": 16.0,
+"off_snp": 519.0,
+"tm_off_snp": 963.0,
+"pos_rank_ppr": 8,
+"pts_ppr_per_game": 16.44,
+"rec_tgt_per_game": 1.24,
+"rush_att_per_game": 18.06
+},
+"7049": {
+"gp": 15.0,
+"gs": 15.0,
+"pts_ppr": 173.3,
+"rec": 55.0,
+"rec_tgt": 90.0,
+"rec_yd": 643.0,
+"rec_td": 9.0,
+"off_snp": 795.0,
+"tm_off_snp": 972.0,
+"pos_rank_ppr": 33,
+"pts_ppr_per_game": 11.55,
+"rec_tgt_per_game": 6.0
+},
+"9225": {
+"gp": 17.0,
+"gs": 1.0,
+"pts_ppr": 53.8,
+"rec": 3.0,
+"rec_tgt": 4.0,
+"rec_yd": 32.0,
+"rush_att": 63.0,
+"rush_yd": 356.0,
+"rush_td": 2.0,
+"off_snp": 101.0,
+"tm_off_snp": 991.0,
+"pos_rank_ppr": 68,
+"pts_ppr_per_game": 3.16,
+"rec_tgt_per_game": 0.24,
+"rush_att_per_game": 3.71
+},
+"4892": {
+"gp": 17.0,
+"gs": 17.0,
+"pts_ppr": 282.92,
+"rush_att": 55.0,
+"rush_yd": 382.0,
+"rush_td": 1.0,
+"pass_yd": 3693.0,
+"pass_td": 26.0,
+"off_snp": 1099.0,
+"tm_off_snp": 1134.0,
+"pos_rank_ppr": 12,
+"pts_ppr_per_game": 16.64,
+"rush_att_per_game": 3.24
+},
+"6770": {
+"gp": 8.0,
+"gs": 8.0,
+"pts_ppr": 139.46,
+"rush_att": 14.0,
+"rush_yd": 41.0,
+"pass_yd": 1809.0,
+"pass_td": 17.0,
+"off_snp": 411.0,
+"tm_off_snp": 478.0,
+"pos_rank_ppr": 29,
+"pts_ppr_per_game": 17.43,
+"rush_att_per_game": 1.75
+},
+"11581": {
+"pos_rank_ppr": 666
+},
+"9487": {
+"gp": 16.0,
+"gs": 7.0,
+"pts_ppr": 184.7,
+"rec": 58.0,
+"rec_tgt": 95.0,
+"rec_yd": 847.0,
+"rec_td": 5.0,
+"rush_att": 7.0,
+"off_snp": 627.0,
+"tm_off_snp": 1025.0,
+"pos_rank_ppr": 27,
+"pts_ppr_per_game": 11.54,
+"rec_tgt_per_game": 5.94,
+"rush_att_per_game": 0.44
+},
+"9493": {
+"gp": 16.0,
+"gs": 15.0,
+"pts_ppr": 375.0,
+"rec": 129.0,
+"rec_tgt": 166.0,
+"rec_yd": 1715.0,
+"rec_td": 10.0,
+"rush_att": 10.0,
+"rush_yd": 105.0,
+"rush_td": 1.0,
+"off_snp": 675.0,
+"tm_off_snp": 990.0,
+"pos_rank_ppr": 1,
+"pts_ppr_per_game": 23.44,
+"rec_tgt_per_game": 10.38,
+"rush_att_per_game": 0.62
+},
+"8228": {
+"gp": 16.0,
+"gs": 14.0,
+"pts_ppr": 217.1,
+"rec": 40.0,
+"rec_tgt": 45.0,
+"rec_yd": 333.0,
+"rec_td": 2.0,
+"rush_att": 211.0,
+"rush_yd": 958.0,
+"rush_td": 6.0,
+"off_snp": 461.0,
+"tm_off_snp": 903.0,
+"pos_rank_ppr": 17,
+"pts_ppr_per_game": 13.57,
+"rec_tgt_per_game": 2.81,
+"rush_att_per_game": 13.19
+},
+"9511": {
+"gp": 13.0,
+"pts_ppr": 55.4,
+"rec": 9.0,
+"rec_tgt": 12.0,
+"rec_yd": 63.0,
+"rush_att": 59.0,
+"rush_yd": 341.0,
+"rush_td": 1.0,
+"off_snp": 125.0,
+"tm_off_snp": 745.0,
+"pos_rank_ppr": 66,
+"pts_ppr_per_game": 4.26,
+"rec_tgt_per_game": 0.92,
+"rush_att_per_game": 4.54
+},
+"12506": {
+"gp": 16.0,
+"gs": 13.0,
+"pts_ppr": 186.4,
+"rec": 72.0,
+"rec_tgt": 107.0,
+"rec_yd": 731.0,
+"rec_td": 6.0,
+"rush_att": 7.0,
+"rush_yd": 13.0,
+"rush_td": 1.0,
+"off_snp": 786.0,
+"tm_off_snp": 1031.0,
+"pos_rank_ppr": 6,
+"pts_ppr_per_game": 11.65,
+"rec_tgt_per_game": 6.69,
+"rush_att_per_game": 0.44
+},
+"12490": {
+"gp": 15.0,
+"pts_ppr": 88.6,
+"rec": 10.0,
+"rec_tgt": 14.0,
+"rec_yd": 79.0,
+"rec_td": 2.0,
+"rush_att": 83.0,
+"rush_yd": 307.0,
+"rush_td": 5.0,
+"off_snp": 199.0,
+"tm_off_snp": 950.0,
+"pos_rank_ppr": 53,
+"pts_ppr_per_game": 5.91,
+"rec_tgt_per_game": 0.93,
+"rush_att_per_game": 5.53
+},
+"6786": {
+"gp": 14.0,
+"gs": 13.0,
+"pts_ppr": 200.9,
+"rec": 75.0,
+"rec_tgt": 117.0,
+"rec_yd": 1077.0,
+"rec_td": 3.0,
+"rush_att": 1.0,
+"rush_yd": 2.0,
+"off_snp": 707.0,
+"tm_off_snp": 947.0,
+"pos_rank_ppr": 22,
+"pts_ppr_per_game": 14.35,
+"rec_tgt_per_game": 8.36,
+"rush_att_per_game": 0.07
 }
 }
 }
